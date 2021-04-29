@@ -10,13 +10,13 @@ dotfiles=(
     ["clojure/deps.edn"]="$HOME/.clojure/deps.edn"
     ["emacs.d/early-init.el"]="$HOME/.emacs.d/early-init.el"
     ["emacs.d/init.el"]="$HOME/.emacs.d/init.el"
-    ["gitconfig"]="$HOME/.gitconfig"
+    # ["gitconfig"]="$HOME/.gitconfig"
     ["lein/profiles.clj"]="$HOME/.lein/profiles.clj"
     ["tmux.conf"]="$HOME/.tmux.conf"
     ["vimrc"]="$HOME/.vimrc"
     ["zprint.edn"]="$HOME/.zprint.edn"
-    ["zshenv"]="$HOME/.zshenv"
-    ["zshrc"]="$HOME/.zshrc"
+    # ["zshenv"]="$HOME/.zshenv"
+    # ["zshrc"]="$HOME/.zshrc"
 )
 
 function ensure_destination_exists {

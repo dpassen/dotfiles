@@ -142,6 +142,9 @@
     :ensure t
     :bind ("C-c r" . deadgrep))
 
+  (leaf display-line-numbers
+    :hook prog-mode-hook)
+
   (leaf dumb-jump
     :ensure t
     :custom (dumb-jump-prefer-searcher . 'rg)
@@ -173,6 +176,9 @@
     :ensure t)
 
   (leaf git-timemachine
+    :ensure t)
+
+  (leaf groovy-mode
     :ensure t)
 
   (leaf hideshow
@@ -265,6 +271,36 @@
     :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'")
     :custom ((web-mode-enable-auto-closing . t)
              (web-mode-markup-indent-offset . 2))))
+
+(leaf work
+  :config
+  (leaf dockerfile-mode
+    :ensure t)
+
+  (leaf ffap
+    :bind ("M-g f" . ffap-other-window))
+
+  (leaf guaranteed-emacs
+    :load-path "~/work/guaranteed-emacs/"
+    :require t
+    :custom (gr-source-directory . "~/work")
+    :defun set-common-vars
+    :config (set-common-vars))
+
+  (leaf graphviz-dot-mode
+    :ensure t)
+
+  (leaf ht
+    :ensure t)
+
+  (leaf kubel
+    :ensure t)
+
+  (leaf terraform-mode
+    :ensure t)
+
+  (leaf yaml-mode
+    :ensure t))
 
 (provide 'init)
 
