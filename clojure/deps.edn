@@ -5,13 +5,15 @@
    :main-opts ["-m" "antq.core"]}
   :check
   {:extra-deps
-   {athos/clj-check
+   {com.github.athos/clj-check
     {:git/url "https://github.com/athos/clj-check.git"
-     :sha     "518d5a1cbfcd7c952f548e6dbfcb9a4a5faf9062"}}
+     :git/sha "518d5a1cbfcd7c952f548e6dbfcb9a4a5faf9062"}}
    :main-opts ["-m" "clj-check.check"]}
   :new
   {:extra-deps
-   {com.github.seancorfield/clj-new {:mvn/version "1.1.324"}}
+   {com.github.seancorfield/clj-new
+    {:git/tag "v1.1.324"
+     :git/sha "55454b6"}}
    :exec-fn clj-new/create}
   :nop
   {:extra-deps
