@@ -60,7 +60,8 @@
   (leaf ido
     :defvar ido-decorations
     :defun ido-everywhere
-    :custom (ido-enable-flex-matching . t)
+    :custom ((ido-enable-flex-matching . t)
+             (ido-use-faces . nil))
     :setf (((nth 0 ido-decorations) . "")
            ((nth 1 ido-decorations) . ""))
     :config (ido-everywhere)
