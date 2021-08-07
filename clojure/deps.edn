@@ -2,7 +2,7 @@
  {:antq
   {:extra-deps
    {com.github.liquidz/antq {:mvn/version "0.16.2"}}
-   :main-opts ["-m" "antq.core"]}
+   :exec-fn antq.tool/outdated}
   :check
   {:extra-deps
    {com.github.athos/clj-check
