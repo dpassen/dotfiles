@@ -1,7 +1,7 @@
 {:aliases
  {:antq
   {:extra-deps
-   {com.github.liquidz/antq {:mvn/version "0.16.2"}}
+   {com.github.liquidz/antq {:mvn/version "0.16.3"}}
    :exec-fn antq.tool/outdated}
   :check
   {:extra-deps
