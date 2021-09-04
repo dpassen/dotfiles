@@ -219,7 +219,7 @@
              (cider-mode-line-show-connection . nil)
              (cider-prompt-for-symbol . nil)
              (cider-repl-display-help-banner . nil)
-             (cider-repl-pop-to-buffer-on-connect . 'display-only)
+             (cider-repl-pop-to-buffer-on-connect . nil)
              (cider-save-file-on-load . t)
              (cider-use-fringe-indicators . nil))
     :defvar cider-repl-history-file
