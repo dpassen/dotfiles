@@ -14,8 +14,8 @@
   :new
   {:extra-deps
    {com.github.seancorfield/clj-new
-    {:git/tag "v1.2.359"
-     :git/sha "7fafc79"}}
+    {:git/tag "v1.2.362"
+     :git/sha "4ab680e"}}
    :exec-fn clj-new/create}
   :nop
   {:extra-deps
