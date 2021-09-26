@@ -13,10 +13,10 @@
    :main-opts ["-m" "clj-check.check"]}
   :new
   {:extra-deps
-   {com.github.seancorfield/clj-new
-    {:git/tag "v1.2.362"
-     :git/sha "4ab680e"}}
-   :exec-fn clj-new/create}
+   {io.github.seancorfield/deps-new
+    {:git/tag "v0.3.1"
+     :git/sha "e4e5bc0"}}
+   :exec-fn org.corfield.new/create}
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop {:mvn/version "1.7.32"}}}}}
