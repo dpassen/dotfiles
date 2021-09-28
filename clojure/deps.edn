@@ -14,8 +14,8 @@
   :new
   {:extra-deps
    {io.github.seancorfield/deps-new
-    {:git/tag "v0.3.1"
-     :git/sha "e4e5bc0"}}
+    {:git/tag "v0.3.2"
+     :git/sha "3e68761"}}
    :exec-fn org.corfield.new/create}
   :nop
   {:extra-deps
