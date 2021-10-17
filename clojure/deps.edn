@@ -1,13 +1,13 @@
 {:aliases
  {:antq
   {:extra-deps
-   {com.github.liquidz/antq
+   {io.github.liquidz/antq
     {:git/tag "1.1.0"
      :git/sha "88f8263"}}
    :exec-fn antq.tool/outdated}
   :check
   {:extra-deps
-   {com.github.athos/clj-check
+   {io.github.athos/clj-check
     {:git/tag "0.1.0"
      :git/sha "0ca84df"}}
    :main-opts ["-m" "clj-check.check"]}
