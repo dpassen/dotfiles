@@ -4,6 +4,10 @@ alias tmux-select='tmux attach -t $(tmux ls "-F#{session_name}" 2> /dev/null | f
 alias mg='mg -n'
 alias view='mg -R'
 
+edit() {
+    eval "$EDITOR" "$@"
+}
+
 emacs() {
     /usr/bin/env emacs "$@" &!
 }
