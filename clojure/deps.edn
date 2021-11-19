@@ -22,5 +22,7 @@
    {org.slf4j/slf4j-nop {:mvn/version "1.7.32"}}}
   :nvd
   {:extra-deps
-   {nvd-clojure/nvd-clojure {:mvn/version "1.8.0"}}
+   {io.github.rm-hull/nvd-clojure
+    {:git/tag "1.8.0"
+     :git/sha "08c00dd"}}
    :main-opts ["-m" "nvd.task.check"]}}}
