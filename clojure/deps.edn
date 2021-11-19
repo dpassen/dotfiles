@@ -23,6 +23,6 @@
   :nvd
   {:extra-deps
    {io.github.rm-hull/nvd-clojure
-    {:git/tag "1.8.0"
-     :git/sha "08c00dd"}}
+    {:git/tag "1.9.0"
+     :git/sha "490afd4"}}
    :main-opts ["-m" "nvd.task.check"]}}}
