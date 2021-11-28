@@ -134,6 +134,10 @@
 
 (leaf general-programming
   :config
+  (leaf apheleia
+    :ensure t
+    :hook prog-mode-hook)
+
   (leaf company
     :ensure t
     :blackout t
@@ -240,12 +244,6 @@
 
 (leaf python
   :config
-  (leaf blacken
-    :ensure t
-    :blackout t
-    :custom (blacken-only-if-project-is-blackened . t)
-    :hook python-mode-hook)
-
   (leaf poetry
     :ensure t))
 
