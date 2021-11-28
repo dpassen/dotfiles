@@ -202,12 +202,6 @@
 
   (leaf subword
     :blackout t
-    :hook prog-mode-hook)
-
-  (leaf whitespace
-    :blackout t
-    :custom ((whitespace-line-column . 80)
-             (whitespace-style . '(face trailing lines-tail tabs)))
     :hook prog-mode-hook))
 
 (leaf clojure
