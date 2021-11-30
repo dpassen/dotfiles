@@ -56,6 +56,6 @@ if [ $ITERM_SESSION_ID ]; then
   add-zsh-hook precmd iterm_tab_title
 fi
 
-nfocat () {
+nfocat() {
   iconv -f cp437 "$@"
 }
