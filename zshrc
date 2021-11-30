@@ -5,11 +5,11 @@ alias mg='mg -n'
 alias view='mg -R'
 
 edit() {
-    eval "$EDITOR" "$@"
+  eval "$EDITOR" "$@"
 }
 
 emacs() {
-    /usr/bin/env emacs "$@" &!
+  /usr/bin/env emacs "$@" &!
 }
 
 HISTFILE=~/.histfile
@@ -37,8 +37,8 @@ zstyle ':vcs_info:git*' formats " (%b)"
 zstyle ':vcs_info:hg*' formats " (%b)"
 
 precmd() {
-    vcs_info
-    print ""
+  vcs_info
+  print ""
 }
 
 setopt prompt_subst
