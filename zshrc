@@ -45,16 +45,6 @@ setopt prompt_subst
 NEWLINE=$'\n'
 PROMPT='[%n@%m] %2d${vcs_info_msg_0_}${NEWLINE}$ '
 
-chpwd () {
-    print -Pn "\e]2; %~/ \a"
-}
-
 nfocat () {
   iconv -f cp437 "$@"
 }
-
-vterm_prompt_end() {
-    printf "\e]51;A$(whoami)@$(hostname):$(pwd)\e\\";
-}
-
-PROMPT=$PROMPT'%{$(vterm_prompt_end)%}'
