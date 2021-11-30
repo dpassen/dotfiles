@@ -45,6 +45,15 @@ setopt prompt_subst
 NEWLINE=$'\n'
 PROMPT='[%n@%m] %2d${vcs_info_msg_0_}${NEWLINE}$ '
 
+if [ $ITERM_SESSION_ID ]; then
+  iterm_tab_title() {
+    echo -ne "\e]0;${PWD##*/}\a"
+  }
+
+  autoload -Uz add-zsh-hook
+  add-zsh-hook precmd iterm_tab_title
+fi
+
 nfocat () {
   iconv -f cp437 "$@"
 }
