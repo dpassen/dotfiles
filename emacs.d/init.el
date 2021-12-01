@@ -216,11 +216,7 @@
   (leaf flycheck-clj-kondo
     :ensure t
     :require t
-    :after clojure-mode)
-
-  (leaf zprint-format
-    :ensure t
-    :blackout zprint-format-on-save-mode))
+    :after clojure-mode))
 
 (leaf python
   :config
