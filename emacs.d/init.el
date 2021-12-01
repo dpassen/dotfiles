@@ -14,10 +14,7 @@
 
   (leaf leaf-keywords
     :ensure t
-    :config (leaf-keywords-init))
-
-  (leaf blackout
-    :ensure t))
+    :config (leaf-keywords-init)))
 
 (leaf emacs
   :custom ((column-number-mode . t)
@@ -128,7 +125,6 @@
 
   (leaf zoom
     :ensure t
-    :blackout t
     :custom (zoom-size . '(0.618 . 0.618))
     :global-minor-mode t))
 
@@ -140,7 +136,6 @@
 
   (leaf company
     :ensure t
-    :blackout t
     :hook (prog-mode-hook cider-repl-mode-hook))
 
   (leaf deadgrep
@@ -154,11 +149,7 @@
 
   (leaf editorconfig
     :ensure t
-    :blackout t
     :hook prog-mode-hook)
-
-  (leaf eldoc
-    :blackout t)
 
   (leaf expand-region
     :ensure t
@@ -171,7 +162,6 @@
 
   (leaf flycheck
     :ensure t
-    :blackout t
     :hook prog-mode-hook)
 
   (leaf git-link
@@ -181,7 +171,6 @@
     :ensure t)
 
   (leaf hideshow
-    :blackout hs-minor-mode
     :hook (prog-mode-hook . hs-minor-mode))
 
   (leaf just-mode
@@ -197,11 +186,9 @@
 
   (leaf paredit
     :ensure t
-    :blackout t
     :hook (cider-repl-mode-hook clojure-mode-hook emacs-lisp-mode-hook))
 
   (leaf subword
-    :blackout t
     :hook prog-mode-hook))
 
 (leaf clojure
@@ -212,7 +199,6 @@
 
   (leaf cider
     :ensure t
-    :blackout cider-auto-test-mode
     :custom ((cider-font-lock-dynamically . nil)
              (cider-mode-line-show-connection . nil)
              (cider-prompt-for-symbol . nil)
