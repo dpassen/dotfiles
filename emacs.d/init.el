@@ -54,6 +54,12 @@
            ("C-M--" . default-text-scale-decrease)
            ("C-M-0" . default-text-scale-reset)))
 
+  (leaf golden-ratio-scroll-screen
+    :ensure t
+    :bind (("C-v" . golden-ratio-scroll-screen-up)
+           ("M-v" . golden-ratio-scroll-screen-down))
+    :custom (golden-ratio-scroll-highlight-flag . nil))
+
   (leaf ido
     :defvar ido-decorations
     :defun ido-everywhere
@@ -108,10 +114,6 @@
 
   (leaf uniquify
     :custom (uniquify-buffer-name-style . 'forward))
-
-  (leaf view
-    :bind (("C-v" . View-scroll-half-page-forward)
-           ("M-v" . View-scroll-half-page-backward)))
 
   (leaf with-editor
     :ensure t
