@@ -167,7 +167,8 @@
     :hook prog-mode-hook)
 
   (leaf git-link
-    :ensure t)
+    :ensure t
+    :custom (git-link-use-commit . 't))
 
   (leaf git-timemachine
     :ensure t)
