@@ -162,9 +162,15 @@
     :bind ("C-x M-f" . find-file-in-repository)
     :custom (ffir-prompt . "Find file: "))
 
-  (leaf flycheck
-    :ensure t
-    :hook prog-mode-hook)
+  (leaf flymake
+    :hook prog-mode-hook
+    :bind (flymake-mode-map
+           ("C-c ! c" . flymake-start)
+           ("C-c ! l" . flymake-show-diagnostics-buffer)
+           ("C-c ! n" . flymake-goto-next-error)
+           ("C-c ! p" . flymake-goto-prev-error))
+    :defun flymake-proc-legacy-flymake
+    :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
 
   (leaf git-link
     :ensure t
@@ -216,10 +222,9 @@
                          ".cider-repl-history"
                          (clojure-project-dir))))
 
-  (leaf flycheck-clj-kondo
+  (leaf flymake-kondor
     :ensure t
-    :require t
-    :after clojure-mode))
+    :hook (clojure-mode-hook . flymake-kondor-setup)))
 
 (leaf python
   :config
