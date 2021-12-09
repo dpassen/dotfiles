@@ -1,4 +1,5 @@
 tap "borkdude/brew"
+tap "clojure-lsp/brew"
 tap "clojure/tools"
 tap "devlocker/tap"
 tap "homebrew/bundle"
@@ -54,6 +55,7 @@ brew "borkdude/brew/babashka"
 brew "borkdude/brew/clj-kondo"
 brew "borkdude/brew/jet"
 brew "borkdude/brew/puget"
+brew "clojure-lsp/brew/clojure-lsp-native"
 brew "clojure/tools/clojure"
 brew "devlocker/tap/tychus"
 
