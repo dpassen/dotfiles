@@ -11,6 +11,7 @@ dotfiles=(
     ["emacs.d/early-init.el"]="$HOME/.emacs.d/early-init.el"
     ["emacs.d/init.el"]="$HOME/.emacs.d/init.el"
     ["gitconfig"]="$HOME/.gitconfig"
+    ["gitignore"]="$HOME/.gitignore"
     ["lein/profiles.clj"]="$HOME/.lein/profiles.clj"
     ["tmux.conf"]="$HOME/.tmux.conf"
     ["vimrc"]="$HOME/.vimrc"
