@@ -15,7 +15,6 @@ dotfiles=(
     ["lein/profiles.clj"]="$HOME/.lein/profiles.clj"
     ["tmux.conf"]="$HOME/.tmux.conf"
     ["vimrc"]="$HOME/.vimrc"
-    ["zprint.edn"]="$HOME/.zprint.edn"
     ["zshenv"]="$HOME/.zshenv"
     ["zshrc"]="$HOME/.zshrc"
 )
