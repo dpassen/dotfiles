@@ -48,12 +48,6 @@
     :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
     :config (load custom-file 'noerror))
 
-  (leaf default-text-scale
-    :ensure t
-    :bind (("C-M-+" . default-text-scale-increase)
-           ("C-M--" . default-text-scale-decrease)
-           ("C-M-0" . default-text-scale-reset)))
-
   (leaf golden-ratio-scroll-screen
     :ensure t
     :bind (("C-v" . golden-ratio-scroll-screen-up)
@@ -171,13 +165,6 @@
            ("C-c ! p" . flymake-goto-prev-error))
     :defun flymake-proc-legacy-flymake
     :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
-
-  (leaf git-link
-    :ensure t
-    :custom (git-link-use-commit . 't))
-
-  (leaf git-timemachine
-    :ensure t)
 
   (leaf hideshow
     :hook (prog-mode-hook . hs-minor-mode))
