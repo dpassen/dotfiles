@@ -19,10 +19,4 @@
    :exec-fn org.corfield.new/create}
   :nop
   {:extra-deps
-   {org.slf4j/slf4j-nop {:mvn/version "1.7.32"}}}
-  :nvd
-  {:extra-deps
-   {io.github.rm-hull/nvd-clojure
-    {:git/tag "2.0.0"
-     :git/sha "4b4a529"}}
-   :exec-fn nvd.task/check}}}
+   {org.slf4j/slf4j-nop {:mvn/version "1.7.32"}}}}}
