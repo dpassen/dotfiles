@@ -197,6 +197,7 @@
     :ensure t
     :custom ((cider-font-lock-dynamically . nil)
              (cider-mode-line-show-connection . nil)
+             (cider-ns-save-files-on-refresh . t)
              (cider-prompt-for-symbol . nil)
              (cider-repl-display-help-banner . nil)
              (cider-repl-pop-to-buffer-on-connect . nil)
