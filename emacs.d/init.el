@@ -48,12 +48,6 @@
     :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
     :config (load custom-file 'noerror))
 
-  (leaf golden-ratio-scroll-screen
-    :ensure t
-    :bind (("C-v" . golden-ratio-scroll-screen-up)
-           ("M-v" . golden-ratio-scroll-screen-down))
-    :custom (golden-ratio-scroll-highlight-flag . nil))
-
   (leaf ido
     :defvar ido-decorations
     :defun ido-everywhere
