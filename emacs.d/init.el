@@ -176,6 +176,8 @@
 
   (leaf paredit
     :ensure t
+    :bind (paredit-mode-map
+           ("M-?" . nil))
     :hook (cider-repl-mode-hook clojure-mode-hook emacs-lisp-mode-hook))
 
   (leaf subword
