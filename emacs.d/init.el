@@ -28,7 +28,8 @@
            (ring-bell-function . 'ignore))
   :setq ((frame-title-format . '("%b - emacs"))
          (kill-buffer-query-functions . nil)
-         (message-truncate-lines . t))
+         (message-truncate-lines . t)
+         (read-process-output-max . 1048576))
   :bind ("M-z" . zap-up-to-char)
   :config
   (fset 'yes-or-no-p 'y-or-n-p)
@@ -47,6 +48,9 @@
   (leaf customize
     :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
     :config (load custom-file 'noerror))
+
+  (leaf ibuffer
+    :bind ("C-x C-b" . ibuffer))
 
   (leaf ido
     :defvar ido-decorations
@@ -76,14 +80,6 @@
       ("NSAppearanceNameAqua" (modus-themes-load-operandi))
       ("NSAppearanceNameDarkAqua" (modus-themes-load-vivendi)))
     :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
-
-  (leaf perspective
-    :ensure t
-    :init (require 'ibuffer)
-    :bind ("C-x C-b" . persp-ibuffer)
-    :custom `((persp-mode-prefix-key . ,(kbd "C-x C-x"))
-              (persp-sort . 'created))
-    :global-minor-mode persp-mode)
 
   (leaf pragmata-pro
     :config
@@ -141,20 +137,23 @@
     :ensure t
     :hook prog-mode-hook)
 
+  (leaf eglot
+    :ensure t
+    :defvar eglot-server-programs
+    :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal)))
+    :hook (clojure-mode-hook . eglot-ensure)
+    :config
+    (add-to-list 'eglot-server-programs '(clojure-mode . ("clojure-lsp"))))
+
   (leaf expand-region
     :ensure t
     :bind ("C-c w" . er/expand-region))
-
-  (leaf find-file-in-repository
-    :ensure t
-    :bind ("C-x M-f" . find-file-in-repository)
-    :custom (ffir-prompt . "Find file: "))
 
   (leaf flymake
     :hook prog-mode-hook
     :bind (flymake-mode-map
            ("C-c ! c" . flymake-start)
-           ("C-c ! l" . flymake-show-diagnostics-buffer)
+           ("C-c ! l" . flymake-show-buffer-diagnostics)
            ("C-c ! n" . flymake-goto-next-error)
            ("C-c ! p" . flymake-goto-prev-error))
     :defun flymake-proc-legacy-flymake
@@ -198,17 +197,14 @@
              (cider-repl-display-help-banner . nil)
              (cider-repl-pop-to-buffer-on-connect . nil)
              (cider-save-file-on-load . t)
-             (cider-use-fringe-indicators . nil))
+             (cider-use-fringe-indicators . nil)
+             (cider-xref-fn-depth . 90))
     :defvar cider-repl-history-file
     :defun (clojure-project-dir . clojure-mode)
     :defer-config (setq cider-repl-history-file
                         (expand-file-name
                          ".cider-repl-history"
-                         (clojure-project-dir))))
-
-  (leaf flymake-kondor
-    :ensure t
-    :hook (clojure-mode-hook . flymake-kondor-setup)))
+                         (clojure-project-dir)))))
 
 (leaf python
   :config
