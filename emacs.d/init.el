@@ -22,7 +22,6 @@
            (indent-tabs-mode . nil)
            (inhibit-startup-screen . t)
            (load-prefer-newer . t)
-           (max-mini-window-height . 1)
            (read-quoted-char-radix . 16)
            (require-final-newline . t)
            (ring-bell-function . 'ignore))
@@ -34,13 +33,6 @@
   :config
   (fset 'yes-or-no-p 'y-or-n-p)
 
-  (leaf amx
-    :ensure t
-    :custom ((amx-ignored-command-matchers . nil)
-             (amx-prompt-string . "")
-             (amx-show-key-bindings . nil))
-    :global-minor-mode t)
-
   (leaf autorevert
     :custom (auto-revert-verbose . nil)
     :global-minor-mode global-auto-revert-mode)
@@ -51,20 +43,6 @@
 
   (leaf ibuffer
     :bind ("C-x C-b" . ibuffer))
-
-  (leaf ido
-    :defvar ido-decorations
-    :defun ido-everywhere
-    :custom ((ido-enable-flex-matching . t)
-             (ido-use-faces . nil))
-    :setf (((nth 0 ido-decorations) . "")
-           ((nth 1 ido-decorations) . ""))
-    :config (ido-everywhere)
-    :global-minor-mode t)
-
-  (leaf ido-completing-read+
-    :ensure t
-    :global-minor-mode ido-ubiquitous-mode)
 
   (leaf initial-size
     :when (display-graphic-p)
@@ -94,6 +72,18 @@
     :global-minor-mode (menu-bar-mode mac-auto-operator-composition-mode))
 
   (leaf save-place
+    :global-minor-mode t)
+
+  (leaf selectrum
+    :ensure t
+    :custom ((selectrum-count-style . nil)
+             (selectrum-fix-vertical-window-height . t))
+    :config
+    (leaf selectrum-prescient
+      :ensure t
+      :defun (prescient-persist-mode . selectrum)
+      :config (prescient-persist-mode)
+      :global-minor-mode t)
     :global-minor-mode t)
 
   (leaf uniquify
