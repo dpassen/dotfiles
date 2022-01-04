@@ -50,6 +50,14 @@
     (add-to-list 'default-frame-alist '(height . 50))
     (add-to-list 'default-frame-alist '(width . 120)))
 
+  (leaf minions
+    :ensure t
+    :custom ((minions-available-modes . '())
+             (minions-mode-line-lighter . "⋯"))
+    :defvar minions-direct
+    :config (push 'flymake-mode minions-direct)
+    :global-minor-mode t)
+
   (leaf modus-themes
     :ensure t
     :init (modus-themes-load-themes)
