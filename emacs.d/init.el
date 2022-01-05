@@ -195,8 +195,7 @@
              (cider-repl-display-help-banner . nil)
              (cider-repl-pop-to-buffer-on-connect . nil)
              (cider-save-file-on-load . t)
-             (cider-use-fringe-indicators . nil)
-             (cider-xref-fn-depth . 90))
+             (cider-use-fringe-indicators . nil))
     :defvar cider-repl-history-file
     :defun (clojure-project-dir . clojure-mode)
     :defer-config (setq cider-repl-history-file
