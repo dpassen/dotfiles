@@ -107,6 +107,9 @@
       :custom ((vterm-always-compile-module . t)
                (vterm-clear-scrollback-when-clearing . t))))
 
+  (leaf xref
+    :custom (xref-search-program . 'ripgrep))
+
   (leaf zoom
     :ensure t
     :custom (zoom-size . '(0.618 . 0.618))
@@ -121,10 +124,6 @@
   (leaf company
     :ensure t
     :hook (prog-mode-hook cider-repl-mode-hook))
-
-  (leaf deadgrep
-    :ensure t
-    :bind ("C-c r" . deadgrep))
 
   (leaf dumb-jump
     :ensure t
