@@ -67,6 +67,10 @@
       ("NSAppearanceNameDarkAqua" (modus-themes-load-vivendi)))
     :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
+  (leaf orderless
+    :ensure t
+    :custom (completion-styles . '(orderless)))
+
   (leaf pragmata-pro
     :config
     (let ((default-font "PragmataPro Liga 12"))
@@ -79,23 +83,25 @@
              (mac-option-modifier . 'meta))
     :global-minor-mode (menu-bar-mode mac-auto-operator-composition-mode))
 
-  (leaf save-place
+  (leaf savehist
     :global-minor-mode t)
 
-  (leaf selectrum
-    :ensure t
-    :custom ((selectrum-count-style . nil)
-             (selectrum-fix-vertical-window-height . t))
-    :config
-    (leaf selectrum-prescient
-      :ensure t
-      :defun (prescient-persist-mode . selectrum)
-      :config (prescient-persist-mode)
-      :global-minor-mode t)
+  (leaf save-place
     :global-minor-mode t)
 
   (leaf uniquify
     :custom (uniquify-buffer-name-style . 'forward))
+
+  (leaf vertico
+    :ensure t
+    :custom ((vertico-count-format . nil)
+             (vertico-cycle . t)
+             (vertico-resize . nil))
+    :global-minor-mode t)
+
+  (leaf vertico-reverse
+    :after vertico
+    :global-minor-mode t)
 
   (leaf with-editor
     :ensure t
