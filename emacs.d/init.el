@@ -69,7 +69,8 @@
 
   (leaf orderless
     :ensure t
-    :custom (completion-styles . '(orderless)))
+    :custom ((completion-styles . '(orderless))
+             (orderless-component-separator . " +\\|[-/\.]")))
 
   (leaf pragmata-pro
     :config
