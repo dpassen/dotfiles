@@ -181,7 +181,10 @@
     :ensure t
     :bind (paredit-mode-map
            ("M-?" . nil))
-    :hook (cider-repl-mode-hook clojure-mode-hook emacs-lisp-mode-hook))
+    :hook (cider-repl-mode-hook
+           clojure-mode-hook
+           emacs-lisp-mode-hook
+           eval-expression-minibuffer-setup-hook))
 
   (leaf subword
     :hook prog-mode-hook))
