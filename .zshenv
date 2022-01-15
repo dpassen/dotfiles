@@ -1,5 +1,3 @@
-# -*- mode: sh -*-
-
 export VOLTA_HOME="$HOME/.volta"
 export PATH=/usr/local/bin:/usr/local/sbin:~/.bin:$VOLTA_HOME/bin:$PATH
 export EDITOR=mg

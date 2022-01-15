@@ -1,0 +1,10 @@
+Brewfile
+README.org
+
+# git
+.git/*
+
+# emacs
+\.\#.+
+.+~
+\#.*\# 

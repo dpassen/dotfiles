@@ -1,5 +1,3 @@
-# -*- mode: sh -*-
-
 alias tmux='tmux -2'
 alias tmux-select='tmux attach -t $(tmux ls "-F#{session_name}" 2> /dev/null | sk)'
 
