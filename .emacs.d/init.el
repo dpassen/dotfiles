@@ -27,6 +27,7 @@
            (ring-bell-function . 'ignore))
   :setq `((frame-title-format . '("%b - emacs"))
           (kill-buffer-query-functions . nil)
+          (message-truncate-lines . t)
           (read-process-output-max . ,(* 1024 1024)))
   :bind ("M-z" . zap-up-to-char)
   :config
