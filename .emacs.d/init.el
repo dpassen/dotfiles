@@ -144,11 +144,8 @@
   (leaf eglot
     :ensure t
     :custom (eglot-confirm-server-initiated-edits . nil)
-    :defvar eglot-server-programs
     :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal)))
-    :hook (clojure-mode-hook . eglot-ensure)
-    :config
-    (add-to-list 'eglot-server-programs '(clojure-mode . ("clojure-lsp"))))
+    :hook (clojure-mode-hook . eglot-ensure))
 
   (leaf expand-region
     :ensure t
