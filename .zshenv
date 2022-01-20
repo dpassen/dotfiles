@@ -1,5 +1,13 @@
 export VOLTA_HOME="$HOME/.volta"
-export PATH=/usr/local/bin:/usr/local/sbin:~/.bin:$VOLTA_HOME/bin:$PATH
+
+typeset -U path
+path+=(
+    usr/local/bin
+    /usr/local/sbin
+    ~/.bin
+    $VOLTA_HOME/bin
+)
+
 export EDITOR=mg
 export SKIM_DEFAULT_COMMAND='rg --files'
 export BAT_THEME=ansi
