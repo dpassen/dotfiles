@@ -159,7 +159,8 @@
            ("C-c ! n" . flymake-goto-next-error)
            ("C-c ! p" . flymake-goto-prev-error))
     :defun flymake-proc-legacy-flymake
-    :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
+    :config
+    (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
 
   (leaf hideshow
     :hook (prog-mode-hook . hs-minor-mode))
