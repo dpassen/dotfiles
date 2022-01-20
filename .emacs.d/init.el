@@ -82,7 +82,7 @@
     :when (display-graphic-p)
     :custom ((mac-command-modifier . nil)
              (mac-option-modifier . 'meta))
-    :global-minor-mode (menu-bar-mode mac-auto-operator-composition-mode))
+    :global-minor-mode mac-auto-operator-composition-mode)
 
   (leaf savehist
     :global-minor-mode t)
