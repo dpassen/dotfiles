@@ -25,8 +25,7 @@
   sb = scoreboard
   standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
   su = standup
-  lasttouched = "!lt() { git branch -r | grep -v ' -> ' | while read -r branch; do echo "$branch"; git log --pretty=format:"%cr" "$branch" -n 1; echo; done; }; lt"
-  lt = lasttouched
+  lt = last-touched
 
 [github]
   user = dpassen
