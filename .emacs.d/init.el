@@ -215,6 +215,11 @@
   (leaf poetry
     :ensure t))
 
+(leaf shell
+  :config
+  (leaf flymake-shellcheck
+    :hook (sh-mode-hook . flymake-shellcheck-load)))
+
 (leaf web-development
   :config
   (leaf emmet-mode
