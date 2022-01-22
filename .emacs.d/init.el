@@ -162,6 +162,9 @@
     :config
     (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
 
+  (leaf flymake-shellcheck
+    :hook (sh-mode-hook . flymake-shellcheck-load))
+
   (leaf hideshow
     :hook (prog-mode-hook . hs-minor-mode))
 
@@ -184,6 +187,12 @@
            clojure-mode-hook
            emacs-lisp-mode-hook
            eval-expression-minibuffer-setup-hook))
+
+  (leaf poetry
+    :ensure t)
+
+  (leaf restclient
+    :ensure t)
 
   (leaf subword
     :hook prog-mode-hook))
@@ -210,16 +219,6 @@
                          ".cider-repl-history"
                          (clojure-project-dir)))))
 
-(leaf python
-  :config
-  (leaf poetry
-    :ensure t))
-
-(leaf shell
-  :config
-  (leaf flymake-shellcheck
-    :hook (sh-mode-hook . flymake-shellcheck-load)))
-
 (leaf web-development
   :config
   (leaf emmet-mode
@@ -228,9 +227,6 @@
     :bind (emmet-mode-keymap
            ("C-c w" . nil))
     :hook (web-mode-hook . emmet-mode))
-
-  (leaf restclient
-    :ensure t)
 
   (leaf web-mode
     :ensure t
