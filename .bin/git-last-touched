@@ -16,7 +16,7 @@ print_last_touched() {
         echo "$branch";
         git log --pretty=format:"%cr" "$branch" -n 1;
         echo;
-    done;
+    done
 }
 
 last_touched() {
