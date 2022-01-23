@@ -148,9 +148,8 @@
     :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal)))
     :hook (clojure-mode-hook . eglot-ensure))
 
-  (leaf expand-region
-    :ensure t
-    :bind ("C-c w" . er/expand-region))
+  (leaf electric-pair
+    :hook (prog-mode-hook eval-expression-minibuffer-setup-hook))
 
   (leaf flymake
     :hook prog-mode-hook
@@ -180,23 +179,33 @@
   (leaf markdown-mode
     :ensure t)
 
-  (leaf paredit
-    :ensure t
-    :bind (paredit-mode-map
-           ("M-?" . nil))
-    :hook (cider-repl-mode-hook
-           clojure-mode-hook
-           emacs-lisp-mode-hook
-           eval-expression-minibuffer-setup-hook))
-
   (leaf poetry
     :ensure t)
+
+  (leaf puni
+    :ensure t
+    :hook prog-mode-hook
+    :bind (("C-<left>" . puni-barf-forward)
+           ("C-<right>" . puni-slurp-forward)
+           ("C-=" . puni-expand-region)
+           ("C-M-<left>" . puni-barf-backward)
+           ("C-M-<right>" . puni-slurp-backward)
+           ("M-r" . puni-raise)
+           ("M-s" . puni-splice)))
 
   (leaf restclient
     :ensure t)
 
   (leaf subword
-    :hook prog-mode-hook))
+    :hook prog-mode-hook)
+
+  (leaf web-mode
+    :ensure t
+    :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'")
+    :custom ((web-mode-code-indent-offset . 2)
+             (web-mode-css-indent-offset . 2)
+             (web-mode-enable-auto-closing . t)
+             (web-mode-markup-indent-offset . 2))))
 
 (leaf clojure
   :config
@@ -219,23 +228,6 @@
                         (expand-file-name
                          ".cider-repl-history"
                          (clojure-project-dir)))))
-
-(leaf web-development
-  :config
-  (leaf emmet-mode
-    :ensure t
-    :custom (emmet-preview-default . nil)
-    :bind (emmet-mode-keymap
-           ("C-c w" . nil))
-    :hook (web-mode-hook . emmet-mode))
-
-  (leaf web-mode
-    :ensure t
-    :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'")
-    :custom ((web-mode-code-indent-offset . 2)
-             (web-mode-css-indent-offset . 2)
-             (web-mode-enable-auto-closing . t)
-             (web-mode-markup-indent-offset . 2))))
 
 (provide 'init)
 
