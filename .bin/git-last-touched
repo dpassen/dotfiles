@@ -7,7 +7,7 @@ remote_branches() {
     git branch -r
 }
 
-exclude_head() {
+exclude_remote_head() {
     rg -v ' -> '
 }
 
@@ -20,7 +20,7 @@ print_last_touched() {
 }
 
 last_touched() {
-    remote_branches | exclude_head | print_last_touched
+    remote_branches | exclude_remote_head | print_last_touched
 }
 
 last_touched
