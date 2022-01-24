@@ -85,8 +85,9 @@
   :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal)))
   :hook (clojure-mode-hook . eglot-ensure))
 
-(leaf electric-pair
-  :hook (prog-mode-hook eval-expression-minibuffer-setup-hook))
+(leaf expand-region
+  :ensure t
+  :bind ("C-=" . er/expand-region))
 
 (leaf flymake
   :hook prog-mode-hook
@@ -147,6 +148,15 @@
   :custom ((completion-styles . '(orderless))
            (orderless-component-separator . " +\\|[-/_\.]")))
 
+(leaf paredit
+  :ensure t
+  :bind (paredit-mode-map
+         ("M-?" . nil))
+  :hook (cider-repl-mode-hook
+         clojure-mode-hook
+         emacs-lisp-mode-hook
+         eval-expression-minibuffer-setup-hook))
+
 (leaf poetry
   :ensure t)
 
@@ -155,18 +165,6 @@
   (let ((default-font "PragmataPro Liga 12"))
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
-
-(leaf puni
-  :ensure t
-  :hook prog-mode-hook
-  :bind (("M-r" . puni-raise)
-         ("M-s" . puni-splice)
-         (puni-mode-map
-          ("C-<left>" . puni-barf-forward)
-          ("C-<right>" . puni-slurp-forward)
-          ("C-=" . puni-expand-region)
-          ("C-M-<left>" . puni-barf-backward)
-          ("C-M-<right>" . puni-slurp-backward))))
 
 (leaf railwaycat
   :when (display-graphic-p)
