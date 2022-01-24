@@ -159,13 +159,14 @@
 (leaf puni
   :ensure t
   :hook prog-mode-hook
-  :bind (("C-<left>" . puni-barf-forward)
-         ("C-<right>" . puni-slurp-forward)
-         ("C-=" . puni-expand-region)
-         ("C-M-<left>" . puni-barf-backward)
-         ("C-M-<right>" . puni-slurp-backward)
-         ("M-r" . puni-raise)
-         ("M-s" . puni-splice)))
+  :bind (("M-r" . puni-raise)
+         ("M-s" . puni-splice)
+         (puni-mode-map
+          ("C-<left>" . puni-barf-forward)
+          ("C-<right>" . puni-slurp-forward)
+          ("C-=" . puni-expand-region)
+          ("C-M-<left>" . puni-barf-backward)
+          ("C-M-<right>" . puni-slurp-backward))))
 
 (leaf railwaycat
   :when (display-graphic-p)
