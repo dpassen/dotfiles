@@ -20,4 +20,4 @@
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop
-    {:mvn/version "1.7.33"}}}}}
+    {:mvn/version "1.7.35"}}}}}
