@@ -128,7 +128,7 @@
 
 (leaf minions
   :ensure t
-  :custom ((minions-available-modes . '())
+  :custom ((minions-available-modes . nil)
            (minions-mode-line-lighter . "⋯"))
   :defvar minions-direct
   :config (push 'flymake-mode minions-direct)
