@@ -101,6 +101,7 @@
   (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
 
 (leaf flymake-shellcheck
+  :ensure t
   :hook (sh-mode-hook . flymake-shellcheck-load))
 
 (leaf hideshow
