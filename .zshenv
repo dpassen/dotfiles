@@ -10,4 +10,4 @@ path+=(
 export EDITOR=mg
 export SKIM_DEFAULT_COMMAND='rg --files'
 export BAT_THEME=ansi
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
