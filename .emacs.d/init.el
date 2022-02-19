@@ -190,15 +190,12 @@
 
 (leaf vertico
   :ensure t
-  :custom ((vertico-count . 18)
-           (vertico-count-format . nil)
-           (vertico-cycle . t))
+  :custom ((vertico-count-format . nil)
+           (vertico-cycle . t)
+           (vertico-resize . nil))
   :global-minor-mode t)
 
-(leaf vertico-posframe
-  :ensure t
-  :custom (vertico-posframe-parameters . '((left-fringe . 8)
-                                           (right-fringe . 8)))
+(leaf vertico-reverse
   :after vertico
   :global-minor-mode t)
 
