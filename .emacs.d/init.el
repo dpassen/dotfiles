@@ -82,8 +82,7 @@
 (leaf eglot
   :ensure t
   :custom (eglot-confirm-server-initiated-edits . nil)
-  :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal)))
-  :hook (clojure-mode-hook . eglot-ensure))
+  :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal))))
 
 (leaf expand-region
   :ensure t
@@ -99,6 +98,10 @@
   :defun flymake-proc-legacy-flymake
   :config
   (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
+
+(leaf flymake-kondor
+  :ensure t
+  :hook (clojure-mode-hook . flymake-kondor-setup))
 
 (leaf flymake-shellcheck
   :ensure t
