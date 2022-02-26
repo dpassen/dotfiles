@@ -79,33 +79,18 @@
   :ensure t
   :hook prog-mode-hook)
 
-(leaf eglot
-  :ensure t
-  :custom (eglot-confirm-server-initiated-edits . nil)
-  :custom-face (eglot-highlight-symbol-face . '((t :inherit 'normal))))
-
 (leaf expand-region
   :ensure t
   :bind ("C-=" . er/expand-region))
 
-(leaf flymake
-  :hook prog-mode-hook
-  :bind (flymake-mode-map
-         ("C-c ! c" . flymake-start)
-         ("C-c ! l" . flymake-show-buffer-diagnostics)
-         ("C-c ! n" . flymake-goto-next-error)
-         ("C-c ! p" . flymake-goto-prev-error))
-  :defun flymake-proc-legacy-flymake
-  :config
-  (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
-
-(leaf flymake-kondor
+(leaf flycheck
   :ensure t
-  :hook (clojure-mode-hook . flymake-kondor-setup))
+  :hook prog-mode-hook)
 
-(leaf flymake-shellcheck
+(leaf flycheck-clj-kondo
   :ensure t
-  :hook (sh-mode-hook . flymake-shellcheck-load))
+  :require t
+  :after clojure-mode)
 
 (leaf hideshow
   :hook (prog-mode-hook . hs-minor-mode))
@@ -135,7 +120,7 @@
   :custom ((minions-available-modes . nil)
            (minions-mode-line-lighter . "⋯"))
   :defvar minions-direct
-  :config (push 'flymake-mode minions-direct)
+  :config (push 'flycheck-mode minions-direct)
   :global-minor-mode t)
 
 (leaf modus-themes
@@ -170,6 +155,12 @@
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
 
+(leaf projectile
+  :ensure t
+  :bind  (projectile-mode-map
+          ("C-x p" . projectile-command-map))
+  :global-minor-mode t)
+
 (leaf railwaycat
   :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
@@ -177,6 +168,9 @@
   :global-minor-mode mac-auto-operator-composition-mode)
 
 (leaf restclient
+  :ensure t)
+
+(leaf rg
   :ensure t)
 
 (leaf savehist
@@ -219,9 +213,6 @@
     :bind ("C-x RET" . vterm-other-window)
     :custom ((vterm-always-compile-module . t)
              (vterm-clear-scrollback-when-clearing . t))))
-
-(leaf xref
-  :custom (xref-search-program . 'ripgrep))
 
 (leaf zoom
   :ensure t
