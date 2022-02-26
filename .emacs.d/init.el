@@ -70,6 +70,14 @@
   :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
   :config (load custom-file 'noerror))
 
+(leaf default-text-scale
+  :ensure t
+  :global-minor-mode t)
+
+(leaf display-line-numbers
+  :disabled t
+  :hook prog-mode-hook)
+
 (leaf dumb-jump
   :ensure t
   :custom (dumb-jump-prefer-searcher . 'rg)
