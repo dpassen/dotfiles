@@ -119,8 +119,8 @@
   :ensure t
   :custom ((minions-available-modes . nil)
            (minions-mode-line-lighter . "⋯"))
-  :defvar minions-direct
-  :config (push 'flycheck-mode minions-direct)
+  :defvar minions-prominent-modes
+  :config (push 'flycheck-mode minions-prominent-modes)
   :global-minor-mode t)
 
 (leaf modus-themes
