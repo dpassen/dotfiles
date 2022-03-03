@@ -20,4 +20,17 @@
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop
-    {:mvn/version "1.7.36"}}}}}
+    {:mvn/version "1.7.36"}}}
+  :watson
+  {:extra-deps
+   {io.github.clj-holmes/clj-watson
+    {:git/tag "v3.0.1"
+     :git/sha "b4d877d"}}
+   :exec-fn clj-watson.entrypoint/scan
+   :exec-args
+   {:aliases           ["*"]
+    :database-strategy "dependency-check"
+    :deps-edn-path     "deps.edn"
+    :fail-on-result    true
+    :output            "stdout"
+    :suggest-fix       true}}}}
