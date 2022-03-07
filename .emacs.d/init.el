@@ -61,8 +61,10 @@
   :ensure t
   :custom (clojure-align-forms-automatically . t))
 
-(leaf company
+(leaf corfu
   :ensure t
+  :custom ((corfu-auto . t)
+           (corfu-cycle . t))
   :hook (prog-mode-hook cider-repl-mode-hook))
 
 (leaf customize
