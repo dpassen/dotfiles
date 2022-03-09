@@ -118,8 +118,8 @@
 
 (leaf magit
   :ensure t
-  :bind (("C-x g" . magit-status)
-         ("C-c g" . magit-file-dispatch)))
+  :bind (("C-c g" . magit-file-dispatch)
+         ("C-x g" . magit-status)))
 
 (leaf markdown-mode
   :ensure t)
