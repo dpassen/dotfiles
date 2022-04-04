@@ -14,6 +14,18 @@
 [rerere]
   enabled = true
 
+[diff]
+  tool = difftastic
+
+[difftool]
+  prompt = false
+
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+  difftool = true
+
 [alias]
   st = status
   ci = commit
@@ -26,6 +38,7 @@
   standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
   su = standup
   lt = last-touched
+  dft = difftool
 
 [github]
   user = dpassen
