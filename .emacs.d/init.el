@@ -142,7 +142,7 @@
 
 (leaf orderless
   :ensure t
-  :custom ((completion-styles . '(orderless))
+  :custom ((completion-styles . '(orderless basic))
            (orderless-component-separator . " +\\|[-/_\.]")))
 
 (leaf paredit
