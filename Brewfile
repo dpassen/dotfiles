@@ -67,4 +67,4 @@ brew "devlocker/tap/tychus"
 
 cask "emacs-mac"
 cask "mactex-no-gui"
-cask "temurin"
+cask "temurin17"
