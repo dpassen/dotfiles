@@ -75,6 +75,9 @@
   :ensure t
   :global-minor-mode t)
 
+(leaf dired
+  :custom (dired-kill-when-opening-new-dired-buffer . t))
+
 (leaf display-line-numbers
   :disabled t
   :hook prog-mode-hook)
