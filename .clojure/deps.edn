@@ -2,8 +2,8 @@
  {:antq
   {:extra-deps
    {io.github.liquidz/antq
-    {:git/tag "1.6.0"
-     :git/sha "d242476"}}
+    {:git/tag "1.6.1"
+     :git/sha "ac1f009"}}
    :exec-fn antq.tool/outdated}
   :check
   {:extra-deps
@@ -25,7 +25,7 @@
   {:extra-deps
    {io.github.clj-holmes/clj-watson
     {:git/tag "v4.0.1"
-     :git/sha "65d928c"}}
+     :git/sha "65d928co"}}
    :exec-fn clj-watson.entrypoint/scan
    :exec-args
    {:aliases           ["*"]
