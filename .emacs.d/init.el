@@ -135,12 +135,10 @@
   :global-minor-mode t)
 
 (leaf modus-themes
-  :ensure t
-  :init (modus-themes-load-themes)
-  :config
+  :init
   (pcase (plist-get (mac-application-state) :appearance)
-    ("NSAppearanceNameAqua" (modus-themes-load-operandi))
-    ("NSAppearanceNameDarkAqua" (modus-themes-load-vivendi)))
+    ("NSAppearanceNameAqua" (load-theme 'modus-operandi))
+    ("NSAppearanceNameDarkAqua" (load-theme 'modus-vivendi)))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
 (leaf orderless
