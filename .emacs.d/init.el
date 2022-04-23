@@ -105,6 +105,11 @@
   :require t
   :after clojure-mode)
 
+(leaf flycheck-color-mode-line
+  :ensure t
+  :custom (flycheck-color-mode-line-show-running . nil)
+  :hook flycheck-mode-hook)
+
 (leaf hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
@@ -131,8 +136,7 @@
 (leaf minions
   :ensure t
   :custom ((minions-available-modes . nil)
-           (minions-mode-line-lighter . "⋯")
-           (minions-prominent-modes . '(flycheck-mode)))
+           (minions-mode-line-lighter . "⋯"))
   :global-minor-mode t)
 
 (leaf modus-themes
