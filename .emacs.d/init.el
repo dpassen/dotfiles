@@ -179,7 +179,10 @@
   :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
            (mac-option-modifier . 'meta))
-  :global-minor-mode mac-auto-operator-composition-mode)
+  :global-minor-mode mac-auto-operator-composition-mode
+  :config
+  (global-unset-key [swipe-left])
+  (global-unset-key [swipe-right]))
 
 (leaf restclient
   :ensure t)
