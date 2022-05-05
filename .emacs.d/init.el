@@ -108,6 +108,7 @@
 (leaf flycheck-color-mode-line
   :ensure t
   :custom (flycheck-color-mode-line-show-running . nil)
+  :after flycheck
   :hook flycheck-mode-hook)
 
 (leaf hideshow
