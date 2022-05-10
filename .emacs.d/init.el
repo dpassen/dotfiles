@@ -170,12 +170,6 @@
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
 
-(leaf projectile
-  :ensure t
-  :bind  (projectile-mode-map
-          ("C-x p" . projectile-command-map))
-  :global-minor-mode t)
-
 (leaf railwaycat
   :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
@@ -186,9 +180,6 @@
   (global-unset-key [swipe-right]))
 
 (leaf restclient
-  :ensure t)
-
-(leaf rg
   :ensure t)
 
 (leaf savehist
@@ -231,6 +222,9 @@
     :bind ("C-x RET" . vterm-other-window)
     :custom ((vterm-always-compile-module . t)
              (vterm-clear-scrollback-when-clearing . t))))
+
+(leaf xref
+  :custom (xref-search-program . 'ripgrep))
 
 (leaf zoom
   :ensure t
