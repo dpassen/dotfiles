@@ -4,23 +4,23 @@ set -o nounset
 set -o errexit
 
 remote_branches() {
-    git branch -r
+	git branch -r
 }
 
 exclude_remote_head() {
-    rg -v ' -> '
+	rg -v " -> "
 }
 
 print_last_touched() {
-    while read -r branch; do
-        echo "$branch";
-        git log --pretty=format:"%cr" "$branch" -n 1;
-        echo;
-    done
+	while read -r branch; do
+		echo "$branch"
+		git log --pretty=format:"%cr" "$branch" -n 1
+		echo
+	done
 }
 
 last_touched() {
-    remote_branches | exclude_remote_head | print_last_touched
+	remote_branches | exclude_remote_head | print_last_touched
 }
 
 last_touched
