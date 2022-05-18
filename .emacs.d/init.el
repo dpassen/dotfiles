@@ -158,8 +158,8 @@
          ("M-?" . nil))
   :hook (cider-repl-mode-hook
          clojure-mode-hook
-         emacs-lisp-mode-hook
-         eval-expression-minibuffer-setup-hook))
+         eval-expression-minibuffer-setup-hook
+         lisp-data-mode-hook))
 
 (leaf poetry
   :ensure t)
