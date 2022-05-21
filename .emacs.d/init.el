@@ -98,6 +98,7 @@
 
 (leaf flycheck
   :ensure t
+  :custom (flycheck-indication-mode . nil)
   :hook prog-mode-hook)
 
 (leaf flycheck-clj-kondo
