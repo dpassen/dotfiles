@@ -35,7 +35,7 @@
 
 (leaf apheleia
   :ensure t
-  :hook prog-mode-hook)
+  :hook (prog-mode-hook yaml-mode-hook))
 
 (leaf autorevert
   :custom (auto-revert-verbose . nil)
@@ -226,6 +226,9 @@
 
 (leaf xref
   :custom (xref-search-program . 'ripgrep))
+
+(leaf yaml-mode
+  :ensure t)
 
 (leaf zoom
   :ensure t
