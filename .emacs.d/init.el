@@ -35,7 +35,7 @@
 
 (leaf apheleia
   :ensure t
-  :hook (prog-mode-hook yaml-mode-hook))
+  :global-minor-mode apheleia-global-mode)
 
 (leaf autorevert
   :custom (auto-revert-verbose . nil)
@@ -66,22 +66,14 @@
   :ensure t
   :custom ((corfu-auto . t)
            (corfu-cycle . t))
-  :hook (prog-mode-hook cider-repl-mode-hook))
+  :global-minor-mode global-corfu-mode)
 
 (leaf customize
   :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
   :config (load custom-file 'noerror))
 
-(leaf default-text-scale
-  :ensure t
-  :global-minor-mode t)
-
 (leaf dired
   :custom (dired-kill-when-opening-new-dired-buffer . t))
-
-(leaf display-line-numbers
-  :disabled t
-  :hook prog-mode-hook)
 
 (leaf dumb-jump
   :ensure t
@@ -90,7 +82,7 @@
 
 (leaf editorconfig
   :ensure t
-  :hook prog-mode-hook)
+  :global-minor-mode t)
 
 (leaf expand-region
   :ensure t
@@ -99,7 +91,7 @@
 (leaf flycheck
   :ensure t
   :custom (flycheck-indication-mode . nil)
-  :hook prog-mode-hook)
+  :global-minor-mode global-flycheck-mode)
 
 (leaf flycheck-clj-kondo
   :ensure t
