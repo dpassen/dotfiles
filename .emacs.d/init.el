@@ -25,13 +25,12 @@
            (load-prefer-newer . t)
            (read-quoted-char-radix . 16)
            (require-final-newline . t)
-           (ring-bell-function . 'ignore))
+           (ring-bell-function . 'ignore)
+           (use-short-answers . t))
   :setq ((frame-title-format . '("%b - emacs"))
          (kill-buffer-query-functions . nil)
          (message-truncate-lines . t))
-  :bind ("M-z" . zap-up-to-char)
-  :config
-  (fset 'yes-or-no-p 'y-or-n-p))
+  :bind ("M-z" . zap-up-to-char))
 
 (leaf apheleia
   :ensure t
