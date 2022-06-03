@@ -25,7 +25,7 @@
   {:extra-deps
    {io.github.clj-holmes/clj-watson
     {:git/tag "v4.0.1"
-     :git/sha "65d928co"}}
+     :git/sha "65d928c"}}
    :exec-fn clj-watson.entrypoint/scan
    :exec-args
    {:aliases           ["*"]
