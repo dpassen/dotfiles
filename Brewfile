@@ -66,6 +66,7 @@ brew "clojure-lsp/brew/clojure-lsp-native"
 brew "clojure/tools/clojure"
 brew "devlocker/tap/tychus"
 
+cask "eloston-chromium"
 cask "emacs-mac"
 cask "mactex-no-gui"
 cask "temurin17"
