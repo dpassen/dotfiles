@@ -197,6 +197,12 @@
   :after vertico
   :global-minor-mode t)
 
+(leaf vterm
+  :ensure t
+  :bind ("C-x RET" . vterm-other-window)
+  :custom ((vterm-always-compile-module . t)
+           (vterm-clear-scrollback-when-clearing . t)))
+
 (leaf web-mode
   :ensure t
   :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'")
@@ -207,13 +213,7 @@
 
 (leaf with-editor
   :ensure t
-  :hook (vterm-mode-hook . with-editor-export-editor)
-  :init
-  (leaf vterm
-    :ensure t
-    :bind ("C-x RET" . vterm-other-window)
-    :custom ((vterm-always-compile-module . t)
-             (vterm-clear-scrollback-when-clearing . t))))
+  :hook (vterm-mode-hook . with-editor-export-editor))
 
 (leaf xref
   :custom (xref-search-program . 'ripgrep))
