@@ -199,9 +199,13 @@
 
 (leaf vterm
   :ensure t
-  :bind ("C-x RET" . vterm-other-window)
   :custom ((vterm-always-compile-module . t)
            (vterm-clear-scrollback-when-clearing . t)))
+
+(leaf vterm-toggle
+  :ensure t
+  :bind ("C-x RET" . vterm-toggle)
+  :custom (vterm-toggle-scope . 'project))
 
 (leaf web-mode
   :ensure t
