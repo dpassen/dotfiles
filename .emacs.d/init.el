@@ -17,7 +17,8 @@
     :config (leaf-keywords-init)))
 
 (leaf emacs
-  :custom ((column-number-mode . t)
+  :custom ((async-shell-command-buffer . 'new-buffer)
+           (column-number-mode . t)
            (confirm-kill-processes . nil)
            (enable-recursive-minibuffers . t)
            (indent-tabs-mode . nil)
