@@ -20,7 +20,6 @@
   :custom ((async-shell-command-buffer . 'new-buffer)
            (column-number-mode . t)
            (confirm-kill-processes . nil)
-           (enable-recursive-minibuffers . t)
            (indent-tabs-mode . nil)
            (inhibit-startup-screen . t)
            (load-prefer-newer . t)
