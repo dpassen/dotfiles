@@ -78,7 +78,7 @@
 (leaf dumb-jump
   :ensure t
   :custom (dumb-jump-prefer-searcher . 'rg)
-  :config (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+  :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (leaf editorconfig
   :ensure t
