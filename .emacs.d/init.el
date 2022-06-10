@@ -220,7 +220,9 @@
   :hook (vterm-mode-hook . with-editor-export-editor))
 
 (leaf xref
-  :custom (xref-search-program . 'ripgrep))
+  :custom ((xref-after-jump-hook . '(recenter))
+           (xref-after-return-hook . nil)
+           (xref-search-program . 'ripgrep)))
 
 (leaf yaml-mode
   :ensure t)
