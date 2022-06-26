@@ -159,7 +159,7 @@
 
 (leaf pragmata-pro
   :config
-  (let ((default-font "PragmataPro Liga 12"))
+  (let ((default-font "PragmataPro 12"))
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
 
@@ -167,7 +167,6 @@
   :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
            (mac-option-modifier . 'meta))
-  :global-minor-mode mac-auto-operator-composition-mode
   :config
   (global-unset-key [swipe-left])
   (global-unset-key [swipe-right]))
