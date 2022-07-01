@@ -25,7 +25,7 @@
            (read-quoted-char-radix . 16)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq ((frame-title-format . '("%b - emacs")))
+  :setq (frame-title-format . '("%b - emacs"))
   :bind ("M-z" . zap-up-to-char))
 
 (leaf apheleia
