@@ -1,4 +1,3 @@
-
 # Created by https://www.toptal.com/developers/gitignore/api/emacs,macos
 # Edit at https://www.toptal.com/developers/gitignore?templates=emacs,macos
 
@@ -81,5 +80,9 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/emacs,macos
