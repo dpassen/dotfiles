@@ -2,8 +2,8 @@
  {:antq
   {:extra-deps
    {io.github.liquidz/antq
-    {:git/tag "1.9.859"
-     :git/sha "96fab63"}}
+    {:git/tag "1.9.863"
+     :git/sha "b7102b8"}}
    :exec-fn antq.tool/outdated}
   :check
   {:extra-deps

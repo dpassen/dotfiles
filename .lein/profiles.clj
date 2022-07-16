@@ -1,6 +1,6 @@
 {:user
  {:plugins
-  [[com.github.liquidz/antq "1.9.859"]
+  [[com.github.liquidz/antq "1.9.863"]
    [com.jakemccrary/lein-test-refresh "0.25.0"]
    [lein-try/lein-try "0.4.3"]]
   :test-refresh
