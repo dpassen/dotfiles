@@ -27,7 +27,8 @@
            (require-final-newline . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq (frame-title-format . '("%b - emacs"))
+  :setq ((frame-title-format . '("%b - emacs"))
+         (kill-buffer-query-functions . nil))
   :bind ("M-z" . zap-up-to-char))
 
 (leaf apheleia
