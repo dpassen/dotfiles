@@ -28,7 +28,8 @@
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
   :setq ((frame-title-format . '("%b - emacs"))
-         (kill-buffer-query-functions . nil))
+         (kill-buffer-query-functions . nil)
+         (message-truncate-lines . t))
   :bind ("M-z" . zap-up-to-char))
 
 (leaf apheleia
