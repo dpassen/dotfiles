@@ -123,6 +123,10 @@
   :bind (("C-c g" . magit-file-dispatch)
          ("C-x g" . magit-status)))
 
+(leaf magit-delta
+  :ensure t
+  :hook magit-mode-hook)
+
 (leaf markdown-mode
   :ensure t)
 
