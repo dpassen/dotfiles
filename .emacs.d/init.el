@@ -71,6 +71,10 @@
   :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
   :config (load custom-file 'noerror))
 
+(leaf default-text-scale
+  :ensure t
+  :global-minor-mode t)
+
 (leaf dired
   :custom (dired-kill-when-opening-new-dired-buffer . t))
 
@@ -78,6 +82,9 @@
   :ensure t
   :custom (dumb-jump-prefer-searcher . 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
+
+(leaf edit-indirect
+  :ensure t)
 
 (leaf editorconfig
   :ensure t
@@ -102,6 +109,13 @@
   :custom (flycheck-color-mode-line-show-running . nil)
   :after flycheck
   :hook flycheck-mode-hook)
+
+(leaf git-link
+  :ensure t
+  :custom (git-link-use-commit . t))
+
+(leaf git-timemachine
+  :ensure t)
 
 (leaf hideshow
   :hook (prog-mode-hook . hs-minor-mode))
