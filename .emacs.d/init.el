@@ -160,8 +160,11 @@
 
 (leaf orderless
   :ensure t
-  :custom ((completion-styles . '(orderless basic))
-           (orderless-component-separator . " +\\|[-/_\.]")))
+  :custom
+  ((completion-category-overrides . '((cider (styles basic))
+                                      (file (styles basic partial-completion))))
+   (completion-styles . '(orderless basic))
+   (orderless-component-separator . " +\\|[-/_\.]")))
 
 (leaf paredit
   :ensure t
