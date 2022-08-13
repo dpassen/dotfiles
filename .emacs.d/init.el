@@ -110,6 +110,10 @@
   :after flycheck
   :hook flycheck-mode-hook)
 
+(leaf gcmh
+  :ensure t
+  :global-minor-mode t)
+
 (leaf git-link
   :ensure t
   :custom (git-link-use-commit . t))
