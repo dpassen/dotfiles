@@ -155,7 +155,8 @@
   :global-minor-mode t)
 
 (leaf modus-themes
-  :custom (modus-themes-region . '(accented bg-only))
+  :custom ((modus-themes-mode-line . '(borderless))
+           (modus-themes-region . '(accented bg-only)))
   :init
   (pcase (plist-get (mac-application-state) :appearance)
     ("NSAppearanceNameAqua" (load-theme 'modus-operandi))
