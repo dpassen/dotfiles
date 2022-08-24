@@ -78,6 +78,9 @@
 (leaf dired
   :custom (dired-kill-when-opening-new-dired-buffer . t))
 
+(leaf display-line-numbers
+  :hook prog-mode-hook)
+
 (leaf dumb-jump
   :ensure t
   :custom (dumb-jump-prefer-searcher . 'rg)
@@ -156,7 +159,8 @@
 
 (leaf modus-themes
   :custom ((modus-themes-mode-line . '(borderless))
-           (modus-themes-region . '(accented bg-only)))
+           (modus-themes-region . '(accented bg-only))
+           (modus-themes-subtle-line-numbers . t))
   :init
   (pcase (plist-get (mac-application-state) :appearance)
     ("NSAppearanceNameAqua" (load-theme 'modus-operandi))
