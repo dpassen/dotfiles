@@ -189,6 +189,9 @@
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
 
+(leaf project
+  :custom (project-switch-commands . 'project-find-file))
+
 (leaf railwaycat
   :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
