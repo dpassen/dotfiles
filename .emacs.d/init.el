@@ -78,9 +78,6 @@
 (leaf dired
   :custom (dired-kill-when-opening-new-dired-buffer . t))
 
-(leaf display-line-numbers
-  :hook prog-mode-hook)
-
 (leaf dumb-jump
   :ensure t
   :custom (dumb-jump-prefer-searcher . 'rg)
