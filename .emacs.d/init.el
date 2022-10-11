@@ -7,6 +7,7 @@
   (customize-set-variable
    'package-archives '(("melpa" . "https://melpa.org/packages/")
                        ("gnu" . "https://elpa.gnu.org/packages/")))
+  (setq package-pinned-packages '((json-mode . "gnu")))
   (package-initialize)
   (unless (package-installed-p 'leaf)
     (package-refresh-contents)
@@ -132,6 +133,9 @@
   :config
   (add-to-list 'default-frame-alist '(height . 50))
   (add-to-list 'default-frame-alist '(width . 120)))
+
+(leaf json-mode
+  :ensure t)
 
 (leaf just-mode
   :ensure t)
