@@ -134,9 +134,6 @@
   (add-to-list 'default-frame-alist '(height . 50))
   (add-to-list 'default-frame-alist '(width . 120)))
 
-(leaf json-mode
-  :ensure t)
-
 (leaf just-mode
   :ensure t)
 
@@ -264,7 +261,7 @@
 
 (leaf web-mode
   :ensure t
-  :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'")
+  :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'" "\\.json\\'")
   :custom ((web-mode-code-indent-offset . 2)
            (web-mode-css-indent-offset . 2)
            (web-mode-enable-auto-closing . t)
