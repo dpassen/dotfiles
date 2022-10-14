@@ -7,7 +7,6 @@
   (customize-set-variable
    'package-archives '(("melpa" . "https://melpa.org/packages/")
                        ("gnu" . "https://elpa.gnu.org/packages/")))
-  (setq package-pinned-packages '((json-mode . "gnu")))
   (package-initialize)
   (unless (package-installed-p 'leaf)
     (package-refresh-contents)
