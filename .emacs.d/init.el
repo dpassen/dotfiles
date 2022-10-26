@@ -255,8 +255,8 @@
 
 (leaf vterm-toggle
   :ensure t
-  :bind ("C-x RET" . vterm-toggle)
-  :custom (vterm-toggle-scope . 'project))
+  :custom (vterm-toggle-scope . 'project)
+  :bind ("C-x RET" . vterm-toggle))
 
 (leaf web-mode
   :ensure t
