@@ -163,6 +163,7 @@
 
 (leaf magit
   :ensure t
+  :custom (magit-diff-refine-hunk . t)
   :bind (("C-c g" . magit-file-dispatch)
          ("C-x g" . magit-status)))
 
