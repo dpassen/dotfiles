@@ -1,7 +1,12 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 set -o nounset
 set -o errexit
+set -o pipefail
+
+if [[ "${TRACE-0}" == "1" ]]; then
+    set -o xtrace
+fi
 
 remote_branches() {
     git branch -r
