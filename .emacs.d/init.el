@@ -273,9 +273,12 @@
   :hook (vterm-mode-hook . with-editor-export-editor))
 
 (leaf xref
-  :custom ((xref-after-jump-hook . '(recenter))
-           (xref-after-return-hook . nil)
-           (xref-search-program . 'ripgrep)))
+  :custom
+  ((xref-after-jump-hook . '(recenter))
+   (xref-after-return-hook . nil)
+   (xref-search-program . 'ripgrep)
+   (xref-show-definitions-function . #'xref-show-definitions-completing-read))
+  :defun xref-show-definitions-completing-read)
 
 (leaf yaml-mode
   :ensure t)
