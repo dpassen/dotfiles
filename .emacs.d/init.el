@@ -92,6 +92,7 @@
 
 (leaf expand-region
   :ensure t
+  :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
 
 (leaf flycheck
