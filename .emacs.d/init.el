@@ -64,7 +64,8 @@
 (leaf corfu
   :ensure t
   :custom ((corfu-auto . t)
-           (corfu-cycle . t))
+           (corfu-cycle . t)
+           (corfu-preselect-first . nil))
   :global-minor-mode global-corfu-mode)
 
 (leaf customize
