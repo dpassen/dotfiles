@@ -40,6 +40,15 @@
   :custom (auto-revert-verbose . nil)
   :global-minor-mode global-auto-revert-mode)
 
+(leaf cape
+  :ensure t
+  :bind (("C-c p p" . completion-at-point)
+         ("C-c p d" . cape-dabbrev)
+         ("C-c p f" . cape-file)
+         ("C-c p i" . cape-ispell)
+         ("C-c p k" . cape-keyword)
+         ("C-c p s" . cape-symbol)))
+
 (leaf cider
   :ensure t
   :custom ((cider-connection-message-fn . nil)
