@@ -105,21 +105,24 @@
   :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
 
-(leaf flycheck
-  :ensure t
-  :custom (flycheck-indication-mode . nil)
-  :global-minor-mode global-flycheck-mode)
+(leaf flymake
+  :hook prog-mode-hook
+  :bind (flymake-mode-map
+         ("C-c ! c" . flymake-start)
+         ("C-c ! l" . flymake-show-buffer-diagnostics)
+         ("C-c ! n" . flymake-goto-next-error)
+         ("C-c ! p" . flymake-goto-prev-error))
+  :defun flymake-proc-legacy-flymake
+  :config
+  (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake))
 
-(leaf flycheck-clj-kondo
+(leaf flymake-kondor
   :ensure t
-  :require t
-  :after clojure-mode)
+  :hook (clojure-mode-hook . flymake-kondor-setup))
 
-(leaf flycheck-color-mode-line
+(leaf flymake-shellcheck
   :ensure t
-  :custom (flycheck-color-mode-line-show-running . nil)
-  :after flycheck
-  :hook flycheck-mode-hook)
+  :hook (sh-mode-hook . flymake-shellcheck-load))
 
 (leaf git-link
   :ensure t
@@ -180,6 +183,7 @@
 (leaf minions
   :ensure t
   :custom ((minions-available-modes . nil)
+           (minions-direct  . '(flymake-mode))
            (minions-mode-line-lighter . "⋯"))
   :global-minor-mode t)
 
