@@ -183,8 +183,8 @@
 (leaf minions
   :ensure t
   :custom ((minions-available-modes . nil)
-           (minions-direct  . '(flymake-mode))
-           (minions-mode-line-lighter . "⋯"))
+           (minions-mode-line-lighter . "⋯")
+           (minions-prominent-modes  . '(flymake-mode)))
   :global-minor-mode t)
 
 (leaf modus-themes
