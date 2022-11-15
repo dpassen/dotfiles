@@ -219,8 +219,11 @@
     (add-to-list 'default-frame-alist `(font . ,default-font))
     (set-face-attribute 'default t :font default-font)))
 
-(leaf project
-  :custom (project-switch-commands . 'project-find-file))
+(leaf projectile
+  :ensure t
+  :bind (projectile-mode-map
+         ("C-x p" . projectile-command-map))
+  :global-minor-mode t)
 
 (leaf railwaycat
   :when (display-graphic-p)
@@ -231,6 +234,9 @@
   (global-unset-key [swipe-right]))
 
 (leaf restclient
+  :ensure t)
+
+(leaf rg
   :ensure t)
 
 (leaf savehist
@@ -258,13 +264,9 @@
 
 (leaf vterm
   :ensure t
+  :bind ("C-x RET" . vterm-other-window)
   :custom ((vterm-always-compile-module . t)
            (vterm-clear-scrollback-when-clearing . t)))
-
-(leaf vterm-toggle
-  :ensure t
-  :custom (vterm-toggle-scope . 'project)
-  :bind ("C-x RET" . vterm-toggle))
 
 (leaf web-mode
   :ensure t
