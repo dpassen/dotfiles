@@ -204,7 +204,8 @@
 (leaf paredit
   :ensure t
   :bind (paredit-mode-map
-         ("M-?" . nil))
+         (("M-?" . nil)
+          ("RET" . nil)))
   :hook (cider-repl-mode-hook
          clojure-mode-hook
          eval-expression-minibuffer-setup-hook
