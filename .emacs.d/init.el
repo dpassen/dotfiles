@@ -201,6 +201,9 @@
    (completion-styles . '(orderless basic))
    (orderless-component-separator . " +\\|[-/_\.]")))
 
+(leaf paren
+  :custom (show-paren-mode . nil))
+
 (leaf poetry
   :ensure t)
 
