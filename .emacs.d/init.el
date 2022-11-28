@@ -201,16 +201,6 @@
    (completion-styles . '(orderless basic))
    (orderless-component-separator . " +\\|[-/_\.]")))
 
-(leaf paredit
-  :ensure t
-  :bind (paredit-mode-map
-         (("M-?" . nil)
-          ("RET" . nil)))
-  :hook (cider-repl-mode-hook
-         clojure-mode-hook
-         eval-expression-minibuffer-setup-hook
-         lisp-data-mode-hook))
-
 (leaf poetry
   :ensure t)
 
@@ -245,6 +235,13 @@
 
 (leaf save-place
   :global-minor-mode t)
+
+(leaf smartparens
+  :ensure t
+  :require smartparens-config
+  :custom (sp-highlight-pair-overlay . nil)
+  :config (sp-use-smartparens-bindings)
+  :global-minor-mode smartparens-global-strict-mode)
 
 (leaf subword
   :hook prog-mode-hook)
