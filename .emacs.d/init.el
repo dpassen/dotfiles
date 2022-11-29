@@ -17,20 +17,14 @@
     :config (leaf-keywords-init)))
 
 (leaf emacs
-  :custom ((async-shell-command-buffer . 'new-buffer)
-           (column-number-mode . t)
-           (confirm-kill-processes . nil)
-           (indent-tabs-mode . nil)
+  :custom ((indent-tabs-mode . nil)
            (inhibit-startup-screen . t)
            (load-prefer-newer . t)
-           (read-quoted-char-radix . 16)
-           (require-final-newline . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
   :setq ((frame-title-format . '("%b - emacs"))
          (kill-buffer-query-functions . nil)
-         (message-truncate-lines . t))
-  :bind ("M-z" . zap-up-to-char))
+         (message-truncate-lines . t)))
 
 (leaf apheleia
   :ensure t
@@ -104,6 +98,10 @@
   :ensure t
   :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
+
+(leaf files
+  :custom ((confirm-kill-processes . nil)
+           (require-final-newline . t)))
 
 (leaf flycheck
   :ensure t
@@ -183,6 +181,9 @@
            (minions-mode-line-lighter . "⋯"))
   :global-minor-mode t)
 
+(leaf misc
+  :bind ("M-z" . zap-up-to-char))
+
 (leaf modus-themes
   :custom ((modus-themes-mode-line . '(borderless))
            (modus-themes-region . '(accented bg-only))
@@ -238,6 +239,11 @@
 
 (leaf save-place
   :global-minor-mode t)
+
+(leaf simple
+  :custom ((async-shell-command-buffer . 'new-buffer)
+           (column-number-mode . t)
+           (read-quoted-char-radix . 16)))
 
 (leaf smartparens
   :ensure t
