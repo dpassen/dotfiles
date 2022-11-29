@@ -253,7 +253,7 @@
   :global-minor-mode smartparens-global-strict-mode)
 
 (leaf subword
-  :hook prog-mode-hook)
+  :global-minor-mode global-subword-mode)
 
 (leaf uniquify
   :custom (uniquify-buffer-name-style . 'forward))
