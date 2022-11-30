@@ -189,9 +189,10 @@
            (modus-themes-region . '(accented bg-only))
            (modus-themes-subtle-line-numbers . t))
   :init
-  (pcase (plist-get (mac-application-state) :appearance)
-    ("NSAppearanceNameAqua" (load-theme 'modus-operandi))
-    ("NSAppearanceNameDarkAqua" (load-theme 'modus-vivendi)))
+  (let ((initial-theme (pcase (plist-get (mac-application-state) :appearance)
+                         ("NSAppearanceNameAqua" 'modus-operandi)
+                         ("NSAppearanceNameDarkAqua" 'modus-vivendi))))
+    (load-theme initial-theme))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
 (leaf orderless
