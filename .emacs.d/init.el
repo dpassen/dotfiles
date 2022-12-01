@@ -168,9 +168,10 @@
 
 (leaf magit
   :ensure t
-  :custom (magit-diff-refine-hunk . t)
+  :custom ((magit-define-global-key-bindings . nil)
+           (magit-diff-refine-hunk . t))
   :bind (("C-c g" . magit-file-dispatch)
-         ("C-x g" . magit-status)))
+         ("C-x g" . magit-dispatch)))
 
 (leaf markdown-mode
   :ensure t)
