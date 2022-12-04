@@ -173,6 +173,11 @@
   :bind (("C-c g" . magit-file-dispatch)
          ("C-x g" . magit-dispatch)))
 
+(leaf marginalia
+  :ensure t
+  :after vertico
+  :global-minor-mode t)
+
 (leaf markdown-mode
   :ensure t)
 
