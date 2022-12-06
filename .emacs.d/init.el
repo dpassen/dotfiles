@@ -72,7 +72,7 @@
   :global-minor-mode global-corfu-mode)
 
 (leaf customize
-  :custom `(custom-file . ,(concat user-emacs-directory "custom.el"))
+  :custom `(custom-file . ,(expand-file-name "custom.el" user-emacs-directory))
   :config (load custom-file 'noerror))
 
 (leaf default-text-scale
