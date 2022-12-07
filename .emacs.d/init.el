@@ -225,7 +225,6 @@
   :global-minor-mode t)
 
 (leaf railwaycat
-  :when (display-graphic-p)
   :custom ((mac-command-modifier . nil)
            (mac-option-modifier . 'meta))
   :config
