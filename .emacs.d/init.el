@@ -194,7 +194,8 @@
   :init
   (let ((initial-theme (pcase (plist-get (mac-application-state) :appearance)
                          ("NSAppearanceNameAqua" 'modus-operandi)
-                         ("NSAppearanceNameDarkAqua" 'modus-vivendi))))
+                         ("NSAppearanceNameDarkAqua" 'modus-vivendi)
+                         (_default 'modus-operandi))))
     (load-theme initial-theme))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
