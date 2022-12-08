@@ -71,7 +71,7 @@
            (corfu-preselect-first . nil))
   :global-minor-mode global-corfu-mode)
 
-(leaf customize
+(leaf cus-edit
   :custom `(custom-file . ,(expand-file-name "custom.el" user-emacs-directory))
   :config (load custom-file 'noerror))
 
@@ -241,8 +241,8 @@
 (leaf savehist
   :global-minor-mode t)
 
-(leaf save-place
-  :global-minor-mode t)
+(leaf saveplace
+  :global-minor-mode save-place-mode)
 
 (leaf simple
   :custom ((async-shell-command-buffer . 'new-buffer)
