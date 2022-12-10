@@ -26,6 +26,14 @@
          (kill-buffer-query-functions . nil)
          (message-truncate-lines . t)))
 
+(leaf emacs-mac
+  :when (eq system-type 'darwin)
+  :custom ((mac-command-modifier . nil)
+           (mac-option-modifier . 'meta))
+  :config
+  (global-unset-key [swipe-left])
+  (global-unset-key [swipe-right]))
+
 (leaf apheleia
   :ensure t
   :global-minor-mode apheleia-global-mode)
@@ -224,13 +232,6 @@
   :bind (projectile-mode-map
          ("C-x p" . projectile-command-map))
   :global-minor-mode t)
-
-(leaf railwaycat
-  :custom ((mac-command-modifier . nil)
-           (mac-option-modifier . 'meta))
-  :config
-  (global-unset-key [swipe-left])
-  (global-unset-key [swipe-right]))
 
 (leaf restclient
   :ensure t)
