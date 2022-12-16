@@ -107,6 +107,12 @@
   :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
 
+(leaf faces
+  :config
+  (let ((default-font "PragmataPro Liga 12"))
+    (add-to-list 'default-frame-alist `(font . ,default-font))
+    (set-face-attribute 'default t :font default-font)))
+
 (leaf fd-dired
   :ensure t)
 
@@ -223,12 +229,6 @@
 
 (leaf poetry
   :ensure t)
-
-(leaf pragmata-pro
-  :config
-  (let ((default-font "PragmataPro Liga 12"))
-    (add-to-list 'default-frame-alist `(font . ,default-font))
-    (set-face-attribute 'default t :font default-font)))
 
 (leaf projectile
   :ensure t
