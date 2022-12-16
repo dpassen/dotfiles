@@ -107,6 +107,9 @@
   :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
 
+(leaf fd-dired
+  :ensure t)
+
 (leaf files
   :custom ((confirm-kill-processes . nil)
            (require-final-newline . t)))
