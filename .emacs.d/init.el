@@ -107,12 +107,6 @@
   :custom (expand-region-show-usage-message . nil)
   :bind ("C-=" . er/expand-region))
 
-(leaf faces
-  :config
-  (let ((default-font "PragmataPro Liga 12"))
-    (add-to-list 'default-frame-alist `(font . ,default-font))
-    (set-face-attribute 'default t :font default-font)))
-
 (leaf fd-dired
   :ensure t)
 
@@ -135,6 +129,10 @@
   :custom (flycheck-color-mode-line-show-running . nil)
   :after flycheck
   :hook flycheck-mode-hook)
+
+(leaf frame
+  :config
+  (set-frame-font "PragmataPro Liga 12" nil t))
 
 (leaf git-link
   :ensure t
