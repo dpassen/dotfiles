@@ -222,9 +222,6 @@
 (leaf paren
   :custom (show-paren-mode . nil))
 
-(leaf poetry
-  :ensure t)
-
 (leaf projectile
   :ensure t
   :bind (projectile-mode-map
