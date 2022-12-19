@@ -92,7 +92,7 @@
 
 (leaf dumb-jump
   :ensure t
-  :custom (dumb-jump-prefer-searcher . 'rg)
+  :custom (dumb-jump-force-searcher . 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (leaf edit-indirect
