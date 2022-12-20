@@ -6,7 +6,8 @@
 (eval-and-compile
   (customize-set-variable
    'package-archives '(("melpa" . "https://melpa.org/packages/")
-                       ("gnu" . "https://elpa.gnu.org/packages/")))
+                       ("gnu" . "https://elpa.gnu.org/packages/")
+                       ("nongnu" . "https://elpa.nongnu.org/nongnu/")))
   (package-initialize)
   (unless (package-installed-p 'leaf)
     (package-refresh-contents)
