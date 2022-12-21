@@ -1,10 +1,7 @@
-export VOLTA_HOME="$HOME/.volta"
-
 typeset -U path
 path+=(
     /usr/local/sbin
     ~/.bin
-    $VOLTA_HOME/bin
 )
 
 export EDITOR="${EDITOR:-mg}"

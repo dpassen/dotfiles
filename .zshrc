@@ -1,3 +1,11 @@
+if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
+    source "$HOME/.asdf/asdf.sh"
+fi
+
+if [[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ]]; then
+    source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
+fi
+
 alias tmux='tmux -2'
 
 tmux-select() {
