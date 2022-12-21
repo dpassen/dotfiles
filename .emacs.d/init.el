@@ -105,6 +105,8 @@
 
 (leaf envrc
   :ensure t
+  :bind (envrc-mode-map
+         ("C-c e" . envrc-command-map))
   :global-minor-mode envrc-global-mode)
 
 (leaf exec-path-from-shell
