@@ -103,6 +103,15 @@
   :ensure t
   :global-minor-mode t)
 
+(leaf envrc
+  :ensure t
+  :global-minor-mode envrc-global-mode)
+
+(leaf exec-path-from-shell
+  :ensure t
+  :when (memq window-system '(mac ns x))
+  :config (exec-path-from-shell-initialize))
+
 (leaf expand-region
   :ensure t
   :custom (expand-region-show-usage-message . nil)
