@@ -297,8 +297,6 @@
 
 (leaf with-editor
   :ensure t
-  :bind (([remap async-shell-command] . with-editor-async-shell-command)
-         ([remap shell-command] . with-editor-shell-command))
   :hook (vterm-mode-hook . with-editor-export-editor))
 
 (leaf xref
