@@ -212,7 +212,8 @@
   :bind ("M-z" . zap-up-to-char))
 
 (leaf modus-themes
-  :custom ((modus-themes-mode-line . '(borderless))
+  :custom ((modus-themes-italic-constructs . t)
+           (modus-themes-mode-line . '(borderless))
            (modus-themes-region . '(accented bg-only))
            (modus-themes-subtle-line-numbers . t))
   :init
