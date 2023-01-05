@@ -186,6 +186,7 @@
   :ensure t
   :custom ((lsp-completion-provider . :none)
            (lsp-enable-snippet . nil)
+           (lsp-enable-symbol-highlighting . nil)
            (lsp-headerline-breadcrumb-enable . nil)
            (lsp-keymap-prefix . "C-c l")
            (lsp-lens-enable . nil)
