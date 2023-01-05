@@ -185,6 +185,7 @@
 (leaf lsp-mode
   :ensure t
   :custom ((lsp-completion-provider . :none)
+           (lsp-eldoc-enable-hover . nil)
            (lsp-enable-snippet . nil)
            (lsp-enable-symbol-highlighting . nil)
            (lsp-headerline-breadcrumb-enable . nil)
@@ -193,7 +194,7 @@
            (lsp-modeline-code-actions-enable . nil)
            (lsp-modeline-diagnostics-enable . nil)
            (lsp-progress-function . 'lsp-on-progress-legacy))
-  :hook (clojure-mode-hook . lsp-deferred))
+  :hook ((clojure-mode-hook web-mode-hook) . lsp-deferred))
 
 (leaf magit
   :ensure t
