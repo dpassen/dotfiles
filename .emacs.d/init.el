@@ -27,6 +27,14 @@
          (kill-buffer-query-functions . nil)
          (message-truncate-lines . t)))
 
+(leaf emacs-mac
+  :when (eq system-type 'darwin)
+  :custom ((mac-command-modifier . nil)
+           (mac-option-modifier . 'meta))
+  :config
+  (global-unset-key [swipe-left])
+  (global-unset-key [swipe-right]))
+
 (leaf apheleia
   :ensure t
   :global-minor-mode apheleia-global-mode)
