@@ -128,6 +128,11 @@
   :custom (flycheck-indication-mode . nil)
   :global-minor-mode global-flycheck-mode)
 
+(leaf flycheck-clj-kondo
+  :ensure t
+  :require t
+  :after clojure-mode)
+
 (leaf flycheck-color-mode-line
   :ensure t
   :custom (flycheck-color-mode-line-show-running . nil)
@@ -181,20 +186,6 @@
      "|=>" "|==>" "|>-" "|<<" "||>" "|>>" "|-" "||-" "~=" "~>" "~~>" "~>>" "[["
      "]]" "\">" "_|_"))
   :global-minor-mode global-ligature-mode)
-
-(leaf lsp-mode
-  :ensure t
-  :custom ((lsp-completion-provider . :none)
-           (lsp-eldoc-enable-hover . nil)
-           (lsp-enable-snippet . nil)
-           (lsp-enable-symbol-highlighting . nil)
-           (lsp-headerline-breadcrumb-enable . nil)
-           (lsp-keymap-prefix . "C-c l")
-           (lsp-lens-enable . nil)
-           (lsp-modeline-code-actions-enable . nil)
-           (lsp-modeline-diagnostics-enable . nil)
-           (lsp-progress-function . 'lsp-on-progress-legacy))
-  :hook ((clojure-mode-hook web-mode-hook) . lsp-deferred))
 
 (leaf magit
   :ensure t
