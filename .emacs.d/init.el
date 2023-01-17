@@ -75,9 +75,7 @@
 
 (leaf corfu
   :ensure t
-  :custom ((corfu-auto . t)
-           (corfu-cycle . t)
-           (corfu-preselect-first . nil))
+  :custom (corfu-cycle . t)
   :global-minor-mode global-corfu-mode)
 
 (leaf cus-edit
