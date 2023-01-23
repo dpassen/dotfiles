@@ -241,8 +241,7 @@
   :custom
   ((completion-category-overrides . '((cider (styles basic))
                                       (file (styles basic partial-completion))))
-   (completion-styles . '(orderless basic))
-   (orderless-component-separator . " +\\|[-/_\.]")))
+   (completion-styles . '(orderless basic))))
 
 (leaf paren
   :custom (show-paren-mode . nil))
