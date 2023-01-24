@@ -23,10 +23,9 @@
            (load-prefer-newer . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq `((frame-title-format . '("%b — emacs"))
-          (kill-buffer-query-functions . nil)
-          (message-truncate-lines . t)
-          (read-process-output-max . ,(* 1024 1024))))
+  :setq ((frame-title-format . '("%b — emacs"))
+         (kill-buffer-query-functions . nil)
+         (message-truncate-lines . t)))
 
 (leaf emacs-mac
   :when (eq system-type 'darwin)
@@ -182,22 +181,6 @@
      "|=>" "|==>" "|>-" "|<<" "||>" "|>>" "|-" "||-" "~=" "~>" "~~>" "~>>" "[["
      "]]" "\">" "_|_"))
   :global-minor-mode global-ligature-mode)
-
-(leaf lsp-mode
-  :ensure t
-  :custom ((lsp-completion-provider . :none)
-           (lsp-diagnostics-provider . :none)
-           (lsp-eldoc-enable-hover . nil)
-           (lsp-enable-indentation . nil)
-           (lsp-enable-snippet . nil)
-           (lsp-enable-symbol-highlighting . nil)
-           (lsp-headerline-breadcrumb-enable . nil)
-           (lsp-keymap-prefix . "C-c l")
-           (lsp-lens-enable . nil)
-           (lsp-modeline-code-actions-enable . nil)
-           (lsp-modeline-diagnostics-enable . nil)
-           (lsp-progress-function . 'lsp-on-progress-legacy))
-  :hook (clojure-mode-hook . lsp-deferred))
 
 (leaf magit
   :ensure t
