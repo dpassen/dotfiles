@@ -23,7 +23,7 @@
            (load-prefer-newer . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq `((frame-title-format . '("%b - emacs"))
+  :setq `((frame-title-format . '("%b — emacs"))
           (kill-buffer-query-functions . nil)
           (message-truncate-lines . t)
           (read-process-output-max . ,(* 1024 1024))))
