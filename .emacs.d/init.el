@@ -201,10 +201,7 @@
 
 (leaf magit
   :ensure t
-  :custom ((magit-define-global-key-bindings . nil)
-           (magit-diff-refine-hunk . t))
-  :bind (("C-c g" . magit-file-dispatch)
-         ("C-x g" . magit-dispatch)))
+  :custom (magit-diff-refine-hunk . t))
 
 (leaf marginalia
   :ensure t
@@ -246,16 +243,10 @@
 (leaf paren
   :custom (show-paren-mode . nil))
 
-(leaf projectile
-  :ensure t
-  :bind (projectile-mode-map
-         ("C-x p" . projectile-command-map))
-  :global-minor-mode t)
+(leaf project
+   :custom (project-switch-commands . 'project-find-file))
 
 (leaf restclient
-  :ensure t)
-
-(leaf rg
   :ensure t)
 
 (leaf savehist
@@ -295,9 +286,13 @@
 
 (leaf vterm
   :ensure t
-  :bind ("C-x RET" . vterm-other-window)
   :custom ((vterm-always-compile-module . t)
            (vterm-clear-scrollback-when-clearing . t)))
+
+(leaf vterm-toggle
+  :ensure t
+  :custom (vterm-toggle-scope . 'project)
+  :bind ("C-x RET" . vterm-toggle))
 
 (leaf web-mode
   :ensure t
