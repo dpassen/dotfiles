@@ -227,7 +227,10 @@
   :custom (show-paren-mode . nil))
 
 (leaf project
-   :custom (project-switch-commands . 'project-find-file))
+  :custom (project-switch-commands . 'project-find-file)
+  :defvar project-kill-buffer-conditions
+  :defer-config
+  (add-to-list 'project-kill-buffer-conditions '(major-mode . vterm-mode) t))
 
 (leaf restclient
   :ensure t)
