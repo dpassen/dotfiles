@@ -138,7 +138,10 @@
   :hook flycheck-mode-hook)
 
 (leaf frame
+  :when (display-graphic-p)
   :config
+  (add-to-list 'default-frame-alist '(height . 50))
+  (add-to-list 'default-frame-alist '(width . 120))
   (set-frame-font "PragmataPro Liga 12" nil t))
 
 (leaf git-link
@@ -150,12 +153,6 @@
 
 (leaf hideshow
   :hook (prog-mode-hook . hs-minor-mode))
-
-(leaf initial-size
-  :when (display-graphic-p)
-  :config
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 120)))
 
 (leaf ligature
   :ensure t
