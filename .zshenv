@@ -2,6 +2,7 @@ typeset -U path
 path+=(
     /usr/local/sbin
     ~/.bin
+    ~/.cargo/bin
 )
 
 export EDITOR="${EDITOR:-mg}"

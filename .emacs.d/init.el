@@ -23,9 +23,10 @@
            (load-prefer-newer . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq ((frame-title-format . '("%b — emacs"))
-         (kill-buffer-query-functions . nil)
-         (message-truncate-lines . t)))
+  :setq `((frame-title-format . '("%b — emacs"))
+          (kill-buffer-query-functions . nil)
+          (message-truncate-lines . t)
+          (read-process-output-max . ,(* 1024 1024))))
 
 (leaf emacs-mac
   :when (eq system-type 'darwin)
@@ -179,6 +180,23 @@
      "]]" "\">" "_|_"))
   :global-minor-mode global-ligature-mode)
 
+(leaf lsp-mode
+  :ensure t
+  :custom ((lsp-completion-provider . :none)
+           (lsp-eldoc-enable-hover . nil)
+           (lsp-enable-snippet . nil)
+           (lsp-enable-symbol-highlighting . nil)
+           (lsp-headerline-breadcrumb-enable . nil)
+           (lsp-keymap-prefix . "C-c l")
+           (lsp-lens-enable . nil)
+           (lsp-modeline-code-actions-enable . nil)
+           (lsp-modeline-diagnostics-enable . nil)
+           (lsp-progress-function . 'lsp-on-progress-legacy))
+  :hook (rust-mode-hook . lsp-deferred))
+
+(leaf lsp-rust
+  :custom (lsp-rust-analyzer-cargo-watch-command . "clippy"))
+
 (leaf magit
   :ensure t
   :custom (magit-diff-refine-hunk . t))
@@ -230,6 +248,9 @@
   (add-to-list 'project-kill-buffer-conditions '(major-mode . vterm-mode) t))
 
 (leaf restclient
+  :ensure t)
+
+(leaf rust-mode
   :ensure t)
 
 (leaf savehist
