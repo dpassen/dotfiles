@@ -145,6 +145,10 @@
   (add-to-list 'default-frame-alist '(width . 120))
   (set-frame-font "PragmataPro Liga 12" nil t))
 
+(leaf gcmh
+  :ensure t
+  :global-minor-mode t)
+
 (leaf git-link
   :ensure t
   :custom (git-link-use-commit . t))
