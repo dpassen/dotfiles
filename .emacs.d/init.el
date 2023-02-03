@@ -87,7 +87,6 @@
   :ensure t
   :custom ((dashboard-items . '((projects . 10)
                                 (recents . 10)))
-           (dashboard-projects-backend . 'project-el)
            (dashboard-set-footer . nil)
            (dashboard-show-shortcuts . nil)
            (dashboard-startup-banner . 'logo))
@@ -255,13 +254,16 @@
 (leaf paren
   :custom (show-paren-mode . nil))
 
-(leaf project
-  :custom (project-switch-commands . 'project-find-file)
-  :defvar project-kill-buffer-conditions
-  :defer-config
-  (add-to-list 'project-kill-buffer-conditions '(major-mode . vterm-mode) t))
+(leaf projectile
+  :ensure t
+  :bind (projectile-mode-map
+         ("C-x p" . projectile-command-map))
+  :global-minor-mode t)
 
 (leaf restclient
+  :ensure t)
+
+(leaf rg
   :ensure t)
 
 (leaf rust-mode
@@ -304,13 +306,9 @@
 
 (leaf vterm
   :ensure t
+  :bind ("C-x RET" . vterm-other-window)
   :custom ((vterm-always-compile-module . t)
            (vterm-clear-scrollback-when-clearing . t)))
-
-(leaf vterm-toggle
-  :ensure t
-  :custom (vterm-toggle-scope . 'project)
-  :bind ("C-x RET" . vterm-toggle))
 
 (leaf web-mode
   :ensure t
