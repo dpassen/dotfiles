@@ -83,6 +83,16 @@
   :custom `(custom-file . ,(expand-file-name "custom.el" user-emacs-directory))
   :config (load custom-file 'noerror))
 
+(leaf dashboard
+  :ensure t
+  :custom ((dashboard-items . '((projects . 10)
+                                (recents . 10)))
+           (dashboard-projects-backend . 'project-el)
+           (dashboard-set-footer . nil)
+           (dashboard-show-shortcuts . nil)
+           (dashboard-startup-banner . 'logo))
+  :config (dashboard-setup-startup-hook))
+
 (leaf default-text-scale
   :ensure t
   :global-minor-mode t)
