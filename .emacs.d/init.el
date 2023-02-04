@@ -23,10 +23,9 @@
            (load-prefer-newer . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
-  :setq `((frame-title-format . '("%b — emacs"))
-          (kill-buffer-query-functions . nil)
-          (message-truncate-lines . t)
-          (read-process-output-max . ,(* 1024 1024))))
+  :setq ((frame-title-format . '("%b — emacs"))
+         (kill-buffer-query-functions . nil)
+         (message-truncate-lines . t)))
 
 (leaf emacs-mac
   :when (eq system-type 'darwin)
@@ -154,10 +153,6 @@
   (add-to-list 'default-frame-alist '(width . 120))
   (set-frame-font "PragmataPro Liga 12" nil t))
 
-(leaf gcmh
-  :ensure t
-  :global-minor-mode t)
-
 (leaf git-link
   :ensure t
   :custom (git-link-use-commit . t))
@@ -192,23 +187,6 @@
      "|=>" "|==>" "|>-" "|<<" "||>" "|>>" "|-" "||-" "~=" "~>" "~~>" "~>>" "[["
      "]]" "\">" "_|_"))
   :global-minor-mode global-ligature-mode)
-
-(leaf lsp-mode
-  :ensure t
-  :custom ((lsp-completion-provider . :none)
-           (lsp-eldoc-enable-hover . nil)
-           (lsp-enable-snippet . nil)
-           (lsp-enable-symbol-highlighting . nil)
-           (lsp-headerline-breadcrumb-enable . nil)
-           (lsp-keymap-prefix . "C-c l")
-           (lsp-lens-enable . nil)
-           (lsp-modeline-code-actions-enable . nil)
-           (lsp-modeline-diagnostics-enable . nil)
-           (lsp-progress-function . 'lsp-on-progress-legacy))
-  :hook (rust-mode-hook . lsp-deferred))
-
-(leaf lsp-rust
-  :custom (lsp-rust-analyzer-cargo-watch-command . "clippy"))
 
 (leaf magit
   :ensure t
@@ -264,9 +242,6 @@
   :ensure t)
 
 (leaf rg
-  :ensure t)
-
-(leaf rust-mode
   :ensure t)
 
 (leaf savehist
