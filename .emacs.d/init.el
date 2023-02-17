@@ -179,6 +179,9 @@
      "]]" "\">" "_|_"))
   :global-minor-mode global-ligature-mode)
 
+(leaf lua-mode
+  :ensure t)
+
 (leaf magit
   :ensure t
   :custom (magit-diff-refine-hunk . t))
