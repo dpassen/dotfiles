@@ -20,6 +20,7 @@
 (leaf emacs
   :custom ((indent-tabs-mode . nil)
            (inhibit-startup-screen . t)
+           (initial-scratch-message . ";; rebellious pro\n\n")
            (load-prefer-newer . t)
            (ring-bell-function . 'ignore)
            (use-short-answers . t))
