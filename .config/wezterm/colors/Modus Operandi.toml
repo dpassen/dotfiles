@@ -1,0 +1,33 @@
+[colors]
+ansi = [
+    '#595959',
+    '#a60000',
+    '#005e00',
+    '#813e00',
+    '#0030a6',
+    '#721045',
+    '#00538b',
+    '#a6a6a6',
+]
+background = 'white'
+brights = [
+    '#595959',
+    '#a60000',
+    '#005e00',
+    '#813e00',
+    '#0030a6',
+    '#721045',
+    '#00538b',
+    '#a6a6a6',
+]
+cursor_bg = 'black'
+cursor_border = 'black'
+cursor_fg = 'white'
+foreground = 'black'
+selection_bg = '#bcbcbc'
+selection_fg = 'black'
+
+[colors.indexed]
+
+[metadata]
+name = 'Modus Operandi'
