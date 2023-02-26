@@ -9,7 +9,7 @@ ansi = [
     '#00538b',
     '#a6a6a6',
 ]
-background = 'white'
+background = '#ffffff'
 brights = [
     '#595959',
     '#a60000',
@@ -20,12 +20,12 @@ brights = [
     '#00538b',
     '#a6a6a6',
 ]
-cursor_bg = 'black'
-cursor_border = 'black'
-cursor_fg = 'white'
-foreground = 'black'
+cursor_bg = '#000000'
+cursor_border = '#000000'
+cursor_fg = '#ffffff'
+foreground = '#000000'
 selection_bg = '#bcbcbc'
-selection_fg = 'black'
+selection_fg = '#000000'
 
 [colors.indexed]
 
