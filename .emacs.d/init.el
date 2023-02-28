@@ -45,6 +45,11 @@
   :custom (auto-revert-verbose . nil)
   :global-minor-mode global-auto-revert-mode)
 
+(leaf beframe
+  :ensure t
+  :custom (beframe-functions-in-frames . '(project-prompt-project-dir))
+  :global-minor-mode t)
+
 (leaf cape
   :ensure t
   :bind (("C-c p p" . completion-at-point)
@@ -227,16 +232,10 @@
 (leaf paren
   :custom (show-paren-mode . nil))
 
-(leaf projectile
-  :ensure t
-  :bind (projectile-mode-map
-         ("C-x p" . projectile-command-map))
-  :global-minor-mode t)
+(leaf project
+  :custom (project-switch-commands . 'project-find-file))
 
 (leaf restclient
-  :ensure t)
-
-(leaf rg
   :ensure t)
 
 (leaf savehist
@@ -276,9 +275,13 @@
 
 (leaf vterm
   :ensure t
-  :bind ("C-x RET" . vterm-other-window)
   :custom ((vterm-always-compile-module . t)
            (vterm-clear-scrollback-when-clearing . t)))
+
+(leaf vterm-toggle
+  :ensure t
+  :custom (vterm-toggle-scope . 'project)
+  :bind ("C-x RET" . vterm-toggle))
 
 (leaf web-mode
   :ensure t
