@@ -31,6 +31,7 @@
 (leaf emacs-mac
   :when (eq system-type 'darwin)
   :custom ((mac-command-modifier . nil)
+           (mac-frame-tabbing . t)
            (mac-option-modifier . 'meta))
   :config
   (global-unset-key [swipe-left])
