@@ -161,6 +161,9 @@
 (leaf hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
+(leaf ibuffer
+  :bind ("C-x C-b" . ibuffer))
+
 (leaf ligature
   :ensure t
   :config
