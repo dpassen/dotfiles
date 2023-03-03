@@ -47,7 +47,8 @@
 
 (leaf beframe
   :ensure t
-  :custom (beframe-functions-in-frames . '(project-prompt-project-dir))
+  :custom ((beframe-create-frame-scratch-buffer . nil)
+           (beframe-functions-in-frames . '(project-prompt-project-dir)))
   :global-minor-mode t)
 
 (leaf cape
