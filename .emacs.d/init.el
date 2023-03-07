@@ -258,7 +258,7 @@
   :require smartparens-config
   :custom (sp-highlight-pair-overlay . nil)
   :config (sp-use-smartparens-bindings)
-  :global-minor-mode smartparens-global-strict-mode)
+  :hook (prog-mode-hook . smartparens-strict-mode))
 
 (leaf subword
   :global-minor-mode global-subword-mode)
