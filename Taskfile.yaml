@@ -1,0 +1,32 @@
+version: "3"
+
+silent: true
+
+tasks:
+  default:
+    cmds:
+      - task --list
+
+  app:server:
+    desc: Generate server app (NAME={{.NAME}})
+    dir: "{{.USER_WORKING_DIR}}"
+    vars:
+      NAME: '{{.NAME | default "org.passen/foob"}}'
+    cmds:
+      - clojure -Sdeps '{:deps {org.passen/deps-server-app {:local/root "deps-server-app"}}}' -X:new :template org.passen/deps-server-app :name {{.NAME}}
+
+  app:client:
+    desc: Generate client app (NAME={{.NAME}})
+    dir: "{{.USER_WORKING_DIR}}"
+    vars:
+      NAME: '{{.NAME | default "org.passen/boof"}}'
+    cmds:
+      - clojure -Sdeps '{:deps {org.passen/deps-client-app {:local/root "deps-client-app"}}}' -X:new :template org.passen/deps-client-app :name {{.NAME}}
+
+  app:library:
+    desc: Generate library app (NAME={{.NAME}})
+    dir: "{{.USER_WORKING_DIR}}"
+    vars:
+      NAME: '{{.NAME | default "org.passen/dood"}}'
+    cmds:
+      - clojure -Sdeps '{:deps {org.passen/deps-library-app {:local/root "deps-library-app"}}}' -X:new :template org.passen/deps-library-app :name {{.NAME}}
