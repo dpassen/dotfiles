@@ -20,7 +20,7 @@
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop
-    {:mvn/version "2.0.6"}}}
+    {:mvn/version "2.0.7"}}}
   :watson
   {:extra-deps
    {io.github.clj-holmes/clj-watson
