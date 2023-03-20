@@ -345,12 +345,9 @@
   (vertico-count-format nil)
   (vertico-cycle t)
   (vertico-resize nil)
-  :init (vertico-mode 1))
-
-(use-package vertico-reverse-mode
-  :after vertico
-  :defer t
-  :init (vertico-reverse-mode 1))
+  :init
+  (vertico-mode 1)
+  (vertico-reverse-mode 1))
 
 (use-package vterm
   :elpaca t
