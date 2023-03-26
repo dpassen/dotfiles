@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-set -o nounset
-set -o errexit
-set -o pipefail
-
-exec rustup run "$(rustup show active-toolchain | awk '{print $1}')" rust-analyzer "$@"
