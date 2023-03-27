@@ -36,7 +36,7 @@
   scoreboard = shortlog --no-merges -sn
   sb = scoreboard
   standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
-  last-touched = for-each-ref --sort=authordate --format '%(refname:short)%0a%(authordate:relative)%0a' 'refs/remotes/origin'
+  last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
   lt = last-touched
   su = standup
   dft = difftool
