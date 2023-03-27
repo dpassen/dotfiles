@@ -9,6 +9,7 @@ function scheme_for_appearance(appearance)
 end
 
 return {
+	check_for_updates = false,
 	color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
 	font = wezterm.font("PragmataPro"),
 	freetype_load_flags = "NO_HINTING",
