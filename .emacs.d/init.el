@@ -218,6 +218,10 @@
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer))
 
+(use-package kotlin-mode
+  :elpaca t
+  :defer t)
+
 (use-package ligature
   :elpaca t
   :defer t
