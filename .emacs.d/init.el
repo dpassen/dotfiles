@@ -193,7 +193,7 @@
   :elpaca t
   :custom (flycheck-color-mode-line-show-running nil)
   :after flycheck
-  :hook flycheck-mode)
+  :hook (flycheck-mode . flycheck-color-mode-line-mode))
 
 (use-package frame
   :when (display-graphic-p)
