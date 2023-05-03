@@ -333,7 +333,7 @@
   :config
   (require 'smartparens-config)
   (sp-use-smartparens-bindings)
-  :hook (prog-mode . smartparens-strict-mode))
+  :hook ((cider-repl-mode prog-mode) . smartparens-strict-mode))
 
 (use-package subword
   :defer t
