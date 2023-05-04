@@ -41,7 +41,8 @@
 (elpaca `(,@elpaca-order))
 
 (elpaca elpaca-use-package
-  (elpaca-use-package-mode))
+  (elpaca-use-package-mode)
+  (setq use-package-hook-name-suffix nil))
 
 (elpaca-wait)
 
@@ -145,7 +146,7 @@
   :elpaca t
   :defer t
   :custom (dumb-jump-force-searcher 'rg)
-  :init (add-hook 'xref-backend-functions #'dumb-jump-xref-activate))
+  :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (use-package edit-indirect
   :elpaca t
@@ -194,7 +195,7 @@
   :elpaca t
   :custom (flycheck-color-mode-line-show-running nil)
   :after flycheck
-  :hook (flycheck-mode . flycheck-color-mode-line-mode))
+  :hook (flycheck-mode-hook . flycheck-color-mode-line-mode))
 
 (use-package frame
   :when (display-graphic-p)
@@ -214,7 +215,7 @@
   :defer t)
 
 (use-package hideshow
-  :hook (prog-mode . hs-minor-mode))
+  :hook (prog-mode-hook . hs-minor-mode))
 
 (use-package ibuffer
   :bind ("C-x C-b" . ibuffer))
@@ -290,7 +291,7 @@
                          ("NSAppearanceNameDarkAqua" 'modus-vivendi)
                          (_default 'modus-operandi))))
     (load-theme initial-theme))
-  :hook (mac-effective-appearance-change . modus-themes-toggle))
+  :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
 (use-package orderless
   :elpaca t
@@ -333,7 +334,7 @@
   :config
   (require 'smartparens-config)
   (sp-use-smartparens-bindings)
-  :hook ((cider-repl-mode prog-mode) . smartparens-strict-mode))
+  :hook ((cider-repl-mode-hook prog-mode-hook) . smartparens-strict-mode))
 
 (use-package subword
   :defer t
@@ -377,7 +378,7 @@
 
 (use-package with-editor
   :elpaca t
-  :hook (vterm-mode . with-editor-export-editor))
+  :hook (vterm-mode-hook . with-editor-export-editor))
 
 (use-package xref
   :defer
