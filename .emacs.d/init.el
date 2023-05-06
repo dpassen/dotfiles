@@ -297,8 +297,7 @@
   :elpaca t
   :defer t
   :custom
-  (completion-category-overrides '((cider (styles basic))
-                                   (file (styles basic partial-completion))))
+  (completion-category-overrides '((file (styles basic partial-completion))))
   (completion-styles '(orderless basic)))
 
 (use-package paren
