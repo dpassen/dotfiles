@@ -144,7 +144,6 @@
 
 (use-package dumb-jump
   :elpaca t
-  :defer t
   :custom (dumb-jump-force-searcher 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
