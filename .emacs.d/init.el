@@ -81,14 +81,6 @@
   :custom (auto-revert-verbose nil)
   :init (global-auto-revert-mode 1))
 
-(use-package beframe
-  :elpaca t
-  :defer t
-  :custom
-  (beframe-create-frame-scratch-buffer nil)
-  (beframe-functions-in-frames '(project-prompt-project-dir))
-  :init (beframe-mode 1))
-
 (use-package cape
   :elpaca t
   :bind
