@@ -295,11 +295,18 @@
   :defer t
   :custom (show-paren-mode nil))
 
-(use-package project
-  :defer t
-  :custom (project-switch-commands 'project-find-file))
+(use-package projectile
+  :elpaca t
+  :bind (:map projectile-mode-map
+              ("C-x p" . projectile-command-map))
+  :init
+  (projectile-mode 1))
 
 (use-package restclient
+  :elpaca t
+  :defer t)
+
+(use-package rg
   :elpaca t
   :defer t)
 
@@ -347,15 +354,10 @@
 
 (use-package vterm
   :elpaca t
-  :defer t
+  :bind ("C-x RET" . vterm-other-window)
   :custom
   (vterm-always-compile-module t)
   (vterm-clear-scrollback-when-clearing t))
-
-(use-package vterm-toggle
-  :elpaca t
-  :custom (vterm-toggle-scope 'project)
-  :bind ("C-x RET" . vterm-toggle))
 
 (use-package web-mode
   :elpaca t
