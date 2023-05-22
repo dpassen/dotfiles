@@ -179,7 +179,6 @@
 
 (use-package flycheck-clj-kondo
   :elpaca t
-  :demand t
   :after clojure-mode)
 
 (use-package flycheck-color-mode-line
