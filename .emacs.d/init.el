@@ -372,7 +372,7 @@
   :hook (vterm-mode-hook . with-editor-export-editor))
 
 (use-package xref
-  :defer
+  :defer t
   :custom
   (xref-after-jump-hook '(recenter))
   (xref-after-return-hook nil)
