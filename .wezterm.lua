@@ -20,6 +20,7 @@ config.font = wezterm.font("PragmataPro")
 config.freetype_load_flags = "NO_HINTING"
 config.line_height = 0.95
 config.window_close_confirmation = "NeverPrompt"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
 config.window_padding = {
 	left = "0.5cell",
 	right = "0.5cell",
