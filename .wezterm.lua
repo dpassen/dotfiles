@@ -1,6 +1,6 @@
 local wezterm = require("wezterm")
 
-function scheme_for_appearance(appearance)
+local function scheme_for_appearance(appearance)
 	if appearance:find("Dark") then
 		return "Modus Vivendi"
 	else
@@ -8,17 +8,23 @@ function scheme_for_appearance(appearance)
 	end
 end
 
-return {
-	check_for_updates = false,
-	color_scheme = scheme_for_appearance(wezterm.gui.get_appearance()),
-	font = wezterm.font("PragmataPro"),
-	freetype_load_flags = "NO_HINTING",
-	line_height = 0.95,
-	window_close_confirmation = "NeverPrompt",
-	window_padding = {
-		left = "0.5cell",
-		right = "0.5cell",
-		top = 1,
-		bottom = "0.5cell",
-	},
+local config = {}
+
+if wezterm.config_builder then
+	config = wezterm.config_builder()
+end
+
+config.check_for_updates = false
+config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
+config.font = wezterm.font("PragmataPro")
+config.freetype_load_flags = "NO_HINTING"
+config.line_height = 0.95
+config.window_close_confirmation = "NeverPrompt"
+config.window_padding = {
+	left = "0.5cell",
+	right = "0.5cell",
+	top = 1,
+	bottom = "0.5cell",
 }
+
+return config
