@@ -15,6 +15,8 @@ tmux-select() {
 alias mg='mg -n'
 alias view='mg -R'
 
+alias tree='tree --gitignore -I ".git"'
+
 edit() {
   eval "$EDITOR" "$@"
 }
