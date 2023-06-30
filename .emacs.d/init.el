@@ -317,6 +317,13 @@
   :defer t
   :init (save-place-mode 1))
 
+(use-package shell-command-x
+  :elpaca (:host github :repo "elizagamedev/shell-command-x.el")
+  :custom
+  (shell-command-x-buffer-name-format "*shell:%f*")
+  (shell-command-x-buffer-name-async-format "*shell:%f*")
+  :init (shell-command-x-mode 1))
+
 (use-package simple
   :defer t
   :custom
