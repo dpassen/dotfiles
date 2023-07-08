@@ -125,6 +125,11 @@
   :custom (custom-file (expand-file-name "custom.el" user-emacs-directory))
   :init (load custom-file 'noerror))
 
+(use-package datetime
+  :elpaca t
+  :defer t
+  :custom (datetime-timezone 'America/Chicago))
+
 (use-package default-text-scale
   :elpaca t
   :defer t
@@ -239,6 +244,10 @@
      "|=>" "|==>" "|>-" "|<<" "||>" "|>>" "|-" "||-" "~=" "~>" "~~>" "~>>" "[["
      "]]" "\">" "_|_"))
   (global-ligature-mode 1))
+
+(use-package logview
+  :elpaca t
+  :defer t)
 
 (use-package lua-mode
   :elpaca t
