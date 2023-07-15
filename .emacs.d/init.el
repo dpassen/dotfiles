@@ -114,6 +114,27 @@
   :defer t
   :custom (clojure-align-forms-automatically t))
 
+(use-package consult
+  :elpaca t
+  :defer t
+  :custom
+  (consult-goto-line-numbers . nil)
+  (xref-show-definitions-function #'consult-xref)
+  (xref-show-xrefs-function #'consult-xref)
+  :bind
+  (("C-x b" . consult-buffer)
+   ("C-x p b" . consult-project-buffer)
+   ("M-g g" . consult-goto-line)
+   ("M-g M-g" . consult-goto-line)
+   ("M-s r" . consult-ripgrep)
+   ("M-s l" . consult-line)))
+
+(use-package consult-flycheck
+  :elpaca t
+  :after flycheck
+  :defer t
+  :bind ("M-g f" . consult-flycheck))
+
 (use-package corfu
   :elpaca t
   :defer t
@@ -196,8 +217,8 @@
   :when (display-graphic-p)
   :defer t
   :config
-  (add-to-list 'default-frame-alist '(height . 50))
-  (add-to-list 'default-frame-alist '(width . 120))
+  (dolist (frame-parameters '((height . 50) (width . 120)))
+    (add-to-list 'default-frame-alist frame-parameters))
   (set-frame-font "PragmataPro Liga 12" nil t))
 
 (use-package git-link
@@ -303,18 +324,14 @@
   :defer t
   :custom (show-paren-mode nil))
 
-(use-package projectile
-  :elpaca t
-  :bind (:map projectile-mode-map
-              ("C-x p" . projectile-command-map))
-  :init
-  (projectile-mode 1))
+(use-package project
+  :defer t
+  :custom (project-switch-commands 'project-find-file)
+  :config
+  (dolist (mode '(cider-repl-mode shell-mode vterm-mode))
+    (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
 (use-package restclient
-  :elpaca t
-  :defer t)
-
-(use-package rg
   :elpaca t
   :defer t)
 
@@ -362,10 +379,15 @@
 
 (use-package vterm
   :elpaca t
-  :bind ("C-x RET" . vterm-other-window)
+  :defer t
   :custom
   (vterm-always-compile-module t)
   (vterm-clear-scrollback-when-clearing t))
+
+(use-package vterm-toggle
+  :elpaca t
+  :custom (vterm-toggle-scope 'project)
+  :bind ("C-x RET" . vterm-toggle))
 
 (use-package web-mode
   :elpaca t
@@ -385,8 +407,7 @@
   :custom
   (xref-after-jump-hook '(recenter))
   (xref-after-return-hook nil)
-  (xref-search-program 'ripgrep)
-  (xref-show-definitions-function #'xref-show-definitions-completing-read))
+  (xref-search-program 'ripgrep))
 
 (use-package yaml-mode
   :elpaca t
