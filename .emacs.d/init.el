@@ -174,6 +174,16 @@
   :defer t
   :init (editorconfig-mode 1))
 
+(use-package embark
+  :elpaca t
+  :bind
+  (("C-." . embark-act)
+   ("C-;" . embark-dwim)))
+
+(use-package embark-consult
+  :elpaca t
+  :hook (embark-collect-mode . consult-preview-at-point-mode))
+
 (use-package envrc
   :elpaca t
   :bind (:map envrc-mode-map
@@ -229,6 +239,11 @@
 (use-package git-timemachine
   :elpaca t
   :defer t)
+
+(use-package golden-ratio
+  :elpaca (golden-ratio :host github :repo "shouya/golden-ratio.el")
+  :defer t
+  :init (golden-ratio-mode 1))
 
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
@@ -398,6 +413,10 @@
   (web-mode-enable-auto-closing t)
   (web-mode-markup-indent-offset 2))
 
+(use-package wgrep
+  :elpaca t
+  :defer t)
+
 (use-package with-editor
   :elpaca t
   :hook (vterm-mode-hook . with-editor-export-editor))
@@ -412,12 +431,6 @@
 (use-package yaml-mode
   :elpaca t
   :defer t)
-
-(use-package zoom
-  :elpaca t
-  :defer t
-  :custom (zoom-size '(0.618 . 0.618))
-  :init (zoom-mode 1))
 
 (provide 'init)
 
