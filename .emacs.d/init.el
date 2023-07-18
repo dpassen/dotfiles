@@ -387,10 +387,13 @@
   :custom
   (vertico-count-format nil)
   (vertico-cycle t)
+  (vertico-multiform-commands
+   '((execute-extended-command reverse)
+     (execute-extended-command-for-buffer reverse)))
   (vertico-resize nil)
   :init
   (vertico-mode 1)
-  (vertico-reverse-mode 1))
+  (vertico-multiform-mode 1))
 
 (use-package vterm
   :elpaca t
