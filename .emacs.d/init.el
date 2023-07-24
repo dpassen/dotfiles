@@ -335,16 +335,6 @@
   (completion-category-overrides '((file (styles basic partial-completion))))
   (completion-styles '(orderless basic)))
 
-(use-package paredit
-  :elpaca t
-  :bind (:map paredit-mode-map
-              ("M-?" . nil)
-              ("RET" . nil))
-  :hook ((cider-repl-mode-hook
-          clojure-mode-hook
-          eval-expression-minibuffer-setup-hook
-          lisp-data-mode-hook) . paredit-mode))
-
 (use-package paren
   :defer t
   :custom (show-paren-mode nil))
@@ -374,6 +364,14 @@
   (async-shell-command-buffer 'new-buffer)
   (column-number-mode t)
   (read-quoted-char-radix 16))
+
+(use-package smartparens
+  :elpaca t
+  :custom (sp-highlight-pair-overlay nil)
+  :config
+  (require 'smartparens-config)
+  (sp-use-smartparens-bindings)
+  :hook ((cider-repl-mode-hook prog-mode-hook) . smartparens-strict-mode))
 
 (use-package subword
   :defer t
