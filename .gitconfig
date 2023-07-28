@@ -14,18 +14,6 @@
 [rerere]
   enabled = true
 
-[diff]
-  tool = difftastic
-
-[difftool]
-  prompt = false
-
-[difftool "difftastic"]
-  cmd = difft "$LOCAL" "$REMOTE"
-
-[pager]
-  difftool = true
-
 [alias]
   st = status
   ci = commit
@@ -39,7 +27,6 @@
   last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
   lt = last-touched
   su = standup
-  dft = difftool
 
 [github]
   user = dpassen
