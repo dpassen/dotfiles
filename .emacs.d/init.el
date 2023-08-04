@@ -378,7 +378,12 @@
   :config
   (require 'smartparens-config)
   (sp-use-smartparens-bindings)
-  :hook ((cider-repl-mode-hook prog-mode-hook) . smartparens-strict-mode))
+  :hook
+  ((cider-repl-mode-hook
+    clojure-mode-hook
+    eval-expression-minibuffer-setup-hook
+    lisp-data-mode-hook) . smartparens-strict-mode)
+  (prog-mode-hook . smartparens-mode))
 
 (use-package subword
   :defer t
