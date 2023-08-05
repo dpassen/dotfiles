@@ -220,6 +220,7 @@
 
 (use-package fontaine
   :elpaca t
+  :when (display-graphic-p)
   :custom (fontaine-presets
            '((regular
               :default-height 120)
