@@ -329,7 +329,9 @@
   (modus-themes-region '(accented bg-only))
   (modus-themes-subtle-line-numbers t)
   :init
-  (let ((initial-theme (pcase (plist-get (mac-application-state) :appearance)
+  (let ((initial-theme (pcase (plist-get (and (eq window-system 'mac)
+                                              (mac-application-state))
+                                         :appearance)
                          ("NSAppearanceNameAqua" 'modus-operandi)
                          ("NSAppearanceNameDarkAqua" 'modus-vivendi)
                          (_default 'modus-operandi))))
