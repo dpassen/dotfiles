@@ -212,12 +212,6 @@
   :elpaca t
   :after clojure-mode)
 
-(use-package flycheck-color-mode-line
-  :elpaca t
-  :custom (flycheck-color-mode-line-show-running nil)
-  :after flycheck
-  :hook (flycheck-mode-hook . flycheck-color-mode-line-mode))
-
 (use-package fontaine
   :elpaca t
   :when (display-graphic-p)
@@ -311,14 +305,6 @@
   :elpaca t
   :defer t)
 
-(use-package minions
-  :elpaca t
-  :defer t
-  :custom
-  (minions-available-modes nil)
-  (minions-mode-line-lighter "⋯")
-  :init (minions-mode 1))
-
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
 
@@ -337,6 +323,12 @@
                          (_default 'modus-operandi))))
     (load-theme initial-theme))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
+
+(use-package mood-line
+  :elpaca t
+  :defer t
+  :custom (mood-line-glyph-alist mood-line-glyphs-fira-code)
+  :init (mood-line-mode 1))
 
 (use-package orderless
   :elpaca t
