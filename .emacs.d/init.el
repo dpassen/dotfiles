@@ -124,16 +124,11 @@
   :bind
   (("C-x b" . consult-buffer)
    ("C-x p b" . consult-project-buffer)
-   ("M-g g" . consult-goto-line)
    ("M-g M-g" . consult-goto-line)
-   ("M-s r" . consult-ripgrep)
-   ("M-s l" . consult-line)))
-
-(use-package consult-flycheck
-  :elpaca t
-  :after flycheck
-  :defer t
-  :bind ("M-g f" . consult-flycheck))
+   ("M-g f" . consult-flymake)
+   ("M-g g" . consult-goto-line)
+   ("M-s l" . consult-line))
+   ("M-s r" . consult-ripgrep))
 
 (use-package corfu
   :elpaca t
@@ -202,15 +197,14 @@
   (confirm-kill-processes nil)
   (require-final-newline t))
 
-(use-package flycheck
-  :elpaca t
-  :defer t
-  :custom (flycheck-indication-mode nil)
-  :init (global-flycheck-mode 1))
+(use-package flymake
+  :custom (flymake-fringe-indicator-position nil)
+  :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake)
+  :hook (prog-mode-hook . flymake-mode))
 
-(use-package flycheck-clj-kondo
+(use-package flymake-kondor
   :elpaca t
-  :after clojure-mode)
+  :hook (clojure-mode-hook . flymake-kondor-setup))
 
 (use-package fontaine
   :elpaca t
