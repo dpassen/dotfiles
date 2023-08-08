@@ -308,6 +308,7 @@
   (modus-themes-mode-line '(borderless))
   (modus-themes-region '(accented bg-only))
   (modus-themes-subtle-line-numbers t)
+  (modus-themes-fringes nil)
   :init
   (let ((initial-theme (pcase (plist-get (and (eq window-system 'mac)
                                               (mac-application-state))
@@ -430,6 +431,7 @@
   :custom
   (xref-after-jump-hook '(recenter))
   (xref-after-return-hook nil)
+  (xref-history-storage 'xref-window-local-history)
   (xref-search-program 'ripgrep))
 
 (use-package yaml-mode
