@@ -164,6 +164,13 @@
   :defer t
   :init (editorconfig-mode 1))
 
+(use-package eglot
+  :defer t
+  :custom
+  (eglot-autoshutdown t)
+  (eglot-confirm-server-initiated-edits nil)
+  :custom-face (eglot-highlight-symbol-face ((t :inherit normal))))
+
 (use-package embark
   :elpaca t
   :bind
@@ -320,7 +327,7 @@
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
 
 (use-package mood-line
-  :elpaca t
+  :elpaca (mood-line :host gitlab :repo "qcfu-bu/mood-line")
   :defer t
   :custom (mood-line-glyph-alist mood-line-glyphs-fira-code)
   :init (mood-line-mode 1))
