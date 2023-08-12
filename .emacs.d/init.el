@@ -155,6 +155,13 @@
   :custom (dumb-jump-force-searcher 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
+(use-package eat
+  :elpaca t
+  :custom
+  (eat-enable-shell-prompt-annotation nil)
+  (eat-kill-buffer-on-exit t)
+  :bind ("C-x RET" . eat-project))
+
 (use-package edit-indirect
   :elpaca t
   :defer t)
@@ -347,7 +354,7 @@
   :defer t
   :custom (project-switch-commands 'project-find-file)
   :config
-  (dolist (mode '(cider-repl-mode shell-mode vterm-mode))
+  (dolist (mode '(cider-repl-mode eat-mode shell-mode))
     (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
 (use-package restclient
@@ -404,18 +411,6 @@
   (vertico-mode 1)
   (vertico-multiform-mode 1))
 
-(use-package vterm
-  :elpaca t
-  :defer t
-  :custom
-  (vterm-always-compile-module t)
-  (vterm-clear-scrollback-when-clearing t))
-
-(use-package vterm-toggle
-  :elpaca t
-  :custom (vterm-toggle-scope 'project)
-  :bind ("C-x RET" . vterm-toggle))
-
 (use-package web-mode
   :elpaca t
   :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'" "\\.json\\'")
@@ -428,10 +423,6 @@
 (use-package wgrep
   :elpaca t
   :defer t)
-
-(use-package with-editor
-  :elpaca t
-  :hook (vterm-mode-hook . with-editor-export-editor))
 
 (use-package xref
   :defer t
