@@ -220,26 +220,13 @@
   :elpaca t
   :hook (clojure-mode-hook . flymake-kondor-setup))
 
-(use-package fontaine
-  :elpaca t
-  :when (display-graphic-p)
-  :custom (fontaine-presets
-           '((regular
-              :default-height 120)
-             (large
-              :default-height 170)
-             (t
-              :default-family "PragmataPro Liga")))
-  :bind ("C-c f" . fontaine-set-preset)
-  :init (fontaine-set-preset 'regular)
-  :hook (modus-themes-after-load-theme-hook . fontaine-apply-current-preset))
-
 (use-package frame
   :when (display-graphic-p)
   :defer t
   :config
   (dolist (frame-parameters '((height . 50) (width . 120)))
-    (add-to-list 'default-frame-alist frame-parameters)))
+    (add-to-list 'default-frame-alist frame-parameters))
+  (set-frame-font "PragmataPro Liga 12" nil t))
 
 (use-package git-link
   :elpaca t
