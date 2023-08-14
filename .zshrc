@@ -50,8 +50,11 @@ zstyle ':vcs_info:git*' formats " (%b)"
 zstyle ':vcs_info:hg*' formats " (%b)"
 
 precmd() {
-  vcs_info
-  print ""
+    vcs_info
+    precmd() {
+        vcs_info
+        print ""
+    }
 }
 
 setopt prompt_subst
