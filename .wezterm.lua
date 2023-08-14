@@ -17,6 +17,7 @@ end
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.font = wezterm.font("PragmataPro")
+config.freetype_interpreter_version = 35
 config.freetype_load_flags = "NO_HINTING"
 config.line_height = 0.95
 config.window_close_confirmation = "NeverPrompt"
