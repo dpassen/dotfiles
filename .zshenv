@@ -1,3 +1,5 @@
+# shellcheck disable=all
+
 typeset -U path
 path+=(
     /usr/local/sbin
