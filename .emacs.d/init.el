@@ -182,7 +182,8 @@
   :elpaca t
   :bind
   (("C-." . embark-act)
-   ("C-;" . embark-dwim)))
+   ("C-;" . embark-dwim))
+  :init (setq prefix-help-command 'embark-prefix-help-command))
 
 (use-package embark-consult
   :elpaca t
