@@ -176,6 +176,7 @@
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-initiated-edits nil)
+  (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal))))
 
 (use-package embark
