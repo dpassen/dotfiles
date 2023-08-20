@@ -150,6 +150,16 @@
   :defer t
   :custom (dired-kill-when-opening-new-dired-buffer t))
 
+(use-package doom-modeline
+  :elpaca t
+  :defer t
+  :custom
+  (doom-modeline-bar-width 0.1)
+  (doom-modeline-buffer-file-name-style 'buffer-name)
+  (doom-modeline-env-version nil)
+  (doom-modeline-major-mode-icon nil)
+  :init (doom-modeline-mode 1))
+
 (use-package dumb-jump
   :elpaca t
   :custom (dumb-jump-force-searcher 'rg)
@@ -321,12 +331,6 @@
                          (_default 'modus-operandi))))
     (load-theme initial-theme))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
-
-(use-package mood-line
-  :elpaca (mood-line :host gitlab :repo "qcfu-bu/mood-line")
-  :defer t
-  :custom (mood-line-glyph-alist mood-line-glyphs-fira-code)
-  :init (mood-line-mode 1))
 
 (use-package orderless
   :elpaca t
