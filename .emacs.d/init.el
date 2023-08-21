@@ -217,6 +217,13 @@
   :custom (expand-region-show-usage-message nil)
   :bind ("C-=" . er/expand-region))
 
+(use-package faces
+  :when (display-graphic-p)
+  :defer t
+  :config
+  (dolist (face '(default tooltip))
+    (set-face-attribute face nil :font "PragmataPro Liga 12")))
+
 (use-package files
   :defer t
   :custom
@@ -237,8 +244,7 @@
   :defer t
   :config
   (dolist (frame-parameters '((height . 50) (width . 120)))
-    (add-to-list 'default-frame-alist frame-parameters))
-  (set-frame-font "PragmataPro Liga 12" nil t))
+    (add-to-list 'default-frame-alist frame-parameters)))
 
 (use-package git-link
   :elpaca t
