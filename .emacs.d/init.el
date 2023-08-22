@@ -158,6 +158,7 @@
   (doom-modeline-buffer-file-name-style 'buffer-name)
   (doom-modeline-env-version nil)
   (doom-modeline-major-mode-icon nil)
+  (doom-modeline-minor-modes t)
   :init (doom-modeline-mode 1))
 
 (use-package dumb-jump
@@ -324,6 +325,11 @@
 (use-package markdown-mode
   :elpaca t
   :defer t)
+
+(use-package minions
+  :elpaca t
+  :defer t
+  :init (minions-mode 1))
 
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
