@@ -187,7 +187,10 @@
   (eglot-autoshutdown t)
   (eglot-confirm-server-initiated-edits nil)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
-  :custom-face (eglot-highlight-symbol-face ((t :inherit normal))))
+  :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
+  :hook
+  ((python-mode-hook
+    ruby-mode-hook) . eglot-ensure))
 
 (use-package embark
   :elpaca t
@@ -245,6 +248,10 @@
   :config
   (dolist (frame-parameters '((height . 50) (width . 120)))
     (add-to-list 'default-frame-alist frame-parameters)))
+
+(use-package gcmh
+  :elpaca t
+  :init (gcmh-mode 1))
 
 (use-package git-link
   :elpaca t
