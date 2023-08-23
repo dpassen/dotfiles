@@ -190,8 +190,8 @@
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
   :hook
-  ((python-mode-hook
-    ruby-mode-hook) . eglot-ensure))
+  ((python-ts-mode-hook
+    ruby-ts-mode-hook) . eglot-ensure))
 
 (use-package embark
   :elpaca t
@@ -405,6 +405,11 @@
   :defer t
   :init (global-subword-mode 1))
 
+(use-package treesit-auto
+  :elpaca t
+  :custom (treesit-auto-install 'prompt)
+  :config (global-treesit-auto-mode 1))
+
 (use-package uniquify
   :defer t
   :custom (uniquify-buffer-name-style 'forward))
@@ -425,7 +430,7 @@
 
 (use-package web-mode
   :elpaca t
-  :mode ("\\.html?\\'" "\\.jsx?\\'" "\\.tsx?\\'" "\\.css\\'" "\\.json\\'")
+  :mode ("\\.html?\\'")
   :custom
   (web-mode-code-indent-offset 2)
   (web-mode-css-indent-offset 2)
