@@ -210,6 +210,10 @@
               ("C-c e" . envrc-command-map))
   :init (envrc-global-mode 1))
 
+(use-package eros
+  :elpaca t
+  :hook lisp-data-mode-hook)
+
 (use-package exec-path-from-shell
   :elpaca t
   :when (memq window-system '(mac ns x))
