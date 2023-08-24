@@ -237,7 +237,7 @@
 (use-package flymake
   :custom (flymake-fringe-indicator-position nil)
   :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake)
-  :hook (prog-mode-hook . flymake-mode))
+  :hook prog-mode-hook)
 
 (use-package flymake-kondor
   :elpaca t
@@ -394,12 +394,11 @@
   :config
   (require 'smartparens-config)
   (sp-use-smartparens-bindings)
-  :hook
+  :hook prog-mode-hook
   ((cider-repl-mode-hook
     clojure-mode-hook
     eval-expression-minibuffer-setup-hook
-    lisp-data-mode-hook) . smartparens-strict-mode)
-  (prog-mode-hook . smartparens-mode))
+    lisp-data-mode-hook) . smartparens-strict-mode))
 
 (use-package subword
   :defer t
