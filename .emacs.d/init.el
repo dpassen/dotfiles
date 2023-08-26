@@ -183,7 +183,6 @@
   :init (editorconfig-mode 1))
 
 (use-package eglot
-  :defer t
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-initiated-edits nil)
