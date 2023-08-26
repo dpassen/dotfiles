@@ -202,7 +202,7 @@
 
 (use-package embark-consult
   :elpaca t
-  :hook (embark-collect-mode . consult-preview-at-point-mode))
+  :hook (embark-collect-mode-hook . consult-preview-at-point-mode))
 
 (use-package envrc
   :elpaca t
