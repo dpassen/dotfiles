@@ -58,7 +58,8 @@
   :init
   (setq frame-title-format '("%b — emacs"))
   (setq kill-buffer-query-functions nil)
-  (setq message-truncate-lines t))
+  (setq message-truncate-lines t)
+  (setq read-process-output-max (* 1024 1024)))
 
 (use-package emacs-mac
   :when (eq system-type 'darwin)
