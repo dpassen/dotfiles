@@ -256,6 +256,7 @@
 
 (use-package gcmh
   :elpaca t
+  :defer t
   :init (gcmh-mode 1))
 
 (use-package git-link
