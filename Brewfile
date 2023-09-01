@@ -71,7 +71,6 @@ brew "clojure/tools/clojure"
 brew "devlocker/tap/tychus"
 brew "go-task/tap/go-task"
 
-cask "eloston-chromium"
 cask "emacs-mac"
 cask "mactex-no-gui"
 cask "temurin17"
