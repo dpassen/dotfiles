@@ -56,10 +56,10 @@
   (ring-bell-function 'ignore)
   (use-short-answers t)
   :init
-  (setq frame-title-format '("%b — emacs"))
-  (setq kill-buffer-query-functions nil)
-  (setq message-truncate-lines t)
-  (setq read-process-output-max (* 1024 1024)))
+  (setq frame-title-format '("%b — emacs")
+        kill-buffer-query-functions nil
+        message-truncate-lines t
+        read-process-output-max (* 1024 1024)))
 
 (use-package emacs-mac
   :when (eq system-type 'darwin)
