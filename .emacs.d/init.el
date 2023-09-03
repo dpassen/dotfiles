@@ -119,7 +119,8 @@
   :elpaca t
   :defer t
   :custom
-  (consult-goto-line-numbers . nil)
+  (consult-after-jump-hook '(recenter))
+  (consult-goto-line-numbers nil)
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
   :bind
