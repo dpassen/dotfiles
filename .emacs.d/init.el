@@ -173,7 +173,7 @@
   :custom
   (eat-enable-shell-prompt-annotation nil)
   (eat-kill-buffer-on-exit t)
-  :bind ("C-x RET" . eat-project))
+  :bind ("C-x RET" . eat-project-other-window))
 
 (use-package edit-indirect
   :elpaca t
