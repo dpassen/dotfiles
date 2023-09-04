@@ -190,9 +190,7 @@
   (eglot-confirm-server-initiated-edits nil)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
-  :hook
-  ((python-base-mode-hook
-    ruby-base-mode-hook) . eglot-ensure))
+  :hook (python-base-mode-hook . eglot-ensure))
 
 (use-package embark
   :elpaca t
