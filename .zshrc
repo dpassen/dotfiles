@@ -47,9 +47,8 @@ autoload -Uz compinit
 compinit
 
 autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git hg
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git*' formats " (%b)"
-zstyle ':vcs_info:hg*' formats " (%b)"
 
 precmd() {
     vcs_info
