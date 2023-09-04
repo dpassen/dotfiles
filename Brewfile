@@ -60,6 +60,7 @@ brew "tree-sitter"
 brew "unar"
 brew "watchexec"
 brew "wget"
+brew "yaml-language-server"
 brew "zsh"
 
 brew "borkdude/brew/babashka"
