@@ -37,8 +37,6 @@ setopt interactivecomments
 setopt no_auto_remove_slash
 
 bindkey -e
-bindkey '^R' history-incremental-search-backward
-bindkey '^[[3~' delete-char
 
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select
