@@ -190,6 +190,11 @@
   (eglot-confirm-server-initiated-edits nil)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
+  :bind (:map eglot-mode-map
+              ("C-c l a" . eglot-code-actions)
+              ("C-c l f b" . eglot-format-buffer)
+              ("C-c l f f" . eglot-format)
+              ("C-c l r" . eglot-rename))
   :hook (python-base-mode-hook . eglot-ensure))
 
 (use-package embark
