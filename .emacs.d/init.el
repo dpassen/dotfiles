@@ -188,6 +188,7 @@
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-initiated-edits nil)
+  (eglot-extend-to-xref t)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
   :bind (:map eglot-mode-map
@@ -287,6 +288,12 @@
   :elpaca (indent-bars :type git :host github :repo "jdtsmith/indent-bars")
   :custom (indent-bars-treesit-support t)
   :hook (python-base-mode-hook yaml-ts-mode-hook))
+
+(use-package jarchive
+  :elpaca t
+  :defer t
+  :after eglot
+  :init (jarchive-setup))
 
 (use-package kotlin-mode
   :elpaca t
