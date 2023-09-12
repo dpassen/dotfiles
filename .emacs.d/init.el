@@ -46,6 +46,11 @@
 
 (elpaca-wait)
 
+(use-package general
+  :elpaca t)
+
+(elpaca-wait)
+
 (use-package emacs
   :defer t
   :custom
@@ -84,13 +89,14 @@
 
 (use-package cape
   :elpaca t
-  :bind
-  (("C-c p p" . completion-at-point)
-   ("C-c p d" . cape-dabbrev)
-   ("C-c p f" . cape-file)
-   ("C-c p i" . cape-ispell)
-   ("C-c p k" . cape-keyword)
-   ("C-c p s" . cape-symbol)))
+  :general
+  (:prefix "C-c p"
+           "p" 'completion-at-point
+           "d" 'cape-dabbrev
+           "f" 'cape-file
+           "i" 'cape-ispell
+           "k" 'cape-keyword
+           "s" 'cape-symbol))
 
 (use-package cider
   :elpaca t
@@ -123,14 +129,14 @@
   (consult-goto-line-numbers nil)
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
-  :bind
-  (("C-x b" . consult-buffer)
-   ("C-x p b" . consult-project-buffer)
-   ("M-g M-g" . consult-goto-line)
-   ("M-g f" . consult-flymake)
-   ("M-g g" . consult-goto-line)
-   ("M-s l" . consult-line))
-   ("M-s r" . consult-ripgrep))
+  :general
+  ("C-x b" 'consult-buffer
+   "C-x p b" 'consult-project-buffer
+   "M-g M-g" 'consult-goto-line
+   "M-g f" 'consult-flymake
+   "M-g g" 'consult-goto-line
+   "M-s l" 'consult-line
+   "M-s r" 'consult-ripgrep))
 
 (use-package corfu
   :elpaca t
@@ -173,7 +179,7 @@
   :custom
   (eat-enable-shell-prompt-annotation nil)
   (eat-kill-buffer-on-exit t)
-  :bind ("C-x RET" . eat-project-other-window))
+  :general ("C-x RET" 'eat-project-other-window))
 
 (use-package edit-indirect
   :elpaca t
@@ -191,18 +197,20 @@
   (eglot-extend-to-xref t)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
-  :bind (:map eglot-mode-map
-              ("C-c l a" . eglot-code-actions)
-              ("C-c l f b" . eglot-format-buffer)
-              ("C-c l f f" . eglot-format)
-              ("C-c l r" . eglot-rename))
+  :general
+  (:keymaps 'eglot-mode-map
+            :prefix "C-c l"
+            "a" 'eglot-code-actions
+            "f b" 'eglot-format-buffer
+            "f f" 'eglot-format
+            "r" 'eglot-rename)
   :hook (python-base-mode-hook . eglot-ensure))
 
 (use-package embark
   :elpaca t
-  :bind
-  (("C-." . embark-act)
-   ("C-;" . embark-dwim))
+  :general
+  ("C-." 'embark-act
+   "C-;" 'embark-dwim)
   :init (setq prefix-help-command 'embark-prefix-help-command))
 
 (use-package embark-consult
@@ -211,8 +219,9 @@
 
 (use-package envrc
   :elpaca t
-  :bind (:map envrc-mode-map
-              ("C-c e" . envrc-command-map))
+  :general
+  (:keymaps 'envrc-mode-map
+            "C-c e" 'envrc-command-map)
   :init (envrc-global-mode 1))
 
 (use-package eros
@@ -228,7 +237,7 @@
 (use-package expand-region
   :elpaca t
   :custom (expand-region-show-usage-message nil)
-  :bind ("C-=" . er/expand-region))
+  :general ("C-=" 'er/expand-region))
 
 (use-package faces
   :when (display-graphic-p)
@@ -282,7 +291,7 @@
   :hook (prog-mode-hook . hs-minor-mode))
 
 (use-package ibuffer
-  :bind ("C-x C-b" . ibuffer))
+  :general ("C-x C-b" 'ibuffer))
 
 (use-package indent-bars
   :elpaca (indent-bars :type git :host github :repo "jdtsmith/indent-bars")
@@ -353,7 +362,7 @@
   :init (minions-mode 1))
 
 (use-package misc
-  :bind ("M-z" . zap-up-to-char))
+  :general ("M-z" 'zap-up-to-char))
 
 (use-package modus-themes
   :custom
