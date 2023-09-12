@@ -283,7 +283,7 @@
   :defer t)
 
 (use-package golden-ratio
-  :elpaca (golden-ratio :host github :repo "shouya/golden-ratio.el")
+  :elpaca t
   :defer t
   :init (golden-ratio-mode 1))
 
