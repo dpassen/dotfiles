@@ -292,6 +292,10 @@
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
+(use-package html-ts-mode
+  :elpaca (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
+  :mode ("\\.html?\\'"))
+
 (use-package ibuffer
   :general ("C-x C-b" 'ibuffer))
 
@@ -453,15 +457,6 @@
   :init
   (vertico-mode 1)
   (vertico-multiform-mode 1))
-
-(use-package web-mode
-  :elpaca t
-  :mode ("\\.html?\\'")
-  :custom
-  (web-mode-code-indent-offset 2)
-  (web-mode-css-indent-offset 2)
-  (web-mode-enable-auto-closing t)
-  (web-mode-markup-indent-offset 2))
 
 (use-package wgrep
   :elpaca t
