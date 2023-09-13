@@ -293,13 +293,6 @@
 (use-package ibuffer
   :general ("C-x C-b" 'ibuffer))
 
-(use-package indent-bars
-  :elpaca (indent-bars :type git :host github :repo "jdtsmith/indent-bars")
-  :custom
-  (indent-bars-starting-column 0)
-  (indent-bars-treesit-support t)
-  :hook (python-base-mode-hook yaml-ts-mode-hook))
-
 (use-package jarchive
   :elpaca t
   :defer t
