@@ -41,10 +41,12 @@
 (elpaca `(,@elpaca-order))
 
 (elpaca elpaca-use-package
-  (elpaca-use-package-mode)
-  (setq use-package-hook-name-suffix nil))
+  (elpaca-use-package-mode))
 
 (elpaca-wait)
+
+(use-package use-package
+  :custom (use-package-hook-name-suffix nil))
 
 (use-package general
   :elpaca t)
