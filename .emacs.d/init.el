@@ -280,6 +280,10 @@
   :defer t
   :custom (git-link-use-commit t))
 
+(use-package git-modes
+  :elpaca t
+  :defer t)
+
 (use-package git-timemachine
   :elpaca t
   :defer t)
