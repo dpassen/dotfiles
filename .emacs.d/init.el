@@ -200,12 +200,12 @@
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
   :general
-  (:keymaps 'eglot-mode-map
-            :prefix "C-c l"
-            "a" 'eglot-code-actions
-            "f b" 'eglot-format-buffer
-            "f f" 'eglot-format
-            "r" 'eglot-rename)
+  (eglot-mode-map
+   :prefix "C-c l"
+   "a" 'eglot-code-actions
+   "f b" 'eglot-format-buffer
+   "f f" 'eglot-format
+   "r" 'eglot-rename)
   :hook (python-base-mode-hook . eglot-ensure))
 
 (use-package embark
@@ -222,8 +222,8 @@
 (use-package envrc
   :elpaca t
   :general
-  (:keymaps 'envrc-mode-map
-            "C-c e" 'envrc-command-map)
+  (envrc-mode-map
+   "C-c e" 'envrc-command-map)
   :init (envrc-global-mode 1))
 
 (use-package eros
@@ -449,8 +449,8 @@
   :defer t
   :after org
   :general
-  (:keymaps 'org-mode-map
-            "C-c C-r" '(:keymap verb-command-map)))
+  (org-mode-map
+   "C-c C-r" '(:keymap verb-command-map)))
 
 (use-package vertico
   :elpaca (vertico :files (:defaults "extensions/*"))
