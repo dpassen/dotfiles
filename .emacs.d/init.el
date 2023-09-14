@@ -404,10 +404,6 @@
   (dolist (mode '(cider-repl-mode eat-mode shell-mode))
     (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
-(use-package restclient
-  :elpaca t
-  :defer t)
-
 (use-package savehist
   :defer t
   :init (savehist-mode 1))
@@ -447,6 +443,14 @@
 (use-package uniquify
   :defer t
   :custom (uniquify-buffer-name-style 'forward))
+
+(use-package verb
+  :elpaca t
+  :defer t
+  :after org
+  :general
+  (:keymaps 'org-mode-map
+            "C-c C-r" '(:keymap verb-command-map)))
 
 (use-package vertico
   :elpaca (vertico :files (:defaults "extensions/*"))
