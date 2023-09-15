@@ -125,7 +125,6 @@
 
 (use-package consult
   :elpaca t
-  :defer t
   :custom
   (consult-after-jump-hook '(recenter))
   (consult-goto-line-numbers nil)
