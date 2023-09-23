@@ -197,6 +197,7 @@
   (eglot-confirm-server-initiated-edits nil)
   (eglot-extend-to-xref t)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
+  (eglot-sync-connect nil)
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
   :general
   (eglot-mode-map
