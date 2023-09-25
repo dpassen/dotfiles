@@ -437,8 +437,10 @@
 
 (use-package treesit-auto
   :elpaca t
+  :defer t
+  :commands global-treesit-auto-mode
   :custom (treesit-auto-install 'prompt)
-  :config (global-treesit-auto-mode 1))
+  :init (global-treesit-auto-mode 1))
 
 (use-package uniquify
   :defer t
