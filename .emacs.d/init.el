@@ -452,7 +452,7 @@
   :after org
   :general
   (org-mode-map
-   "C-c C-r" '(:keymap verb-command-map)))
+   "C-c C-r" verb-command-map))
 
 (use-package vertico
   :elpaca (vertico :files (:defaults "extensions/*"))
