@@ -81,13 +81,11 @@
 
 (use-package apheleia
   :elpaca t
-  :defer t
-  :init (apheleia-global-mode 1))
+  :hook (elpaca-after-init-hook . apheleia-global-mode))
 
 (use-package autorevert
-  :defer t
   :custom (auto-revert-verbose nil)
-  :init (global-auto-revert-mode 1))
+  :hook (elpaca-after-init-hook .  global-auto-revert-mode))
 
 (use-package cape
   :elpaca t
@@ -141,9 +139,8 @@
 
 (use-package corfu
   :elpaca t
-  :defer t
   :custom (corfu-cycle t)
-  :init (global-corfu-mode 1))
+  :hook (elpaca-after-init-hook . global-corfu-mode))
 
 (use-package cus-edit
   :defer t
@@ -161,14 +158,13 @@
 
 (use-package doom-modeline
   :elpaca t
-  :defer t
   :custom
   (doom-modeline-bar-width 0.1)
   (doom-modeline-buffer-file-name-style 'buffer-name)
   (doom-modeline-env-version nil)
   (doom-modeline-major-mode-icon nil)
   (doom-modeline-minor-modes t)
-  :init (doom-modeline-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package dumb-jump
   :elpaca t
@@ -188,8 +184,7 @@
 
 (use-package editorconfig
   :elpaca t
-  :defer t
-  :init (editorconfig-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package eglot
   :custom
@@ -224,7 +219,7 @@
   :general
   (envrc-mode-map
    "C-c e" 'envrc-command-map)
-  :init (envrc-global-mode 1))
+  :hook (elpaca-after-init-hook . envrc-global-mode))
 
 (use-package eros
   :elpaca t
@@ -233,8 +228,7 @@
 (use-package exec-path-from-shell
   :elpaca t
   :when (memq window-system '(mac ns x))
-  :defer t
-  :init (exec-path-from-shell-initialize))
+  :hook (elpaca-after-init-hook . exec-path-from-shell-initialize))
 
 (use-package expand-region
   :elpaca t
@@ -272,8 +266,7 @@
 
 (use-package gcmh
   :elpaca t
-  :defer t
-  :init (gcmh-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package git-link
   :elpaca t
@@ -290,8 +283,7 @@
 
 (use-package golden-ratio
   :elpaca t
-  :defer t
-  :init (golden-ratio-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
@@ -315,7 +307,6 @@
 
 (use-package ligature
   :elpaca t
-  :defer t
   :init
   (ligature-set-ligatures
    'prog-mode
@@ -337,7 +328,7 @@
      "^>>" "^>" "\\\\" "\\>" "\\/-" "@>" "|=" "||" "|>" "|||" "|+|" "|->" "|-->"
      "|=>" "|==>" "|>-" "|<<" "||>" "|>>" "|-" "||-" "~=" "~>" "~~>" "~>>" "[["
      "]]" "\">" "_|_"))
-  (global-ligature-mode 1))
+  :hook (elpaca-after-init-hook . global-ligature-mode))
 
 (use-package logview
   :elpaca t
@@ -354,8 +345,7 @@
 
 (use-package marginalia
   :elpaca t
-  :defer t
-  :init (marginalia-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package markdown-mode
   :elpaca t
@@ -363,8 +353,7 @@
 
 (use-package minions
   :elpaca t
-  :defer t
-  :init (minions-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
@@ -405,12 +394,10 @@
     (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
 (use-package savehist
-  :defer t
-  :init (savehist-mode 1))
+  :hook elpaca-after-init-hook)
 
 (use-package saveplace
-  :defer t
-  :init (save-place-mode 1))
+  :hook (elpaca-after-init-hook . save-place-mode))
 
 (use-package simple
   :defer t
@@ -433,14 +420,13 @@
 
 (use-package subword
   :defer t
-  :init (global-subword-mode 1))
+  :hook (elpaca-after-init-hook . global-subword-mode))
 
 (use-package treesit-auto
   :elpaca t
-  :defer t
   :commands global-treesit-auto-mode
   :custom (treesit-auto-install 'prompt)
-  :init (global-treesit-auto-mode 1))
+  :hook (elpaca-after-init-hook . global-treesit-auto-mode))
 
 (use-package uniquify
   :defer t
@@ -456,7 +442,6 @@
 
 (use-package vertico
   :elpaca (vertico :files (:defaults "extensions/*"))
-  :defer t
   :custom
   (vertico-count-format nil)
   (vertico-cycle t)
@@ -464,9 +449,8 @@
    '((execute-extended-command reverse)
      (execute-extended-command-for-buffer reverse)))
   (vertico-resize nil)
-  :init
-  (vertico-mode 1)
-  (vertico-multiform-mode 1))
+  :config (vertico-multiform-mode 1)
+  :hook elpaca-after-init-hook)
 
 (use-package wgrep
   :elpaca t
