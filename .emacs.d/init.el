@@ -418,7 +418,6 @@
     lisp-data-mode-hook) . smartparens-strict-mode))
 
 (use-package subword
-  :defer t
   :hook (elpaca-after-init-hook . global-subword-mode))
 
 (use-package treesit-auto
