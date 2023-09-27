@@ -88,14 +88,16 @@
 
 (use-package cape
   :elpaca t
+  :after corfu
   :general
-  (:prefix "C-c p"
-           "p" 'completion-at-point
-           "d" 'cape-dabbrev
-           "f" 'cape-file
-           "i" 'cape-ispell
-           "k" 'cape-keyword
-           "s" 'cape-symbol))
+  (corfu-mode-map
+   :prefix "C-c p"
+   "p" 'completion-at-point
+   "d" 'cape-dabbrev
+   "f" 'cape-file
+   "i" 'cape-ispell
+   "k" 'cape-keyword
+   "s" 'cape-elisp-symbol))
 
 (use-package cider
   :elpaca t
