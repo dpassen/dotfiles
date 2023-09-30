@@ -456,6 +456,11 @@
   :config (vertico-multiform-mode 1)
   :hook elpaca-after-init-hook)
 
+(use-package vundo
+  :elpaca t
+  :custom (vundo-glyph-alist vundo-unicode-symbols)
+  :general ("C-c u" 'vundo))
+
 (use-package wgrep
   :elpaca t
   :defer t)
