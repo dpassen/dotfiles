@@ -218,10 +218,6 @@
   :elpaca t
   :hook (embark-collect-mode-hook . consult-preview-at-point-mode))
 
-(use-package emmet-mode
-  :elpaca t
-  :hook html-ts-mode-hook)
-
 (use-package envrc
   :elpaca t
   :general
