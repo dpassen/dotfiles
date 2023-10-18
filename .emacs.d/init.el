@@ -345,7 +345,10 @@
 (use-package magit
   :elpaca t
   :defer t
-  :custom (magit-diff-refine-hunk t))
+  :custom
+  (magit-bury-buffer-function 'magit-restore-window-configuration)
+  (magit-diff-refine-hunk t)
+  (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1))
 
 (use-package marginalia
   :elpaca t
