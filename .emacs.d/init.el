@@ -160,16 +160,6 @@
   :defer t
   :custom (dired-kill-when-opening-new-dired-buffer t))
 
-(use-package doom-modeline
-  :elpaca t
-  :custom
-  (doom-modeline-bar-width 0.1)
-  (doom-modeline-buffer-file-name-style 'buffer-name)
-  (doom-modeline-env-version nil)
-  (doom-modeline-major-mode-icon nil)
-  (doom-modeline-minor-modes t)
-  :hook elpaca-after-init-hook)
-
 (use-package dumb-jump
   :elpaca t
   :custom (dumb-jump-force-searcher 'rg)
@@ -358,10 +348,6 @@
   :elpaca t
   :defer t)
 
-(use-package minions
-  :elpaca t
-  :hook elpaca-after-init-hook)
-
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
 
@@ -381,6 +367,11 @@
                          (_default 'modus-operandi))))
     (load-theme initial-theme))
   :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
+
+(use-package mood-line
+  :elpaca t
+  :custom (mood-line-glyph-alist mood-line-glyphs-fira-code)
+  :hook elpaca-after-init-hook)
 
 (use-package orderless
   :elpaca t
