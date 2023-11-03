@@ -68,7 +68,7 @@
         read-process-output-max (* 1024 1024)))
 
 (use-package emacs-mac
-  :when (eq system-type 'darwin)
+  :when (eq window-system 'mac)
   :defer t
   :custom
   (mac-command-modifier nil)
