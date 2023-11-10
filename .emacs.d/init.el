@@ -422,7 +422,9 @@
 (use-package treesit-auto
   :elpaca t
   :commands global-treesit-auto-mode
-  :custom (treesit-auto-install 'prompt)
+  :custom
+  (treesit-auto-langs
+   '(bash c cpp css html java javascript json python ruby toml))
   :hook (elpaca-after-init-hook . global-treesit-auto-mode))
 
 (use-package uniquify
