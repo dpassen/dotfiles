@@ -284,7 +284,7 @@
 
 (use-package html-ts-mode
   :elpaca (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
-  :mode ("\\.html?\\'"))
+  :defer t)
 
 (use-package ibuffer
   :general ("C-x C-b" 'ibuffer))
@@ -421,11 +421,10 @@
 
 (use-package treesit-auto
   :elpaca t
-  :commands global-treesit-auto-mode
   :custom
   (treesit-auto-langs
    '(bash c cpp css html java javascript json python ruby toml))
-  :hook (elpaca-after-init-hook . global-treesit-auto-mode))
+  :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
   :defer t
