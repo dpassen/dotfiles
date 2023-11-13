@@ -80,9 +80,6 @@
 
 (use-package apheleia
   :elpaca t
-  :config
-  (add-to-list 'apheleia-formatters '(cljfmt . ("cljfmt" "fix" "-")))
-  (add-to-list 'apheleia-mode-alist '(clojure-mode . cljfmt))
   :hook (elpaca-after-init-hook . apheleia-global-mode))
 
 (use-package autorevert
