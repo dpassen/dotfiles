@@ -2,7 +2,8 @@
 
 typeset -U path
 path+=(
-    /usr/local/sbin
+    /opt/homebrew/bin
+    /opt/homebrew/sbin
     ~/.bin
 )
 
