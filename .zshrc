@@ -1,5 +1,12 @@
 # shellcheck disable=all
 
+path=(
+    ~/.bin
+    /opt/homebrew/bin
+    /opt/homebrew/sbin
+    ${path}
+)
+
 if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
     source "$HOME/.asdf/asdf.sh"
 fi

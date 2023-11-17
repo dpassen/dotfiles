@@ -1,11 +1,6 @@
 # shellcheck disable=all
 
-typeset -U path
-path+=(
-    /opt/homebrew/bin
-    /opt/homebrew/sbin
-    ~/.bin
-)
+typeset -U -g PATH path
 
 export EDITOR="${EDITOR:-mg}"
 export SKIM_DEFAULT_COMMAND='rg --files'
