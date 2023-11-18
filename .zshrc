@@ -48,6 +48,7 @@ bindkey -e
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select
 
+FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
 autoload -Uz compinit
 compinit
 
