@@ -63,24 +63,21 @@
   (ring-bell-function 'ignore)
   (use-short-answers t)
   :init
-  (setq kill-buffer-query-functions nil
+  (setq frame-title-format '("%b — emacs")
+        kill-buffer-query-functions nil
         message-truncate-lines t
         read-process-output-max (* 1024 1024)))
-
-(use-package emacs-mac
-  :when (eq window-system 'mac)
-  :defer t
-  :custom
-  (mac-command-modifier nil)
-  (mac-frame-tabbing t)
-  (mac-option-modifier 'meta)
-  :init
-  (global-unset-key [swipe-left])
-  (global-unset-key [swipe-right]))
 
 (use-package apheleia
   :elpaca t
   :hook (elpaca-after-init-hook . apheleia-global-mode))
+
+(use-package auto-dark
+  :elpaca t
+  :custom
+  (auto-dark-dark-theme 'modus-vivendi)
+  (auto-dark-light-theme 'modus-operandi)
+  :hook elpaca-after-init-hook)
 
 (use-package autorevert
   :custom (auto-revert-verbose nil)
@@ -121,6 +118,12 @@
   :elpaca t
   :defer t
   :custom (clojure-align-forms-automatically t))
+
+(use-package comp
+  :defer t
+  :custom
+  (native-comp-async-report-warnings-errors nil)
+  (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
 
 (use-package consult
   :elpaca t
@@ -363,21 +366,13 @@
   :general ("M-z" 'zap-up-to-char))
 
 (use-package modus-themes
+  :defer t
   :custom
   (modus-themes-italic-constructs t)
   (modus-themes-mode-line '(borderless))
   (modus-themes-region '(accented bg-only))
   (modus-themes-subtle-line-numbers t)
-  (modus-themes-fringes nil)
-  :init
-  (let ((initial-theme (pcase (plist-get (and (eq window-system 'mac)
-                                              (mac-application-state))
-                                         :appearance)
-                         ("NSAppearanceNameAqua" 'modus-operandi)
-                         ("NSAppearanceNameDarkAqua" 'modus-vivendi)
-                         (_default 'modus-operandi))))
-    (load-theme initial-theme))
-  :hook (mac-effective-appearance-change-hook . modus-themes-toggle))
+  (modus-themes-fringes nil))
 
 (use-package orderless
   :elpaca t
