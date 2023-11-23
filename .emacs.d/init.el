@@ -109,10 +109,10 @@
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil)
   :config
-  (setq cider-repl-history-file
-        (expand-file-name
-         ".cider-repl-history"
-         (clojure-project-dir))))
+  (setopt cider-repl-history-file
+          (expand-file-name
+           ".cider-repl-history"
+           (clojure-project-dir))))
 
 (use-package clojure-mode
   :elpaca t
