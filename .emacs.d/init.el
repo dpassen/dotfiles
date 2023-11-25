@@ -355,7 +355,7 @@
   :defer t
   :custom
   (modus-themes-italic-constructs t)
-  (modus-themes-mode-line '(borderless))
+  (modus-themes-mode-line '(accented borderless))
   (modus-themes-region '(accented bg-only))
   (modus-themes-subtle-line-numbers t)
   (modus-themes-fringes nil))
