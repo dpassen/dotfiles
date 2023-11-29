@@ -362,7 +362,24 @@
 
 (use-package mood-line
   :elpaca t
-  :custom (mood-line-glyph-alist mood-line-glyphs-fira-code)
+  :custom
+  (mood-line-format
+   (mood-line-defformat
+    :left
+    (((mood-line-segment-buffer-status)    . " ")
+     ((mood-line-segment-buffer-name)      . "  ")
+     ((mood-line-segment-cursor-position)  . " ")
+     ((mood-line-segment-scroll)           . " ")
+     (mood-line-segment-region))
+    :right
+    (((mood-line-segment-eol)         . "  ")
+     ((mood-line-segment-encoding)    . "  ")
+     ((mood-line-segment-vc)          . "  ")
+     ((mood-line-segment-major-mode)  . "  ")
+     ((mood-line-segment-misc-info)   . "  ")
+     ((mood-line-segment-checker)     . "  ")
+     ((mood-line-segment-process)     . "  "))))
+  (mood-line-glyph-alist mood-line-glyphs-fira-code)
   :hook elpaca-after-init-hook)
 
 (use-package orderless
