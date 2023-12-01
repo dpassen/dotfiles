@@ -466,7 +466,8 @@
 
 (use-package wgrep
   :elpaca t
-  :defer t)
+  :defer t
+  :custom (wgrep-auto-save-buffer t))
 
 (use-package xref
   :defer t
