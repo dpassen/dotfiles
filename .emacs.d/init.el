@@ -253,7 +253,9 @@
   :when (display-graphic-p)
   :defer t
   :config
-  (dolist (frame-parameters '((height . 50) (width . 120)))
+  (dolist (frame-parameters '((height . 50)
+                              (width . 120)
+                              (ns-transparent-titlebar . t)))
     (add-to-list 'default-frame-alist frame-parameters)))
 
 (use-package gcmh
