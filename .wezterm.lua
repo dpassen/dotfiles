@@ -14,6 +14,7 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
+config.adjust_window_size_when_changing_font_size = false
 config.check_for_updates = false
 config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 config.font = wezterm.font_with_fallback({
