@@ -436,7 +436,7 @@
   :elpaca t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin python ruby toml))
+   '(bash c cpp css html java javascript json kotlin python ruby toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
