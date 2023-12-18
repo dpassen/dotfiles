@@ -5,10 +5,10 @@ Everyone else is doing it
 ** Install
 #+BEGIN_SRC sh
   brew bundle install
-  stow -S . --target=$HOME --no-folding
+  stow -S . --target="$HOME" --no-folding
 #+END_SRC
 
 ** Uninstall
 #+BEGIN_SRC sh
-  stow -D . --target=$HOME  
+  stow -D . --target="$HOME"
 #+END_SRC
