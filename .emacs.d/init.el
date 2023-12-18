@@ -105,12 +105,7 @@
   (cider-repl-display-help-banner nil)
   (cider-repl-pop-to-buffer-on-connect nil)
   (cider-save-file-on-load t)
-  (cider-use-fringe-indicators nil)
-  :config
-  (setopt cider-repl-history-file
-          (expand-file-name
-           ".cider-repl-history"
-           (clojure-project-dir))))
+  (cider-use-fringe-indicators nil))
 
 (use-package clojure-mode
   :elpaca t
