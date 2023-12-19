@@ -1,5 +1,3 @@
-# shellcheck disable=all
-
 path=(
     ~/.bin
     /opt/homebrew/bin
