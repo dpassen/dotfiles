@@ -129,10 +129,15 @@
   ("C-x b" 'consult-buffer
    "C-x p b" 'consult-project-buffer
    "M-g M-g" 'consult-goto-line
-   "M-g f" 'consult-flymake
    "M-g g" 'consult-goto-line
    "M-s l" 'consult-line
    "M-s r" 'consult-ripgrep))
+
+(use-package consult-flycheck
+  :elpaca t
+  :defer t
+  :after flycheck
+  :general ("M-g f" 'consult-flycheck))
 
 (use-package corfu
   :elpaca t
@@ -187,8 +192,7 @@
    "a" 'eglot-code-actions
    "f b" 'eglot-format-buffer
    "f f" 'eglot-format
-   "r" 'eglot-rename)
-  :hook (python-base-mode-hook . eglot-ensure))
+   "r" 'eglot-rename))
 
 (use-package embark
   :elpaca t
@@ -235,14 +239,20 @@
   (confirm-kill-processes nil)
   (require-final-newline t))
 
-(use-package flymake
-  :custom (flymake-fringe-indicator-position nil)
-  :config (remove-hook 'flymake-diagnostic-functions #'flymake-proc-legacy-flymake)
-  :hook prog-mode-hook)
-
-(use-package flymake-kondor
+(use-package flycheck
   :elpaca t
-  :hook (clojure-mode-hook . flymake-kondor-setup))
+  :custom (flycheck-indication-mode nil)
+  :hook (elpaca-after-init-hook . global-flycheck-mode))
+
+(use-package flycheck-clj-kondo
+  :elpaca t
+  :after clojure-mode)
+
+(use-package flycheck-eglot
+  :elpaca t
+  :after (eglot flycheck)
+  :custom (flycheck-eglot-exclusive nil)
+  :config (global-flycheck-eglot-mode 1))
 
 (use-package frame
   :when (display-graphic-p)
