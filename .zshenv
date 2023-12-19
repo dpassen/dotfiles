@@ -1,5 +1,3 @@
-# shellcheck disable=all
-
 typeset -U -g PATH path
 
 export EDITOR="${EDITOR:-mg}"
