@@ -433,10 +433,6 @@
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
 
-(use-package transient
-  :elpaca t
-  :defer t)
-
 (use-package treesit-auto
   :elpaca t
   :custom
