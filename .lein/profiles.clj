@@ -1,3 +1,4 @@
+#_:clj-kondo/ignore
 {:user
  {:plugins
   [[com.github.liquidz/antq "2.7.1147"]
