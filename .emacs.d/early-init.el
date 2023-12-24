@@ -22,8 +22,6 @@
                     gc-cons-percentage default-gc-percentage
                     file-name-handler-alist default-file-name-handler-alist))))
 
-(provide 'early-init)
-
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; no-native-compile: t
