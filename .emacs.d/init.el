@@ -485,8 +485,6 @@
   :elpaca t
   :defer t)
 
-(provide 'init)
-
 ;; Local Variables:
 ;; no-byte-compile: t
 ;; no-native-compile: t
