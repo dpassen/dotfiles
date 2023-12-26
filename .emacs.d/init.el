@@ -360,7 +360,7 @@
   :custom
   (modus-themes-fringes nil)
   (modus-themes-italic-constructs t)
-  (modus-themes-mode-line '(accented borderless 6))
+  (modus-themes-mode-line '(accented borderless))
   (modus-themes-region '(accented bg-only))
   (modus-themes-subtle-line-numbers t))
 
@@ -428,6 +428,10 @@
     clojure-mode-hook
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
+
+(use-package spacious-padding
+  :elpaca t
+  :hook elpaca-after-init-hook)
 
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
