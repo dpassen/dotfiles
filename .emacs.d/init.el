@@ -361,8 +361,7 @@
   (modus-themes-fringes nil)
   (modus-themes-italic-constructs t)
   (modus-themes-mode-line '(accented borderless))
-  (modus-themes-region '(accented bg-only))
-  (modus-themes-subtle-line-numbers t))
+  (modus-themes-region '(accented bg-only)))
 
 (use-package mood-line
   :elpaca t
