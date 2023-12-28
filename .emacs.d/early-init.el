@@ -4,6 +4,7 @@
 ;;; Code:
 
 (setq frame-inhibit-implied-resize t
+      mode-line-format nil
       package-enable-at-startup nil)
 
 (push '(menu-bar-lines . 0) default-frame-alist)
