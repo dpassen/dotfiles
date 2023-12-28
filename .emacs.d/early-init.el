@@ -11,17 +11,17 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 
-(let ((default-gc-threshold gc-cons-threshold)
+(let ((default-file-name-handler-alist file-name-handler-alist)
       (default-gc-percentage gc-cons-percentage)
-      (default-file-name-handler-alist file-name-handler-alist))
+      (default-gc-threshold gc-cons-threshold))
   (setq gc-cons-threshold most-positive-fixnum
         gc-cons-percentage 0.8
         file-name-handler-alist nil)
   (add-hook 'after-init-hook
             (lambda ()
-              (setq gc-cons-threshold default-gc-threshold
+              (setq file-name-handler-alist default-file-name-handler-alist
                     gc-cons-percentage default-gc-percentage
-                    file-name-handler-alist default-file-name-handler-alist))))
+                    gc-cons-threshold default-gc-threshold))))
 
 ;; Local Variables:
 ;; no-byte-compile: t
