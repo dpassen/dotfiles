@@ -381,7 +381,7 @@
      ((mood-line-segment-major-mode)  . "  ")
      ((mood-line-segment-misc-info)   . "  ")
      ((mood-line-segment-checker)     . "  ")
-     ((mood-line-segment-process)     . "  "))))
+     (mood-line-segment-process))))
   (mood-line-glyph-alist mood-line-glyphs-fira-code)
   :hook elpaca-after-init-hook)
 
