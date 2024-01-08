@@ -20,7 +20,7 @@
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop
-    {:mvn/version "2.0.10"}}}
+    {:mvn/version "2.0.11"}}}
   :splint
   {:extra-deps
    {io.github.noahtheduke/splint
