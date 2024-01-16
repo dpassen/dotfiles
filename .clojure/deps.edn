@@ -30,8 +30,8 @@
   :watson
   {:extra-deps
    {io.github.clj-holmes/clj-watson
-    {:git/tag "v5.1.0"
-     :git/sha "151ca1d"}}
+    {:git/tag "v5.1.1"
+     :git/sha "ad5fe07"}}
    :exec-fn clj-watson.entrypoint/scan
    :exec-args
    {:aliases           ["*"]
