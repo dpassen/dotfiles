@@ -220,10 +220,9 @@
   :when (memq window-system '(mac ns x))
   :hook (elpaca-after-init-hook . exec-path-from-shell-initialize))
 
-(use-package expand-region
+(use-package expreg
   :elpaca t
-  :custom (expand-region-show-usage-message nil)
-  :general ("C-=" 'er/expand-region))
+  :general ("C-=" 'expreg-expand))
 
 (use-package faces
   :when (display-graphic-p)
