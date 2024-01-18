@@ -332,8 +332,8 @@
   :elpaca t
   :defer t)
 
-(use-package lua-mode
-  :elpaca t
+(use-package lua-ts-mode
+  :elpaca (lua-ts-mode :type git :host sourcehut :repo "johnmuhl/lua-ts-mode")
   :defer t)
 
 (use-package magit
@@ -461,7 +461,7 @@
   :elpaca t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin python ruby rust toml tsx typescript))
+   '(bash c cpp css html java javascript json kotlin lua python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
