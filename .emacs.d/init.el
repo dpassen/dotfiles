@@ -63,6 +63,7 @@
   (setq frame-title-format "\n"
         kill-buffer-query-functions nil
         message-truncate-lines t
+        ns-use-proxy-icon nil
         read-process-output-max (* 1024 1024)))
 
 (use-package apheleia
