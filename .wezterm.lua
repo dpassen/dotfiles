@@ -22,7 +22,6 @@ config.font = wezterm.font_with_fallback({
 	"Symbols Nerd Font Mono",
 })
 config.freetype_interpreter_version = 35
-config.freetype_load_flags = "NO_HINTING"
 config.line_height = 0.95
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
