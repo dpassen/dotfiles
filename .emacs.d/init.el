@@ -110,7 +110,9 @@
 (use-package clojure-mode
   :elpaca t
   :defer t
-  :custom (clojure-align-forms-automatically t))
+  :custom
+  (clojure-align-forms-automatically t)
+  (clojure-toplevel-inside-comment-form t))
 
 (use-package comp
   :defer t
