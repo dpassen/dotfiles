@@ -15,17 +15,17 @@
   enabled = true
 
 [alias]
-  st = status
   ci = commit
   co = checkout
-  ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset) %C(bold blue)<%an>%C(reset)'
+  last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
   lg = ln --graph
   ll = ln --decorate --numstat
-  scoreboard = shortlog --no-merges -sn
-  sb = scoreboard
-  standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
-  last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
+  ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset) %C(bold blue)<%an>%C(reset)'
   lt = last-touched
+  sb = scoreboard
+  scoreboard = shortlog --no-merges -sn
+  st = status
+  standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
   su = standup
 
 [github]
