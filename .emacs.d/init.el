@@ -404,6 +404,9 @@
   :defer t
   :custom (show-paren-mode nil))
 
+(use-package pixel-scroll
+  :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
+
 (use-package project
   :defer t
   :custom (project-switch-commands 'project-find-file)
