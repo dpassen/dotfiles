@@ -75,6 +75,7 @@ brew "devlocker/tap/tychus"
 brew "go-task/tap/go-task"
 
 cask "appcleaner"
+cask "coteditor"
 cask "emacs-app"
 cask "font-smoothing-adjuster"
 cask "font-symbols-only-nerd-font"
