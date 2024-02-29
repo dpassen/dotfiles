@@ -160,6 +160,10 @@
   :defer t
   :custom (dired-kill-when-opening-new-dired-buffer t))
 
+(use-package diredfl
+  :ensure t
+  :hook (elpaca-after-init-hook . diredfl-global-mode))
+
 (use-package dumb-jump
   :ensure t
   :custom (dumb-jump-force-searcher 'rg)
