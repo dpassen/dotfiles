@@ -158,7 +158,9 @@
 
 (use-package dired
   :defer t
-  :custom (dired-kill-when-opening-new-dired-buffer t))
+  :custom
+  (dired-kill-when-opening-new-dired-buffer t)
+  (dired-use-ls-dired nil))
 
 (use-package diredfl
   :ensure t
