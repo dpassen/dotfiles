@@ -164,7 +164,7 @@
 
 (use-package diredfl
   :ensure t
-  :hook (elpaca-after-init-hook . diredfl-global-mode))
+  :hook dired-mode-hook)
 
 (use-package dumb-jump
   :ensure t
