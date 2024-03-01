@@ -270,10 +270,6 @@
                               (ns-transparent-titlebar . t)))
     (add-to-list 'default-frame-alist frame-parameters)))
 
-(use-package gcmh
-  :ensure t
-  :hook elpaca-after-init-hook)
-
 (use-package git-link
   :ensure t
   :defer t
