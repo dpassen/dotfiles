@@ -339,7 +339,7 @@
   :defer t)
 
 (use-package lua-ts-mode
-  :ensure (lua-ts-mode :type git :host sourcehut :repo "johnmuhl/lua-ts-mode")
+  :ensure (lua-ts-mode :type git :host sourcehut :repo "dpassen/lua-ts-mode")
   :defer t)
 
 (use-package magit
