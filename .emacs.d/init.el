@@ -168,6 +168,14 @@
   :ensure t
   :hook dired-mode-hook)
 
+(use-package doom-modeline
+  :ensure t
+  :custom
+  (doom-modeline-bar-width 0.1)
+  (doom-modeline-buffer-file-name-style 'buffer-name)
+  (doom-modeline-major-mode-icon nil)
+  :hook elpaca-after-init-hook)
+
 (use-package dumb-jump
   :ensure t
   :custom (dumb-jump-force-searcher 'rg)
@@ -369,33 +377,10 @@
   (modus-themes-mode-line '(accented borderless))
   (modus-themes-region '(accented bg-only)))
 
-(use-package mood-line
+(use-package nerd-icons
   :ensure t
-  :custom
-  (mood-line-format
-   (mood-line-defformat
-    :left
-    (((when (mode-line-window-selected-p)
-        (mood-line-segment-buffer-status))   . " ")
-     ((mood-line-segment-buffer-name)        . "  ")
-     ((when (mode-line-window-selected-p)
-        (mood-line-segment-cursor-position)) . " ")
-     ((when (mode-line-window-selected-p)
-        (mood-line-segment-scroll))          . " ")
-     (when (mode-line-window-selected-p)
-       (mood-line-segment-region)))
-    :right
-    (((mood-line-segment-eol)                . "  ")
-     ((mood-line-segment-encoding)           . "  ")
-     ((when (mode-line-window-selected-p)
-        (mood-line-segment-vc))              . "  ")
-     ((mood-line-segment-major-mode)         . "  ")
-     ((mood-line-segment-misc-info)          . "  ")
-     ((when (mode-line-window-selected-p)
-        (mood-line-segment-checker))         . "  ")
-     (mood-line-segment-process))))
-  (mood-line-glyph-alist mood-line-glyphs-fira-code)
-  :hook elpaca-after-init-hook)
+  :defer t
+  :custom (nerd-icons-scale-factor 1.1))
 
 (use-package orderless
   :ensure t
