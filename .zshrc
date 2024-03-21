@@ -1,7 +1,7 @@
 path=(
     ~/.bin
-    /opt/homebrew/bin
-    /opt/homebrew/sbin
+    ~/work/rh.customer/scripts
+    /usr/local/sbin
     ${path}
 )
 
@@ -11,6 +11,10 @@ fi
 
 if [[ -f "$HOME/.config/asdf-direnv/zshrc" ]]; then
     source "$HOME/.config/asdf-direnv/zshrc"
+fi
+
+if [[ -f "$HOME/.asdf/plugins/java/set-java-home.zsh" ]]; then
+    source "$HOME/.asdf/plugins/java/set-java-home.zsh"
 fi
 
 if [[ -f "$EAT_SHELL_INTEGRATION_DIR/zsh" ]]; then
