@@ -497,6 +497,9 @@
   :defer t
   :custom (wgrep-auto-save-buffer t))
 
+(use-package winner
+  :hook elpaca-after-init-hook)
+
 (use-package xref
   :defer t
   :custom
