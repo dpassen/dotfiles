@@ -173,6 +173,7 @@
   :custom
   (doom-modeline-bar-width 0.1)
   (doom-modeline-buffer-file-name-style 'buffer-name)
+  (doom-modeline-check-simple-format t)
   (doom-modeline-major-mode-icon nil)
   :hook elpaca-after-init-hook)
 
