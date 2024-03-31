@@ -420,6 +420,10 @@
   (dolist (mode '(cider-repl-mode eat-mode shell-mode))
     (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
+(use-package pulse
+  :defer t
+  :custom (pulse-flag 'never))
+
 (use-package savehist
   :hook elpaca-after-init-hook)
 
@@ -519,8 +523,6 @@
 (use-package xref
   :defer t
   :custom
-  (xref-after-jump-hook '(recenter))
-  (xref-after-return-hook nil)
   (xref-history-storage 'xref-window-local-history)
   (xref-search-program 'ripgrep))
 
