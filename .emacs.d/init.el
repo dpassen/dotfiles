@@ -217,6 +217,7 @@
 
 (use-package envrc
   :ensure t
+  :custom (envrc-show-summary-in-minibuffer nil)
   :general
   (envrc-mode-map
    "C-c e" 'envrc-command-map)
