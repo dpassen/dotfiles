@@ -134,8 +134,8 @@
    "C-x p b" 'consult-project-buffer
    "M-g M-g" 'consult-goto-line
    "M-g g" 'consult-goto-line
-   "M-s l" 'consult-line
-   "M-s r" 'consult-ripgrep))
+   "M-g l" 'consult-line
+   "M-g r" 'consult-ripgrep))
 
 (use-package consult-flycheck
   :ensure t
@@ -407,6 +407,17 @@
   (completion-category-overrides '((file (styles basic partial-completion))))
   (completion-styles '(orderless basic)))
 
+(use-package paredit
+  :ensure t
+  :general-config
+  (paredit-mode-map
+   "RET" nil
+   "M-?" nil)
+  :hook (cider-repl-mode-hook
+         clojure-mode-hook
+         eval-expression-minibuffer-setup-hook
+         lisp-data-mode-hook))
+
 (use-package paren
   :defer t
   :custom (show-paren-mode nil))
@@ -453,18 +464,6 @@
   (async-shell-command-buffer 'new-buffer)
   (column-number-mode t)
   (read-quoted-char-radix 16))
-
-(use-package smartparens
-  :ensure t
-  :custom (sp-highlight-pair-overlay nil)
-  :config
-  (require 'smartparens-config)
-  (sp-use-smartparens-bindings)
-  :hook prog-mode-hook
-  ((cider-repl-mode-hook
-    clojure-mode-hook
-    eval-expression-minibuffer-setup-hook
-    lisp-data-mode-hook) . smartparens-strict-mode))
 
 (use-package spacious-padding
   :ensure t
