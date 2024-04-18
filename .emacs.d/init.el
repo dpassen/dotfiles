@@ -45,12 +45,8 @@
   (elpaca-use-package-mode)
   (setopt use-package-hook-name-suffix nil))
 
-(elpaca-wait)
-
 (use-package general
-  :ensure t)
-
-(elpaca-wait)
+  :ensure (:wait t))
 
 (use-package emacs
   :defer t
