@@ -414,7 +414,7 @@
   :defer t
   :custom (project-switch-commands 'project-find-file)
   :config
-  (dolist (mode '(cider-repl-mode eat-mode shell-mode))
+  (dolist (mode '(cider-repl-mode eat-mode))
     (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
 
 (use-package pulse
