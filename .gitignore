@@ -1,9 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/emacs,macos,direnv
-# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,macos,direnv
-
-### direnv ###
-.direnv
-.envrc
+# Created by https://www.toptal.com/developers/gitignore/api/emacs,macos
+# Edit at https://www.toptal.com/developers/gitignore?templates=emacs,macos
 
 ### Emacs ###
 # -*- mode: gitignore; -*-
@@ -89,4 +85,7 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
-# End of https://www.toptal.com/developers/gitignore/api/emacs,macos,direnv
+# End of https://www.toptal.com/developers/gitignore/api/emacs,macos
+
+### mise ###
+.mise.local.toml

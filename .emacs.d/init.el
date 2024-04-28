@@ -211,14 +211,6 @@
   :ensure t
   :hook (embark-collect-mode-hook . consult-preview-at-point-mode))
 
-(use-package envrc
-  :ensure t
-  :custom (envrc-show-summary-in-minibuffer nil)
-  :general
-  (envrc-mode-map
-   "C-c e" 'envrc-command-map)
-  :hook (elpaca-after-init-hook . envrc-global-mode))
-
 (use-package eros
   :ensure t
   :hook lisp-data-mode-hook)
@@ -359,6 +351,10 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
+
+(use-package mise
+  :ensure (mise :type git :host github :repo "liuyinz/mise.el")
+  :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package modus-themes
   :defer t
