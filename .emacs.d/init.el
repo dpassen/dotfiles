@@ -215,11 +215,6 @@
   :ensure t
   :hook lisp-data-mode-hook)
 
-(use-package exec-path-from-shell
-  :ensure t
-  :when (memq window-system '(mac ns x))
-  :hook (elpaca-after-init-hook . exec-path-from-shell-initialize))
-
 (use-package expreg
   :ensure t
   :general ("C-=" 'expreg-expand))
@@ -351,10 +346,6 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
-
-(use-package mise
-  :ensure (mise :type git :host github :repo "liuyinz/mise.el")
-  :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package modus-themes
   :defer t
@@ -522,6 +513,15 @@
 (use-package yaml-mode
   :ensure t
   :defer t)
+
+(use-package mise
+  :ensure (mise :type git :host github :repo "liuyinz/mise.el")
+  :hook (elpaca-after-init-hook . global-mise-mode))
+
+(use-package exec-path-from-shell
+  :ensure t
+  :when (memq window-system '(mac ns x))
+  :hook (elpaca-after-init-hook . exec-path-from-shell-initialize))
 
 ;; Local Variables:
 ;; no-byte-compile: t
