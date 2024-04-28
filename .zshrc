@@ -5,13 +5,7 @@ path=(
     ${path}
 )
 
-if [[ -f "$HOME/.asdf/asdf.sh" ]]; then
-    source "$HOME/.asdf/asdf.sh"
-fi
-
-if [[ -f "$HOME/.config/asdf-direnv/zshrc" ]]; then
-    source "$HOME/.config/asdf-direnv/zshrc"
-fi
+eval "$(mise activate zsh)"
 
 if [[ -f "$EAT_SHELL_INTEGRATION_DIR/zsh" ]]; then
     source "$EAT_SHELL_INTEGRATION_DIR/zsh"
