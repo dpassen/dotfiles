@@ -515,7 +515,7 @@
   :defer t)
 
 (use-package mise
-  :ensure (mise :type git :host github :repo "liuyinz/mise.el")
+  :ensure t
   :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
