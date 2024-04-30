@@ -7,10 +7,6 @@ path=(
 
 eval "$(mise activate zsh)"
 
-if [[ -f "$EAT_SHELL_INTEGRATION_DIR/zsh" ]]; then
-    source "$EAT_SHELL_INTEGRATION_DIR/zsh"
-fi
-
 alias mg='mg -n'
 alias tmux='tmux -2'
 alias tree='tree --gitignore -I ".git"'
@@ -65,3 +61,9 @@ precmd() {
 setopt prompt_subst
 NEWLINE=$'\n'
 PROMPT='[%n@%m] %2d${vcs_info_msg_0_}${NEWLINE}$ '
+
+if [[ "$INSIDE_EMACS" = 'vterm' ]] \
+    && [[ -n ${EMACS_VTERM_PATH} ]] \
+    && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh ]]; then
+	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
+fi
