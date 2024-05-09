@@ -5,7 +5,6 @@ tap "devlocker/tap"
 tap "go-task/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "jimeh/emacs-builds"
 
 brew "aspell"
