@@ -275,9 +275,6 @@
   :ensure (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
   :defer t)
 
-(use-package ibuffer
-  :general ("C-x C-b" 'ibuffer))
-
 (use-package jarchive
   :ensure t
   :defer t
