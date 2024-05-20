@@ -4,7 +4,6 @@ tap "clojure/tools"
 tap "devlocker/tap"
 tap "go-task/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "jimeh/emacs-builds"
 
 brew "aspell"
