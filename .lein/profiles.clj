@@ -1,4 +1,4 @@
-#_:clj-kondo/ignore
+#_{:clj-kondo/ignore [:unresolved-namespace]}
 {:user
  {:plugins
   [[com.github.liquidz/antq "2.8.1201"]
