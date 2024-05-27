@@ -45,25 +45,10 @@ FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz compinit
 compinit
-
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git*' formats " (%b)"
-
-precmd() {
-    vcs_info
-    precmd() {
-        vcs_info
-        print ""
-    }
-}
-
-setopt prompt_subst
-NEWLINE=$'\n'
-PROMPT='[%n@%m] %2d${vcs_info_msg_0_}${NEWLINE}$ '
-
 if [[ "$INSIDE_EMACS" = 'vterm' ]] \
     && [[ -n ${EMACS_VTERM_PATH} ]] \
     && [[ -f ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh ]]; then
 	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
 fi
+
+eval "$(starship init zsh)"
