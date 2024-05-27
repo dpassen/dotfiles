@@ -9,7 +9,8 @@ eval "$(mise activate zsh)"
 
 alias mg='mg -n'
 alias tmux='tmux -2'
-alias tree='tree --gitignore -I ".git"'
+alias ls='eza --git-ignore --group-directories-first --sort=Name'
+alias tree='ls -T --no-quotes'
 alias view='mg -R'
 
 edit() {
