@@ -6,7 +6,6 @@ path=(
 )
 
 alias mg='mg -n'
-alias tmux='tmux -2'
 alias ls='eza --group-directories-first --sort=Name'
 alias tree='ls -T --git-ignore --no-quotes'
 alias view='mg -R'
@@ -21,10 +20,6 @@ emacs() {
 
 nfocat() {
     iconv -f cp437 "$@"
-}
-
-tmux-select() {
-    tmux attach -t $(tmux ls "-F#{session_name}" 2> /dev/null | sk)
 }
 
 HISTFILE=~/.histfile
