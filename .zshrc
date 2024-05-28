@@ -30,8 +30,6 @@ setopt interactivecomments
 setopt no_auto_remove_slash
 setopt share_history
 
-bindkey -e
-
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select
 
