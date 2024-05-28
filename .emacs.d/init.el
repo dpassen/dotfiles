@@ -161,6 +161,10 @@
   (dired-kill-when-opening-new-dired-buffer t)
   (dired-use-ls-dired nil))
 
+(use-package dired-gitignore
+  :ensure t
+  :hook dired-mode-hook)
+
 (use-package diredfl
   :ensure t
   :hook dired-mode-hook)
