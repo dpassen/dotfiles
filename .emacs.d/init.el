@@ -159,7 +159,7 @@
   :defer t
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
-  (dired-use-ls-dired nil))
+  (dired-listing-switches "--group-directories-first -al"))
 
 (use-package dired-gitignore
   :ensure t
@@ -228,7 +228,8 @@
   :defer t
   :custom
   (confirm-kill-processes nil)
-  (require-final-newline t))
+  (require-final-newline t)
+  :init (setq insert-directory-program "gls"))
 
 (use-package flycheck
   :ensure t
