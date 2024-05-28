@@ -5,8 +5,6 @@ path=(
     ${path}
 )
 
-eval "$(mise activate zsh)"
-
 alias mg='mg -n'
 alias tmux='tmux -2'
 alias ls='eza --group-directories-first --sort=Name'
@@ -52,4 +50,5 @@ if [[ "$INSIDE_EMACS" = 'vterm' ]] \
 	source ${EMACS_VTERM_PATH}/etc/emacs-vterm-zsh.sh
 fi
 
+eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
