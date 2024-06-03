@@ -1,4 +1,5 @@
 typeset -U -g PATH path
+typeset -U -g FPATH fpath
 
 export BAT_THEME=ansi
 export EDITOR="${EDITOR:-mg}"

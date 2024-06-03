@@ -5,6 +5,11 @@ path=(
     ${path}
 )
 
+fpath=(
+    /opt/homebrew/share/zsh/site-functions
+    ${fpath}
+)
+
 alias mg='mg -n'
 alias ls='eza --group-directories-first --sort=Name'
 alias tree='ls -T --git-ignore --no-quotes'
@@ -32,8 +37,6 @@ setopt share_history
 
 zstyle :compinstall filename "$HOME/.zshrc"
 zstyle ':completion:*' menu select
-
-FPATH="/opt/homebrew/share/zsh/site-functions:${FPATH}"
 
 autoload -Uz compinit
 compinit
