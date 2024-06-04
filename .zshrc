@@ -35,9 +35,6 @@ setopt interactivecomments
 setopt no_auto_remove_slash
 setopt share_history
 
-zstyle :compinstall filename "$HOME/.zshrc"
-zstyle ':completion:*' menu select
-
 autoload -Uz compinit
 compinit
 
