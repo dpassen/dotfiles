@@ -31,6 +31,10 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt inc_append_history
 setopt interactivecomments
 setopt no_auto_remove_slash
 setopt share_history
