@@ -262,7 +262,7 @@
   (dolist (frame-parameters '((height . 50)
                               (width . 120)
                               (ns-transparent-titlebar . t)))
-    (add-to-list 'default-frame-alist frame-parameters)))
+    (push frame-parameters default-frame-alist)))
 
 (use-package git-link
   :ensure t
@@ -405,7 +405,7 @@
   :custom (project-switch-commands 'project-find-file)
   :config
   (dolist (mode '(cider-repl-mode eat-mode))
-    (add-to-list 'project-kill-buffer-conditions `(major-mode . ,mode) t)))
+    (push `(major-mode . ,mode) project-kill-buffer-conditions)))
 
 (use-package pulse
   :defer t
