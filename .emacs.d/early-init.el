@@ -11,6 +11,10 @@
 (push '(tool-bar-lines . 0) default-frame-alist)
 (push '(vertical-scroll-bars) default-frame-alist)
 
+(setq menu-bar-mode nil
+      tool-bar-mode nil
+      scroll-bar-mode nil)
+
 (let ((default-file-name-handler-alist file-name-handler-alist)
       (default-gc-percentage gc-cons-percentage)
       (default-gc-threshold gc-cons-threshold))
