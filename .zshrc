@@ -11,8 +11,7 @@ fpath=(
 )
 
 alias mg='mg -n'
-alias ls='eza --group-directories-first --sort=Name'
-alias tree='ls -T --git-ignore --no-quotes'
+alias tree='tree --gitignore -I ".git"'
 alias view='mg -R'
 
 edit() {
