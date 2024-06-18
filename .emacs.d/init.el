@@ -101,7 +101,6 @@
   (cider-ns-save-files-on-refresh t)
   (cider-prompt-for-symbol nil)
   (cider-repl-display-help-banner nil)
-  (cider-repl-display-output-before-window-boundaries t)
   (cider-repl-pop-to-buffer-on-connect nil)
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil))
