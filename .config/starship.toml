@@ -17,7 +17,7 @@ error_symbol = '[\$](red)'
 
 [git_branch]
 format = '[$branch]($style)'
-style = 'bright-green'
+style = 'green'
 
 [package]
 disabled = true
