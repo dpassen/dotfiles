@@ -452,6 +452,7 @@
 
 (use-package spacious-padding
   :ensure t
+  :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
 (use-package subword
