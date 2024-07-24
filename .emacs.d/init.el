@@ -137,7 +137,9 @@
   :ensure t
   :defer t
   :after flycheck
-  :general ("M-g f" 'consult-flycheck))
+  :general
+  (flycheck-mode-map
+   "M-g f" 'consult-flycheck))
 
 (use-package corfu
   :ensure t
