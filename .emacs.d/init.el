@@ -343,7 +343,8 @@
 
 (use-package markdown-mode
   :ensure t
-  :defer t)
+  :defer t
+  :custom (markdown-fontify-code-blocks-natively t))
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
