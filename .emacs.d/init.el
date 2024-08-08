@@ -194,7 +194,6 @@
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-initiated-edits nil)
-  (eglot-extend-to-xref t)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   (eglot-sync-connect nil)
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
@@ -287,12 +286,6 @@
 (use-package html-ts-mode
   :ensure (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
   :defer t)
-
-(use-package jarchive
-  :ensure t
-  :defer t
-  :after eglot
-  :init (jarchive-setup))
 
 (use-package kotlin-ts-mode
   :ensure t
