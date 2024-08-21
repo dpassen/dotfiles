@@ -130,6 +130,7 @@
    "C-x p b" 'consult-project-buffer
    "M-g M-g" 'consult-goto-line
    "M-g g" 'consult-goto-line
+   "M-g i" 'consult-imenu
    "M-s l" 'consult-line
    "M-s r" 'consult-ripgrep))
 
