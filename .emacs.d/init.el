@@ -221,9 +221,10 @@
   :ensure t
   :hook lisp-data-mode-hook)
 
-(use-package expreg
+(use-package expand-region
   :ensure t
-  :general ("C-=" 'expreg-expand))
+  :custom (expand-region-show-usage-message nil)
+  :general ("C-=" 'er/expand-region))
 
 (use-package faces
   :when (display-graphic-p)
