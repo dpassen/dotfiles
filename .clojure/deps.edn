@@ -2,9 +2,9 @@
  {:antq
   {:extra-deps
    {io.github.liquidz/antq
-    {:git/tag "2.9.1227"
-     :git/sha "197c707"}}
-   :exec-fn antq.tool/outdated}
+    {:git/tag "2.9.1232"
+     :git/sha "c1d0f9e"}}
+   :main-opts ["-m" "antq.core"]}
   :check
   {:extra-deps
    {io.github.athos/clj-check
