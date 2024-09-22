@@ -1,6 +1,6 @@
 {:aliases
  {:antq
-  {:extra-deps
+  {:deps
    {io.github.liquidz/antq
     {:git/tag "2.9.1232"
      :git/sha "c1d0f9e"}}
@@ -12,7 +12,7 @@
      :git/sha "0ca84df"}}
    :main-opts ["-m" "clj-check.check"]}
   :new
-  {:extra-deps
+  {:deps
    {io.github.seancorfield/deps-new
     {:git/tag "v0.8.0"
      :git/sha "2f96530"}}
@@ -22,13 +22,13 @@
    {org.slf4j/slf4j-nop
     {:mvn/version "2.0.16"}}}
   :splint
-  {:extra-deps
+  {:deps
    {io.github.noahtheduke/splint
     {:git/tag "v1.17.1"
      :git/sha "dd6e172"}}
    :main-opts ["-m" "noahtheduke.splint"]}
   :watson
-  {:extra-deps
+  {:deps
    {io.github.clj-holmes/clj-watson
     {:git/tag "v6.0.0"
      :git/sha "cb02879"}}
