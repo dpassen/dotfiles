@@ -2,8 +2,8 @@
  {:antq
   {:deps
    {io.github.liquidz/antq
-    {:git/tag "2.9.1232"
-     :git/sha "c1d0f9e"}}
+    {:git/tag "2.10.1241"
+     :git/sha "11e3565"}}
    :main-opts ["-m" "antq.core"]}
   :check
   {:extra-deps
