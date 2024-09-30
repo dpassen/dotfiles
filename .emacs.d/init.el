@@ -332,7 +332,8 @@
   :custom
   (magit-bury-buffer-function 'magit-restore-window-configuration)
   (magit-diff-refine-hunk t)
-  (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1))
+  (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+  (magit-no-message '("Turning on magit-auto-revert-mode...")))
 
 (use-package marginalia
   :ensure t
