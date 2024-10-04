@@ -64,9 +64,18 @@
         ns-use-proxy-icon nil
         read-process-output-max (* 1024 1024)))
 
+(use-package adoc-mode
+  :ensure t
+  :defer t)
+
 (use-package apheleia
   :ensure t
-  :hook (elpaca-after-init-hook . apheleia-global-mode))
+  :hook clojure-mode-hook)
+
+(use-package apprentice
+  :ensure (apprentice :type git :host github :repo "Sasanidas/Apprentice")
+  :custom (apprentice-test-status-modeline nil)
+  :hook elixir-ts-mode-hook)
 
 (use-package auto-dark
   :ensure t
@@ -146,6 +155,10 @@
   :custom (corfu-cycle t)
   :hook (elpaca-after-init-hook . global-corfu-mode))
 
+(use-package csv-mode
+  :ensure t
+  :defer t)
+
 (use-package cus-edit
   :defer t
   :custom (custom-file (expand-file-name "custom.el" user-emacs-directory))
@@ -172,6 +185,10 @@
 
 (use-package display-line-numbers
   :hook ((conf-mode-hook prog-mode-hook) . display-line-numbers-mode))
+
+(use-package docker
+  :ensure t
+  :defer t)
 
 (use-package dumb-jump
   :ensure t
@@ -207,6 +224,10 @@
    "f b" 'eglot-format-buffer
    "f f" 'eglot-format
    "r" 'eglot-rename))
+
+(use-package elixir-ts-mode
+  :ensure t
+  :defer t)
 
 (use-package embark
   :ensure t
@@ -291,9 +312,23 @@
   :ensure (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
   :defer t)
 
+(use-package jsonnet-mode
+  :ensure t
+  :defer t)
+
 (use-package kotlin-ts-mode
   :ensure t
   :defer t)
+
+(use-package kubed
+  :ensure t
+  :defer t
+  :custom (kubed-yaml-setup-hook '(yaml-mode)))
+
+(use-package kubel
+  :ensure t
+  :defer t
+  :custom (kubel-use-namespace-list 'on))
 
 (use-package ligature
   :ensure t
@@ -345,6 +380,10 @@
   :ensure t
   :defer t
   :custom (markdown-fontify-code-blocks-natively t))
+
+(use-package markdown-toc
+  :ensure t
+  :defer t)
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
@@ -411,6 +450,10 @@
   :defer t
   :custom (pulse-flag 'never))
 
+(use-package robot-mode
+  :ensure t
+  :defer t)
+
 (use-package savehist
   :hook elpaca-after-init-hook)
 
@@ -468,7 +511,7 @@
   :ensure t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin lua python ruby rust toml tsx typescript))
+   '(bash c cpp css dockerfile elixir heex html java javascript json kotlin lua python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify

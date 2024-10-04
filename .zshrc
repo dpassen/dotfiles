@@ -1,12 +1,12 @@
 path=(
     ~/.bin
-    /opt/homebrew/bin
-    /opt/homebrew/sbin
+    ~/work/rh.customer/scripts
+    /usr/local/sbin
     ${path}
 )
 
 fpath=(
-    /opt/homebrew/share/zsh/site-functions
+    /usr/local/share/zsh/site-functions
     ${fpath}
 )
 

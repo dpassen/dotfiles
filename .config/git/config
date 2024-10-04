@@ -1,6 +1,6 @@
 [user]
   name = Derek Passen
-  email = dpassen1@gmail.com
+  email = dpassen@ridehealth.com
 
 [core]
   excludesfile = ~/.config/git/ignore
@@ -30,3 +30,12 @@
 
 [github]
   user = dpassen
+
+[url "ssh://git@github.com/"]
+  insteadOf = https://github.com/
+
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
