@@ -4,5 +4,5 @@ legacy_version_file = false
 
 [tools]
 node = "22.9.0"
-python = "3.12.6"
+python = "3.13.0"
 usage = "latest"
