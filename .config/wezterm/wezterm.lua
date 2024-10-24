@@ -20,6 +20,7 @@ config.font = wezterm.font_with_fallback({
 	"PragmataPro",
 	"Symbols Nerd Font Mono",
 })
+config.front_end = "Software"
 config.line_height = 0.95
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
