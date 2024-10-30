@@ -3,6 +3,6 @@ experimental = true
 legacy_version_file = false
 
 [tools]
-node = "22.10.0"
+node = "22.11.0"
 python = "3.13.0"
 usage = "latest"
