@@ -383,6 +383,10 @@
   (mood-line-glyph-alist mood-line-glyphs-fira-code)
   :hook elpaca-after-init-hook)
 
+(use-package nerd-icons-corfu
+  :ensure t
+  :hook (corfu-margin-formatters . nerd-icons-corfu-formatter))
+
 (use-package orderless
   :ensure t
   :defer t
