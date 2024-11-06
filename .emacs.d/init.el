@@ -497,7 +497,7 @@
   :defer t)
 
 (use-package mise
-  :ensure t
+  :ensure (mise :type git :host github :repo "dpassen/mise.el" :branch "json-config")
   :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
