@@ -206,6 +206,10 @@
    "f f" 'eglot-format
    "r" 'eglot-rename))
 
+(use-package eldoc-box
+  :ensure t
+  :hook (eldoc-mode-hook . eldoc-box-hover-mode))
+
 (use-package embark
   :ensure t
   :general
