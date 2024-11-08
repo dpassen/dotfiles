@@ -171,10 +171,9 @@
   :ensure t
   :hook dired-mode-hook)
 
-(use-package dumb-jump
+(use-package dumber-jump
   :ensure t
-  :custom (dumb-jump-force-searcher 'rg)
-  :hook (xref-backend-functions . dumb-jump-xref-activate))
+  :hook (xref-backend-functions . dumber-jump-xref-activate))
 
 (use-package eat
   :ensure t
