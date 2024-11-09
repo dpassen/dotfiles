@@ -99,7 +99,6 @@
   (cider-connection-message-fn nil)
   (cider-font-lock-dynamically nil)
   (cider-ns-save-files-on-refresh t)
-  (cider-prompt-for-symbol nil)
   (cider-repl-display-help-banner nil)
   (cider-repl-pop-to-buffer-on-connect nil)
   (cider-save-file-on-load t)
