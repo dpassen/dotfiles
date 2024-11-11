@@ -280,10 +280,6 @@
   :ensure t
   :defer t)
 
-(use-package golden-ratio
-  :ensure t
-  :hook elpaca-after-init-hook)
-
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
