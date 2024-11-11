@@ -170,6 +170,12 @@
   :ensure t
   :hook dired-mode-hook)
 
+(use-package disproject
+  :ensure (disproject :type git :host github :repo "aurtzy/disproject")
+  :general
+  (ctl-x-map
+   "p" 'disproject-dispatch))
+
 (use-package dumber-jump
   :ensure t
   :hook (xref-backend-functions . dumber-jump-xref-activate))
@@ -378,7 +384,6 @@
 
 (use-package project
   :defer t
-  :custom (project-switch-commands 'project-find-file)
   :config
   (dolist (mode '(cider-repl-mode eat-mode))
     (push `(major-mode . ,mode) project-kill-buffer-conditions)))
