@@ -206,7 +206,7 @@
 
 (use-package eldoc-box
   :ensure t
-  :hook (eldoc-mode-hook . eldoc-box-hover-mode))
+  :hook (eglot-managed-mode-hook . eldoc-box-hover-mode))
 
 (use-package embark
   :ensure t
