@@ -287,6 +287,10 @@
   :ensure t
   :defer t)
 
+(use-package golden
+  :ensure (golden :type git :host sourcehut :repo "wklew/golden")
+  :hook (elpaca-after-init-hook . global-golden-mode))
+
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
