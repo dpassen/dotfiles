@@ -171,7 +171,8 @@
   :hook dired-mode-hook)
 
 (use-package disproject
-  :ensure (disproject :type git :host github :repo "aurtzy/disproject")
+  :ensure t
+  :custom (disproject-shell-command #'eat-project)
   :general
   (ctl-x-map
    "p" 'disproject-dispatch))
@@ -182,10 +183,10 @@
 
 (use-package eat
   :ensure t
+  :defer t
   :custom
   (eat-enable-shell-prompt-annotation nil)
-  (eat-kill-buffer-on-exit t)
-  :general ("C-x RET" 'eat-project-other-window))
+  (eat-kill-buffer-on-exit t))
 
 (use-package edit-indirect
   :ensure t
