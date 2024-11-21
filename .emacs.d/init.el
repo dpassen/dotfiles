@@ -127,11 +127,13 @@
   :general
   (ctl-x-map
    "b" 'consult-buffer)
-  ("M-g M-g" 'consult-goto-line
-   "M-g g" 'consult-goto-line
-   "M-g i" 'consult-imenu
-   "M-s l" 'consult-line
-   "M-s r" 'consult-ripgrep))
+  (:prefix "M-g"
+           "M-g" 'consult-goto-line
+           "g" 'consult-goto-line
+           "i" 'consult-imenu)
+  (:prefix "M-s"
+           "l" 'consult-line
+           "r" 'consult-ripgrep))
 
 (use-package consult-flycheck
   :ensure t
