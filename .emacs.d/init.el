@@ -125,8 +125,7 @@
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
   :general
-  (ctl-x-map
-   "b" 'consult-buffer)
+  (ctl-x-map "b" 'consult-buffer)
   (:prefix "M-g"
            "M-g" 'consult-goto-line
            "g" 'consult-goto-line
@@ -139,9 +138,7 @@
   :ensure t
   :defer t
   :after flycheck
-  :general
-  (flycheck-mode-map
-   "M-g f" 'consult-flycheck))
+  :general (flycheck-mode-map "M-g f" 'consult-flycheck))
 
 (use-package corfu
   :ensure t
@@ -177,9 +174,7 @@
   :custom
   (disproject-shell-command #'eat-project)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
-  :general
-  (ctl-x-map
-   "p" 'disproject-dispatch))
+  :general (ctl-x-map "p" 'disproject-dispatch))
 
 (use-package dumber-jump
   :ensure t
@@ -469,9 +464,7 @@
   :ensure t
   :defer t
   :after org
-  :general
-  (org-mode-map
-   "C-c C-r" verb-command-map))
+  :general (org-mode-map "C-c C-r" verb-command-map))
 
 (use-package vertico
   :ensure (vertico :files (:defaults "extensions/*"))
