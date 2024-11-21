@@ -172,6 +172,7 @@
 (use-package disproject
   :ensure t
   :custom
+  (disproject-find-line-command #'consult-line-multi)
   (disproject-shell-command #'eat-project)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
