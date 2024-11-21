@@ -126,7 +126,6 @@
   (xref-show-xrefs-function #'consult-xref)
   :general
   ("C-x b" 'consult-buffer
-   "C-x p b" 'consult-project-buffer
    "M-g M-g" 'consult-goto-line
    "M-g g" 'consult-goto-line
    "M-g i" 'consult-imenu
@@ -172,7 +171,9 @@
 
 (use-package disproject
   :ensure t
-  :custom (disproject-shell-command #'eat-project)
+  :custom
+  (disproject-shell-command #'eat-project)
+  (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general
   (ctl-x-map
    "p" 'disproject-dispatch))
