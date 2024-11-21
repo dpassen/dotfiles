@@ -125,8 +125,9 @@
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
   :general
-  ("C-x b" 'consult-buffer
-   "M-g M-g" 'consult-goto-line
+  (ctl-x-map
+   "b" 'consult-buffer)
+  ("M-g M-g" 'consult-goto-line
    "M-g g" 'consult-goto-line
    "M-g i" 'consult-imenu
    "M-s l" 'consult-line
