@@ -88,4 +88,4 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/emacs,macos
 
 ### mise ###
-.mise.local.toml
+mise.local.toml
