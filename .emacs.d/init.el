@@ -179,6 +179,10 @@
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
+(use-package docker
+  :ensure t
+  :defer t)
+
 (use-package dumber-jump
   :ensure t
   :hook (xref-backend-functions . dumber-jump-xref-activate))
@@ -387,6 +391,10 @@
   :defer t
   :custom (show-paren-mode nil))
 
+(use-package php-mode
+  :ensure t
+  :defer t)
+
 (use-package pixel-scroll
   :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
 
@@ -457,7 +465,7 @@
   :ensure t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin lua python ruby rust toml tsx typescript))
+   '(bash c cpp css dockerfile html java javascript json kotlin lua python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
