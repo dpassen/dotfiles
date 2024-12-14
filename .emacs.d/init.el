@@ -340,6 +340,7 @@
   :defer t
   :custom
   (magit-bury-buffer-function 'magit-restore-window-configuration)
+  (magit-clone-default-directory "~/Developer/")
   (magit-diff-refine-hunk t)
   (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
   (magit-no-message '("Turning on magit-auto-revert-mode...")))
