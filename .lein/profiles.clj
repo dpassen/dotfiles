@@ -2,8 +2,10 @@
 {:user
  {:plugins
   [[com.github.liquidz/antq "2.11.1250"]
-   [com.jakemccrary/lein-test-refresh "0.25.0"]
+   [com.jakemccrary/lein-test-refresh "0.26.0"]
    [lein-try/lein-try "0.4.3"]]
   :test-refresh
-  {:changes-only true
+  {:banner       ""
+   :changes-only true
+   :clear        true
    :quiet        true}}}
