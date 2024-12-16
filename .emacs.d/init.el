@@ -66,7 +66,7 @@
         read-process-output-max (* 1024 1024)))
 
 (use-package apheleia
-  :ensure t
+  :ensure (apheleia :type git :host github :repo "dpassen/apheleia" :branch "add-cljstyle-formatter")
   :hook (elpaca-after-init-hook . apheleia-global-mode))
 
 (use-package auto-dark
@@ -79,6 +79,10 @@
 (use-package autorevert
   :custom (auto-revert-verbose nil)
   :hook (elpaca-after-init-hook .  global-auto-revert-mode))
+
+(use-package bazel
+  :ensure t
+  :defer t)
 
 (use-package cape
   :ensure t
@@ -179,6 +183,10 @@
   (disproject-shell-command #'eat-project)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
+
+(use-package docker
+  :ensure t
+  :defer t)
 
 (use-package dumber-jump
   :ensure t
@@ -397,6 +405,10 @@
   :defer t
   :custom (show-paren-mode nil))
 
+(use-package php-mode
+  :ensure t
+  :defer t)
+
 (use-package pixel-scroll
   :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
 
@@ -456,8 +468,20 @@
   :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
+(use-package splash
+  :ensure (splash :repo "/Users/dpassen/Work/stonehenge"
+                  :files ("development/emacs/splash.el"))
+  :defer t
+  :custom
+  (splash-stonehenge-dir "/Users/dpassen/Work/stonehenge")
+  (splash-website-dir "/Users/dpassen/Work/Website"))
+
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
+
+(use-package terraform-mode
+  :ensure t
+  :defer t)
 
 (use-package transient
   :ensure t
@@ -467,7 +491,7 @@
   :ensure t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin lua python ruby rust toml tsx typescript))
+   '(bash c cpp css dockerfile html java javascript json kotlin lua python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
