@@ -51,6 +51,7 @@
 (use-package emacs
   :defer t
   :custom
+  (frame-resize-pixelwise t)
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (initial-scratch-message ";; rebellious pro\n\n")
