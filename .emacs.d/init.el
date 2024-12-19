@@ -156,6 +156,10 @@
   :defer t
   :custom (datetime-timezone 'America/Chicago))
 
+(use-package difftastic
+  :ensure t
+  :hook (magit-mode-hook . difftastic-bindings-mode))
+
 (use-package dired
   :defer t
   :custom
