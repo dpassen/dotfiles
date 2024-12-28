@@ -59,10 +59,9 @@
   (ring-bell-function 'ignore)
   (use-short-answers t)
   :init
-  (setq frame-title-format "\n"
+  (setq frame-title-format "%b\n"
         kill-buffer-query-functions nil
         message-truncate-lines t
-        ns-use-proxy-icon nil
         read-process-output-max (* 1024 1024)))
 
 (use-package apheleia
@@ -274,9 +273,7 @@
   :when (display-graphic-p)
   :defer t
   :config
-  (dolist (frame-parameters '((height . 50)
-                              (width . 120)
-                              (ns-transparent-titlebar . t)))
+  (dolist (frame-parameters '((height . 50) (width . 120)))
     (push frame-parameters default-frame-alist)))
 
 (use-package git-link
