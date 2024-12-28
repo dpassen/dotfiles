@@ -1,7 +1,7 @@
 #_{:clj-kondo/ignore [:unresolved-namespace]}
 {:user
  {:plugins
-  [[com.github.liquidz/antq "2.11.1250"]
+  [[com.github.liquidz/antq "2.11.1260"]
    [com.jakemccrary/lein-test-refresh "0.26.0"]
    [lein-try/lein-try "0.4.3"]]
   :test-refresh
