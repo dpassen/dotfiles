@@ -1,0 +1,11 @@
+adjust-cell-height = -5%
+cursor-style = block
+font-family = PragmataPro
+font-size = 12
+macos-titlebar-style = native
+shell-integration-features = no-cursor
+theme = dark:Modus Vivendi,light:Modus Operandi
+window-height = 30
+window-padding-x = 9
+window-padding-y = 9
+window-width = 120
