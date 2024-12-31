@@ -290,14 +290,14 @@
   :defer t)
 
 (use-package golden
-  :ensure (golden :type git :host sourcehut :repo "wklew/golden")
+  :ensure (golden :host sourcehut :repo "wklew/golden")
   :hook (elpaca-after-init-hook . global-golden-mode))
 
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
 (use-package html-ts-mode
-  :ensure (html-ts-mode :type git :host github :repo "mickeynp/html-ts-mode")
+  :ensure (html-ts-mode :host github :repo "mickeynp/html-ts-mode")
   :defer t)
 
 (use-package kotlin-ts-mode
@@ -334,7 +334,7 @@
   :defer t)
 
 (use-package lua-ts-mode
-  :ensure (lua-ts-mode :type git :host sourcehut :repo "dpassen/lua-ts-mode")
+  :ensure (lua-ts-mode :host sourcehut :repo "dpassen/lua-ts-mode")
   :defer t)
 
 (use-package magit
