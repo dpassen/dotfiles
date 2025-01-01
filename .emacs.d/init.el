@@ -155,10 +155,6 @@
   :defer t
   :custom (datetime-timezone 'America/Chicago))
 
-(use-package difftastic
-  :ensure t
-  :hook (magit-mode-hook . difftastic-bindings-mode))
-
 (use-package dired
   :defer t
   :custom
@@ -214,10 +210,6 @@
    "f b" 'eglot-format-buffer
    "f f" 'eglot-format
    "r" 'eglot-rename))
-
-(use-package eldoc-box
-  :ensure t
-  :hook (eglot-managed-mode-hook . eldoc-box-hover-mode))
 
 (use-package embark
   :ensure t
