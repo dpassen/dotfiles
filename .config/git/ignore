@@ -89,3 +89,6 @@ Temporary Items
 
 ### mise ###
 mise.local.toml
+
+### cider ###
+.cider-history

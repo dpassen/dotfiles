@@ -100,6 +100,7 @@
   (cider-font-lock-dynamically nil)
   (cider-ns-save-files-on-refresh t)
   (cider-repl-display-help-banner nil)
+  (cider-repl-history-file 'per-project)
   (cider-repl-pop-to-buffer-on-connect nil)
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil))
