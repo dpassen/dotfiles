@@ -43,13 +43,14 @@
 
 (elpaca elpaca-use-package
   (elpaca-use-package-mode)
-  (setopt use-package-hook-name-suffix nil))
+  (setopt use-package-always-defer t
+          use-package-hook-name-suffix nil))
 
 (use-package general
-  :ensure (:wait t))
+  :ensure (:wait t)
+  :demand t)
 
 (use-package emacs
-  :defer t
   :custom
   (frame-resize-pixelwise t)
   (indent-tabs-mode nil)
@@ -94,7 +95,6 @@
 
 (use-package cider
   :ensure t
-  :defer t
   :custom
   (cider-connection-message-fn nil)
   (cider-font-lock-dynamically nil)
@@ -106,13 +106,11 @@
 
 (use-package clojure-mode
   :ensure t
-  :defer t
   :custom
   (clojure-align-forms-automatically t)
   (clojure-toplevel-inside-comment-form t))
 
 (use-package comp
-  :defer t
   :custom
   (native-comp-async-report-warnings-errors nil)
   (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
@@ -136,7 +134,6 @@
 
 (use-package consult-flycheck
   :ensure t
-  :defer t
   :after flycheck
   :general (flycheck-mode-map "M-g f" 'consult-flycheck))
 
@@ -146,17 +143,14 @@
   :hook (elpaca-after-init-hook . global-corfu-mode))
 
 (use-package cus-edit
-  :defer t
   :custom (custom-file (expand-file-name "custom.el" user-emacs-directory))
   :init (load custom-file 'noerror))
 
 (use-package datetime
   :ensure t
-  :defer t
   :custom (datetime-timezone 'America/Chicago))
 
 (use-package dired
-  :defer t
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
   (dired-use-ls-dired nil))
@@ -183,14 +177,12 @@
 
 (use-package eat
   :ensure t
-  :defer t
   :custom
   (eat-enable-shell-prompt-annotation nil)
   (eat-kill-buffer-on-exit t))
 
 (use-package edit-indirect
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package editorconfig
   :ensure t
@@ -233,13 +225,11 @@
 
 (use-package faces
   :when (display-graphic-p)
-  :defer t
   :config
   (dolist (face '(default tooltip))
     (set-face-attribute face nil :font "PragmataPro Liga 12")))
 
 (use-package files
-  :defer t
   :custom
   (confirm-kill-processes nil)
   (require-final-newline t))
@@ -251,6 +241,7 @@
 
 (use-package flycheck-clj-kondo
   :ensure t
+  :demand t
   :after clojure-mode)
 
 (use-package flycheck-eglot
@@ -263,23 +254,19 @@
 
 (use-package frame
   :when (display-graphic-p)
-  :defer t
   :config
   (dolist (frame-parameters '((height . 50) (width . 120)))
     (push frame-parameters default-frame-alist)))
 
 (use-package git-link
   :ensure t
-  :defer t
   :custom (git-link-use-commit t))
 
 (use-package git-modes
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package git-timemachine
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package golden
   :ensure (golden :host sourcehut :repo "wklew/golden")
@@ -289,12 +276,10 @@
   :hook (prog-mode-hook . hs-minor-mode))
 
 (use-package html-ts-mode
-  :ensure (html-ts-mode :host github :repo "mickeynp/html-ts-mode")
-  :defer t)
+  :ensure (html-ts-mode :host github :repo "mickeynp/html-ts-mode"))
 
 (use-package kotlin-ts-mode
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package ligature
   :ensure t
@@ -322,12 +307,10 @@
   :hook (elpaca-after-init-hook . global-ligature-mode))
 
 (use-package logview
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package magit
   :ensure t
-  :defer t
   :custom
   (magit-bury-buffer-function 'magit-restore-window-configuration)
   (magit-clone-default-directory "~/Developer/")
@@ -341,14 +324,12 @@
 
 (use-package markdown-mode
   :ensure t
-  :defer t
   :custom (markdown-fontify-code-blocks-natively t))
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
 
 (use-package modus-themes
-  :defer t
   :custom
   (modus-themes-fringes nil)
   (modus-themes-italic-constructs t)
@@ -374,26 +355,22 @@
 
 (use-package orderless
   :ensure t
-  :defer t
   :custom
   (completion-category-overrides '((file (styles basic partial-completion))))
   (completion-styles '(orderless basic)))
 
 (use-package paren
-  :defer t
   :custom (show-paren-mode nil))
 
 (use-package pixel-scroll
   :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
 
 (use-package project
-  :defer t
   :config
   (dolist (mode '(cider-repl-mode eat-mode))
     (push `(major-mode . ,mode) project-kill-buffer-conditions)))
 
 (use-package pulse
-  :defer t
   :custom (pulse-flag 'never))
 
 (use-package savehist
@@ -415,11 +392,9 @@
    (list '+elpaca-unload-seq 'elpaca--activate-package)))
 
 (use-package seq
-  :ensure `(seq :build ,(+elpaca-seq-build-steps))
-  :defer t)
+  :ensure `(seq :build ,(+elpaca-seq-build-steps)))
 
 (use-package simple
-  :defer t
   :custom
   (async-shell-command-buffer 'new-buffer)
   (column-number-mode t)
@@ -446,8 +421,7 @@
   :hook (elpaca-after-init-hook . global-subword-mode))
 
 (use-package transient
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package treesit-auto
   :ensure t
@@ -457,12 +431,10 @@
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
-  :defer t
   :custom (uniquify-buffer-name-style 'forward))
 
 (use-package verb
   :ensure t
-  :defer t
   :after org
   :general (org-mode-map "C-c C-r" verb-command-map))
 
@@ -485,21 +457,18 @@
 
 (use-package wgrep
   :ensure t
-  :defer t
   :custom (wgrep-auto-save-buffer t))
 
 (use-package winner
   :hook elpaca-after-init-hook)
 
 (use-package xref
-  :defer t
   :custom
   (xref-history-storage 'xref-window-local-history)
   (xref-search-program 'ripgrep))
 
 (use-package yaml-mode
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package mise
   :ensure t
