@@ -46,8 +46,7 @@ let mapleader = ","
 " FUZZY FINDING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set path+=**
-set wildmenu
-nnoremap <silent> <leader><leader> :find<space>
+nnoremap <leader><leader> :find<space>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
