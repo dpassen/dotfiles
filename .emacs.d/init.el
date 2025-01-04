@@ -168,19 +168,13 @@
   :ensure t
   :custom
   (disproject-find-line-command #'consult-line-multi)
-  (disproject-shell-command #'eat-project)
+  (disproject-shell-command #'vterm)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
 (use-package dumber-jump
   :ensure t
   :hook (xref-backend-functions . dumber-jump-xref-activate))
-
-(use-package eat
-  :ensure t
-  :custom
-  (eat-enable-shell-prompt-annotation nil)
-  (eat-kill-buffer-on-exit t))
 
 (use-package edit-indirect
   :ensure t)
@@ -368,7 +362,7 @@
 
 (use-package project
   :config
-  (dolist (mode '(cider-repl-mode eat-mode))
+  (dolist (mode '(cider-repl-mode vterm-mode))
     (push `(major-mode . ,mode) project-kill-buffer-conditions)))
 
 (use-package pulse
@@ -451,6 +445,12 @@
   :config (vertico-multiform-mode 1)
   :hook elpaca-after-init-hook)
 
+(use-package vterm
+  :ensure t
+  :custom
+  (vterm-always-compile-module t)
+  (vterm-clear-scrollback-when-clearing t))
+
 (use-package vundo
   :ensure t
   :custom (vundo-glyph-alist vundo-unicode-symbols)
@@ -462,6 +462,10 @@
 
 (use-package winner
   :hook elpaca-after-init-hook)
+
+(use-package with-editor
+  :ensure t
+  :hook (vterm-mode-hook . with-editor-export-editor))
 
 (use-package xref
   :custom
