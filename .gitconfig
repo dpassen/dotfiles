@@ -1,0 +1,32 @@
+[user]
+  name = Derek Passen
+  email = dpassen1@gmail.com
+
+[core]
+  excludesfile = ~/.gitignore
+
+[init]
+  defaultBranch = main
+
+[pull]
+  ff = only
+
+[rerere]
+  enabled = true
+
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+  ln = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = ln --graph
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  scoreboard = shortlog --no-merges -sn
+  sb = scoreboard
+  standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
+  su = standup
+  lasttouched = "!lt() { git branch -r | grep -v ' -> ' | while read -r branch; do echo "$branch"; git log --pretty=format:"%cr" "$branch" -n 1; echo; done; }; lt"
+  lt = lasttouched
+
+[github]
+  user = dpassen

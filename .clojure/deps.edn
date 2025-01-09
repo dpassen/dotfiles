@@ -1,0 +1,23 @@
+{:aliases
+ {:antq
+  {:extra-deps
+   {io.github.liquidz/antq
+    {:git/tag "1.3.1"
+     :git/sha "de79d34"}}
+   :exec-fn antq.tool/outdated}
+  :check
+  {:extra-deps
+   {io.github.athos/clj-check
+    {:git/tag "0.1.0"
+     :git/sha "0ca84df"}}
+   :main-opts ["-m" "clj-check.check"]}
+  :new
+  {:extra-deps
+   {io.github.seancorfield/deps-new
+    {:git/tag "v0.4.9"
+     :git/sha "ba30a76"}}
+   :exec-fn org.corfield.new/create}
+  :nop
+  {:extra-deps
+   {org.slf4j/slf4j-nop
+    {:mvn/version "1.7.33"}}}}}

@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+* dotfiles
+Everyone else is doing it
+
+#+BEGIN_SRC sh
+  $ brew bundle install
+  $ stow . --target=$HOME --no-folding
+#+END_SRC
