@@ -464,7 +464,8 @@
   :ensure t
   :custom
   (vterm-always-compile-module t)
-  (vterm-clear-scrollback-when-clearing t))
+  (vterm-clear-scrollback-when-clearing t)
+  (vterm-environment '("COLORTERM=truecolor")))
 
 (use-package vundo
   :ensure t
