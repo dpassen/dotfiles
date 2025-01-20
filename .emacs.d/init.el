@@ -98,6 +98,7 @@
   :ensure t
   :custom
   (cider-connection-message-fn nil)
+  (cider-download-java-sources t)
   (cider-font-lock-dynamically nil)
   (cider-ns-save-files-on-refresh t)
   (cider-repl-display-help-banner nil)
