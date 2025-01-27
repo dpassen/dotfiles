@@ -16,16 +16,19 @@
       scroll-bar-mode nil)
 
 (let ((default-file-name-handler-alist file-name-handler-alist)
-      (default-gc-percentage gc-cons-percentage)
-      (default-gc-threshold gc-cons-threshold))
-  (setq gc-cons-threshold most-positive-fixnum
+      (default-gc-cons-percentage gc-cons-percentage)
+      (default-gc-cons-threshold gc-cons-threshold)
+      (default-vc-handled-backends vc-handled-backends))
+  (setq file-name-handler-alist nil
         gc-cons-percentage 0.8
-        file-name-handler-alist nil)
+        gc-cons-threshold most-positive-fixnum
+        vc-handled-backends nil)
   (add-hook 'after-init-hook
             (lambda ()
               (setq file-name-handler-alist default-file-name-handler-alist
-                    gc-cons-percentage default-gc-percentage
-                    gc-cons-threshold default-gc-threshold))))
+                    gc-cons-percentage default-gc-cons-percentage
+                    gc-cons-threshold default-gc-cons-threshold
+                    vc-handled-backends default-vc-handled-backends))))
 
 ;; Local Variables:
 ;; no-byte-compile: t
