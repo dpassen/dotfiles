@@ -3,6 +3,9 @@
 
 ;;; Code:
 
+(setopt custom-file (locate-user-emacs-file "custom.el"))
+(load custom-file :no-error-if-file-is-missing)
+
 (defvar elpaca-installer-version 0.9)
 (defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
 (defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
@@ -144,10 +147,6 @@
   :ensure t
   :custom (corfu-cycle t)
   :hook (elpaca-after-init-hook . global-corfu-mode))
-
-(use-package cus-edit
-  :custom (custom-file (expand-file-name "custom.el" user-emacs-directory))
-  :init (load custom-file 'noerror))
 
 (use-package datetime
   :ensure t
