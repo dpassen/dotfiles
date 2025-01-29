@@ -423,6 +423,10 @@
   :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
+(use-package stillness-mode
+  :ensure (stillness-mode :host github :repo "neeasade/stillness-mode.el")
+  :hook elpaca-after-init-hook)
+
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
 
