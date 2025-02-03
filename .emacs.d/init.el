@@ -61,7 +61,6 @@
   (initial-scratch-message ";; rebellious pro\n\n")
   (load-prefer-newer t)
   (ring-bell-function 'ignore)
-  (scroll-conservatively 101)
   (use-short-answers t)
   :init
   (setq frame-title-format "%b\n"
@@ -371,6 +370,9 @@
 (use-package paren
   :custom (show-paren-mode nil))
 
+(use-package pixel-scroll
+  :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
+
 (use-package project
   :config
   (dolist (mode '(cider-repl-mode vterm-mode))
@@ -439,10 +441,6 @@
   (treesit-auto-langs
    '(bash c cpp css html java javascript json kotlin python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
-
-(use-package ultra-scroll
-  :ensure (ultra-scroll :host github :repo "jdtsmith/ultra-scroll")
-  :hook elpaca-after-init-hook)
 
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
