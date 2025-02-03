@@ -424,7 +424,7 @@
   :hook elpaca-after-init-hook)
 
 (use-package stillness-mode
-  :ensure (stillness-mode :host github :repo "neeasade/stillness-mode.el")
+  :ensure t
   :hook elpaca-after-init-hook)
 
 (use-package subword
