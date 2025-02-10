@@ -325,6 +325,7 @@
   (magit-clone-default-directory "~/Developer/")
   (magit-diff-refine-hunk t)
   (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
+  (magit-format-file-function 'magit-format-file-nerd-icons)
   (magit-no-message '("Turning on magit-auto-revert-mode...")))
 
 (use-package marginalia
@@ -348,6 +349,10 @@
   (modus-themes-italic-constructs t)
   (modus-themes-mode-line '(accented borderless))
   (modus-themes-region '(accented bg-only)))
+
+(use-package nerd-icons
+  :ensure t
+  :defer t)
 
 (use-package nerd-icons-completion
   :ensure t
