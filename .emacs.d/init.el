@@ -430,15 +430,15 @@
   :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
-(use-package stillness-mode
-  :ensure t
-  :hook elpaca-after-init-hook)
-
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
 
 (use-package transient
   :ensure t)
+
+(use-package transient-posframe
+  :ensure t
+  :hook elpaca-after-init-hook)
 
 (use-package treesit-auto
   :ensure t
@@ -461,11 +461,17 @@
   (vertico-count-format nil)
   (vertico-cycle t)
   (vertico-multiform-commands
-   '((execute-extended-command reverse)
-     (execute-extended-command-for-buffer reverse)))
+   '((execute-extended-command reverse posframe)
+     (execute-extended-command-for-buffer reverse posframe)
+     (t posframe)))
   (vertico-resize nil)
   :config (vertico-multiform-mode 1)
   :hook elpaca-after-init-hook)
+
+(use-package vertico-posframe
+  :ensure t
+  :custom (vertico-posframe-border-width 1)
+  :defer t)
 
 (use-package vterm
   :ensure t
@@ -482,9 +488,6 @@
 (use-package wgrep
   :ensure t
   :custom (wgrep-auto-save-buffer t))
-
-(use-package winner
-  :hook elpaca-after-init-hook)
 
 (use-package with-editor
   :ensure t
