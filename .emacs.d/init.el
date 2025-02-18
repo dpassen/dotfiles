@@ -255,11 +255,10 @@
 
 (use-package flycheck-eglot
   :ensure t
-  :after (eglot flycheck)
   :custom
   (flycheck-eglot-enable-diagnostic-tags nil)
   (flycheck-eglot-exclusive nil)
-  :config (global-flycheck-eglot-mode 1))
+  :hook (elpaca-after-init-hook . global-flycheck-eglot-mode))
 
 (use-package frame
   :when (display-graphic-p)
