@@ -236,7 +236,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "PragmataPro 12")))
+    (set-face-attribute face nil :font "SF Mono 12")))
 
 (use-package files
   :custom
@@ -263,7 +263,7 @@
 (use-package frame
   :when (display-graphic-p)
   :config
-  (dolist (frame-parameters '((height . 50) (width . 120)))
+  (dolist (frame-parameters '((height . 40) (width . 96)))
     (push frame-parameters default-frame-alist)))
 
 (use-package git-link
