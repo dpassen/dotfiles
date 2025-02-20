@@ -124,7 +124,6 @@
   :ensure t
   :custom
   (consult-after-jump-hook '(recenter))
-  (consult-goto-line-numbers nil)
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
   :general
@@ -163,6 +162,10 @@
 (use-package diredfl
   :ensure t
   :hook dired-mode-hook)
+
+(use-package display-line-numbers
+  :custom (display-line-numbers-width-start t)
+  :hook (conf-mode-hook prog-mode-hook))
 
 (use-package disproject
   :ensure t
@@ -326,7 +329,8 @@
   (modus-themes-fringes nil)
   (modus-themes-italic-constructs t)
   (modus-themes-mode-line '(accented borderless))
-  (modus-themes-region '(accented bg-only)))
+  (modus-themes-region '(accented bg-only))
+  (modus-themes-subtle-line-numbers t))
 
 (use-package nerd-icons
   :ensure t
