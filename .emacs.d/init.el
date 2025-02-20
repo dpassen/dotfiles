@@ -329,8 +329,7 @@
   (modus-themes-region '(accented bg-only)))
 
 (use-package nerd-icons
-  :ensure t
-  :defer t)
+  :ensure t)
 
 (use-package nerd-icons-completion
   :ensure t
