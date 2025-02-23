@@ -329,7 +329,8 @@
   (modus-themes-region '(accented bg-only)))
 
 (use-package nerd-icons
-  :ensure t)
+  :ensure t
+  :custom (nerd-icons-font-family "PragmataPro"))
 
 (use-package nerd-icons-completion
   :ensure t
