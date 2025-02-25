@@ -414,7 +414,8 @@
   :hook (elpaca-after-init-hook . global-subword-mode))
 
 (use-package transient
-  :ensure t)
+  :ensure t
+  :custom (transient-mode-line-format nil))
 
 (use-package treesit-auto
   :ensure t
