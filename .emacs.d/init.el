@@ -117,8 +117,7 @@
 
 (use-package comp
   :custom
-  (native-comp-async-report-warnings-errors nil)
-  (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
+  (native-comp-async-report-warnings-errors nil))
 
 (use-package consult
   :ensure t
@@ -183,7 +182,6 @@
   (doom-modeline-env-version nil)
   (doom-modeline-major-mode-icon nil)
   (doom-modeline-minor-modes t)
-  (doom-modeline-project-name t)
   :hook elpaca-after-init-hook)
 
 (use-package dumber-jump
@@ -194,7 +192,6 @@
   :ensure t)
 
 (use-package editorconfig
-  :ensure t
   :hook elpaca-after-init-hook)
 
 (use-package eglot
@@ -287,9 +284,6 @@
   :ensure t
   :hook (elpaca-after-init-hook . global-hl-todo-mode))
 
-(use-package html-ts-mode
-  :ensure (html-ts-mode :host github :repo "mickeynp/html-ts-mode"))
-
 (use-package kotlin-ts-mode
   :ensure t)
 
@@ -323,10 +317,13 @@
 
 (use-package modus-themes
   :custom
-  (modus-themes-fringes nil)
-  (modus-themes-italic-constructs t)
-  (modus-themes-mode-line '(accented borderless))
-  (modus-themes-region '(accented bg-only)))
+  (modus-themes-common-palette-overrides
+   '((bg-mode-line-active bg-blue-intense)
+     (bg-region bg-magenta-nuanced)
+     (border-mode-line-active unspecified)
+     (border-mode-line-inactive unspecified)
+     (fringe unspecified)))
+  (modus-themes-italic-constructs t))
 
 (use-package nerd-icons
   :ensure t
@@ -357,6 +354,7 @@
   :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
 
 (use-package project
+  :custom (project-mode-line t)
   :config
   (dolist (mode '(cider-repl-mode vterm-mode))
     (push `(major-mode . ,mode) project-kill-buffer-conditions)))
@@ -422,7 +420,7 @@
   :ensure t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin python ruby rust toml tsx typescript))
+   '(bash c cpp css html java javascript json kotlin lua python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
