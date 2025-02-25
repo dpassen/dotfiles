@@ -13,6 +13,13 @@
 
 [rerere]
   enabled = true
+  autoUpdate = true
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = version:refname
 
 [alias]
   ci = commit
