@@ -180,7 +180,6 @@
   (doom-modeline-check-simple-format t)
   (doom-modeline-display-misc-in-all-mode-lines nil)
   (doom-modeline-env-version nil)
-  (doom-modeline-major-mode-icon nil)
   (doom-modeline-minor-modes t)
   :hook elpaca-after-init-hook)
 
