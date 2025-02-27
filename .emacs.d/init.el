@@ -167,7 +167,7 @@
   :ensure t
   :custom
   (disproject-find-line-command #'consult-line-multi)
-  (disproject-shell-command #'vterm)
+  (disproject-shell-command #'terminal-here)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
@@ -355,8 +355,7 @@
 (use-package project
   :custom (project-mode-line t)
   :config
-  (dolist (mode '(cider-repl-mode vterm-mode))
-    (push `(major-mode . ,mode) project-kill-buffer-conditions)))
+  (push '(major-mode . cider-repl-mode) project-kill-buffer-conditions))
 
 (use-package pulse
   :custom (pulse-flag 'never))
@@ -447,13 +446,6 @@
   :config (vertico-multiform-mode 1)
   :hook elpaca-after-init-hook)
 
-(use-package vterm
-  :ensure t
-  :custom
-  (vterm-always-compile-module t)
-  (vterm-clear-scrollback-when-clearing t)
-  (vterm-environment '("COLORTERM=truecolor")))
-
 (use-package vundo
   :ensure t
   :custom (vundo-glyph-alist vundo-unicode-symbols)
@@ -465,10 +457,6 @@
 
 (use-package winner
   :hook elpaca-after-init-hook)
-
-(use-package with-editor
-  :ensure t
-  :hook (vterm-mode-hook . with-editor-export-editor))
 
 (use-package xref
   :custom
