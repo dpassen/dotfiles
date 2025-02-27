@@ -413,7 +413,7 @@
 
 (use-package terminal-here
   :ensure t
-  :custom (terminal-here-mac-terminal-command 'ghostty))
+  :custom (terminal-here-terminal-command 'ghostty))
 
 (use-package transient
   :ensure t
