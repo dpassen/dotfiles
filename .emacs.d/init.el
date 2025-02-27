@@ -413,6 +413,10 @@
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
 
+(use-package terminal-here
+  :ensure t
+  :custom (terminal-here-mac-terminal-command 'ghostty))
+
 (use-package transient
   :ensure t
   :custom (transient-mode-line-format nil))
