@@ -59,12 +59,12 @@
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
   (initial-scratch-message ";; rebellious pro\n\n")
-  (load-prefer-newer t)
   (ring-bell-function 'ignore)
   (use-short-answers t)
   :init
   (setq frame-title-format "%b\n"
         kill-buffer-query-functions nil
+        load-prefer-newer t
         message-truncate-lines t
         read-process-output-max (* 1024 1024)))
 
@@ -122,7 +122,6 @@
 (use-package consult
   :ensure t
   :custom
-  (consult-after-jump-hook '(recenter))
   (consult-goto-line-numbers nil)
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
@@ -195,7 +194,7 @@
 (use-package eglot
   :custom
   (eglot-autoshutdown t)
-  (eglot-confirm-server-initiated-edits nil)
+  (eglot-confirm-server-edits nil)
   (eglot-ignored-server-capabilities '(:inlayHintProvider))
   (eglot-sync-connect nil)
   :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
