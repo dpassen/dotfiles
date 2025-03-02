@@ -14,21 +14,21 @@ return {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = {},
+		opts = {},
 	},
 	{
 		"ibhagwan/fzf-lua",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = {
+		opts = {
 			"skim",
 		},
 	},
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		config = {
+		opts = {
 			cmdline = {
 				enabled = true,
 			},
@@ -42,7 +42,7 @@ return {
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = {},
+		opts = {},
 	},
 	{
 		"stevearc/conform.nvim",
@@ -50,7 +50,7 @@ return {
 			"BufReadPre",
 			"BufNewFile",
 		},
-		config = {
+		opts = {
 			formatters_by_ft = {
 				lua = {
 					"stylua",
@@ -64,31 +64,39 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		config = {
-			ensure_installed = {
-				"bash",
-				"c",
-				"clojure",
-				"cpp",
-				"css",
-				"html",
-				"java",
-				"javascript",
-				"json",
-				"kotlin",
-				"lua",
-				"python",
-				"ruby",
-				"rust",
-				"toml",
-				"tsx",
-				"typescript",
-			},
-			sync_installed = false,
-			auto_install = true,
-			highlight = {
-				enabled = true,
-			},
-		},
+		config = function()
+			local configs = require("nvim-treesitter.configs")
+			configs.setup({
+				ensure_installed = {
+					"bash",
+					"c",
+					"clojure",
+					"cpp",
+					"css",
+					"html",
+					"java",
+					"javascript",
+					"json",
+					"kotlin",
+					"lua",
+					"markdown",
+					"markdown_inline",
+					"python",
+					"query",
+					"ruby",
+					"rust",
+					"toml",
+					"tsx",
+					"typescript",
+					"vim",
+					"vimdoc",
+				},
+				sync_installed = false,
+				auto_install = true,
+				highlight = {
+					enable = true,
+				},
+			})
+		end,
 	},
 }
