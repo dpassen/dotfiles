@@ -2,12 +2,12 @@ path=(
     ~/.bin
     /opt/homebrew/bin
     /opt/homebrew/sbin
-    ${path}
+    $path
 )
 
 fpath=(
     /opt/homebrew/share/zsh/site-functions
-    ${fpath}
+    $fpath
 )
 
 alias ls='ls --color=auto'
