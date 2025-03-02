@@ -1,21 +1,38 @@
-palette = 0=#595959
-palette = 1=#a60000
-palette = 2=#005e00
-palette = 3=#813e00
-palette = 4=#0031a9
-palette = 5=#721045
-palette = 6=#00538b
-palette = 7=#a6a6a6
-palette = 8=#595959
-palette = 9=#972500
-palette = 10=#145c33
-palette = 11=#70480f
-palette = 12=#2544bb
-palette = 13=#5317ac
-palette = 14=#005a5f
-palette = 15=#ffffff
+# Modus Operandi Tinted
 background = #fbf7f0
 foreground = #000000
-cursor-color = #000000
+cursor-color = #d00000
 selection-background = #f8e6f5
 selection-foreground = #000000
+
+# black
+palette = 0=#000000
+palette = 8=#595959
+
+# red
+palette = 1=#a60000
+palette = 9=#972500
+
+# green
+palette = 2=#006800
+palette = 10=#00663f
+
+# yellow
+palette = 3=#6f5500
+palette = 11=#884900
+
+# blue
+palette = 4=#0031a9
+palette = 12=#3548cf
+
+# magenta
+palette = 5=#721045
+palette = 13=#531ab6
+
+# cyan
+palette = 6=#005e8b
+palette = 14=#005f5f
+
+# white
+palette = 7=#a6a6a6
+palette = 15=#ffffff
