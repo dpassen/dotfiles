@@ -317,8 +317,6 @@
   (modus-themes-common-palette-overrides
    '((bg-mode-line-active bg-blue-intense)
      (bg-region bg-magenta-nuanced)
-     (border-mode-line-active unspecified)
-     (border-mode-line-inactive unspecified)
      (fringe unspecified)))
   (modus-themes-italic-constructs t)
   (modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted)))
