@@ -15,10 +15,6 @@ alias mg='mg -n'
 alias tree='tree --gitignore -I ".git"'
 alias view='mg -R'
 
-edit() {
-    eval "$EDITOR" "$@"
-}
-
 emacs() {
     /usr/bin/env emacs "$@" &!
 }
