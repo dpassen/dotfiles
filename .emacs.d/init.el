@@ -206,6 +206,11 @@
    "f f" 'eglot-format
    "r" 'eglot-rename))
 
+(use-package eldoc-box
+  :ensure t
+  :custom (eldoc-box-clear-with-C-g t)
+  :general ("C-c k" 'eldoc-box-help-at-point))
+
 (use-package embark
   :ensure t
   :general
