@@ -1,7 +1,16 @@
 theme = "modus_operandi_tinted"
 
 [editor]
+color-modes = true
 end-of-line-diagnostics = "hint"
+
+[editor.cursor-shape]
+insert = "bar"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
+
+[editor.statusline]
+mode.insert = "INSERT"
+mode.normal = "NORMAL"
+mode.select = "SELECT"
