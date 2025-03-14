@@ -6,11 +6,16 @@ end-of-line-diagnostics = "hint"
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
 
 [editor.inline-diagnostics]
 cursor-line = "warning"
 
-[editor.statusline]
-mode.insert = "INSERT"
-mode.normal = "NORMAL"
-mode.select = "SELECT"
+[editor.statusline.mode]
+insert = "INSERT"
+normal = "NORMAL"
+select = "SELECT"
