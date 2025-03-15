@@ -1,17 +1,17 @@
 # Modus Operandi Tinted
 background = #fbf7f0
 foreground = #000000
-cursor-color = #d00000
+cursor-color = #000000
 selection-background = #f8e6f5
 selection-foreground = #000000
 
 # black
-palette = 0=#000000
-palette = 8=#595959
+palette = 0=#efe9dd
+palette = 8=#c9b9b0
 
 # red
 palette = 1=#a60000
-palette = 9=#972500
+palette = 9=#a0132f
 
 # green
 palette = 2=#006800
@@ -19,11 +19,11 @@ palette = 10=#00663f
 
 # yellow
 palette = 3=#6f5500
-palette = 11=#884900
+palette = 11=#7a4f2f
 
 # blue
 palette = 4=#0031a9
-palette = 12=#3548cf
+palette = 12=#0000b0
 
 # magenta
 palette = 5=#721045
@@ -34,5 +34,5 @@ palette = 6=#005e8b
 palette = 14=#005f5f
 
 # white
-palette = 7=#a6a6a6
-palette = 15=#ffffff
+palette = 7=#000000
+palette = 15=#595959

@@ -1,17 +1,17 @@
 # Modus Vivendi Tinted
 background = #0d0e1c
 foreground = #ffffff
-cursor-color = #ff66ff
+cursor-color = #ffffff
 selection-background = #2f0c3f
 selection-foreground = #ffffff
 
 # black
-palette = 0=#000000
-palette = 8=#595959
+palette = 0=#1d2235
+palette = 8=#4a4f69
 
 # red
 palette = 1=#ff5f59
-palette = 9=#ff6b55
+palette = 9=#ff7f9f
 
 # green
 palette = 2=#44bc44
@@ -19,11 +19,11 @@ palette = 10=#00c06f
 
 # yellow
 palette = 3=#d0bc00
-palette = 11=#fec43f
+palette = 11=#dfaf7a
 
 # blue
 palette = 4=#2fafff
-palette = 12=#79a8ff
+palette = 12=#00bcff
 
 # magenta
 palette = 5=#feacd0
@@ -34,5 +34,5 @@ palette = 6=#00d3d0
 palette = 14=#6ae4b9
 
 # white
-palette = 7=#a6a6a6
-palette = 15=#ffffff
+palette = 7=#ffffff
+palette = 15=#989898

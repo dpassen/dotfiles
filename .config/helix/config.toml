@@ -1,4 +1,4 @@
-theme = "modus_operandi_tinted"
+theme = "base16_terminal"
 
 [editor]
 color-modes = true
