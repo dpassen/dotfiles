@@ -10,6 +10,7 @@ fpath=(
     $fpath
 )
 
+alias helix='zellij --layout="helix"'
 alias ls='ls --color=auto'
 alias mg='mg -n'
 alias tree='tree --gitignore -I ".git"'

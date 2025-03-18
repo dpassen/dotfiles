@@ -1,0 +1,52 @@
+[language-server.phpactor]
+command = "phpactor"
+args = ["language-server"]
+
+[[language]]
+name = "php"
+scope = "source.php"
+injection-regex = "php"
+file-types = ["php", "inc", "php4", "php5", "phtml", "ctp"]
+shebangs = ["php"]
+roots = ["composer.json", "index.php"]
+comment-token = "//"
+language-servers = [ "phpactor" ]
+indent = { tab-width = 4, unit = "    " }
+auto-format = true
+
+[[language]]
+name = "clojure"
+formatter = { command = "cljstyle", args = ["pipe"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+formatter = { command = "prettier", args = ["--stdin-filepath", "main.js"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+formatter = { command = "prettier", args = ["--stdin-filepath", "main.jsx"] }
+auto-format = true
+
+[[language]]
+name = "json"
+formatter = { command = "prettier", args = ["--parser", "json", "--stdin-filepath", "main.json"] }
+auto-format = true
+  
+[[language]]
+name = "typescript"
+formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.ts"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.tsx"] }
+auto-format = true
+
+[[language]]
+name = "python"
+language-servers = [ "pyright" ]
+roots = [ "pyproject.toml" ]
+formatter = { command = "ruff", args = [ "format", "--silent", "-" ] }
+auto-format = true
