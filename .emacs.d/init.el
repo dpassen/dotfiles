@@ -122,7 +122,6 @@
 (use-package consult
   :ensure t
   :custom
-  (consult-goto-line-numbers nil)
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
   :general
@@ -161,6 +160,10 @@
 (use-package diredfl
   :ensure t
   :hook dired-mode-hook)
+
+(use-package display-line-numbers
+  :custom (display-line-numbers-width-start t)
+  :hook (conf-mode-hook prog-mode-hook))
 
 (use-package disproject
   :ensure t
@@ -320,8 +323,11 @@
 (use-package modus-themes
   :custom
   (modus-themes-common-palette-overrides
-   '((bg-mode-line-active bg-blue-intense)
+   '((bg-line-number-active unspecified)
+     (bg-line-number-inactive unspecified)
+     (bg-mode-line-active bg-blue-intense)
      (bg-region bg-magenta-nuanced)
+     (fg-line-number-inactive fg-dim)
      (fringe unspecified)))
   (modus-themes-italic-constructs t)
   (modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted)))
