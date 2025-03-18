@@ -19,6 +19,10 @@ emacs() {
     /usr/bin/env emacs "$@" &!
 }
 
+jj() {
+    cd $(/usr/bin/env jj "$@")
+}
+
 nfocat() {
     iconv -f cp437 "$@"
 }
@@ -38,5 +42,6 @@ setopt share_history
 autoload -Uz compinit
 compinit
 
+eval "$(fasder --init auto)"
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"

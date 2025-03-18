@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+
+if [[ "${TRACE-0}" == "1" ]]; then
+    set -o xtrace
+fi
+
+jj() {
+    local selection
+    selection=$(fasder -Rdl "$@" | sk -1 -0)
+    if [[ -n "$selection" ]]; then
+        echo "$selection" | xargs -r fasder --add
+        echo "$selection"
+    else
+        return 1
+    fi
+}
+
+jj "$@"
