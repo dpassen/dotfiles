@@ -11,9 +11,7 @@ fpath=(
 )
 
 alias ls='ls --color=auto'
-alias mg='mg -n'
 alias tree='tree --gitignore -I ".git"'
-alias view='mg -R'
 
 emacs() {
     /usr/bin/env emacs "$@" &!
