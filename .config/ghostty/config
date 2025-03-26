@@ -1,6 +1,6 @@
-adjust-cell-height = -5%
+adjust-cell-width = -10%
 cursor-style = block
-font-family = PragmataPro
+font-family = Berkeley Mono
 font-size = 12
 macos-titlebar-style = native
 shell-integration-features = no-cursor

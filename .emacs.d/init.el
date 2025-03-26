@@ -238,7 +238,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "PragmataPro 12")))
+    (set-face-attribute face nil :font "Berkeley Mono 12")))
 
 (use-package files
   :custom
@@ -329,12 +329,7 @@
      (bg-region bg-magenta-nuanced)
      (fg-line-number-inactive fg-dim)
      (fringe unspecified)))
-  (modus-themes-italic-constructs t)
   (modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted)))
-
-(use-package nerd-icons
-  :ensure t
-  :custom (nerd-icons-font-family "PragmataPro"))
 
 (use-package nerd-icons-completion
   :ensure t
