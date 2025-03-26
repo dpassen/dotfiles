@@ -10,7 +10,7 @@ fi
 
 jj() {
     local selection
-    selection=$(fasder -Rdl "$@" | sk -1 -0)
+    selection=$(fasder -Rdl "$@" | fzf -1 -0 --no-sort +m --height=10)
     if [[ -n "$selection" ]]; then
         echo "$selection" | xargs -r fasder --add
         echo "$selection"
