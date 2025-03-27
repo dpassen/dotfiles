@@ -391,7 +391,7 @@
   (read-quoted-char-radix 16))
 
 (use-package smartparens
-  :ensure t
+  :ensure (smartparens :host github :repo "thatismatt/smartparens")
   :custom (sp-highlight-pair-overlay nil)
   :config
   (require 'smartparens-config)
