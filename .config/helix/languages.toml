@@ -14,8 +14,18 @@ formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-f
 auto-format = true
 
 [[language]]
+name = "css"
+formatter = { command = "prettier", args = ["--parser", "css", "--stdin-filepath", "main.css"] }
+auto-format = true
+
+[[language]]
 name = "json"
 formatter = { command = "prettier", args = ["--parser", "json", "--stdin-filepath", "main.json"] }
+auto-format = true
+
+[[language]]
+name = "markdown"
+formatter = { command = "prettier", args = ["--parser", "markdown", "--stdin-filepath", "main.md"] }
 auto-format = true
 
 [[language]]
