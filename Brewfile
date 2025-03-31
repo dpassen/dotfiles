@@ -4,7 +4,6 @@ tap 'borkdude/brew'
 tap 'clojure-lsp/brew'
 tap 'clojure/tools'
 tap 'devlocker/tap'
-tap 'homebrew/bundle'
 tap 'jimeh/emacs-builds'
 tap 'wyne/tap'
 
