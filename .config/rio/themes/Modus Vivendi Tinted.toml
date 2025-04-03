@@ -1,0 +1,27 @@
+# Modus Vivendi Tinted
+[colors]
+background = '#0d0e1c'
+foreground = '#ffffff'
+
+cursor = '#ffffff'
+
+selection-background = '#2f0c3f'
+selection-foreground = '#ffffff'
+
+black = '#1d2235'
+blue = '#2fafff'
+cyan = '#00d3d0'
+green = '#44bc44'
+magenta = '#feacd0'
+red = '#ff5f59'
+white = '#ffffff'
+yellow = '#d0bc00'
+
+light-black = '#4a4f69'
+light-blue = '#00bcff'
+light-cyan = '#6ae4b9'
+light-green = '#00c06f'
+light-magenta = '#b6a0ff'
+light-red = '#ff7f9f'
+light-white = '#989898'
+light-yellow = '#dfaf7a'
