@@ -1,21 +1,21 @@
-theme = "base16_transparent"
+theme = 'base16_transparent'
 
 [editor]
 color-modes = true
-end-of-line-diagnostics = "hint"
+end-of-line-diagnostics = 'hint'
 
 [editor.cursor-shape]
-insert = "bar"
-normal = "block"
-select = "underline"
+insert = 'bar'
+normal = 'block'
+select = 'underline'
 
 [editor.file-picker]
 hidden = false
 
 [editor.inline-diagnostics]
-cursor-line = "warning"
+cursor-line = 'warning'
 
 [editor.statusline.mode]
-insert = "INSERT"
-normal = "NORMAL"
-select = "SELECT"
+insert = 'INSERT'
+normal = 'NORMAL'
+select = 'SELECT'

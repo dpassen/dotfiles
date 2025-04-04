@@ -4,21 +4,21 @@ padding-x = 10
 padding-y = [10, 10]
 
 [adaptive-theme]
-dark = "Modus Vivendi Tinted"
-light = "Modus Operandi Tinted"
+dark = 'Modus Vivendi Tinted'
+light = 'Modus Operandi Tinted'
 
 [editor]
-program = "/opt/homebrew/bin/hx"
+program = '/opt/homebrew/bin/hx'
 
 [fonts]
-family = "Berkeley Mono"
+family = 'Berkeley Mono'
 hinting = false
 size = 12
 
 [navigation]
-mode = "NativeTab"
+mode = 'NativeTab'
 use-current-path = true
 use-split = false
 
 [window]
-decorations = "Enabled"
+decorations = 'Enabled'

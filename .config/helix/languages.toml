@@ -1,53 +1,53 @@
 [[language]]
-name = "python"
-language-servers = [ "pyright", "ruff" ]
+name = 'python'
+language-servers = [ 'pyright', 'ruff' ]
 auto-format = true
 
 [[language]]
-name = "javascript"
-formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.js"] }
+name = 'javascript'
+formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.js'] }
 auto-format = true
 
 [[language]]
-name = "jsx"
-formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.jsx"] }
+name = 'jsx'
+formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.jsx'] }
 auto-format = true
 
 [[language]]
-name = "css"
-formatter = { command = "prettier", args = ["--parser", "css", "--stdin-filepath", "main.css"] }
+name = 'css'
+formatter = { command = 'prettier', args = ['--parser', 'css', '--stdin-filepath', 'main.css'] }
 auto-format = true
 
 [[language]]
-name = "json"
-formatter = { command = "prettier", args = ["--parser", "json", "--stdin-filepath", "main.json"] }
+name = 'json'
+formatter = { command = 'prettier', args = ['--parser', 'json', '--stdin-filepath', 'main.json'] }
 auto-format = true
 
 [[language]]
-name = "markdown"
-formatter = { command = "prettier", args = ["--parser", "markdown", "--stdin-filepath", "main.md"] }
+name = 'markdown'
+formatter = { command = 'prettier', args = ['--parser', 'markdown', '--stdin-filepath', 'main.md'] }
 auto-format = true
 
 [[language]]
-name = "html"
-formatter = { command = "prettier", args = ["--parser", "html", "--stdin-filepath", "main.html"] }
+name = 'html'
+formatter = { command = 'prettier', args = ['--parser', 'html', '--stdin-filepath', 'main.html'] }
 auto-format =  true
 
 [[language]]
-name = "typescript"
-formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.ts"] }
+name = 'typescript'
+formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.ts'] }
 auto-format = true
 
 [[language]]
-name = "tsx"
-formatter = { command = "prettier", args = ["--parser", "typescript", "--stdin-filepath", "main.tsx"] }
+name = 'tsx'
+formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.tsx'] }
 auto-format = true
 
 [[language]]
-name = "clojure"
+name = 'clojure'
 auto-format = true
 
 [[language]]
-name = "java"
-formatter = { command = "google-java-format", args = ["-"] }
+name = 'java'
+formatter = { command = 'google-java-format', args = ['-'] }
 auto-format = true
