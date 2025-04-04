@@ -45,9 +45,19 @@ auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
 name = 'java'
 formatter = { command = 'google-java-format', args = ['-'] }
+auto-format = true
+
+[language-server.phpactor]
+command = 'phpactor'
+args = ['language-server']
+
+[[language]]
+name = 'php'
+language-servers = [ 'phpactor' ]
 auto-format = true
