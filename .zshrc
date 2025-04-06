@@ -14,11 +14,11 @@ alias ls='ls --color=auto'
 alias tree='tree --gitignore -I ".git"'
 
 emacs() {
-    /usr/bin/env emacs "$@" &!
+    command emacs "$@" &!
 }
 
 jj() {
-    cd $(/usr/bin/env jj "$@")
+    cd $(command jj "$@")
 }
 
 nfocat() {
