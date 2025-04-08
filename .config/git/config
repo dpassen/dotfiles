@@ -8,6 +8,9 @@
 [init]
   defaultBranch = main
 
+[log]
+  date = iso
+
 [pull]
   ff = only
 
@@ -27,7 +30,7 @@
   last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
   lg = ln --graph
   ll = ln --decorate --numstat
-  ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cr)%C(reset) %C(bold blue)<%an>%C(reset)'
+  ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cs)%C(reset) %C(bold blue)<%an>%C(reset)'
   lt = last-touched
   sb = scoreboard
   scoreboard = shortlog --no-merges -sn
