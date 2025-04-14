@@ -1,13 +1,13 @@
-# Modus Operandi Tinted
-background = #fbf7f0
+# Modus Operandi
+background = #ffffff
 foreground = #000000
 cursor-color = #000000
 selection-background = #f8e6f5
 selection-foreground = #000000
 
 # black
-palette = 0=#efe9dd
-palette = 8=#c9b9b0
+palette = 0=#f2f2f2
+palette = 8=#c4c4c4
 
 # red
 palette = 1=#a60000

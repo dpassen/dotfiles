@@ -75,8 +75,8 @@
 (use-package auto-dark
   :ensure t
   :custom
-  (auto-dark-dark-theme 'modus-vivendi-tinted)
-  (auto-dark-light-theme 'modus-operandi-tinted)
+  (auto-dark-dark-theme 'modus-vivendi)
+  (auto-dark-light-theme 'modus-operandi)
   :hook elpaca-after-init-hook)
 
 (use-package autorevert
@@ -329,7 +329,7 @@
      (bg-region bg-magenta-nuanced)
      (fg-line-number-inactive fg-dim)
      (fringe unspecified)))
-  (modus-themes-to-toggle '(modus-operandi-tinted modus-vivendi-tinted)))
+  (modus-themes-to-toggle '(modus-operandi modus-vivendi)))
 
 (use-package nerd-icons-completion
   :ensure t

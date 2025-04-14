@@ -1,6 +1,6 @@
-# Modus Operandi Tinted
+# Modus Operandi
 [colors]
-background = '#fbf7f0'
+background = '#ffffff'
 foreground = '#000000'
 
 cursor = '#000000'
@@ -8,7 +8,7 @@ cursor = '#000000'
 selection-background = '#f8e6f5'
 selection-foreground = '#000000'
 
-black = '#efe9dd'
+black = '#f2f2f2'
 blue = '#0031a9'
 cyan = '#005e8b'
 green = '#006800'
@@ -17,7 +17,7 @@ red = '#a60000'
 white = '#000000'
 yellow = '#6f5500'
 
-light-black = '#c9b9b0'
+light-black = '#c4c4c4'
 light-blue = '#0000b0'
 light-cyan = '#005f5f'
 light-green = '#00663f'

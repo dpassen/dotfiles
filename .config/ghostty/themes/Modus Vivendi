@@ -1,13 +1,13 @@
-# Modus Vivendi Tinted
-background = #0d0e1c
+# Modus Vivendi
+background = #000000
 foreground = #ffffff
 cursor-color = #ffffff
 selection-background = #2f0c3f
 selection-foreground = #ffffff
 
 # black
-palette = 0=#1d2235
-palette = 8=#4a4f69
+palette = 0=#1e1e1e
+palette = 8=#535353
 
 # red
 palette = 1=#ff5f59

@@ -4,8 +4,8 @@ padding-x = 10
 padding-y = [10, 10]
 
 [adaptive-theme]
-dark = 'Modus Vivendi Tinted'
-light = 'Modus Operandi Tinted'
+dark = 'Modus Vivendi'
+light = 'Modus Operandi'
 
 [editor]
 program = '/opt/homebrew/bin/hx'
