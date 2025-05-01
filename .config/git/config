@@ -24,6 +24,9 @@
 [tag]
   sort = version:refname
 
+[interactive]
+  singleKey = true
+
 [alias]
   ci = commit
   co = checkout
