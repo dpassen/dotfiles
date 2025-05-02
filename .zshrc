@@ -17,8 +17,8 @@ emacs() {
     command emacs "$@" &!
 }
 
-jj() {
-    cd $(command jj "$@")
+jd() {
+    cd $(command jd "$@")
 }
 
 nfocat() {

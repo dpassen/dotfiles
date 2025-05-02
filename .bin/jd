@@ -8,7 +8,7 @@ if [[ "${TRACE-0}" == "1" ]]; then
     set -o xtrace
 fi
 
-jj() {
+jd() {
     local selection
     selection=$(fasder -Rdl "$@" | fzf -1 -0 --no-sort +m --height=10)
     if [[ -n "$selection" ]]; then
@@ -19,4 +19,4 @@ jj() {
     fi
 }
 
-jj "$@"
+jd "$@"
