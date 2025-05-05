@@ -17,10 +17,6 @@ emacs() {
     command emacs "$@" &!
 }
 
-jd() {
-    cd $(command jd "$@")
-}
-
 nfocat() {
     iconv -f cp437 "$@"
 }
@@ -40,6 +36,6 @@ setopt share_history
 autoload -Uz compinit
 compinit
 
-eval "$(fasder --init auto)"
+eval "$(zoxide init zsh --cmd cd)"
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
