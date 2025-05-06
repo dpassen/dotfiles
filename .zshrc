@@ -17,10 +17,6 @@ emacs() {
     command emacs "$@" &!
 }
 
-nfocat() {
-    iconv -f cp437 "$@"
-}
-
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
