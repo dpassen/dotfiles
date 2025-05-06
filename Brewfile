@@ -7,6 +7,7 @@ tap 'devlocker/tap'
 tap 'jimeh/emacs-builds'
 
 brew 'aspell'
+brew 'basedpyright'
 brew 'bat'
 brew 'black'
 brew 'checkmake'
