@@ -328,8 +328,7 @@
      (bg-mode-line-active bg-blue-intense)
      (bg-region bg-magenta-nuanced)
      (fg-line-number-inactive fg-dim)
-     (fringe unspecified)))
-  (modus-themes-to-toggle '(modus-operandi modus-vivendi)))
+     (fringe unspecified))))
 
 (use-package nerd-icons-completion
   :ensure t
