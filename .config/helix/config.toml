@@ -13,6 +13,9 @@ select = 'underline'
 [editor.file-picker]
 hidden = false
 
+[editor.gutters]
+layout = ['spacer', 'diagnostics', 'line-numbers', 'spacer']
+
 [editor.inline-diagnostics]
 cursor-line = 'warning'
 
