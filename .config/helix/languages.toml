@@ -51,3 +51,6 @@ auto-format = true
 name = 'java'
 formatter = { command = 'google-java-format', args = ['-'] }
 auto-format = true
+
+[language-server.rust-analyzer.config.check]
+command = 'clippy'

@@ -5,5 +5,5 @@ legacy_version_file = false
 [tools]
 node = '22.15.0'
 python = '3.13.3'
-rust = { version = '1.87.0', components = 'rust-analyzer' }
+rust = { version = '1.87.0', components = 'clippy,rust-analyzer' }
 usage = 'latest'
