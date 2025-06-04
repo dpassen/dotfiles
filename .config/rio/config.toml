@@ -19,6 +19,3 @@ size = 12
 mode = 'NativeTab'
 use-current-path = true
 use-split = false
-
-[window]
-decorations = 'Enabled'
