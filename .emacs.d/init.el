@@ -75,8 +75,8 @@
 (use-package auto-dark
   :ensure t
   :custom
-  (auto-dark-dark-theme 'modus-vivendi)
-  (auto-dark-light-theme 'modus-operandi)
+  (auto-dark-dark-theme 'ef-dark)
+  (auto-dark-light-theme 'ef-light)
   :hook elpaca-after-init-hook)
 
 (use-package autorevert
@@ -194,6 +194,10 @@
 (use-package editorconfig
   :hook elpaca-after-init-hook)
 
+(use-package ef-themes
+  :ensure t
+  :custom (ef-themes-to-toggle '(ef-dark ef-light)))
+
 (use-package eglot
   :custom
   (eglot-autoshutdown t)
@@ -238,7 +242,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "Berkeley Mono 12")))
+    (set-face-attribute face nil :font "MonoLisa Variable 11")))
 
 (use-package files
   :custom
@@ -322,16 +326,6 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
-
-(use-package modus-themes
-  :custom
-  (modus-themes-common-palette-overrides
-   '((bg-line-number-active unspecified)
-     (bg-line-number-inactive unspecified)
-     (bg-mode-line-active bg-blue-intense)
-     (bg-region bg-magenta-nuanced)
-     (fg-line-number-inactive fg-dim)
-     (fringe unspecified))))
 
 (use-package nerd-icons-completion
   :ensure t

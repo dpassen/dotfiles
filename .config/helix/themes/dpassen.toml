@@ -1,0 +1,5 @@
+inherits = 'base16_terminal'
+
+'ui.statusline.insert' = { fg = 'black', bg = 'green' }
+'ui.statusline.normal' = { fg = 'black', bg = 'blue' }
+'ui.statusline.select' = { fg = 'black', bg = 'magenta' }

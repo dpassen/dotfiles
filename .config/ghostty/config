@@ -1,11 +1,11 @@
 adjust-cell-width = -10%
 cursor-style = block
-font-family = Berkeley Mono
+font-family = MonoLisa Variable
 font-size = 12
 macos-titlebar-style = native
 resize-overlay = never
 shell-integration-features = no-cursor
-theme = dark:Modus Vivendi,light:Modus Operandi
+theme = dark:Ef-Dark,light:Ef-Light
 window-height = 30
 window-padding-x = 9
 window-padding-y = 9
