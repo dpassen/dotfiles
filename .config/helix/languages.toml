@@ -5,46 +5,53 @@ auto-format = true
 
 [[language]]
 name = 'javascript'
-formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.js'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'typescript', '--stdin-filepath', 'main.js'] }
 auto-format = true
 
 [[language]]
 name = 'jsx'
-formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.jsx'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'typescript', '--stdin-filepath', 'main.jsx'] }
 auto-format = true
 
 [[language]]
 name = 'css'
-formatter = { command = 'prettier', args = ['--parser', 'css', '--stdin-filepath', 'main.css'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'css', '--stdin-filepath', 'main.css'] }
 auto-format = true
 
 [[language]]
 name = 'json'
-formatter = { command = 'prettier', args = ['--parser', 'json', '--stdin-filepath', 'main.json'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'json', '--stdin-filepath', 'main.json'] }
 auto-format = true
 
 [[language]]
 name = 'markdown'
-formatter = { command = 'prettier', args = ['--parser', 'markdown', '--stdin-filepath', 'main.md'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'markdown', '--stdin-filepath', 'main.md'] }
 auto-format = true
 
 [[language]]
 name = 'html'
-formatter = { command = 'prettier', args = ['--parser', 'html', '--stdin-filepath', 'main.html'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'html', '--stdin-filepath', 'main.html'] }
 auto-format =  true
 
 [[language]]
 name = 'typescript'
-formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.ts'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'typescript', '--stdin-filepath', 'main.ts'] }
 auto-format = true
 
 [[language]]
 name = 'tsx'
-formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.tsx'] }
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'typescript', '--stdin-filepath', 'main.tsx'] }
+language-servers = [ 'typescript-language-server', 'tailwindcss-ls' ]
+auto-format = true
+
+[[language]]
+name = 'graphql'
+formatter = { command = 'yarn', args = ['exec', 'prettier', '--parser', 'graphql', '--stdin-filepath', 'main.graphql'] }
 auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -54,3 +61,16 @@ auto-format = true
 
 [language-server.rust-analyzer.config.check]
 command = 'clippy'
+
+[language-server.phpactor]
+command = 'phpactor'
+args = ['language-server']
+
+[[language]]
+name = 'php'
+language-servers = [ 'phpactor' ]
+auto-format = true
+
+[[language]]
+name = 'hurl'
+auto-format = true
