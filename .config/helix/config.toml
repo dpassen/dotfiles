@@ -17,6 +17,9 @@ hidden = false
 [editor.gutters]
 layout = ['spacer', 'diagnostics', 'line-numbers', 'spacer']
 
+[editor.gutters.line-numbers]
+min-width = 1
+
 [editor.inline-diagnostics]
 cursor-line = 'warning'
 
