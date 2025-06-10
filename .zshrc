@@ -17,6 +17,9 @@ emacs() {
     command emacs "$@" &!
 }
 
+setopt interactivecomments
+setopt no_auto_remove_slash
+
 autoload -Uz compinit
 compinit
 
