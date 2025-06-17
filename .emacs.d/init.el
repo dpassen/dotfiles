@@ -286,6 +286,9 @@
   :ensure (golden :host sourcehut :repo "wklew/golden")
   :hook (elpaca-after-init-hook . global-golden-mode))
 
+(use-package grep
+  :custom (grep-use-headings t))
+
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
@@ -338,6 +341,10 @@
 (use-package nerd-icons-dired
   :ensure t
   :hook dired-mode-hook)
+
+(use-package nerd-icons-grep
+  :ensure t
+  :hook grep-mode-hook)
 
 (use-package orderless
   :ensure t
