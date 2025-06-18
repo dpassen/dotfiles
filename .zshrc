@@ -11,7 +11,6 @@ fpath=(
 )
 
 alias ls='ls --color=auto'
-alias tree='tree --gitignore -I ".git"'
 
 emacs() {
     command emacs "$@" &!
