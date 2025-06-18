@@ -40,11 +40,18 @@ auto-format = true
 
 [[language]]
 name = 'tsx'
-formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.tsx'] }
+formatter = { command = 'prettier', args = ['--parser', 'typescript', '--stdin-filepath', 'main.tsx'] }  
+language-servers = [ 'typescript-language-server', 'tailwindcss-ls' ]
+auto-format = true
+
+[[language]]
+name = 'graphql'
+formatter = { command = 'prettier', args = ['--parser', 'graphql', '--stdin-filepath', 'main.graphql'] }
 auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -54,3 +61,16 @@ auto-format = true
 
 [language-server.rust-analyzer.config.check]
 command = 'clippy'
+
+[language-server.phpactor]
+command = 'phpactor'
+args = ['language-server']
+
+[[language]]
+name = 'php'
+language-servers = [ 'phpactor' ]
+auto-format = true
+
+[[language]]
+name = 'hurl'
+auto-format = true

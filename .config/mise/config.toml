@@ -6,5 +6,7 @@ legacy_version_file = false
 node = '22.16.0'
 python = '3.13.3'
 rust = { version = '1.87.0', components = 'clippy,rust-analyzer' }
+'ubi:moov-io/ach' = { version = 'latest', matching_regex = 'achcli', rename_exe = 'achcli' }
+'ubi:pnpm/pnpm' = '10.12.1'
 'ubi:weavejester/cljfmt' = 'latest'
 usage = 'latest'
