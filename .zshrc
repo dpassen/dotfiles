@@ -1,5 +1,4 @@
 path=(
-    ~/.bin
     /opt/homebrew/bin
     /opt/homebrew/sbin
     $path
