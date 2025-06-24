@@ -3,3 +3,6 @@ typeset -U -g FPATH fpath
 
 export EDITOR="${EDITOR:-hx}"
 export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
