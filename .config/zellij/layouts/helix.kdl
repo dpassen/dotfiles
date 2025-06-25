@@ -1,0 +1,15 @@
+layout {
+  pane size="70%" {
+    command "hx"
+    args "."
+  }
+  pane split_direction="vertical" {
+    pane {
+      command "gitu"
+    }
+    pane
+  }
+  pane borderless=true size=1 {
+    plugin location="zellij:compact-bar"
+  }
+}
