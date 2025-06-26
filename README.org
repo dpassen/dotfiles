@@ -6,9 +6,11 @@ Everyone else is doing it
 #+BEGIN_SRC sh
   brew bundle install
   stow -S . --target="$HOME" --no-folding
+  mise install
 #+END_SRC
 
 ** Uninstall
 #+BEGIN_SRC sh
+  mise uninstall --all
   stow -D . --target="$HOME"
 #+END_SRC
