@@ -82,7 +82,6 @@ brew 'devlocker/tap/tychus'
 
 cask 'appcleaner'
 cask 'coteditor'
-cask 'emacs-app'
 cask 'font-symbols-only-nerd-font'
 cask 'fontsmoothingadjuster'
 cask 'foobar2000'
@@ -101,3 +100,5 @@ cask 'spotify'
 cask 'subler'
 cask 'temurin@21'
 cask 'xld'
+
+cask 'jimeh/emacs-builds/emacs-app'
