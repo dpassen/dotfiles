@@ -11,7 +11,7 @@ light = 'Ef-Light'
 program = '/opt/homebrew/bin/hx'
 
 [fonts]
-family = 'MonoLisa Variable'
+family = 'PragmataPro Mono'
 hinting = false
 size = 12
 

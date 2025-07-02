@@ -242,7 +242,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "MonoLisa Variable 11")))
+    (set-face-attribute face nil :font "PragmataPro Mono 12")))
 
 (use-package files
   :custom
@@ -329,6 +329,10 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
+
+(use-package nerd-icons
+  :ensure t
+  :custom (nerd-icons-font-family "PragmataPro"))
 
 (use-package nerd-icons-completion
   :ensure t

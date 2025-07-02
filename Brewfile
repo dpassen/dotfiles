@@ -82,7 +82,6 @@ brew 'devlocker/tap/tychus'
 
 cask 'appcleaner'
 cask 'coteditor'
-cask 'font-symbols-only-nerd-font'
 cask 'fontsmoothingadjuster'
 cask 'foobar2000'
 cask 'ghostty'
