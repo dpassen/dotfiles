@@ -350,6 +350,10 @@
   :ensure t
   :hook grep-mode-hook)
 
+(use-package nerd-icons-xref
+  :ensure t
+  :hook elpaca-after-init-hook)
+
 (use-package orderless
   :ensure t
   :custom
