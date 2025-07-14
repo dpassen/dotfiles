@@ -74,9 +74,7 @@
 
 (use-package auto-dark
   :ensure t
-  :custom
-  (auto-dark-dark-theme 'ef-dark)
-  (auto-dark-light-theme 'ef-light)
+  :custom (auto-dark-themes '((ef-dark) (ef-light)))
   :hook elpaca-after-init-hook)
 
 (use-package autorevert
