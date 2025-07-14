@@ -296,6 +296,9 @@
   :ensure t
   :hook (elpaca-after-init-hook . global-hl-todo-mode))
 
+(use-package just-mode
+  :ensure t)
+
 (use-package kdl-mode
   :ensure t)
 
