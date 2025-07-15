@@ -1,5 +1,4 @@
-inherits = 'base16_terminal'
+inherits = 'base16_transparent'
 
-'ui.statusline.insert' = { fg = 'black', bg = 'green' }
-'ui.statusline.normal' = { fg = 'black', bg = 'blue' }
-'ui.statusline.select' = { fg = 'black', bg = 'magenta' }
+'ui.statusline' = { fg = 'white', bg = 'black' }
+'ui.statusline.inactive' = { fg = 'gray', bg = 'black' }
