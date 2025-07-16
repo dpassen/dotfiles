@@ -16,6 +16,6 @@ hinting = false
 size = 12
 
 [navigation]
+current-working-directory = true
 mode = 'NativeTab'
-use-current-path = true
 use-split = false
