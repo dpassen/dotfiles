@@ -178,6 +178,7 @@
   (doom-modeline-buffer-file-name-style 'relative-to-project)
   (doom-modeline-buffer-state-icon nil)
   (doom-modeline-check-simple-format t)
+  (doom-modeline-column-zero-based nil)
   (doom-modeline-env-version nil)
   (doom-modeline-minor-modes t)
   :hook elpaca-after-init-hook)
