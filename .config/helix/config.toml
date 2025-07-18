@@ -32,15 +32,8 @@ left = [
   'read-only-indicator',
   'file-modification-indicator',
 ]
-center = [
-  'selections',
-]
-right = [
-  'diagnostics',
-  'file-type',
-  'version-control',
-  'spacer',
-]
+center = ['selections']
+right = ['diagnostics', 'file-type', 'version-control', 'spacer']
 
 [editor.statusline.mode]
 insert = 'I'
