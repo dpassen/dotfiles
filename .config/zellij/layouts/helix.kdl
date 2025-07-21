@@ -9,7 +9,7 @@ layout {
     }
     pane
   }
-  pane borderless=true size=1 {
+  pane size=1 {
     plugin location="zellij:compact-bar"
   }
 }
