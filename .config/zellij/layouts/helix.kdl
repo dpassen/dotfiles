@@ -1,5 +1,5 @@
 layout {
-  pane size="70%" {
+  pane size="62%" {
     command "hx"
     args "."
   }
