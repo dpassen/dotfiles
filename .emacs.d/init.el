@@ -365,6 +365,11 @@
 (use-package paren
   :custom (show-paren-mode nil))
 
+(use-package paren-face
+  :ensure t
+  :custom (paren-face-regexp "#?[](){}[]")
+  :hook (elpaca-after-init-hook . global-paren-face-mode))
+
 (use-package pixel-scroll
   :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
 
