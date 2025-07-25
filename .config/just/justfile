@@ -4,12 +4,12 @@ default:
 
 # Generate client app
 client-app name='org.passen/boof':
-    @clojure -Sdeps '{:deps {org.passen/deps-client-app {:local/root "deps-client-app"}}}' -X:new :template org.passen/deps-client-app :name {{name}}
+    @clojure -Sdeps '{:deps {io.github.dpassen/deps-client-app {:git/tag "0.7.0" :git/sha "6c60de9"}}}' -X:new :template org.passen/deps-client-app :name {{name}}
 
 # Generate library app
 library-app name='org.passen/dood':
-    @clojure -Sdeps '{:deps {org.passen/deps-library-app {:local/root "deps-library-app"}}}' -X:new :template org.passen/deps-library-app :name {{name}}
+    @clojure -Sdeps '{:deps {io.github.dpassen/deps-library-app {:git/tag "0.1.1" :git/sha "fa13342"}}}' -X:new :template org.passen/deps-library-app :name {{name}}
 
 # Generate server app
 server-app name='org.passen/foob':
-    @clojure -Sdeps '{:deps {org.passen/deps-server-app {:local/root "deps-server-app"}}}' -X:new :template org.passen/deps-server-app :name {{name}}
+    @clojure -Sdeps '{:deps {io.github.dpassen/deps-server-app {:git/tag "0.4.0" :git/sha "6e33904"}}}' -X:new :template org.passen/deps-server-app :name {{name}}
