@@ -71,7 +71,6 @@ brew 'watchexec'
 brew 'wget'
 brew 'xh'
 brew 'yaml-language-server'
-brew 'zellij'
 brew 'zoxide'
 brew 'zsh'
 

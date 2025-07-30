@@ -298,9 +298,6 @@
 (use-package just-mode
   :ensure t)
 
-(use-package kdl-mode
-  :ensure t)
-
 (use-package kotlin-ts-mode
   :ensure t)
 
