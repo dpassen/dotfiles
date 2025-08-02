@@ -1,0 +1,12 @@
+icons = true
+layout = 'inverted'
+sort = 'name'
+suppress-size = true
+
+[hidden]
+hidden = true
+icons = true
+layout = 'inverted'
+no-git = true
+sort = 'name'
+suppress-size = true

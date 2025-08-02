@@ -1,0 +1,2 @@
+[general]
+collapsed_sections = ['branch_status', 'untracked', 'stashes', 'recent_commits']

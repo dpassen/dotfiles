@@ -1,0 +1,41 @@
+theme = 'dpassen'
+
+[editor]
+auto-completion = false
+color-modes = true
+end-of-line-diagnostics = 'hint'
+popup-border = 'all'
+
+[editor.cursor-shape]
+insert = 'bar'
+normal = 'block'
+select = 'underline'
+
+[editor.file-picker]
+hidden = false
+
+[editor.gutters]
+layout = ['spacer', 'diagnostics', 'line-numbers', 'spacer']
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.inline-diagnostics]
+cursor-line = 'warning'
+
+[editor.statusline]
+left = [
+  'mode',
+  'spinner',
+  'file-name',
+  'position',
+  'read-only-indicator',
+  'file-modification-indicator',
+]
+center = ['selections']
+right = ['diagnostics', 'file-type', 'version-control', 'spacer']
+
+[editor.statusline.mode]
+insert = 'I'
+normal = 'N'
+select = 'S'

@@ -1,0 +1,14 @@
+adjust-cell-height = -5%
+confirm-close-surface = false
+cursor-style = block
+font-family = PragmataPro Mono
+font-size = 12
+macos-titlebar-style = native
+quit-after-last-window-closed = true
+resize-overlay = never
+shell-integration-features = no-cursor
+theme = dark:Ef-Dark,light:Ef-Light
+window-height = 30
+window-padding-x = 9
+window-padding-y = 9
+window-width = 120
