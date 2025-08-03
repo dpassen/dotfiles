@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+* dotfiles
+Everyone else is doing it
+
+** Install
+#+BEGIN_SRC sh
+  brew bundle install
+  dotter deploy
+  mise install
+#+END_SRC
+
+** Uninstall
+#+BEGIN_SRC sh
+  mise uninstall --all
+  dotter undeploy
+#+END_SRC

@@ -1,0 +1,43 @@
+{:aliases
+ {:antq
+  {:deps
+   {io.github.liquidz/antq
+    {:git/tag "2.11.1276"
+     :git/sha "0e8d29f"}}
+   :main-opts ["-m" "antq.core"]}
+  :check
+  {:extra-deps
+   {io.github.athos/clj-check
+    {:git/tag "0.1.0"
+     :git/sha "0ca84df"}}
+   :main-opts ["-m" "clj-check.check"]}
+  :new
+  {:deps
+   {io.github.seancorfield/deps-new
+    {:git/tag "v0.10.0"
+     :git/sha "20e82f8"}}
+   :exec-fn org.corfield.new/create}
+  :nop
+  {:extra-deps
+   {org.slf4j/slf4j-nop
+    {:mvn/version "2.0.17"}}}
+  :splint
+  {:deps
+   {io.github.noahtheduke/splint
+    {:git/tag "v1.21.0"
+     :git/sha "a21d00d"}}
+   :main-opts ["-m" "noahtheduke.splint"]}
+  :watson
+  {:deps
+   {io.github.clj-holmes/clj-watson
+    {:git/tag "v6.0.1"
+     :git/sha "b520351"}}
+   :exec-fn clj-watson.entrypoint/scan
+   :exec-args
+   {:aliases                 ["*"]
+    :database-strategy       "dependency-check"
+    :deps-edn-path           "deps.edn"
+    :fail-on-result          true
+    :output                  "stdout"
+    :run-without-nvd-api-key true
+    :suggest-fix             true}}}}
