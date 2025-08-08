@@ -5,6 +5,7 @@ Everyone else is doing it
 ** Install
 #+BEGIN_SRC sh
   brew bundle install
+  dotter init
   dotter deploy
   mise install
 #+END_SRC
