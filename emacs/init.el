@@ -384,21 +384,6 @@
 (use-package saveplace
   :hook (elpaca-after-init-hook . save-place-mode))
 
-(defun +elpaca-unload-seq (e)
-  "Unload existing feature 'seq and activate package E."
-  (and (featurep 'seq) (unload-feature 'seq t))
-  (elpaca--continue-build e))
-
-(defun +elpaca-seq-build-steps ()
-  "Force seq package to be managed by elpaca and unloaded."
-  (append
-   (butlast (if (file-exists-p (expand-file-name "seq" elpaca-builds-directory))
-                elpaca--pre-built-steps elpaca-build-steps))
-   (list '+elpaca-unload-seq 'elpaca--activate-package)))
-
-(use-package seq
-  :ensure `(seq :build ,(+elpaca-seq-build-steps)))
-
 (use-package simple
   :custom
   (async-shell-command-buffer 'new-buffer)
