@@ -161,7 +161,7 @@
 
 (use-package display-line-numbers
   :custom (display-line-numbers-width-start t)
-  :hook (conf-mode-hook prog-mode-hook))
+  :hook (conf-mode-hook prog-mode-hook text-mode-hook))
 
 (use-package disproject
   :ensure t
