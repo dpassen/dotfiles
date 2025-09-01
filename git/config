@@ -38,8 +38,7 @@
   sb = scoreboard
   scoreboard = shortlog --no-merges -sn
   st = status
-  standup = !git ln --all --since='yesterday' --author="$(git config user.email)"
-  su = standup
+  su = standup -s
 
 [github]
   user = dpassen
