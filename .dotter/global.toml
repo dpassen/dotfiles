@@ -8,8 +8,8 @@
 'clojure/deps.edn' = '~/.config/clojure/deps.edn'
 
 [emacs.files]
-'emacs/early-init.el' = '~/.emacs.d/early-init.el'
-'emacs/init.el' = '~/.emacs.d/init.el'
+'emacs/early-init.el' = '~/.config/emacs/early-init.el'
+'emacs/init.el' = '~/.config/emacs/init.el'
 
 [erdtree.files]
 'erdtree/erdtree.toml' = '~/.config/erdtree/.erdtree.toml'
