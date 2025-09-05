@@ -81,10 +81,22 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['typescript-language-server', 'tailwindcss-ls']
+auto-format = true
+
+[[language]]
+name = 'graphql'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'graphql',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
 auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -98,3 +110,23 @@ command = 'clippy'
 [[language]]
 name = 'toml'
 auto-format = true
+
+[language-server.efm]
+command = 'efm-langserver'
+
+[language-server.phpactor]
+command = 'phpactor.phar'
+args = ['language-server']
+
+[[language]]
+name = 'php'
+language-servers = ['phpactor']
+auto-format = true
+
+[[language]]
+name = 'hurl'
+auto-format = true
+
+[language-server.typescript-language-server.config.preferences]
+importModuleSpecifierEnding = 'minimal'
+importModuleSpecifierPreference = 'non-relative'
