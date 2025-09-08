@@ -38,7 +38,7 @@
   sb = scoreboard
   scoreboard = shortlog --no-merges -sn
   st = status
-  su = standup -s
+  su = standup -s -Dshort
 
 [github]
   user = dpassen
