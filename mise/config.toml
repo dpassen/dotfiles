@@ -3,7 +3,7 @@ experimental = true
 legacy_version_file = false
 
 [tools]
-node = '22.19.0'
+node = '22.20.0'
 python = '3.13.7'
 rust = { version = '1.90.0', components = 'clippy,rust-analyzer' }
 'ubi:terror/just-lsp' = 'latest'
