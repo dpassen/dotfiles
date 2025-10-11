@@ -314,17 +314,7 @@
   :general ("M-z" 'zap-up-to-char))
 
 (use-package mood-line
-  :ensure t
-  :custom
-  (mood-line-format
-   (mood-line-defformat
-    :left
-    (((mood-line-segment-buffer-name) . " ")
-     (mood-line-segment-cursor-position))
-    :right
-    (((mood-line-segment-checker) . " ")
-     (mood-line-segment-major-mode))))
-  (mood-line-glyph-alist mood-line-glyphs-fira-code)
+  :ensure (mood-line :host gitlab :repo "dpassen/mood-line")
   :hook elpaca-after-init-hook)
 
 (use-package nerd-icons
