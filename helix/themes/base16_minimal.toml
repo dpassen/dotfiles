@@ -15,3 +15,8 @@
 'type' = 'light-gray'
 'variable' = 'light-gray'
 'variable.other.member' = 'light-gray'
+
+'error' = { fg = 'light-red', modifiers = ['bold'] }
+'hint' = { fg = 'light-gray', modifiers = ['bold'] }
+'info' = { fg = 'light-blue', modifiers = ['bold'] }
+'warning' = { fg = 'light-yellow', modifiers = ['bold'] }
