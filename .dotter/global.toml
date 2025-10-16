@@ -29,7 +29,7 @@
 [helix.files]
 'helix/config.toml' = '~/.config/helix/config.toml'
 'helix/languages.toml' = '~/.config/helix/languages.toml'
-'helix/themes/base16_statusbar.toml' = '~/.config/helix/themes/base16_statusbar.toml'
+'helix/themes/base16_minimal.toml' = '~/.config/helix/themes/base16_minimal.toml'
 
 [jj.files]
 'jj/config.toml' = '~/.config/jj/config.toml'

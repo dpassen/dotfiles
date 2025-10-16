@@ -1,0 +1,17 @@
+'inherits' = 'base16_transparent'
+
+'ui.statusline' = { fg = 'white', bg = 'black' }
+'ui.statusline.inactive' = { fg = 'gray', bg = 'black' }
+
+'comment' = { fg = 'light-gray', modifiers = ['dim', 'italic'] }
+'constant' = 'light-gray'
+'constant.builtin' = 'yellow'
+'constant.numeric' = 'yellow'
+'constructor' = 'light-gray'
+'function' = 'light-gray'
+'keyword' = { fg = 'light-gray', modifiers = ['bold'] }
+'label' = 'light-gray'
+'special' = 'light-gray'
+'type' = 'light-gray'
+'variable' = 'light-gray'
+'variable.other.member' = 'light-gray'

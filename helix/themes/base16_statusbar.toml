@@ -1,4 +1,0 @@
-inherits = 'base16_transparent'
-
-'ui.statusline' = { fg = 'white', bg = 'black' }
-'ui.statusline.inactive' = { fg = 'gray', bg = 'black' }

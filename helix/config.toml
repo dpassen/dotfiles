@@ -1,4 +1,4 @@
-theme = 'base16_statusbar'
+theme = 'base16_minimal'
 
 [editor]
 auto-completion = false
