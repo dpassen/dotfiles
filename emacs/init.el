@@ -411,6 +411,9 @@
   :ensure t
   :custom (transient-mode-line-format nil))
 
+(use-package treesit
+  :custom (treesit-font-lock-level 2))
+
 (use-package treesit-auto
   :ensure t
   :custom
