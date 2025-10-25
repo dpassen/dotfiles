@@ -7,5 +7,8 @@ email = 'dpassen1@gmail.com'
 [ui]
 default-command = 'log'
 
+[templates]
+git_push_bookmark = '"dpassen/push-" ++ change_id.short()'
+
 [template-aliases]
 'format_timestamp(timestamp)' = 'timestamp.local().format("%Y-%m-%d")'
