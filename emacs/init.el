@@ -107,11 +107,12 @@
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil))
 
-(use-package clojure-mode
+(use-package clojure-ts-mode
   :ensure t
+  :demand t
   :custom
-  (clojure-align-forms-automatically t)
-  (clojure-toplevel-inside-comment-form t))
+  (clojure-ts-align-forms-automatically t)
+  (clojure-ts-toplevel-inside-comment-form t))
 
 (use-package comp
   :custom
@@ -244,7 +245,7 @@
 (use-package flycheck-clj-kondo
   :ensure t
   :demand t
-  :after clojure-mode)
+  :after clojure-ts-mode)
 
 (use-package flycheck-eglot
   :ensure t
@@ -387,7 +388,7 @@
   (sp-use-smartparens-bindings)
   :hook prog-mode-hook
   ((cider-repl-mode-hook
-    clojure-mode-hook
+    clojure-ts-mode-hook
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
 
