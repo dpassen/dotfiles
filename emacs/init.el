@@ -230,7 +230,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "PragmataPro Mono 12")))
+    (set-face-attribute face nil :font "PragmataPro 12")))
 
 (use-package files
   :custom

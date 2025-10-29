@@ -1,7 +1,7 @@
 adjust-cell-height = -5%
 confirm-close-surface = false
 cursor-style = block
-font-family = PragmataPro Mono
+font-family = PragmataPro
 font-size = 12
 macos-titlebar-style = native
 quit-after-last-window-closed = true
