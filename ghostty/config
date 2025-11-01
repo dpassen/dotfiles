@@ -3,6 +3,7 @@ confirm-close-surface = false
 cursor-style = block
 font-family = PragmataPro
 font-size = 12
+keybind = cmd+f=write_scrollback_file:paste
 macos-titlebar-style = native
 quit-after-last-window-closed = true
 resize-overlay = never
