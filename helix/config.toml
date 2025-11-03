@@ -19,6 +19,10 @@ min-width = 1
 [editor.statusline]
 right = ['diagnostics', 'selections', 'file-type']
 
+[keys.normal.space.l]
+c = ":sh forgelink copy \"%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}\""
+o = ":sh forgelink open \"%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}\""
+
 [theme]
 dark = 'wolf-alabaster-dark'
 light = 'wolf-alabaster-light'

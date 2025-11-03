@@ -14,3 +14,7 @@ mise.local.toml
 
 # cider
 .cider-history
+
+### claude
+**/.claude/settings.local.json
+**/.claude/memory/

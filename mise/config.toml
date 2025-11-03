@@ -8,3 +8,4 @@ python = '3.14.6'
 rust = { version = '1.97.1', components = 'clippy,rust-analyzer' }
 'cargo:forgelink-cli' = '0.3.1'
 'github:MKindberg/ghostty-ls' = '0.1.0'
+'github:moov-io/ach' = { version = '1.55.1', asset_pattern = 'achcli-*', rename_exe = 'achcli' }
