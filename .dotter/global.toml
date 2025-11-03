@@ -1,6 +1,9 @@
 [bat.files]
 'bat/config' = '~/.config/bat/config'
 
+[claude.files]
+'claude/settings.json' = '~/.claude/settings.json'
+
 [emacs.files]
 'emacs/early-init.el' = '~/.config/emacs/early-init.el'
 'emacs/init.el' = '~/.config/emacs/init.el'
@@ -35,18 +38,21 @@
 'kak/config/core.kak' = '~/.config/kak/config/core.kak'
 'kak/config/find.kak' = '~/.config/kak/config/find.kak'
 'kak/config/init.kak' = '~/.config/kak/config/init.kak'
+'kak/filetypes/go.kak' = '~/.config/kak/filetypes/go.kak'
 'kak/filetypes/init.kak' = '~/.config/kak/filetypes/init.kak'
+'kak/filetypes/javascript.kak' = '~/.config/kak/filetypes/javascript.kak'
 'kak/filetypes/markdown.kak' = '~/.config/kak/filetypes/markdown.kak'
+'kak/filetypes/php.kak' = '~/.config/kak/filetypes/php.kak'
 'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
 'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
 'kak/lsp/init.kak' = '~/.config/kak/lsp/init.kak'
-'kak/lsp/rumdl.toml' = '~/.config/kak/lsp/rumdl.toml'
+'kak/lsp/oxlint-language-server.toml' = '~/.config/kak/lsp/oxlint-language-server.toml'
+'kak/lsp/phpantom.toml' = '~/.config/kak/lsp/phpantom.toml'
 'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
+'kak/lsp/rumdl.toml' = '~/.config/kak/lsp/rumdl.toml'
+'kak/lsp/vtsls.toml' = '~/.config/kak/lsp/vtsls.toml'
 
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'
-
-[pi.files]
-'pi/agent/settings.json' = '~/.pi/agent/settings.json'
