@@ -2,11 +2,35 @@
 command = 'rumdl'
 args = ['server']
 
+[language-server.phpantom]
+command = 'phpantom_lsp'
+
 [language-server.rust-analyzer.config.check]
 command = 'clippy'
 
+[language-server.vtsls]
+command = 'vtsls'
+args = ['--stdio']
+
+[language-server.vtsls.config.vtsls]
+autoUseWorkspaceTsdk = true
+
+[language-server.vtsls.config.javascript.preferences]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+
+[language-server.vtsls.config.typescript.preferences]
+autoImportFileExcludePatterns = [
+  'next/router.d.ts',
+  'next/dist/client/router.d.ts',
+  'lucide-react',
+]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -17,11 +41,23 @@ formatter = { command = 'prettier', args = [
 ] }
 
 [[language]]
+name = 'graphql'
+formatter = { command = 'prettier', args = [
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
 name = 'html'
 formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+
+[[language]]
+name = 'hurl'
+auto-format = true
 
 [[language]]
 name = 'java'
@@ -30,6 +66,7 @@ formatter = { command = 'google-java-format', args = ['-'] }
 
 [[language]]
 name = 'javascript'
+language-servers = ['vtsls', 'oxlint-language-server']
 auto-format = true
 formatter = { command = 'prettier', args = [
   '--stdin-filepath',
@@ -45,6 +82,7 @@ formatter = { command = 'prettier', args = [
 
 [[language]]
 name = 'jsx'
+language-servers = ['vtsls', 'oxlint-language-server', 'tailwindcss-ls']
 auto-format = true
 formatter = { command = 'prettier', args = [
   '--stdin-filepath',
@@ -52,8 +90,17 @@ formatter = { command = 'prettier', args = [
 ] }
 
 [[language]]
+name = 'kotlin'
+language-servers = ['kotlin-lsp']
+
+[[language]]
 name = 'markdown'
 language-servers = ['rumdl']
+auto-format = true
+
+[[language]]
+name = 'php'
+language-servers = ['phpantom']
 auto-format = true
 
 [[language]]
@@ -67,6 +114,7 @@ auto-format = true
 
 [[language]]
 name = 'tsx'
+language-servers = ['vtsls', 'oxlint-language-server', 'tailwindcss-ls']
 auto-format = true
 formatter = { command = 'prettier', args = [
   '--stdin-filepath',
@@ -75,6 +123,7 @@ formatter = { command = 'prettier', args = [
 
 [[language]]
 name = 'typescript'
+language-servers = ['vtsls', 'oxlint-language-server']
 auto-format = true
 formatter = { command = 'prettier', args = [
   '--stdin-filepath',
