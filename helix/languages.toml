@@ -11,6 +11,7 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['typescript-language-server', 'oxlint-language-server']
 auto-format = true
 
 [[language]]
@@ -21,6 +22,11 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = [
+  'typescript-language-server',
+  'oxlint-language-server',
+  'tailwindcss-ls',
+]
 auto-format = true
 
 [[language]]
@@ -71,6 +77,7 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['typescript-language-server', 'oxlint-language-server']
 auto-format = true
 
 [[language]]
@@ -81,10 +88,26 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = [
+  'typescript-language-server',
+  'oxlint-language-server',
+  'tailwindcss-ls',
+]
+auto-format = true
+
+[[language]]
+name = 'graphql'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'graphql',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
 auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -105,3 +128,23 @@ language-servers = ['ghostty-ls']
 
 [language-server.ghostty-ls]
 command = 'ghostty-ls'
+
+[language-server.phpantom]
+command = 'phpantom_lsp'
+
+[[language]]
+name = 'php'
+language-servers = ['phpantom']
+auto-format = true
+
+[[language]]
+name = 'hurl'
+auto-format = true
+
+[language-server.typescript-language-server.config.preferences]
+importModuleSpecifierEnding = 'minimal'
+importModuleSpecifierPreference = 'non-relative'
+
+[[language]]
+name = 'kotlin'
+language-servers = ['kotlin-lsp']

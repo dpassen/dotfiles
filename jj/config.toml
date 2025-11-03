@@ -4,6 +4,10 @@
 name = 'Derek Passen'
 email = 'dpassen1@gmail.com'
 
+[[--scope]]
+--when.repositories = ['~/Work']
+user.email = 'dpassen@splashfinancial.com'
+
 [ui]
 default-command = 'log'
 diff-editor = ':builtin'
@@ -15,6 +19,9 @@ merge-args = ['$base', '$left', '$right', '$output']
 
 [revsets]
 bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
+
+[revset-aliases]
+standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
 
 [templates]
 git_push_bookmark = '"dpassen/" ++ change_id.short()'
