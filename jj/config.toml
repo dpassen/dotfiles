@@ -2,12 +2,26 @@
 
 [user]
 name = 'Derek Passen'
-email = 'dpassen1@gmail.com'
+email = 'dpassen@splashfinancial.com'
 
 [ui]
+conflict-marker-style = 'git'
 default-command = 'log'
+diff-formatter = ':git'
+
+[aliases]
+tug = [
+  'bookmark',
+  'move',
+  '--from',
+  'closest_bookmark(@)',
+  '--to',
+  'closest_pushable(@)',
+]
 
 [revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks() & ~trunk())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
 
 [templates]

@@ -88,6 +88,9 @@
 (use-package bash-ts-mode
   :treesit)
 
+(use-package bazel
+  :ensure t)
+
 (use-package c-ts-mode
   :treesit)
 
@@ -122,8 +125,7 @@
   :general
   (completion-preview-active-mode-map
    "M-n" 'completion-preview-next-candidate
-   "M-p" 'completion-preview-prev-candidate)
-  :hook (conf-mode-hook prog-mode-hook))
+   "M-p" 'completion-preview-prev-candidate))
 
 (use-package consult
   :ensure t
@@ -154,6 +156,9 @@
 (use-package css-ts-mode
   :treesit)
 
+(use-package csv-mode
+  :ensure t)
+
 (use-package datetime
   :ensure t
   :custom (datetime-timezone 'America/Chicago))
@@ -181,6 +186,13 @@
   (disproject-find-line-command #'consult-line-multi)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
+
+(use-package docker
+  :ensure t)
+
+(use-package dockerfile-ts-mode
+  :demand t
+  :treesit)
 
 (use-package dumb-jump
   :ensure t
@@ -313,6 +325,9 @@
 (use-package git-timemachine
   :ensure t)
 
+(use-package graphql-mode
+  :ensure t)
+
 (use-package grep
   :custom (grep-use-headings t))
 
@@ -325,6 +340,9 @@
 
 (use-package html-ts-mode
   :treesit)
+
+(use-package hurl-mode
+  :ensure (hurl-mode :host github :repo "JasZhe/hurl-mode"))
 
 (use-package java-ts-mode
   :treesit)
@@ -406,6 +424,9 @@
   :custom (paren-face-regexp "#?[](){}[]")
   :hook (elpaca-after-init-hook . global-paren-face-mode))
 
+(use-package php-mode
+  :ensure t)
+
 (use-package project
   :config
   (push '(major-mode . cider-repl-mode) project-kill-buffer-conditions))
@@ -452,6 +473,15 @@
   :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
+(use-package splash
+  :ensure (splash :host github
+                  :repo "SplashFinancial/stonehenge"
+                  :protocol ssh
+                  :files ("development/emacs/splash.el"))
+  :custom
+  (splash-stonehenge-dir "/Users/dpassen/Work/stonehenge")
+  (splash-website-dir "/Users/dpassen/Work/Website"))
+
 (use-package stillness-mode
   :ensure t
   :hook elpaca-after-init-hook)
@@ -461,6 +491,9 @@
 
 (use-package toml-ts-mode
   :treesit)
+
+(use-package terraform-mode
+  :ensure t)
 
 (use-package transient
   :ensure t
@@ -502,6 +535,14 @@
   :custom (vundo-glyph-alist vundo-unicode-symbols)
   :general ("C-c u" 'vundo))
 
+(use-package web-mode
+  :ensure t
+  :custom
+  (web-mode-code-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-enable-auto-closing t)
+  (web-mode-markup-indent-offset 2))
+
 (use-package wgrep
   :ensure t
   :custom (wgrep-auto-save-buffer t))
@@ -515,7 +556,7 @@
   :ensure t)
 
 (use-package mise
-  :ensure t
+  :ensure (mise :host github :repo "dpassen/mise.el" :branch "ignore-json-readtable-errors")
   :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
