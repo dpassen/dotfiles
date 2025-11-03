@@ -6,5 +6,8 @@ load utils lsp
 
 load config options
 
+load filetypes go
+load filetypes javascript
+load filetypes php
 load filetypes python
 load filetypes rust

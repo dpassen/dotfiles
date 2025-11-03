@@ -1,0 +1,4 @@
+[phpantom]
+command = "phpantom_lsp"
+args = ["--stdio"]
+root_globs = ["composer.json", ".git", ".hg"]
