@@ -11,6 +11,7 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['vtsls', 'oxlint-language-server']
 auto-format = true
 
 [[language]]
@@ -21,6 +22,7 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['vtsls', 'oxlint-language-server', 'tailwindcss-ls']
 auto-format = true
 
 [[language]]
@@ -65,6 +67,7 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['vtsls', 'oxlint-language-server']
 auto-format = true
 
 [[language]]
@@ -75,10 +78,22 @@ formatter = { command = 'prettier', args = [
   '--stdin-filepath',
   '%{buffer_name}',
 ] }
+language-servers = ['vtsls', 'oxlint-language-server', 'tailwindcss-ls']
+auto-format = true
+
+[[language]]
+name = 'graphql'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'graphql',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
 auto-format = true
 
 [[language]]
 name = 'clojure'
+formatter = { command = 'cljstyle', args = ['pipe'] }
 auto-format = true
 
 [[language]]
@@ -92,3 +107,32 @@ command = 'clippy'
 [[language]]
 name = 'toml'
 auto-format = true
+
+[language-server.phpantom]
+command = 'phpantom_lsp'
+
+[[language]]
+name = 'php'
+language-servers = ['phpantom']
+auto-format = true
+
+[[language]]
+name = 'hurl'
+auto-format = true
+
+[language-server.vtsls.config.javascript.preferences]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+
+[language-server.vtsls.config.typescript.preferences]
+autoImportFileExcludePatterns = [
+  'next/router.d.ts',
+  'next/dist/client/router.d.ts',
+  'lucide-react',
+]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+
+[[language]]
+name = 'kotlin'
+language-servers = ['kotlin-lsp']

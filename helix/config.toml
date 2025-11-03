@@ -23,6 +23,10 @@ insert = 'I'
 normal = 'N'
 select = 'S'
 
+[keys.normal.space.l]
+c = ':sh forgelink copy "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
+o = ':sh forgelink open "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
+
 [theme]
 dark = 'modus_vivendi_tinted'
 light = 'modus_operandi_tinted'
