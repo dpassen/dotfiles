@@ -1,0 +1,7 @@
+{
+  "skipWorkflowUsageWarning": true,
+  "tui": "fullscreen",
+  "permissions": {
+    "defaultMode": "manual"
+  }
+}
