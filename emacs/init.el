@@ -43,6 +43,9 @@
 (use-package bash-ts-mode
   :treesit)
 
+(use-package bazel
+  :ensure t)
+
 (use-package c++-ts-mode
   :treesit)
 
@@ -105,6 +108,9 @@
 (use-package css-ts-mode
   :treesit)
 
+(use-package csv-mode
+  :ensure t)
+
 (use-package custom
   :custom (custom-file (locate-user-emacs-file "custom.el"))
   :config (load custom-file :no-error-if-file-is-missing))
@@ -141,6 +147,13 @@
   (disproject-shell-command #'terminal-here)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
+
+(use-package docker
+  :ensure t)
+
+(use-package dockerfile-ts-mode
+  :demand t
+  :treesit)
 
 (use-package dumb-jump
   :ensure t
@@ -217,6 +230,9 @@
   :custom (git-link-use-commit t))
 
 (use-package git-modes
+  :ensure t)
+
+(use-package graphql-mode
   :ensure t)
 
 (use-package grep
@@ -333,6 +349,13 @@
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
 
+(use-package splash
+  :vc (:url "git@github.com:SplashFinancial/stonehenge.git"
+            :lisp-dir "development/emacs")
+  :custom
+  (splash-stonehenge-dir (expand-file-name "~/Work/stonehenge"))
+  (splash-website-dir (expand-file-name "~/Work/Website")))
+
 (use-package stillness-mode
   :ensure t
   :hook after-init-hook)
@@ -343,6 +366,9 @@
 (use-package terminal-here
   :vc (:url "https://github.com/dpassen/terminal-here")
   :custom (terminal-here-terminal-command 'ghostty))
+
+(use-package terraform-mode
+  :ensure t)
 
 (use-package toml-ts-mode
   :treesit)
@@ -392,7 +418,8 @@
   :ensure t)
 
 (use-package mise
-  :ensure t
+  :vc (:url "https://github.com/dpassen/mise.el"
+            :branch "ignore-json-readtable-errors")
   :hook (after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
