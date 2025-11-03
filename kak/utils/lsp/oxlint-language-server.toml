@@ -1,0 +1,4 @@
+[oxlint-language-server]
+root_globs = ["package.json", ".git", ".hg"]
+command = "oxlint"
+args = ["--lsp"]
