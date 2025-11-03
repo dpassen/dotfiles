@@ -4,6 +4,9 @@
 [clojure.files]
 'clojure/deps.edn' = '~/.config/clojure/deps.edn'
 
+[efm-langserver.files]
+'efm-langserver/config.yaml' = '~/.config/efm-langserver/config.yaml'
+
 [emacs.files]
 'emacs/early-init.el' = '~/.config/emacs/early-init.el'
 'emacs/init.el' = '~/.config/emacs/init.el'
