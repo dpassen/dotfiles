@@ -9,3 +9,6 @@ rust = { version = '1.92.0', components = 'clippy,rust-analyzer' }
 'github:MKindberg/ghostty-ls' = 'latest'
 'github:terror/just-lsp' = 'latest'
 'github:weavejester/cljfmt' = 'latest'
+'ubi:moov-io/ach' = { version = 'latest', matching_regex = 'achcli', rename_exe = 'achcli' }
+'ubi:phpactor/phpactor' = { version = '2024.11.28.1' }
+'ubi:pnpm/pnpm' = '10.12.1'
