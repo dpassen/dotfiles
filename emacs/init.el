@@ -81,6 +81,9 @@
   :custom (auto-revert-verbose nil)
   :hook (elpaca-after-init-hook .  global-auto-revert-mode))
 
+(use-package bazel
+  :ensure t)
+
 (use-package cider
   :ensure t
   :custom
@@ -139,6 +142,9 @@
   :custom (corfu-cycle t)
   :hook (elpaca-after-init-hook . global-corfu-mode))
 
+(use-package csv-mode
+  :ensure t)
+
 (use-package datetime
   :ensure t
   :custom (datetime-timezone 'America/Chicago))
@@ -176,6 +182,9 @@
   (disproject-find-line-command #'consult-line-multi)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
+
+(use-package docker
+  :ensure t)
 
 (use-package dumber-jump
   :ensure t
@@ -284,6 +293,9 @@
 (use-package git-timemachine
   :ensure t)
 
+(use-package graphql-mode
+  :ensure t)
+
 (use-package grep
   :custom (grep-use-headings t))
 
@@ -293,6 +305,9 @@
 (use-package hl-todo
   :ensure t
   :hook (elpaca-after-init-hook . global-hl-todo-mode))
+
+(use-package hurl-mode
+  :ensure (hurl-mode :host github :repo "JasZhe/hurl-mode"))
 
 (use-package just-mode
   :ensure t)
@@ -359,6 +374,9 @@
   :custom (paren-face-regexp "#?[](){}[]")
   :hook (elpaca-after-init-hook . global-paren-face-mode))
 
+(use-package php-mode
+  :ensure t)
+
 (use-package project
   :config
   (push '(major-mode . cider-repl-mode) project-kill-buffer-conditions))
@@ -395,12 +413,24 @@
   :when (display-graphic-p)
   :hook elpaca-after-init-hook)
 
+(use-package splash
+  :ensure (splash :host github
+                  :repo "SplashFinancial/stonehenge"
+                  :protocol ssh
+                  :files ("development/emacs/splash.el"))
+  :custom
+  (splash-stonehenge-dir "/Users/dpassen/Work/stonehenge")
+  (splash-website-dir "/Users/dpassen/Work/Website"))
+
 (use-package stillness-mode
   :ensure t
   :hook elpaca-after-init-hook)
 
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
+
+(use-package terraform-mode
+  :ensure t)
 
 (use-package transient
   :ensure t
@@ -413,7 +443,7 @@
   :ensure t
   :custom
   (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin python ruby rust toml tsx typescript))
+   '(bash c cpp css dockerfile html java javascript json kotlin python ruby rust toml tsx typescript))
   :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
 
 (use-package uniquify
@@ -441,6 +471,14 @@
   :custom (vundo-glyph-alist vundo-unicode-symbols)
   :general ("C-c u" 'vundo))
 
+(use-package web-mode
+  :ensure t
+  :custom
+  (web-mode-code-indent-offset 2)
+  (web-mode-css-indent-offset 2)
+  (web-mode-enable-auto-closing t)
+  (web-mode-markup-indent-offset 2))
+
 (use-package wgrep
   :ensure t
   :custom (wgrep-auto-save-buffer t))
@@ -454,7 +492,7 @@
   :ensure t)
 
 (use-package mise
-  :ensure t
+  :ensure (mise :host github :repo "dpassen/mise.el" :branch "ignore-json-readtable-errors")
   :hook (elpaca-after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
