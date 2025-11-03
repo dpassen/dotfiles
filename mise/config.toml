@@ -3,8 +3,11 @@ experimental = true
 
 [tools]
 node = '24.13.0'
+pnpm = '10.12.1'
 python = '3.14.3'
 rust = { version = '1.93.0', components = 'clippy,rust-analyzer' }
 'github:MKindberg/ghostty-ls' = '0.1.0'
+'github:moov-io/ach' = { version = '1.55.1', asset_pattern = 'achcli-*', rename_exe = 'achcli' }
+'github:phpactor/phpactor' = { version = '2024.11.28.1', asset_pattern = 'phpactor.phar' }
 'github:terror/just-lsp' = '0.3.3'
 'github:weavejester/cljfmt' = '0.15.6'

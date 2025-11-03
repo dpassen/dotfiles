@@ -4,6 +4,11 @@
 name = 'Derek Passen'
 email = 'dpassen1@gmail.com'
 
+[[--scope]]
+--when.repositories = ['~/Work']
+[--scope.user]
+email = 'dpassen@splashfinancial.com'
+
 [ui]
 default-command = 'log'
 
