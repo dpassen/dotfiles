@@ -8,7 +8,13 @@ email = 'dpassen1@gmail.com'
 default-command = 'log'
 
 [templates]
-git_push_bookmark = '"dpassen/push-" ++ change_id.short()'
+git_push_bookmark = '''
+concat(
+  author.email().local().replace(regex:"\\d", ""),
+  "/push-",
+  change_id.short()
+)
+'''
 
 [template-aliases]
 'format_timestamp(timestamp)' = 'timestamp.local().format("%Y-%m-%d")'
