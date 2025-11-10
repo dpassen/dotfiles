@@ -4,6 +4,12 @@
 name = 'Derek Passen'
 email = 'dpassen1@gmail.com'
 
+[colors]
+'prefix' = { bold = true, underline = true }
+'rest' = 'white'
+'working_copy change_id rest' = { bold = false }
+'working_copy commit_id rest' = { bold = false }
+
 [ui]
 default-command = 'log'
 

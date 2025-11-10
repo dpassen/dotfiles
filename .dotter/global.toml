@@ -34,6 +34,9 @@
 [jj.files]
 'jj/config.toml' = '~/.config/jj/config.toml'
 
+[jjui.files]
+'jjui/config.toml' = '~/.config/jjui/config.toml'
+
 [just.files]
 'just/justfile' = { target = '~/.config/just/justfile', type = 'symbolic' }
 
