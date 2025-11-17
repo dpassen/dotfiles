@@ -4,7 +4,8 @@ format = """
 $username\
 $hostname\
 $directory\
-$git_branch\
+${custom.git}\
+${custom.jj}\
 $line_break\
 $character"""
 
@@ -15,9 +16,18 @@ style = 'blue'
 success_symbol = '[\$](purple)'
 error_symbol = '[\$](red)'
 
-[git_branch]
-format = '[$branch]($style)'
+[custom.git]
+detect_folders = ['.git', '!.jj']
 style = 'green'
+symbol = 'git'
+
+[custom.jj]
+detect_folders = ['.jj']
+style = 'green'
+symbol = 'jj'
+
+[git_branch]
+disabled = true
 
 [package]
 disabled = true
