@@ -74,7 +74,7 @@
 
 (use-package auto-dark
   :ensure t
-  :custom (auto-dark-themes '((ef-dark) (ef-light)))
+  :custom (auto-dark-themes '((doric-dark) (doric-light)))
   :hook elpaca-after-init-hook)
 
 (use-package autorevert
@@ -172,6 +172,9 @@
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
+(use-package doric-themes
+  :ensure t)
+
 (use-package dumber-jump
   :ensure t
   :hook (xref-backend-functions . dumber-jump-xref-activate))
@@ -181,10 +184,6 @@
 
 (use-package editorconfig
   :hook elpaca-after-init-hook)
-
-(use-package ef-themes
-  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0")
-  :custom (ef-themes-to-toggle '(ef-dark ef-light)))
 
 (use-package eglot
   :custom

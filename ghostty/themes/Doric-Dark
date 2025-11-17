@@ -1,0 +1,38 @@
+# Doric-Dark
+background = #000000
+foreground = #ffffff
+cursor-color = #ccaaee
+selection-background = #50447f
+selection-foreground = #ffffff
+
+# black
+palette = 0=#000000
+palette = 8=#4d4d4d
+
+# red
+palette = 1=#eca28f
+palette = 9=#eca28f
+
+# green
+palette = 2=#b9d0aa
+palette = 10=#b9d0aa
+
+# yellow
+palette = 3=#c0b080
+palette = 11=#c0b080
+
+# blue
+palette = 4=#9fbfe7
+palette = 12=#9fbfe7
+
+# magenta
+palette = 5=#e9acbf
+palette = 13=#e9acbf
+
+# cyan
+palette = 6=#a0c0d0
+palette = 14=#a0c0d0
+
+# white
+palette = 7=#ffffff
+palette = 15=#b3b3b3

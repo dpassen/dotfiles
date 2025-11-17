@@ -1,2 +1,3 @@
 [ui.colors]
-'revisions selected' = { bg = 'bright black' }
+'revisions selected' = { bg = 'black' }
+'status dimmed' = { fg = 'white' }

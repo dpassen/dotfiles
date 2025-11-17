@@ -16,8 +16,8 @@
 
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'
-'ghostty/themes/Ef-Dark' = '~/.config/ghostty/themes/Ef-Dark'
-'ghostty/themes/Ef-Light' = '~/.config/ghostty/themes/Ef-Light'
+'ghostty/themes/Doric-Dark' = '~/.config/ghostty/themes/Doric-Dark'
+'ghostty/themes/Doric-Light' = '~/.config/ghostty/themes/Doric-Light'
 
 [git.files]
 'git/config' = '~/.config/git/config'
