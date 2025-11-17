@@ -1,6 +1,7 @@
 'inherits' = 'base16_transparent'
 
-'ui.linenr.selected' = { fg = 'light-gray' }
+'ui.linenr' = { fg = 'light-gray', modifiers = ['dim'] }
+'ui.linenr.selected' = { fg = 'light-gray', modifiers = ['bold'] }
 'ui.statusline' = { fg = 'white', bg = 'black' }
 'ui.statusline.inactive' = { fg = 'gray', bg = 'black' }
 
