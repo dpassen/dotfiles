@@ -183,8 +183,7 @@
   :hook elpaca-after-init-hook)
 
 (use-package ef-themes
-  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0")
-  :custom (ef-themes-to-toggle '(ef-dark ef-light)))
+  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0"))
 
 (use-package eglot
   :custom
