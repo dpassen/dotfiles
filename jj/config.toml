@@ -13,6 +13,9 @@ email = 'dpassen1@gmail.com'
 [ui]
 default-command = 'log'
 
+[revset-aliases]
+standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
+
 [templates]
 git_push_bookmark = '''
 concat(
