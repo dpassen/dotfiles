@@ -253,6 +253,15 @@
   (flycheck-eglot-exclusive nil)
   :hook (elpaca-after-init-hook . global-flycheck-eglot-mode))
 
+(use-package flyover
+  :ensure t
+  :custom (flyover-display-mode 'show-only-on-same-line)
+  :custom-face
+  (flyover-error ((t :height 1)))
+  (flyover-info ((t :height 1)))
+  (flyover-warning ((t :height 1)))
+  :hook flycheck-mode-hook)
+
 (use-package frame
   :when (display-graphic-p)
   :config
