@@ -147,6 +147,16 @@
   :ensure t
   :custom (datetime-timezone 'America/Chicago))
 
+(use-package dimmer
+  :ensure t
+  :config (dimmer-configure-magit)
+  :custom
+  (dimmer-adjustment-mode :foreground)
+  (dimmer-fraction 0.3)
+  (dimmer-use-colorspace :rgb)
+  (dimmer-watch-frame-focus-events nil)
+  :hook elpaca-after-init-hook)
+
 (use-package dired
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
@@ -277,10 +287,6 @@
 
 (use-package git-timemachine
   :ensure t)
-
-(use-package golden
-  :ensure (golden :host sourcehut :repo "wklew/golden")
-  :hook (elpaca-after-init-hook . global-golden-mode))
 
 (use-package grep
   :custom (grep-use-headings t))
