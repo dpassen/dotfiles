@@ -3,7 +3,6 @@ theme = 'base16_minimal'
 [editor]
 auto-completion = false
 color-modes = true
-end-of-line-diagnostics = 'hint'
 popup-border = 'all'
 
 [editor.cursor-shape]
