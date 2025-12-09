@@ -178,7 +178,6 @@
   :ensure t
   :custom
   (disproject-find-line-command #'consult-line-multi)
-  (disproject-shell-command #'terminal-here)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
@@ -420,10 +419,6 @@
 
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
-
-(use-package terminal-here
-  :ensure t
-  :custom (terminal-here-terminal-command 'ghostty))
 
 (use-package transient
   :ensure t
