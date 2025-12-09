@@ -193,7 +193,10 @@
   :hook elpaca-after-init-hook)
 
 (use-package ef-themes
-  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0"))
+  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0")
+  :custom
+  (ef-themes-common-palette-overrides
+   '((bg-mode-line bg-alt))))
 
 (use-package eglot
   :custom
