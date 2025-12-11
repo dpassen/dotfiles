@@ -17,6 +17,10 @@
 [erdtree.files]
 'erdtree/erdtree.toml' = '~/.config/erdtree/.erdtree.toml'
 
+[fish.files]
+'fish/config.fish' = '~/.config/fish/config.fish'
+'fish/functions/emacs.fish' = '~/.config/fish/functions/emacs.fish'
+
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'
 'ghostty/themes/Ef-Dark' = '~/.config/ghostty/themes/Ef-Dark'
