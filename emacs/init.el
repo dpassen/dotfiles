@@ -248,6 +248,9 @@
   (confirm-kill-processes nil)
   (require-final-newline t))
 
+(use-package fish-mode
+  :ensure t)
+
 (use-package flycheck
   :ensure t
   :custom (flycheck-indication-mode nil)
