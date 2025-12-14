@@ -13,5 +13,4 @@ if status is-interactive
     set -q EDITOR; or set -gx EDITOR hx
 
     atuin init fish | source
-    zoxide init fish --cmd cd | source
 end
