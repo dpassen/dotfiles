@@ -81,19 +81,6 @@
   :custom (auto-revert-verbose nil)
   :hook (elpaca-after-init-hook .  global-auto-revert-mode))
 
-(use-package cape
-  :ensure t
-  :after corfu
-  :general
-  (corfu-mode-map
-   :prefix "C-c p"
-   "p" 'completion-at-point
-   "d" 'cape-dabbrev
-   "f" 'cape-file
-   "i" 'cape-ispell
-   "k" 'cape-keyword
-   "s" 'cape-elisp-symbol))
-
 (use-package cider
   :ensure t
   :custom
@@ -137,11 +124,6 @@
   :ensure t
   :after flycheck
   :general (flycheck-mode-map "M-g f" 'consult-flycheck))
-
-(use-package corfu
-  :ensure t
-  :custom (corfu-cycle t)
-  :hook (elpaca-after-init-hook . global-corfu-mode))
 
 (use-package datetime
   :ensure t
@@ -332,6 +314,16 @@
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
 
+(use-package mono-complete
+  :ensure t
+  :custom (mono-complete-backends '(capf dabbrev filesystem))
+  :custom-face (mono-complete-preview-face
+                ((t (:background unspecified :foreground unspecified :inherit shadow))))
+  :general
+  (mono-complete-mode-map
+   "<tab>" 'mono-complete-expand-or-fallback)
+  :hook prog-mode-hook)
+
 (use-package mood-line
   :ensure (mood-line :host gitlab :repo "dpassen/mood-line")
   :hook elpaca-after-init-hook)
@@ -343,10 +335,6 @@
 (use-package nerd-icons-completion
   :ensure t
   :hook (marginalia-mode-hook . nerd-icons-completion-marginalia-setup))
-
-(use-package nerd-icons-corfu
-  :ensure t
-  :hook (corfu-margin-formatters . nerd-icons-corfu-formatter))
 
 (use-package nerd-icons-dired
   :ensure t
