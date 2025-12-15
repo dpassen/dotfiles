@@ -201,9 +201,8 @@
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-edits nil)
-  (eglot-ignored-server-capabilities '(:inlayHintProvider))
+  (eglot-ignored-server-capabilities '(:documentHighlightProvider :inlayHintProvider))
   (eglot-sync-connect nil)
-  :custom-face (eglot-highlight-symbol-face ((t :inherit normal)))
   :general
   (eglot-mode-map
    :prefix "C-c l"
