@@ -103,7 +103,8 @@
 
 (use-package comp
   :custom
-  (native-comp-async-report-warnings-errors nil))
+  (native-comp-async-report-warnings-errors nil)
+  (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
 
 (use-package consult
   :ensure t
