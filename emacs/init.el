@@ -363,9 +363,6 @@
   :custom (paren-face-regexp "#?[](){}[]")
   :hook (elpaca-after-init-hook . global-paren-face-mode))
 
-(use-package pixel-scroll
-  :hook (elpaca-after-init-hook . pixel-scroll-precision-mode))
-
 (use-package project
   :custom (project-mode-line t)
   :config
@@ -452,9 +449,6 @@
 (use-package wgrep
   :ensure t
   :custom (wgrep-auto-save-buffer t))
-
-(use-package winner
-  :hook elpaca-after-init-hook)
 
 (use-package xref
   :custom
