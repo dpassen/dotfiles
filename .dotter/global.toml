@@ -11,9 +11,6 @@
 'emacs/early-init.el' = '~/.config/emacs/early-init.el'
 'emacs/init.el' = '~/.config/emacs/init.el'
 
-[erdtree.files]
-'erdtree/erdtree.toml' = '~/.config/erdtree/.erdtree.toml'
-
 [fish.files]
 'fish/config.fish' = '~/.config/fish/config.fish'
 'fish/fish_plugins' = '~/.config/fish/fish_plugins'
