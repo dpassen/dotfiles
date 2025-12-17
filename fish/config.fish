@@ -9,7 +9,6 @@ fish_add_path -a /opt/homebrew/bin /opt/homebrew/sbin
 
 if status is-interactive
     set fish_greeting
-
     set -q EDITOR; or set -gx EDITOR hx
 
     atuin init fish | source
