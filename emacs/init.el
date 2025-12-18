@@ -106,11 +106,20 @@
   (native-comp-async-report-warnings-errors nil)
   (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
 
+(use-package completion-preview
+  :custom (completion-preview-message-format nil)
+  :general
+  (completion-preview-active-mode-map
+   "M-n" 'completion-preview-next-candidate
+   "M-p" 'completion-preview-prev-candidate)
+  :hook (elpaca-after-init-hook . global-completion-preview-mode))
+
 (use-package consult
   :ensure t
   :custom
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
+  :init (setq completion-in-region-function #'consult-completion-in-region)
   :general
   (ctl-x-map "b" 'consult-buffer)
   (:prefix "M-g"
@@ -314,16 +323,6 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
-
-(use-package mono-complete
-  :ensure t
-  :custom (mono-complete-backends '(capf dabbrev filesystem))
-  :custom-face (mono-complete-preview-face
-                ((t (:background unspecified :foreground unspecified :inherit shadow))))
-  :general
-  (mono-complete-mode-map
-   "<tab>" 'mono-complete-expand-or-fallback)
-  :hook prog-mode-hook)
 
 (use-package mood-line
   :ensure (mood-line :host gitlab :repo "dpassen/mood-line")
