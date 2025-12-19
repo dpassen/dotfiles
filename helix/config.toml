@@ -14,7 +14,7 @@ select = 'underline'
 hidden = false
 
 [editor.gutters]
-layout = ['spacer', 'diagnostics', 'line-numbers', 'spacer']
+layout = ['diagnostics', 'line-numbers', 'spacer']
 
 [editor.gutters.line-numbers]
 min-width = 1
