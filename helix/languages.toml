@@ -98,3 +98,11 @@ command = 'clippy'
 [[language]]
 name = 'toml'
 auto-format = true
+
+[[language]]
+name = 'fish'
+language-servers = ['fish-lsp']
+
+[language-server.fish-lsp]
+command = 'fish-lsp'
+args = ['start']
