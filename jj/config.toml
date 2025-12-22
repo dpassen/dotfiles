@@ -27,6 +27,3 @@ concat(
 
 [template-aliases]
 'format_timestamp(timestamp)' = 'timestamp.local().format("%Y-%m-%d")'
-
-[lazyjj]
-highlight-color = 'bright black'
