@@ -98,3 +98,10 @@ command = 'clippy'
 [[language]]
 name = 'toml'
 auto-format = true
+
+[[language]]
+name = 'ghostty'
+language-servers = ['ghostty-ls']
+
+[language-server.ghostty-ls]
+command = 'ghostty-ls'
