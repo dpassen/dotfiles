@@ -1,0 +1,107 @@
+[[language]]
+name = 'python'
+language-servers = ['basedpyright', 'ruff']
+auto-format = true
+
+[[language]]
+name = 'javascript'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'typescript',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'jsx'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'typescript',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'css'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'css',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'json'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'json',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'markdown'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'markdown',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'html'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'html',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'typescript'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'typescript',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'tsx'
+formatter = { command = 'prettier', args = [
+  '--parser',
+  'typescript',
+  '--stdin-filepath',
+  '%{buffer_name}',
+] }
+auto-format = true
+
+[[language]]
+name = 'clojure'
+auto-format = true
+
+[[language]]
+name = 'java'
+formatter = { command = 'google-java-format', args = ['-'] }
+auto-format = true
+
+[language-server.rust-analyzer.config.check]
+command = 'clippy'
+
+[[language]]
+name = 'toml'
+auto-format = true
+
+[[language]]
+name = 'ghostty'
+language-servers = ['ghostty-ls']
+
+[language-server.ghostty-ls]
+command = 'ghostty-ls'
