@@ -1,0 +1,10 @@
+[settings]
+experimental = true
+
+[tools]
+node = '22.21.1'
+python = '3.14.2'
+rust = { version = '1.92.0', components = 'clippy,rust-analyzer' }
+'github:MKindberg/ghostty-ls' = 'latest'
+'github:terror/just-lsp' = 'latest'
+'github:weavejester/cljfmt' = 'latest'
