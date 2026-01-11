@@ -1,0 +1,29 @@
+{:aliases
+ {:antq
+  {:deps
+   {io.github.liquidz/antq
+    {:git/tag "2.11.1276"
+     :git/sha "0e8d29f"}}
+   :main-opts ["-m" "antq.core"]}
+  :check
+  {:extra-deps
+   {io.github.athos/clj-check
+    {:git/tag "0.1.0"
+     :git/sha "0ca84df"}}
+   :main-opts ["-m" "clj-check.check"]}
+  :new
+  {:deps
+   {io.github.seancorfield/deps-new
+    {:git/tag "v0.10.3"
+     :git/sha "2c012c4"}}
+   :exec-fn org.corfield.new/create}
+  :nop
+  {:extra-deps
+   {org.slf4j/slf4j-nop
+    {:mvn/version "2.0.17"}}}
+  :splint
+  {:deps
+   {io.github.noahtheduke/splint
+    {:git/tag "v1.22.0"
+     :git/sha "cfa50df"}}
+   :main-opts ["-m" "noahtheduke.splint"]}}}
