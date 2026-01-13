@@ -1,0 +1,41 @@
+[user]
+  name = Derek Passen
+  email = dpassen1@gmail.com
+
+[core]
+  excludesfile = ~/.config/git/ignore
+
+[init]
+  defaultBranch = main
+
+[log]
+  date = iso
+
+[pull]
+  ff = only
+
+[rerere]
+  enabled = true
+  autoUpdate = true
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = version:refname
+
+[interactive]
+  singleKey = true
+
+[alias]
+  ci = commit
+  co = checkout
+  last-touched = for-each-ref --sort=authordate --format '%0a%(refname:short)%0a%(authordate:relative)' 'refs/remotes/'
+  lg = ln --graph
+  ll = ln --decorate --numstat
+  ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cs)%C(reset) %C(bold blue)<%an>%C(reset)'
+  scoreboard = shortlog --no-merges -sn
+  st = status
+
+[github]
+  user = dpassen

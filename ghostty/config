@@ -1,0 +1,14 @@
+confirm-close-surface = false
+font-family = MonoLisa Variable
+font-feature = -calt, -dlig, -liga
+font-size = 12
+keybind = cmd+f=write_screen_file:paste
+macos-titlebar-style = native
+quit-after-last-window-closed = true
+resize-overlay = never
+shell-integration-features = no-cursor
+theme = dark:Ef-Dark,light:Ef-Light
+window-height = 24
+window-padding-x = 9
+window-padding-y = 9
+window-width = 80

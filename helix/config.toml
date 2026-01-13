@@ -1,0 +1,39 @@
+theme = 'base16_minimal'
+
+[editor]
+auto-completion = false
+color-modes = true
+popup-border = 'all'
+
+[editor.cursor-shape]
+insert = 'bar'
+normal = 'block'
+select = 'underline'
+
+[editor.file-picker]
+hidden = false
+
+[editor.gutters]
+layout = ['line-numbers', 'spacer']
+
+[editor.gutters.line-numbers]
+min-width = 1
+
+[editor.inline-diagnostics]
+cursor-line = 'warning'
+
+[editor.statusline]
+left = [
+  'mode',
+  'spinner',
+  'file-name',
+  'position',
+  'read-only-indicator',
+  'file-modification-indicator',
+]
+right = ['diagnostics', 'selections', 'file-type']
+
+[editor.statusline.mode]
+insert = 'I'
+normal = 'N'
+select = 'S'

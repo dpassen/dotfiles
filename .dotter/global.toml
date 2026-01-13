@@ -1,0 +1,46 @@
+[bat.files]
+'bat/config' = '~/.config/bat/config'
+
+[clojure.files]
+'clojure/deps.edn' = '~/.config/clojure/deps.edn'
+
+[emacs.files]
+'emacs/early-init.el' = '~/.config/emacs/early-init.el'
+'emacs/init.el' = '~/.config/emacs/init.el'
+
+[emacs-plus.files]
+'emacs-plus/build.yml' = '~/.config/emacs-plus/build.yml'
+
+[fish.files]
+'fish/config.fish' = '~/.config/fish/config.fish'
+'fish/fish_plugins' = '~/.config/fish/fish_plugins'
+'fish/functions/emacs.fish' = '~/.config/fish/functions/emacs.fish'
+
+[ghostty.files]
+'ghostty/config' = '~/.config/ghostty/config'
+'ghostty/themes/Ef-Dark' = '~/.config/ghostty/themes/Ef-Dark'
+'ghostty/themes/Ef-Light' = '~/.config/ghostty/themes/Ef-Light'
+
+[git.files]
+'git/config' = '~/.config/git/config'
+'git/ignore' = '~/.config/git/ignore'
+
+[gitu.files]
+'gitu/config.toml' = '~/.config/gitu/config.toml'
+
+[helix.files]
+'helix/config.toml' = '~/.config/helix/config.toml'
+'helix/languages.toml' = '~/.config/helix/languages.toml'
+'helix/themes/base16_minimal.toml' = '~/.config/helix/themes/base16_minimal.toml'
+
+[hushlogin.files]
+'hushlogin/hushlogin' = '~/.hushlogin'
+
+[jj.files]
+'jj/config.toml' = '~/.config/jj/config.toml'
+
+[leiningen.files]
+'leiningen/profiles.clj' = '~/.lein/profiles.clj'
+
+[mise.files]
+'mise/config.toml' = '~/.config/mise/config.toml'

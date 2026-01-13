@@ -1,0 +1,23 @@
+'inherits' = 'base16_transparent'
+
+'ui.linenr' = { fg = 'light-gray', modifiers = ['dim'] }
+'ui.linenr.selected' = { fg = 'light-gray', modifiers = ['bold'] }
+'ui.statusline' = { fg = 'white', bg = 'black' }
+'ui.statusline.inactive' = { fg = 'gray', bg = 'black' }
+
+'comment' = { fg = 'light-gray', modifiers = ['dim', 'italic'] }
+'constant' = 'light-gray'
+'constant.builtin' = 'yellow'
+'constant.numeric' = 'yellow'
+'constructor' = 'light-gray'
+'function' = 'light-gray'
+'keyword' = { fg = 'light-gray', modifiers = ['bold'] }
+'label' = 'light-gray'
+'special' = 'light-gray'
+'variable' = 'light-gray'
+'variable.other.member' = 'light-gray'
+
+'error' = { fg = 'light-red', modifiers = ['bold'] }
+'hint' = { fg = 'light-gray', modifiers = ['bold'] }
+'info' = { fg = 'light-blue', modifiers = ['bold'] }
+'warning' = { fg = 'light-yellow', modifiers = ['bold'] }
