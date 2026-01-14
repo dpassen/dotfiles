@@ -126,7 +126,8 @@
            "i" 'consult-imenu)
   (:prefix "M-s"
            "l" 'consult-line
-           "r" 'consult-ripgrep))
+           "r" 'consult-ripgrep)
+  ("M-y" 'consult-yank-pop))
 
 (use-package consult-flycheck
   :ensure t
