@@ -53,6 +53,10 @@
   :ensure (:wait t)
   :demand t)
 
+(use-package use-package-treesit
+  :ensure (:wait t)
+  :demand t)
+
 (use-package emacs
   :custom
   (frame-resize-pixelwise t)
@@ -80,6 +84,15 @@
 (use-package autorevert
   :custom (auto-revert-verbose nil)
   :hook (elpaca-after-init-hook .  global-auto-revert-mode))
+
+(use-package bash-ts-mode
+  :treesit)
+
+(use-package c-ts-mode
+  :treesit)
+
+(use-package c++-ts-mode
+  :treesit)
 
 (use-package cider
   :ensure t
@@ -137,6 +150,9 @@
   :ensure t
   :custom (corfu-cycle t)
   :hook (elpaca-after-init-hook . global-corfu-mode))
+
+(use-package css-ts-mode
+  :treesit)
 
 (use-package datetime
   :ensure t
@@ -239,12 +255,23 @@
   :custom
   (confirm-kill-processes nil)
   (major-mode-remap-alist
-   '((clojure-mode . clojure-ts-mode)
-     (clojurescript-mode . clojure-ts-clojurescript-mode)
+   '((c++-mode . c++-ts-mode)
+     (c-mode . c-ts-mode)
+     (clojure-mode . clojure-ts-mode)
      (clojurec-mode . clojure-ts-clojurec-mode)
      (clojuredart-mode . clojure-ts-clojuredart-mode)
+     (clojurescript-mode . clojure-ts-clojurescript-mode)
+     (conf-toml-mode . toml-ts-mode)
+     (css-mode . css-ts-mode)
      (jank-mode . clojure-ts-jank-mode)
-     (joker-mode . clojure-ts-joker-mode)))
+     (java-mode . java-ts-mode)
+     (javascript-mode . js-ts-mode)
+     (joker-mode . clojure-ts-joker-mode)
+     (js-json-mode . json-ts-mode)
+     (mhtml-mode . html-ts-mode)
+     (python-mode . python-ts-mode)
+     (ruby-mode . ruby-ts-mode)
+     (sh-mode . bash-ts-mode)))
   (require-final-newline t))
 
 (use-package fish-mode
@@ -303,11 +330,25 @@
   :ensure t
   :hook (elpaca-after-init-hook . global-hl-todo-mode))
 
+(use-package html-ts-mode
+  :treesit)
+
+(use-package java-ts-mode
+  :treesit)
+
+(use-package js-ts-mode
+  :treesit)
+
+(use-package json-ts-mode
+  :treesit)
+
 (use-package just-mode
   :ensure t)
 
 (use-package kotlin-ts-mode
-  :ensure t)
+  :ensure t
+  :mode "\\.kts?\\'"
+  :treesit)
 
 (use-package logview
   :ensure t)
@@ -379,6 +420,16 @@
 (use-package pulse
   :custom (pulse-flag 'never))
 
+(use-package python-ts-mode
+  :treesit)
+
+(use-package ruby-ts-mode
+  :treesit)
+
+(use-package rust-ts-mode
+  :mode "\\.rs\\'"
+  :treesit)
+
 (use-package savehist
   :hook elpaca-after-init-hook)
 
@@ -415,6 +466,9 @@
 (use-package subword
   :hook (elpaca-after-init-hook . global-subword-mode))
 
+(use-package toml-ts-mode
+  :treesit)
+
 (use-package transient
   :ensure t
   :custom (transient-mode-line-format nil))
@@ -422,12 +476,13 @@
 (use-package treesit
   :custom (treesit-font-lock-level 2))
 
-(use-package treesit-auto
-  :ensure t
-  :custom
-  (treesit-auto-langs
-   '(bash c cpp css html java javascript json kotlin python ruby rust toml tsx typescript))
-  :hook (elpaca-after-init-hook . treesit-auto-add-to-auto-mode-alist))
+(use-package tsx-ts-mode
+  :mode "\\.tsx\\'"
+  :treesit)
+
+(use-package typescript-ts-mode
+  :mode "\\.ts\\'"
+  :treesit)
 
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
