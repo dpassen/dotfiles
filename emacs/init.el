@@ -96,7 +96,6 @@
 
 (use-package clojure-ts-mode
   :ensure t
-  :mode ("\\.clj[c|s]?\\'" "\\.edn\\'")
   :custom
   (clojure-ts-align-forms-automatically t)
   (clojure-ts-toplevel-inside-comment-form t))
@@ -239,6 +238,13 @@
 (use-package files
   :custom
   (confirm-kill-processes nil)
+  (major-mode-remap-alist
+   '((clojure-mode . clojure-ts-mode)
+     (clojurescript-mode . clojure-ts-clojurescript-mode)
+     (clojurec-mode . clojure-ts-clojurec-mode)
+     (clojuredart-mode . clojure-ts-clojuredart-mode)
+     (jank-mode . clojure-ts-jank-mode)
+     (joker-mode . clojure-ts-joker-mode)))
   (require-final-newline t))
 
 (use-package fish-mode
