@@ -11,13 +11,7 @@ default-command = 'log'
 standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
 
 [templates]
-git_push_bookmark = '''
-concat(
-  author.email().local().replace(regex:"\\d", ""),
-  "/push-",
-  change_id.short()
-)
-'''
+git_push_bookmark = '"dpassen/" ++ change_id.short()'
 
 [template-aliases]
 'format_timestamp(timestamp)' = 'timestamp.local().format("%Y-%m-%d")'
