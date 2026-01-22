@@ -193,9 +193,12 @@
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
-(use-package dumber-jump
+(use-package dumb-jump
   :ensure t
-  :hook (xref-backend-functions . dumber-jump-xref-activate))
+  :custom
+  (dumb-jump-prefer-searcher 'rg)
+  (dumb-jump-selector 'completing-read)
+  :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (use-package edit-indirect
   :ensure t)
