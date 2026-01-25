@@ -9,6 +9,5 @@ fish_add_path -a /opt/homebrew/{,s}bin
 
 if status is-interactive
     set fish_greeting
-    set fish_transient_prompt
     set -q EDITOR; or set -gx EDITOR hx
 end
