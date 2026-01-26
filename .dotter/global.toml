@@ -8,6 +8,9 @@
 'emacs/early-init.el' = '~/.config/emacs/early-init.el'
 'emacs/init.el' = '~/.config/emacs/init.el'
 
+[emacs-plus.files]
+'emacs-plus/build.yml' = '~/.config/emacs-plus/build.yml'
+
 [fish.files]
 'fish/config.fish' = '~/.config/fish/config.fish'
 'fish/fish_plugins' = '~/.config/fish/fish_plugins'

@@ -3,7 +3,7 @@
 tap 'borkdude/brew'
 tap 'clojure-lsp/brew'
 tap 'clojure/tools'
-tap 'jimeh/emacs-builds'
+tap 'd12frosted/emacs-plus'
 
 brew 'aspell'
 brew 'basedpyright'
@@ -85,4 +85,4 @@ cask 'subler'
 cask 'temurin@21'
 cask 'xld'
 
-cask 'jimeh/emacs-builds/emacs-app'
+cask 'd12frosted/emacs-plus/emacs-plus-app'

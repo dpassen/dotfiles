@@ -115,8 +115,7 @@
 
 (use-package comp
   :custom
-  (native-comp-async-report-warnings-errors nil)
-  (native-comp-jit-compilation-deny-list '(".*-loaddefs.el.gz")))
+  (native-comp-async-report-warnings-errors nil))
 
 (use-package completion-preview
   :custom (completion-preview-message-format nil)
