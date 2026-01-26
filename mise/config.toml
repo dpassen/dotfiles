@@ -5,6 +5,6 @@ experimental = true
 node = '22.22.0'
 python = '3.14.2'
 rust = { version = '1.93.0', components = 'clippy,rust-analyzer' }
-'github:MKindberg/ghostty-ls' = 'latest'
-'github:terror/just-lsp' = 'latest'
-'github:weavejester/cljfmt' = 'latest'
+'github:MKindberg/ghostty-ls' = '0.1.0'
+'github:terror/just-lsp' = '0.3.2'
+'github:weavejester/cljfmt' = '0.15.6'
