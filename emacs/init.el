@@ -109,6 +109,7 @@
 
 (use-package clojure-ts-mode
   :ensure t
+  :treesit
   :custom
   (clojure-ts-align-forms-automatically t)
   (clojure-ts-toplevel-inside-comment-form t))
