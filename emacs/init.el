@@ -107,12 +107,10 @@
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil))
 
-(use-package clojure-ts-mode
-  :ensure t
-  :treesit
+(use-package clojure-mode
   :custom
-  (clojure-ts-align-forms-automatically t)
-  (clojure-ts-toplevel-inside-comment-form t))
+  (clojure-align-forms-automatically t)
+  (clojure-toplevel-inside-comment-form t))
 
 (use-package comp
   :custom
@@ -251,16 +249,10 @@
   (major-mode-remap-alist
    '((c++-mode . c++-ts-mode)
      (c-mode . c-ts-mode)
-     (clojure-mode . clojure-ts-mode)
-     (clojurec-mode . clojure-ts-clojurec-mode)
-     (clojuredart-mode . clojure-ts-clojuredart-mode)
-     (clojurescript-mode . clojure-ts-clojurescript-mode)
      (conf-toml-mode . toml-ts-mode)
      (css-mode . css-ts-mode)
-     (jank-mode . clojure-ts-jank-mode)
      (java-mode . java-ts-mode)
      (javascript-mode . js-ts-mode)
-     (joker-mode . clojure-ts-joker-mode)
      (js-json-mode . json-ts-mode)
      (mhtml-mode . html-ts-mode)
      (python-mode . python-ts-mode)
@@ -279,7 +271,7 @@
 (use-package flycheck-clj-kondo
   :ensure t
   :demand t
-  :after clojure-ts-mode)
+  :after clojure-mode)
 
 (use-package flycheck-eglot
   :ensure t
@@ -444,7 +436,7 @@
   (sp-use-smartparens-bindings)
   :hook prog-mode-hook
   ((cider-repl-mode-hook
-    clojure-ts-mode-hook
+    clojure-mode-hook
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
 
