@@ -7,7 +7,19 @@ email = 'dpassen1@gmail.com'
 [ui]
 default-command = 'log'
 
+[aliases]
+tug = [
+  'bookmark',
+  'move',
+  '--from',
+  'closest_bookmark(@)',
+  '--to',
+  'closest_pushable(@)',
+]
+
 [revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks() & ~trunk())'
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
 
 [templates]
