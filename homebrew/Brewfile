@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 tap 'borkdude/brew'
+tap 'chojs23/tap'
 tap 'clojure-lsp/brew'
 tap 'clojure/tools'
 tap 'd12frosted/emacs-plus'
@@ -86,6 +87,7 @@ brew 'zoxide'
 brew 'borkdude/brew/babashka'
 brew 'borkdude/brew/clj-kondo'
 brew 'borkdude/brew/jet'
+brew 'chojs23/tap/ec'
 brew 'clojure-lsp/brew/clojure-lsp-native'
 brew 'clojure/tools/clojure'
 brew 'hmarr/tap/codeowners'

@@ -11,6 +11,10 @@ email = 'dpassen@splashfinancial.com'
 
 [ui]
 default-command = 'log'
+merge-editor = 'ec'
+
+[merge-tools.ec]
+merge-args = ['$base', '$left', '$right', '$output']
 
 [aliases]
 tug = [
