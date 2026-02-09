@@ -18,7 +18,7 @@ tug = [
 ]
 
 [revset-aliases]
-'closest_bookmark(to)' = 'heads(::to & bookmarks() & ~trunk())'
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
 
