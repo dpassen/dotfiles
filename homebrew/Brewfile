@@ -108,5 +108,6 @@ cask 'mactex-no-gui'
 cask 'netnewswire'
 cask 'scroll-reverser'
 cask 'visualvm'
+cask 'zed'
 
 cask 'd12frosted/emacs-plus/emacs-plus-app'
