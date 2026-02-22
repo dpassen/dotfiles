@@ -15,6 +15,7 @@
 'fish/config.fish' = '~/.config/fish/config.fish'
 'fish/fish_plugins' = '~/.config/fish/fish_plugins'
 'fish/functions/emacs.fish' = '~/.config/fish/functions/emacs.fish'
+'fish/functions/zed.fish' = '~/.config/fish/functions/zed.fish'
 
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'

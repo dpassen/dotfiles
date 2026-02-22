@@ -110,5 +110,6 @@ cask 'netnewswire'
 cask 'scroll-reverser'
 cask 'temurin@21'
 cask 'visualvm'
+cask 'zed'
 
 cask 'd12frosted/emacs-plus/emacs-plus-app'
