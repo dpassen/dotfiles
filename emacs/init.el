@@ -195,7 +195,7 @@
   :hook elpaca-after-init-hook)
 
 (use-package ef-themes
-  :ensure (ef-themes :host github :repo "protesilaos/ef-themes" :tag "1.11.0")
+  :ensure (:host github :repo "protesilaos/ef-themes" :tag "1.11.0")
   :custom
   (ef-themes-common-palette-overrides
    '((bg-mode-line bg-alt))))
@@ -361,7 +361,7 @@
   :general ("M-z" 'zap-up-to-char))
 
 (use-package mood-line
-  :ensure (mood-line :host gitlab :repo "dpassen/mood-line")
+  :ensure (:host gitlab :repo "dpassen/mood-line")
   :hook elpaca-after-init-hook)
 
 (use-package nerd-icons-completion
@@ -479,7 +479,7 @@
   :general (org-mode-map "C-c C-r" verb-command-map))
 
 (use-package vertico
-  :ensure (vertico :files (:defaults "extensions/*"))
+  :ensure (:files (:defaults "extensions/*"))
   :custom
   (vertico-count-format nil)
   (vertico-cycle t)
