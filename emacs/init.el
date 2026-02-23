@@ -500,9 +500,12 @@
   :custom (wgrep-auto-save-buffer t))
 
 (use-package xref
-  :custom
-  (xref-history-storage 'xref-window-local-history)
-  (xref-search-program 'ripgrep))
+  :custom (xref-search-program 'ripgrep))
+
+(use-package xref-project-history
+  :ensure (:host codeberg :repo "imarko/xref-project-history")
+  :demand t
+  :custom (xref-history-storage 'xref-project-history))
 
 (use-package yaml-mode
   :ensure t)
