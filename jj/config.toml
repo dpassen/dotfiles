@@ -6,6 +6,7 @@ email = 'dpassen1@gmail.com'
 
 [ui]
 default-command = 'log'
+diff-editor = ':builtin'
 merge-editor = 'ec'
 
 [merge-tools.ec]
