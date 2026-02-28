@@ -37,8 +37,5 @@
   scoreboard = shortlog --no-merges -sn
   st = status
 
-[github]
-  user = dpassen
-
 [delta]
   navigate = true
