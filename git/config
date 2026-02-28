@@ -39,3 +39,6 @@
 
 [github]
   user = dpassen
+
+[delta]
+  navigate = true
