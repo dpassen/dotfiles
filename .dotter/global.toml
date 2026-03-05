@@ -25,9 +25,6 @@
 'git/config' = '~/.config/git/config'
 'git/ignore' = '~/.config/git/ignore'
 
-[gitu.files]
-'gitu/config.toml' = '~/.config/gitu/config.toml'
-
 [helix.files]
 'helix/config.toml' = '~/.config/helix/config.toml'
 'helix/languages.toml' = '~/.config/helix/languages.toml'
