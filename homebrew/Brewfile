@@ -86,7 +86,6 @@ cask 'scroll-reverser'
 cask 'signal'
 cask 'simple-comic'
 cask 'subler'
-cask 'temurin@21'
 cask 'xld'
 
 cask 'd12frosted/emacs-plus/emacs-plus-app'
