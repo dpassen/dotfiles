@@ -8,6 +8,5 @@ set -gx JAVA_HOME $(/usr/libexec/java_home -v 21)
 fish_add_path -a /opt/homebrew/{,s}bin
 
 if status is-interactive
-    set fish_greeting
     set -q EDITOR; or set -gx EDITOR hx
 end
