@@ -15,9 +15,6 @@ merge-args = ['$base', '$left', '$right', '$output']
 [revsets]
 bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
-[revset-aliases]
-standup = 'mine() & (author_date(after:"yesterday") | committer_date(after:"yesterday"))'
-
 [templates]
 git_push_bookmark = '"dpassen/" ++ change_id.short()'
 
