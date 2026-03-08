@@ -36,6 +36,3 @@
   ln = log --format='%C(red)%h%C(reset) -%C(yellow)%d%C(reset) %s %C(green)(%cs)%C(reset) %C(bold blue)<%an>%C(reset)'
   scoreboard = shortlog --no-merges -sn
   st = status
-
-[delta]
-  navigate = true
