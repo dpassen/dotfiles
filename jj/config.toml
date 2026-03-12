@@ -19,4 +19,4 @@ bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty(
 git_push_bookmark = '"dpassen/" ++ change_id.short()'
 
 [template-aliases]
-'format_timestamp(timestamp)' = 'timestamp.local().format("%Y-%m-%d")'
+'format_timestamp(timestamp)' = 'timestamp.local().format("%F")'
