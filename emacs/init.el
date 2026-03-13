@@ -195,10 +195,7 @@
   :hook elpaca-after-init-hook)
 
 (use-package ef-themes
-  :ensure (:host github :repo "protesilaos/ef-themes" :tag "1.11.0")
-  :custom
-  (ef-themes-common-palette-overrides
-   '((bg-mode-line bg-alt))))
+  :ensure t)
 
 (use-package eglot
   :custom
@@ -359,6 +356,17 @@
 
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
+
+(use-package modus-themes
+  :custom
+  (modus-themes-bold-constructs t)
+  (modus-themes-common-palette-overrides
+   '((bg-line-number-active unspecified)
+     (bg-line-number-inactive unspecified)
+     (bg-mode-line-active bg-alt)
+     (fg-line-number-active fg-main)
+     (fg-line-number-inactive "gray50")))
+  (modus-themes-italic-constructs t))
 
 (use-package mood-line
   :ensure (:host gitlab :repo "dpassen/mood-line")
