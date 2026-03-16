@@ -3,6 +3,7 @@ theme = 'base16_minimal'
 [editor]
 auto-completion = false
 color-modes = true
+end-of-line-diagnostics = 'disable'
 popup-border = 'all'
 
 [editor.cursor-shape]
@@ -18,9 +19,6 @@ layout = ['line-numbers', 'spacer']
 
 [editor.gutters.line-numbers]
 min-width = 1
-
-[editor.inline-diagnostics]
-cursor-line = 'warning'
 
 [editor.statusline]
 left = [

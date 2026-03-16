@@ -45,12 +45,6 @@ auto-format = true
 
 [[language]]
 name = 'markdown'
-formatter = { command = 'prettier', args = [
-  '--parser',
-  'markdown',
-  '--stdin-filepath',
-  '%{buffer_name}',
-] }
 auto-format = true
 
 [[language]]
