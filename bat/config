@@ -1,2 +1,3 @@
---theme=base16-256
+--theme-dark=Catppuccin\ Mocha
+--theme-light=Catppuccin\ Latte
 --style=changes,header,numbers

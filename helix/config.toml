@@ -1,5 +1,3 @@
-theme = 'base16_minimal'
-
 [editor]
 auto-completion = false
 color-modes = true
@@ -35,3 +33,7 @@ right = ['diagnostics', 'selections', 'file-type']
 insert = 'I'
 normal = 'N'
 select = 'S'
+
+[theme]
+dark = 'catppuccin_mocha'
+light = 'catppuccin_latte'
