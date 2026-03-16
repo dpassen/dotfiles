@@ -43,12 +43,6 @@ formatter = { command = 'prettier', args = [
 
 [[language]]
 name = 'markdown'
-formatter = { command = 'prettier', args = [
-  '--parser',
-  'markdown',
-  '--stdin-filepath',
-  '%{buffer_name}',
-] }
 auto-format = true
 
 [[language]]
@@ -95,10 +89,3 @@ command = 'clippy'
 [[language]]
 name = 'toml'
 auto-format = true
-
-[[language]]
-name = 'ghostty'
-language-servers = ['ghostty-ls']
-
-[language-server.ghostty-ls]
-command = 'ghostty-ls'
