@@ -1,7 +1,3 @@
-[language-server.rumdl]
-command = 'rumdl'
-args = ['server']
-
 [language-server.rust-analyzer.config.check]
 command = 'clippy'
 
@@ -53,7 +49,6 @@ formatter = { command = 'prettier', args = [
 
 [[language]]
 name = 'markdown'
-language-servers = ['rumdl']
 auto-format = true
 
 [[language]]
