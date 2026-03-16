@@ -22,8 +22,6 @@
 
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'
-'ghostty/themes/Ef-Dark' = '~/.config/ghostty/themes/Ef-Dark'
-'ghostty/themes/Ef-Light' = '~/.config/ghostty/themes/Ef-Light'
 
 [git.files]
 'git/config' = '~/.config/git/config'
@@ -32,7 +30,6 @@
 [helix.files]
 'helix/config.toml' = '~/.config/helix/config.toml'
 'helix/languages.toml' = '~/.config/helix/languages.toml'
-'helix/themes/base16_minimal.toml' = '~/.config/helix/themes/base16_minimal.toml'
 
 [hushlogin.files]
 'hushlogin/hushlogin' = '~/.hushlogin'

@@ -79,7 +79,7 @@
 (use-package auto-dark
   :ensure t
   :when (display-graphic-p)
-  :custom (auto-dark-themes '((ef-dark) (ef-light)))
+  :custom (auto-dark-themes '((batppuccin-mocha) (batppuccin-latte)))
   :hook elpaca-after-init-hook)
 
 (use-package autorevert
@@ -88,6 +88,9 @@
 
 (use-package bash-ts-mode
   :treesit)
+
+(use-package batppuccin
+  :ensure (:host github :repo "bbatsov/batppuccin-emacs"))
 
 (use-package c-ts-mode
   :treesit)
@@ -212,9 +215,6 @@
 
 (use-package editorconfig
   :hook elpaca-after-init-hook)
-
-(use-package ef-themes
-  :ensure t)
 
 (use-package eglot
   :custom
@@ -363,17 +363,6 @@
 (use-package misc
   :general ("M-z" 'zap-up-to-char))
 
-(use-package modus-themes
-  :custom
-  (modus-themes-bold-constructs t)
-  (modus-themes-common-palette-overrides
-   '((bg-line-number-active unspecified)
-     (bg-line-number-inactive unspecified)
-     (bg-mode-line-active bg-alt)
-     (fg-line-number-active fg-main)
-     (fg-line-number-inactive "gray50")))
-  (modus-themes-italic-constructs t))
-
 (use-package nerd-icons-completion
   :ensure t
   :hook (marginalia-mode-hook . nerd-icons-completion-marginalia-setup))
@@ -470,9 +459,6 @@
 (use-package transient
   :ensure t
   :custom (transient-mode-line-format nil))
-
-(use-package treesit
-  :custom (treesit-font-lock-level 2))
 
 (use-package tsx-ts-mode
   :mode "\\.tsx\\'"
