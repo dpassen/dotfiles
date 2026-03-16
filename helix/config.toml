@@ -3,6 +3,7 @@ theme = 'catppuccin_mocha'
 [editor]
 auto-completion = false
 color-modes = true
+end-of-line-diagnostics = 'disable'
 popup-border = 'all'
 
 [editor.cursor-shape]
@@ -15,9 +16,6 @@ hidden = false
 [editor.gutters]
 layout = ['line-numbers', 'spacer']
 
-[editor.inline-diagnostics]
-cursor-line = 'warning'
-
 [editor.statusline]
 right = ['diagnostics', 'selections', 'file-type']
 
@@ -27,9 +25,9 @@ normal = 'N'
 select = 'S'
 
 [keys.normal.space.u]
-c = ':sh forgelink copy "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
-o = ':sh forgelink open "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
+c = ':sh forgelink copy "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
+o = ':sh forgelink open "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
 
 [keys.select.space.u]
-c = ':sh forgelink copy "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
-o = ':sh forgelink open "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
+c = ':sh forgelink copy "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
+o = ':sh forgelink open "%{file_path_absolute}:%{selection_line_start}-%{selection_line_end}"'
