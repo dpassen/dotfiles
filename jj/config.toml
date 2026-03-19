@@ -7,10 +7,7 @@ email = 'dpassen1@gmail.com'
 [ui]
 default-command = 'log'
 diff-editor = ':builtin'
-merge-editor = 'ec'
-
-[merge-tools.ec]
-merge-args = ['$base', '$left', '$right', '$output']
+merge-editor = ':builtin'
 
 [revsets]
 bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
