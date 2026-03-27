@@ -136,13 +136,13 @@
   (xref-show-xrefs-function #'consult-xref)
   :general
   (ctl-x-map "b" 'consult-buffer)
-  (:prefix "M-g"
-           "M-g" 'consult-goto-line
-           "g" 'consult-goto-line
-           "i" 'consult-imenu)
-  (:prefix "M-s"
-           "l" 'consult-line
-           "r" 'consult-ripgrep)
+  (goto-map
+   "M-g" 'consult-goto-line
+   "g" 'consult-goto-line
+   "i" 'consult-imenu)
+  (search-map
+   "l" 'consult-line
+   "r" 'consult-ripgrep)
   ("M-y" 'consult-yank-pop))
 
 (use-package consult-flycheck
