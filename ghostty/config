@@ -1,7 +1,9 @@
 confirm-close-surface = false
-font-family = MonoLisa Variable
+font-family = Berkeley Mono
 font-feature = -calt, -dlig, -liga
 font-size = 12
+font-style = Retina
+font-style-italic = Retina Oblique
 macos-titlebar-style = tabs
 quit-after-last-window-closed = true
 resize-overlay = never
