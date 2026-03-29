@@ -105,10 +105,7 @@
   (cider-repl-history-file 'per-project)
   (cider-repl-pop-to-buffer-on-connect nil)
   (cider-save-file-on-load t)
-  (cider-use-fringe-indicators nil)
-  :custom-face
-  (cider-result-overlay-face
-   ((t (:background unspecified)))))
+  (cider-use-fringe-indicators nil))
 
 (use-package clojure-mode
   :custom
@@ -230,9 +227,6 @@
 
 (use-package eros
   :ensure t
-  :custom-face
-  (eros-result-overlay-face
-   ((t (:background unspecified))))
   :hook lisp-data-mode-hook)
 
 (use-package expand-region
