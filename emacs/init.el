@@ -107,8 +107,6 @@
   (cider-save-file-on-load t)
   (cider-use-fringe-indicators nil)
   :custom-face
-  (cider-debug-code-overlay-face
-   ((t (:background unspecified))))
   (cider-result-overlay-face
    ((t (:background unspecified)))))
 
