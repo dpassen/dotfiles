@@ -182,6 +182,21 @@
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :general (ctl-x-map "p" 'disproject-dispatch))
 
+(use-package doom-modeline
+  :ensure t
+  :custom
+  (doom-modeline-bar-width 0.1)
+  (doom-modeline-buffer-file-name-style 'relative-to-project)
+  (doom-modeline-buffer-encoding nil)
+  (doom-modeline-buffer-state-icon nil)
+  (doom-modeline-check 'simple)
+  (doom-modeline-column-zero-based nil)
+  (doom-modeline-env-version nil)
+  (doom-modeline-major-mode-icon nil)
+  (doom-modeline-percent-position nil)
+  :config (doom-modeline-remove-segment 'vcs)
+  :hook elpaca-after-init-hook)
+
 (use-package dumb-jump
   :ensure t
   :custom
@@ -367,10 +382,6 @@
      (fg-line-number-active fg-main)
      (fg-line-number-inactive "gray50")))
   (modus-themes-italic-constructs t))
-
-(use-package mood-line
-  :ensure (:host gitlab :repo "dpassen/mood-line")
-  :hook elpaca-after-init-hook)
 
 (use-package nerd-icons-completion
   :ensure t
