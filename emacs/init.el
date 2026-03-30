@@ -78,6 +78,7 @@
 
 (use-package auto-dark
   :ensure t
+  :when (display-graphic-p)
   :custom (auto-dark-themes '((ef-dark) (ef-light)))
   :hook elpaca-after-init-hook)
 
