@@ -445,6 +445,7 @@
   :custom
   (async-shell-command-buffer 'new-buffer)
   (column-number-mode t)
+  (read-extended-command-predicate 'command-completion-default-include-p)
   (read-quoted-char-radix 16))
 
 (use-package smartparens
