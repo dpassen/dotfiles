@@ -7,6 +7,7 @@ email = 'dpassen1@gmail.com'
 [ui]
 default-command = 'log'
 diff-editor = ':builtin'
+diff-formatter = ['difft', '--color=always', '$left', '$right']
 merge-editor = 'ec'
 
 [merge-tools.ec]
