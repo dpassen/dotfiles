@@ -322,6 +322,9 @@
 (use-package grep
   :custom (grep-use-headings t))
 
+(use-package help
+  :custom (help-window-select t))
+
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
@@ -445,8 +448,10 @@
   :custom
   (async-shell-command-buffer 'new-buffer)
   (column-number-mode t)
+  (kill-do-not-save-duplicates t)
   (read-extended-command-predicate 'command-completion-default-include-p)
-  (read-quoted-char-radix 16))
+  (read-quoted-char-radix 16)
+  (save-interprogram-paste-before-kill t))
 
 (use-package smartparens
   :ensure t
