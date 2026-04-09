@@ -4,7 +4,7 @@ experimental = true
 [tools]
 java = 'temurin-21.0.10+7.0.LTS'
 node = '24.14.1'
-python = '3.14.3'
+python = '3.14.4'
 rust = { version = '1.94.0', components = 'clippy,rust-analyzer' }
 'github:MKindberg/ghostty-ls' = '0.1.0'
 'github:chojs23/ec' = '0.3.1'
