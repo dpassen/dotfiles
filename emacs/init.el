@@ -255,7 +255,7 @@
   :when (display-graphic-p)
   :config
   (dolist (face '(default tooltip))
-    (set-face-attribute face nil :font "Berkeley Mono Retina 12")))
+    (set-face-attribute face nil :font "Berkeley Mono Variable 12")))
 
 (use-package files
   :custom
