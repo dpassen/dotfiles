@@ -154,6 +154,12 @@
 (use-package css-ts-mode
   :treesit)
 
+(use-package custom
+  :config
+  (add-hook 'enable-theme-functions
+            (lambda (&rest _)
+              (set-face-attribute 'bold nil :weight 'semibold))))
+
 (use-package datetime
   :ensure t
   :custom (datetime-timezone 'America/Chicago))
