@@ -369,6 +369,7 @@
   (modus-themes-common-palette-overrides
    '((bg-line-number-active unspecified)
      (bg-line-number-inactive unspecified)
+     (bg-mode-line-active bg-alt)
      (fg-line-number-active fg-main)
      (fg-line-number-inactive "gray50")))
   (modus-themes-italic-constructs t))
@@ -451,12 +452,6 @@
     clojure-mode-hook
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
-
-(use-package spacious-padding
-  :ensure t
-  :when (display-graphic-p)
-  :custom (spacious-padding-subtle-frame-lines t)
-  :hook elpaca-after-init-hook)
 
 (use-package stillness-mode
   :ensure t
