@@ -352,16 +352,6 @@
 (use-package logview
   :ensure t)
 
-(use-package magit
-  :ensure t
-  :custom
-  (magit-bury-buffer-function 'magit-restore-window-configuration)
-  (magit-clone-default-directory "~/Developer/")
-  (magit-diff-refine-hunk t)
-  (magit-display-buffer-function 'magit-display-buffer-fullframe-status-v1)
-  (magit-format-file-function 'magit-format-file-nerd-icons)
-  (magit-no-message '("Turning on magit-auto-revert-mode...")))
-
 (use-package marginalia
   :ensure t
   :hook elpaca-after-init-hook)
@@ -499,6 +489,11 @@
 
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
+
+(use-package vc-jj
+  :ensure t
+  :demand t
+  :after vc)
 
 (use-package verb
   :ensure t
