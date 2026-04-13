@@ -134,17 +134,13 @@
   (ctl-x-map "b" 'consult-buffer)
   (goto-map
    "M-g" 'consult-goto-line
+   "f" 'consult-flymake
    "g" 'consult-goto-line
    "i" 'consult-imenu)
   (search-map
    "l" 'consult-line
    "r" 'consult-ripgrep)
   ("M-y" 'consult-yank-pop))
-
-(use-package consult-flycheck
-  :ensure t
-  :after flycheck
-  :general (flycheck-mode-map "M-g f" 'consult-flycheck))
 
 (use-package corfu
   :ensure t
@@ -283,32 +279,26 @@
 (use-package fish-mode
   :ensure t)
 
-(use-package flycheck
-  :ensure t
-  :custom (flycheck-indication-mode nil)
-  :hook (elpaca-after-init-hook . global-flycheck-mode))
-
-(use-package flycheck-clj-kondo
-  :ensure t
-  :demand t
-  :after clojure-mode)
-
-(use-package flycheck-eglot
-  :ensure t
+(use-package flymake
   :custom
-  (flycheck-eglot-enable-diagnostic-tags nil)
-  (flycheck-eglot-exclusive nil)
-  :hook (elpaca-after-init-hook . global-flycheck-eglot-mode))
+  (flymake-fringe-indicator-position nil)
+  (flymake-margin-indicator-position nil)
+  :hook prog-mode-hook)
+
+(use-package flymake-kondor
+  :ensure t
+  :hook (clojure-mode-hook . flymake-kondor-setup))
 
 (use-package flyover
   :ensure t
   :custom
   (flyover-base-height 1)
+  (flyover-checkers '(flymake))
   (flyover-display-mode 'show-only-on-same-line)
   (flyover-show-icon nil)
   (flyover-text-tint-percent 75)
   (flyover-virtual-line-type 'line-no-arrow)
-  :hook flycheck-mode-hook)
+  :hook flymake-mode-hook)
 
 (use-package frame
   :when (display-graphic-p)
