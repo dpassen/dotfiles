@@ -40,8 +40,5 @@
 [jj.files]
 'jj/config.toml' = '~/.config/jj/config.toml'
 
-[leiningen.files]
-'leiningen/profiles.clj' = '~/.lein/profiles.clj'
-
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'
