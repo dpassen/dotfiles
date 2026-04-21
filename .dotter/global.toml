@@ -19,6 +19,7 @@
 'fish/functions/edit.fish' = '~/.config/fish/functions/edit.fish'
 'fish/functions/emacs.fish' = '~/.config/fish/functions/emacs.fish'
 'fish/functions/fish_greeting.fish' = '~/.config/fish/functions/fish_greeting.fish'
+'fish/functions/fish_prompt.fish' = '~/.config/fish/functions/fish_prompt.fish'
 
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'
