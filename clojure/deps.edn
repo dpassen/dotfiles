@@ -11,12 +11,6 @@
     {:git/tag "0.1.0"
      :git/sha "0ca84df"}}
    :main-opts ["-m" "clj-check.check"]}
-  :new
-  {:deps
-   {io.github.seancorfield/deps-new
-    {:git/tag "v0.11.1"
-     :git/sha "dd459f0"}}
-   :exec-fn org.corfield.new/create}
   :nop
   {:extra-deps
    {org.slf4j/slf4j-nop
