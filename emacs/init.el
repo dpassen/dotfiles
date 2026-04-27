@@ -156,10 +156,6 @@
             (lambda (&rest _)
               (set-face-attribute 'bold nil :weight 'semibold))))
 
-(use-package datetime
-  :ensure t
-  :custom (datetime-timezone 'America/Chicago))
-
 (use-package dired
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
@@ -348,9 +344,6 @@
   :ensure t
   :mode "\\.kts?\\'"
   :treesit)
-
-(use-package logview
-  :ensure t)
 
 (use-package marginalia
   :ensure t
