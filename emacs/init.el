@@ -490,11 +490,6 @@
   :demand t
   :after vc)
 
-(use-package verb
-  :ensure t
-  :after org
-  :general (org-mode-map "C-c C-r" verb-command-map))
-
 (use-package vertico
   :ensure (:files (:defaults "extensions/*"))
   :custom
