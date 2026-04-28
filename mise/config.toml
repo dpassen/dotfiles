@@ -2,7 +2,7 @@
 experimental = true
 
 [tools]
-java = 'temurin-21.0.10+7.0.LTS'
+java = 'temurin-21.0.11+10.0.LTS'
 node = '24.15.0'
 python = '3.14.4'
 rust = { version = '1.95.0', components = 'clippy,rust-analyzer' }
