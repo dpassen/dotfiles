@@ -3,58 +3,18 @@
 
 ;;; Code:
 
-(setopt custom-file (locate-user-emacs-file "custom.el"))
-(load custom-file :no-error-if-file-is-missing)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 
-(defvar elpaca-installer-version 0.12)
-(defvar elpaca-directory (expand-file-name "elpaca/" user-emacs-directory))
-(defvar elpaca-builds-directory (expand-file-name "builds/" elpaca-directory))
-(defvar elpaca-sources-directory (expand-file-name "sources/" elpaca-directory))
-(defvar elpaca-order '(elpaca :repo "https://github.com/progfolio/elpaca.git"
-                              :ref nil :depth 1 :inherit ignore
-                              :files (:defaults "elpaca-test.el" (:exclude "extensions"))
-                              :build (:not elpaca-activate)))
-(let* ((repo  (expand-file-name "elpaca/" elpaca-sources-directory))
-       (build (expand-file-name "elpaca/" elpaca-builds-directory))
-       (order (cdr elpaca-order))
-       (default-directory repo))
-  (add-to-list 'load-path (if (file-exists-p build) build repo))
-  (unless (file-exists-p repo)
-    (make-directory repo t)
-    (condition-case-unless-debug err
-        (if-let* ((buffer (pop-to-buffer-same-window "*elpaca-bootstrap*"))
-                  ((zerop (apply #'call-process `("git" nil ,buffer t "clone"
-                                                  ,@(when-let* ((depth (plist-get order :depth)))
-                                                      (list (format "--depth=%d" depth) "--no-single-branch"))
-                                                  ,(plist-get order :repo) ,repo))))
-                  ((zerop (call-process "git" nil buffer t "checkout"
-                                        (or (plist-get order :ref) "--"))))
-                  (emacs (concat invocation-directory invocation-name))
-                  ((zerop (call-process emacs nil buffer nil "-Q" "-L" "." "--batch"
-                                        "--eval" "(byte-recompile-directory \".\" 0 'force)")))
-                  ((require 'elpaca))
-                  ((elpaca-generate-autoloads "elpaca" repo)))
-            (progn (message "%s" (buffer-string)) (kill-buffer buffer))
-          (error "%s" (with-current-buffer buffer (buffer-string))))
-      ((error) (warn "%s" err) (delete-directory repo 'recursive))))
-  (unless (require 'elpaca-autoloads nil t)
-    (require 'elpaca)
-    (elpaca-generate-autoloads "elpaca" repo)
-    (let ((load-source-file-function nil)) (load "./elpaca-autoloads"))))
-(add-hook 'after-init-hook #'elpaca-process-queues)
-(elpaca `(,@elpaca-order))
-
-(elpaca elpaca-use-package
-  (elpaca-use-package-mode)
-  (setopt use-package-always-defer t
-          use-package-hook-name-suffix nil))
+(setopt use-package-always-defer t
+        use-package-hook-name-suffix nil
+        use-package-vc-prefer-newest t)
 
 (use-package general
-  :ensure (:wait t)
+  :ensure t
   :demand t)
 
 (use-package use-package-treesit
-  :ensure (:wait t)
+  :ensure t
   :demand t)
 
 (use-package emacs
@@ -74,17 +34,17 @@
 
 (use-package apheleia
   :ensure t
-  :hook (elpaca-after-init-hook . apheleia-global-mode))
+  :hook (after-init-hook . apheleia-global-mode))
 
 (use-package auto-dark
   :ensure t
   :when (display-graphic-p)
   :custom (auto-dark-themes '((ef-dark) (ef-light)))
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package autorevert
   :custom (auto-revert-verbose nil)
-  :hook (elpaca-after-init-hook .  global-auto-revert-mode))
+  :hook (after-init-hook .  global-auto-revert-mode))
 
 (use-package bash-ts-mode
   :treesit)
@@ -145,13 +105,15 @@
 (use-package corfu
   :ensure t
   :custom (corfu-cycle t)
-  :hook (elpaca-after-init-hook . global-corfu-mode))
+  :hook (after-init-hook . global-corfu-mode))
 
 (use-package css-ts-mode
   :treesit)
 
 (use-package custom
+  :custom (custom-file (locate-user-emacs-file "custom.el"))
   :config
+  (load custom-file :no-error-if-file-is-missing)
   (add-hook 'enable-theme-functions
             (lambda (&rest _)
               (set-face-attribute 'bold nil :weight 'semibold))))
@@ -194,7 +156,7 @@
   (doom-modeline-major-mode-icon nil)
   (doom-modeline-percent-position nil)
   :config (doom-modeline-remove-segment 'vcs)
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package dumb-jump
   :ensure t
@@ -207,7 +169,7 @@
   :ensure t)
 
 (use-package editorconfig
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package ef-themes
   :ensure t)
@@ -323,7 +285,7 @@
 
 (use-package hl-todo
   :ensure t
-  :hook (elpaca-after-init-hook . global-hl-todo-mode))
+  :hook (after-init-hook . global-hl-todo-mode))
 
 (use-package html-ts-mode
   :treesit)
@@ -347,7 +309,7 @@
 
 (use-package marginalia
   :ensure t
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package markdown-mode
   :ensure t
@@ -385,7 +347,7 @@
 
 (use-package nerd-icons-xref
   :ensure t
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package orderless
   :ensure t
@@ -420,10 +382,10 @@
   :treesit)
 
 (use-package savehist
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package saveplace
-  :hook (elpaca-after-init-hook . save-place-mode))
+  :hook (after-init-hook . save-place-mode))
 
 (use-package simple
   :custom
@@ -448,13 +410,13 @@
 
 (use-package stillness-mode
   :ensure t
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package subword
-  :hook (elpaca-after-init-hook . global-subword-mode))
+  :hook (after-init-hook . global-subword-mode))
 
 (use-package terminal-here
-  :ensure (:host github :repo "dpassen/terminal-here")
+  :vc (:url "https://github.com/dpassen/terminal-here")
   :custom (terminal-here-terminal-command 'ghostty))
 
 (use-package toml-ts-mode
@@ -484,7 +446,7 @@
   :after vc)
 
 (use-package vertico
-  :ensure (:files (:defaults "extensions/*"))
+  :ensure t
   :custom
   (vertico-count-format nil)
   (vertico-cycle t)
@@ -493,7 +455,7 @@
      (execute-extended-command-for-buffer reverse)))
   (vertico-resize nil)
   :config (vertico-multiform-mode 1)
-  :hook elpaca-after-init-hook)
+  :hook after-init-hook)
 
 (use-package wgrep
   :ensure t
@@ -509,12 +471,12 @@
 
 (use-package mise
   :ensure t
-  :hook (elpaca-after-init-hook . global-mise-mode))
+  :hook (after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
   :ensure t
   :when (memq window-system '(mac ns x))
-  :hook (elpaca-after-init-hook . exec-path-from-shell-initialize))
+  :hook (after-init-hook . exec-path-from-shell-initialize))
 
 ;; Local Variables:
 ;; no-byte-compile: t

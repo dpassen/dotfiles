@@ -6,7 +6,6 @@
 (setq frame-inhibit-implied-resize t
       menu-bar-mode nil
       mode-line-format nil
-      package-enable-at-startup nil
       scroll-bar-mode nil
       tool-bar-mode nil)
 
@@ -18,18 +17,15 @@
 
 (let ((default-file-name-handler-alist file-name-handler-alist)
       (default-gc-cons-percentage gc-cons-percentage)
-      (default-gc-cons-threshold gc-cons-threshold)
-      (default-vc-handled-backends vc-handled-backends))
+      (default-gc-cons-threshold gc-cons-threshold))
   (setq file-name-handler-alist nil
         gc-cons-percentage 0.8
-        gc-cons-threshold most-positive-fixnum
-        vc-handled-backends nil)
+        gc-cons-threshold most-positive-fixnum)
   (add-hook 'after-init-hook
             (lambda ()
               (setq file-name-handler-alist default-file-name-handler-alist
                     gc-cons-percentage default-gc-cons-percentage
-                    gc-cons-threshold default-gc-cons-threshold
-                    vc-handled-backends default-vc-handled-backends)
+                    gc-cons-threshold default-gc-cons-threshold)
               (make-frame-visible))))
 
 ;; Local Variables:
