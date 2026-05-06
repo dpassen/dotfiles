@@ -9,10 +9,6 @@
         use-package-hook-name-suffix nil
         use-package-vc-prefer-newest t)
 
-(use-package general
-  :ensure t
-  :demand t)
-
 (use-package use-package-treesit
   :ensure t
   :demand t)
@@ -79,10 +75,9 @@
 
 (use-package completion-preview
   :custom (completion-preview-message-format nil)
-  :general
-  (completion-preview-active-mode-map
-   "M-n" 'completion-preview-next-candidate
-   "M-p" 'completion-preview-prev-candidate)
+  :bind (:map completion-preview-active-mode-map
+              ("M-n" . completion-preview-next-candidate)
+              ("M-p" . completion-preview-prev-candidate))
   :hook (conf-mode-hook prog-mode-hook))
 
 (use-package consult
@@ -90,17 +85,16 @@
   :custom
   (xref-show-definitions-function #'consult-xref)
   (xref-show-xrefs-function #'consult-xref)
-  :general
-  (ctl-x-map "b" 'consult-buffer)
-  (goto-map
-   "M-g" 'consult-goto-line
-   "f" 'consult-flymake
-   "g" 'consult-goto-line
-   "i" 'consult-imenu)
-  (search-map
-   "l" 'consult-line
-   "r" 'consult-ripgrep)
-  ("M-y" 'consult-yank-pop))
+  :bind (("M-y" . consult-yank-pop)
+         :map ctl-x-map ("b" . consult-buffer)
+         :map goto-map
+         ("M-g" . consult-goto-line)
+         ("f" . consult-flymake)
+         ("g" . consult-goto-line)
+         ("i" . consult-imenu)
+         :map search-map
+         ("l" . consult-line)
+         ("r" . consult-ripgrep)))
 
 (use-package corfu
   :ensure t
@@ -141,7 +135,7 @@
   (disproject-find-line-command #'consult-line-multi)
   (disproject-shell-command #'terminal-here)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
-  :general (ctl-x-map "p" 'disproject-dispatch))
+  :bind (:map ctl-x-map ("p" . disproject-dispatch)))
 
 (use-package doom-modeline
   :ensure t
@@ -180,22 +174,20 @@
   (eglot-confirm-server-edits nil)
   (eglot-ignored-server-capabilities '(:documentHighlightProvider :inlayHintProvider))
   (eglot-sync-connect nil)
-  :general
-  (eglot-mode-map
-   :prefix "C-c l"
-   "a" 'eglot-code-actions
-   "f b" 'eglot-format-buffer
-   "f f" 'eglot-format
-   "r" 'eglot-rename))
+  :bind (:map eglot-mode-map
+              ("C-c l a" . eglot-code-actions)
+              ("C-c l f b" . eglot-format-buffer)
+              ("C-c l f f" . eglot-format)
+              ("C-c l r" . eglot-rename)))
 
 (use-package eldoc-box
   :ensure t
   :custom (eldoc-box-clear-with-C-g t)
-  :general ("C-c k" 'eldoc-box-help-at-point))
+  :bind ("C-c k" . eldoc-box-help-at-point))
 
 (use-package embark
   :ensure t
-  :general ("C-." 'embark-act)
+  :bind ("C-." . embark-act)
   :init (setq prefix-help-command 'embark-prefix-help-command))
 
 (use-package embark-consult
@@ -209,7 +201,7 @@
 (use-package expand-region
   :ensure t
   :custom (expand-region-show-usage-message nil)
-  :general ("C-=" 'er/expand-region))
+  :bind ("C-=" . er/expand-region))
 
 (use-package faces
   :when (display-graphic-p)
@@ -316,7 +308,7 @@
   :custom (markdown-fontify-code-blocks-natively t))
 
 (use-package misc
-  :general ("M-z" 'zap-up-to-char))
+  :bind ("M-z" . zap-up-to-char))
 
 (use-package modus-themes
   :custom
