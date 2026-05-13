@@ -176,7 +176,10 @@
   :custom
   (eglot-autoshutdown t)
   (eglot-confirm-server-edits nil)
-  (eglot-ignored-server-capabilities '(:documentHighlightProvider :inlayHintProvider))
+  (eglot-ignored-server-capabilities
+   '(:documentHighlightProvider
+     :documentOnTypeFormattingProvider
+     :inlayHintProvider))
   (eglot-sync-connect nil)
   :bind (:map eglot-mode-map
               ("C-c l a" . eglot-code-actions)
