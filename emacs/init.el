@@ -45,11 +45,15 @@
 (use-package bash-ts-mode
   :treesit)
 
+(use-package c++-ts-mode
+  :treesit)
+
 (use-package c-ts-mode
   :treesit)
 
-(use-package c++-ts-mode
-  :treesit)
+(use-package cape
+  :ensure t
+  :bind-keymap ("C-c p" . cape-prefix-map))
 
 (use-package cider
   :ensure t
