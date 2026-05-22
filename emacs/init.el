@@ -77,13 +77,6 @@
   :custom
   (native-comp-async-report-warnings-errors nil))
 
-(use-package completion-preview
-  :custom (completion-preview-message-format nil)
-  :bind (:map completion-preview-active-mode-map
-              ("M-n" . completion-preview-next-candidate)
-              ("M-p" . completion-preview-prev-candidate))
-  :hook (conf-mode-hook prog-mode-hook))
-
 (use-package consult
   :ensure t
   :custom
