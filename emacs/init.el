@@ -341,12 +341,14 @@
   :ensure t
   :hook after-init-hook)
 
-(use-package orderless
+(use-package nucleo-completion
   :ensure t
   :custom
   (completion-category-defaults nil)
-  (completion-category-overrides '((file (styles partial-completion))))
-  (completion-styles '(orderless basic)))
+  (completion-styles '(nucleo basic))
+  (nucleo-completion-module-install-policy 'prompt)
+  (nucleo-completion-sort-ties-by-length t)
+  :init (nucleo-completion-ensure-module))
 
 (use-package paren
   :custom (show-paren-mode nil))
