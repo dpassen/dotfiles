@@ -431,6 +431,10 @@
   :mode "\\.ts\\'"
   :treesit)
 
+(use-package typst-mode
+  :mode "\\.typ\\(st\\)?\\'"
+  :vc (:url "https://git.sr.ht/~meow_king/typst-mode"))
+
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
 
