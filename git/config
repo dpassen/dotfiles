@@ -2,9 +2,6 @@
   name = Derek Passen
   email = dpassen1@gmail.com
 
-[core]
-  excludesfile = ~/.config/git/ignore
-
 [init]
   defaultBranch = main
 
