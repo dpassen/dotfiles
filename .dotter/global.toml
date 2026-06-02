@@ -25,7 +25,6 @@
 'ghostty/themes/Ef-Light' = '~/.config/ghostty/themes/Ef-Light'
 
 [git.files]
-'git/config' = '~/.config/git/config'
 'git/ignore' = '~/.config/git/ignore'
 
 [helix.files]
