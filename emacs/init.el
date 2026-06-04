@@ -138,7 +138,7 @@
   :ensure t
   :custom
   (doom-modeline-bar-width 0.1)
-  (doom-modeline-buffer-file-name-style 'relative-to-project)
+  (doom-modeline-buffer-file-name-style 'file-name)
   (doom-modeline-buffer-encoding nil)
   (doom-modeline-buffer-state-icon nil)
   (doom-modeline-check 'simple)

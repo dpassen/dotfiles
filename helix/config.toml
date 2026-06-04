@@ -26,7 +26,7 @@ cursor-line = 'warning'
 left = [
   'mode',
   'spinner',
-  'file-name',
+  'file-base-name',
   'position',
   'read-only-indicator',
   'file-modification-indicator',
