@@ -375,12 +375,6 @@
   :mode "\\.rs\\'"
   :treesit)
 
-(use-package savehist
-  :hook after-init-hook)
-
-(use-package saveplace
-  :hook (after-init-hook . save-place-mode))
-
 (use-package simple
   :custom
   (async-shell-command-buffer 'new-buffer)
