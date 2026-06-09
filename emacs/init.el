@@ -439,6 +439,7 @@
    '((execute-extended-command reverse)
      (execute-extended-command-for-buffer reverse)))
   (vertico-resize nil)
+  (vertico-sort-function 'vertico-sort-length-alpha)
   :config (vertico-multiform-mode 1)
   :hook after-init-hook)
 
