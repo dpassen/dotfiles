@@ -35,7 +35,7 @@
 (use-package auto-dark
   :ensure t
   :when (display-graphic-p)
-  :custom (auto-dark-themes '((modus-flexoki-dark) (modus-flexoki-light)))
+  :custom (auto-dark-themes '((modus-alabaster-dark) (modus-alabaster-light)))
   :hook after-init-hook)
 
 (use-package autorevert
@@ -237,12 +237,12 @@
 (use-package hideshow
   :hook (prog-mode-hook . hs-minor-mode))
 
-(use-package hl-todo
-  :ensure t
-  :hook (after-init-hook . global-hl-todo-mode))
-
 (use-package html-ts-mode
   :treesit)
+
+(use-package iedit
+  :ensure t
+  :demand t)
 
 (use-package java-ts-mode
   :treesit)
@@ -272,8 +272,8 @@
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
 
-(use-package modus-flexoki
-  :vc (:url "https://github.com/dpassen/modus-flexoki"))
+(use-package modus-alabaster
+  :vc (:url "https://github.com/dpassen/modus-alabaster"))
 
 (use-package modus-themes
   :custom

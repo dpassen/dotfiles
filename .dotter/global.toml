@@ -20,6 +20,8 @@
 
 [ghostty.files]
 'ghostty/config' = '~/.config/ghostty/config'
+'ghostty/themes/Alabaster Dark' = '~/.config/ghostty/themes/Alabaster Dark'
+'ghostty/themes/Alabaster Light' = '~/.config/ghostty/themes/Alabaster Light'
 
 [git.files]
 'git/ignore' = '~/.config/git/ignore'

@@ -1,6 +1,5 @@
 [editor]
 auto-completion = false
-color-modes = true
 end-of-line-diagnostics = 'disable'
 popup-border = 'all'
 
@@ -20,11 +19,6 @@ min-width = 1
 [editor.statusline]
 right = ['diagnostics', 'selections', 'file-type']
 
-[editor.statusline.mode]
-insert = 'I'
-normal = 'N'
-select = 'S'
-
 [theme]
-dark = 'flexoki_dark'
-light = 'flexoki_light'
+dark = 'wolf-alabaster-dark'
+light = 'wolf-alabaster-light'

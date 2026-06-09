@@ -6,6 +6,6 @@ font-style-bold = SemiBold
 font-style-bold-italic = SemiBold Oblique
 font-style-italic = Retina Oblique
 macos-titlebar-style = tabs
-theme = dark:Flexoki Dark,light:Flexoki Light
+theme = dark:Alabaster Dark,light:Alabaster Light
 window-padding-x = 9
 window-padding-y = 9
