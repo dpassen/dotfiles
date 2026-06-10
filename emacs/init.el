@@ -134,21 +134,6 @@
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
 
-(use-package doom-modeline
-  :ensure t
-  :custom
-  (doom-modeline-bar-width 0.1)
-  (doom-modeline-buffer-file-name-style 'file-name)
-  (doom-modeline-buffer-encoding nil)
-  (doom-modeline-buffer-state-icon nil)
-  (doom-modeline-check 'simple)
-  (doom-modeline-column-zero-based nil)
-  (doom-modeline-env-version nil)
-  (doom-modeline-major-mode-icon nil)
-  (doom-modeline-percent-position nil)
-  :config (doom-modeline-remove-segment 'vcs)
-  :hook after-init-hook)
-
 (use-package dumb-jump
   :ensure t
   :custom
@@ -383,6 +368,18 @@
   (read-extended-command-predicate 'command-completion-default-include-p)
   (read-quoted-char-radix 16)
   (save-interprogram-paste-before-kill t))
+
+(use-package sleek-modeline
+  :ensure t
+  :custom
+  (sleek-modeline-diagnostics-error-symbol "●")
+  (sleek-modeline-diagnostics-show-info nil)
+  (sleek-modeline-diagnostics-warning-symbol "●")
+  (sleek-modeline-enable-project nil)
+  (sleek-modeline-separator "  ")
+  (sleek-modeline-show-icons nil)
+  (sleek-modeline-vc-show-status-symbol nil)
+  :hook after-init-hook)
 
 (use-package smartparens
   :ensure t

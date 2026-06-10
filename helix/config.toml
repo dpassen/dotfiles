@@ -27,11 +27,10 @@ left = [
   'mode',
   'spinner',
   'file-base-name',
-  'position',
   'read-only-indicator',
   'file-modification-indicator',
 ]
-right = ['diagnostics', 'selections', 'file-type']
+right = ['diagnostics', 'selections', 'file-line-ending', 'file-type']
 
 [editor.statusline.mode]
 insert = 'I'
