@@ -1,11 +1,5 @@
 # frozen_string_literal: true
 
-tap 'borkdude/brew'
-tap 'clojure-lsp/brew'
-tap 'clojure/tools'
-tap 'd12frosted/emacs-plus'
-tap 'neurosnap/tap'
-
 brew 'aspell'
 brew 'basedpyright'
 brew 'bat'
@@ -65,12 +59,12 @@ brew 'wget'
 brew 'xh'
 brew 'yaml-language-server'
 
-brew 'borkdude/brew/babashka'
-brew 'borkdude/brew/clj-kondo'
-brew 'borkdude/brew/jet'
-brew 'clojure-lsp/brew/clojure-lsp-native'
-brew 'clojure/tools/clojure'
-brew 'neurosnap/tap/zmx'
+brew 'borkdude/brew/babashka', trusted: true
+brew 'borkdude/brew/clj-kondo', trusted: true
+brew 'borkdude/brew/jet', trusted: true
+brew 'clojure-lsp/brew/clojure-lsp-native', trusted: true
+brew 'clojure/tools/clojure', trusted: true
+brew 'neurosnap/tap/zmx', trusted: true
 
 cask 'appcleaner'
 cask 'coteditor'
@@ -92,4 +86,4 @@ cask 'subler'
 cask 'tuna'
 cask 'xld'
 
-cask 'd12frosted/emacs-plus/emacs-plus-app'
+cask 'd12frosted/emacs-plus/emacs-plus-app', trusted: true
