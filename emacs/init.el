@@ -109,6 +109,14 @@
             (lambda (&rest _)
               (set-face-attribute 'bold nil :weight 'semibold))))
 
+(use-package dimmer
+  :ensure t
+  :custom
+  (dimmer-fraction 0.4)
+  (dimmer-watch-frame-focus-events nil)
+  :config (dimmer-configure-magit)
+  :hook after-init-hook)
+
 (use-package dired
   :custom
   (dired-kill-when-opening-new-dired-buffer t)
