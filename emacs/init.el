@@ -15,6 +15,7 @@
 
 (use-package emacs
   :custom
+  (cursor-type 'bar)
   (frame-resize-pixelwise t)
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)

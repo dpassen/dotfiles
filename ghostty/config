@@ -9,7 +9,6 @@ font-style-italic = Retina Oblique
 macos-titlebar-style = tabs
 quit-after-last-window-closed = true
 resize-overlay = never
-shell-integration-features = no-cursor
 theme = dark:Ef-Dark,light:Ef-Light
 window-height = 24
 window-padding-x = 9
