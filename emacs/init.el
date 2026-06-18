@@ -252,12 +252,6 @@
   (flyover-virtual-line-type 'line-no-arrow)
   :hook flymake-mode-hook)
 
-(use-package frame
-  :when (display-graphic-p)
-  :config
-  (dolist (frame-parameters '((height . 40) (width . 96)))
-    (push frame-parameters default-frame-alist)))
-
 (use-package git-link
   :ensure t
   :custom (git-link-use-commit t))
