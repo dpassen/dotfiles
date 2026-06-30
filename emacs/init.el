@@ -207,9 +207,6 @@
      (sh-mode . bash-ts-mode)))
   (require-final-newline t))
 
-(use-package fish-mode
-  :ensure t)
-
 (use-package flymake
   :custom
   (flymake-fringe-indicator-position nil)
@@ -411,10 +408,6 @@
 (use-package typescript-ts-mode
   :mode "\\.ts\\'"
   :treesit)
-
-(use-package typst-mode
-  :mode "\\.typ\\(st\\)?\\'"
-  :vc (:url "https://git.sr.ht/~meow_king/typst-mode"))
 
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
