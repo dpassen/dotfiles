@@ -26,8 +26,7 @@
   (setq frame-title-format "%b\n"
         kill-buffer-query-functions nil
         load-prefer-newer t
-        message-truncate-lines t
-        read-process-output-max (* 1024 1024)))
+        message-truncate-lines t))
 
 (use-package apheleia
   :ensure t
@@ -160,26 +159,6 @@
 
 (use-package ef-themes
   :ensure t)
-
-(use-package eglot
-  :custom
-  (eglot-autoshutdown t)
-  (eglot-confirm-server-edits nil)
-  (eglot-ignored-server-capabilities
-   '(:documentHighlightProvider
-     :documentOnTypeFormattingProvider
-     :inlayHintProvider))
-  (eglot-sync-connect nil)
-  :bind (:map eglot-mode-map
-              ("C-c l a" . eglot-code-actions)
-              ("C-c l f b" . eglot-format-buffer)
-              ("C-c l f f" . eglot-format)
-              ("C-c l r" . eglot-rename)))
-
-(use-package eldoc-box
-  :ensure t
-  :custom (eldoc-box-clear-with-C-g t)
-  :bind ("C-c k" . eldoc-box-help-at-point))
 
 (use-package embark
   :ensure t
