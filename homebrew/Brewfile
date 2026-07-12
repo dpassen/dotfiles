@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 brew 'aspell'
+brew 'bacon'
 brew 'basedpyright'
 brew 'bat'
 brew 'black'
