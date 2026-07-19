@@ -392,7 +392,6 @@
   :treesit)
 
 (use-package transient
-  :ensure t
   :custom (transient-mode-line-format nil))
 
 (use-package treesit
