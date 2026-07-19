@@ -235,9 +235,6 @@
 (use-package git-modes
   :ensure t)
 
-(use-package git-timemachine
-  :ensure t)
-
 (use-package grep
   :custom (grep-use-headings t))
 
