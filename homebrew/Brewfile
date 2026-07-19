@@ -15,7 +15,6 @@ brew 'fastfetch'
 brew 'fd'
 brew 'fish'
 brew 'fish-lsp'
-brew 'gh'
 brew 'git'
 brew 'gnupg'
 brew 'google-java-format'
@@ -57,6 +56,7 @@ brew 'borkdude/brew/clj-kondo', trusted: true
 brew 'borkdude/brew/jet', trusted: true
 brew 'clojure-lsp/brew/clojure-lsp-native', trusted: true
 brew 'clojure/tools/clojure', trusted: true
+brew 'git-pkgs/git-pkgs/forge', trusted: true
 brew 'neurosnap/tap/zmx', trusted: true
 
 cask 'appcleaner'
