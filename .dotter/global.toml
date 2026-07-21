@@ -39,3 +39,6 @@
 
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'
+
+[pi.files]
+'pi/agent/settings.json' = '~/.pi/agent/settings.json'
