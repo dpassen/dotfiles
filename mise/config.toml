@@ -6,5 +6,6 @@ java = 'temurin-21.0.11+10.0.LTS'
 node = '24.18.0'
 python = '3.14.6'
 rust = { version = '1.97.1', components = 'clippy,rust-analyzer' }
+'cargo:git-credit-cli' = '0.1.0'
 'cargo:forgelink-cli' = '0.3.3'
 'github:MKindberg/ghostty-ls' = '0.1.0'
