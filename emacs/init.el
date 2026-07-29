@@ -88,12 +88,17 @@
          :map ctl-x-map ("b" . consult-buffer)
          :map goto-map
          ("M-g" . consult-goto-line)
-         ("f" . consult-flymake)
          ("g" . consult-goto-line)
          ("i" . consult-imenu)
          :map search-map
          ("l" . consult-line)
          ("r" . consult-ripgrep)))
+
+(use-package consult-flycheck
+  :ensure t
+  :after flycheck
+  :bind (:map goto-map
+              ("f" . consult-flycheck)))
 
 (use-package corfu
   :ensure t
@@ -207,26 +212,18 @@
      (sh-mode . bash-ts-mode)))
   (require-final-newline t))
 
-(use-package flymake
-  :custom
-  (flymake-fringe-indicator-position nil)
-  (flymake-margin-indicator-position nil)
-  :hook prog-mode-hook)
-
-(use-package flymake-kondor
-  :ensure t
-  :hook (clojure-ts-mode-hook . flymake-kondor-setup))
-
-(use-package flyover
+(use-package flycheck
   :ensure t
   :custom
-  (flyover-base-height 1)
-  (flyover-checkers '(flymake))
-  (flyover-display-mode 'show-only-on-same-line)
-  (flyover-show-icon nil)
-  (flyover-text-tint-percent 75)
-  (flyover-virtual-line-type 'line-no-arrow)
-  :hook flymake-mode-hook)
+  (flycheck-annotate-other-lines-style nil)
+  (flycheck-indication-mode nil)
+  :config (global-flycheck-annotate-mode)
+  :hook (after-init-hook . global-flycheck-mode))
+
+(use-package flycheck-clj-kondo
+  :ensure t
+  :demand t
+  :after clojure-ts-mode)
 
 (use-package git-link
   :ensure t
