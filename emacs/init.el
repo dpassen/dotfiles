@@ -287,26 +287,6 @@
      (fg-line-number-inactive "gray50")))
   (modus-themes-italic-constructs t))
 
-(use-package nerd-icons-completion
-  :ensure t
-  :hook (marginalia-mode-hook . nerd-icons-completion-marginalia-setup))
-
-(use-package nerd-icons-corfu
-  :ensure t
-  :hook (corfu-margin-formatters . nerd-icons-corfu-formatter))
-
-(use-package nerd-icons-dired
-  :ensure t
-  :hook dired-mode-hook)
-
-(use-package nerd-icons-grep
-  :ensure t
-  :hook grep-mode-hook)
-
-(use-package nerd-icons-xref
-  :ensure t
-  :hook after-init-hook)
-
 (use-package nucleo-completion
   :ensure t
   :custom
