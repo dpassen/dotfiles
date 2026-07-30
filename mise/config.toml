@@ -3,7 +3,7 @@ experimental = true
 
 [tools]
 java = 'temurin-21.0.11+10.0.LTS'
-node = '24.18.0'
+node = '24.18.1'
 python = '3.14.6'
 rust = { version = '1.97.1', components = 'clippy,rust-analyzer' }
 'cargo:git-credit-cli' = '0.1.0'
