@@ -33,7 +33,7 @@
 (use-package auto-dark
   :ensure t
   :when (display-graphic-p)
-  :custom (auto-dark-themes '((ef-dark) (ef-light)))
+  :custom (auto-dark-themes '((modus-vivendi-tinted) (modus-operandi-tinted)))
   :hook after-init-hook)
 
 (use-package autorevert
@@ -116,11 +116,7 @@
 
 (use-package custom
   :custom (custom-file (locate-user-emacs-file "custom.el"))
-  :config
-  (load custom-file :no-error-if-file-is-missing)
-  (add-hook 'enable-theme-functions
-            (lambda (&rest _)
-              (set-face-attribute 'bold nil :weight 'semibold))))
+  :config (load custom-file :no-error-if-file-is-missing))
 
 (use-package dimmer
   :ensure t
@@ -165,9 +161,6 @@
 
 (use-package editorconfig
   :hook after-init-hook)
-
-(use-package ef-themes
-  :ensure t)
 
 (use-package embark
   :ensure t
@@ -228,6 +221,9 @@
   :demand t
   :after clojure-ts-mode)
 
+(use-package fringe
+  :custom (fringe-mode '(8 . 0)))
+
 (use-package ghostel
   :ensure t
   :custom
@@ -285,17 +281,6 @@
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
 
-(use-package modus-themes
-  :custom
-  (modus-themes-bold-constructs t)
-  (modus-themes-common-palette-overrides
-   '((bg-line-number-active unspecified)
-     (bg-line-number-inactive unspecified)
-     (bg-mode-line-active bg-alt)
-     (fg-line-number-active fg-main)
-     (fg-line-number-inactive "gray50")))
-  (modus-themes-italic-constructs t))
-
 (use-package nucleo-completion
   :ensure t
   :custom
@@ -305,13 +290,10 @@
   (nucleo-completion-sort-ties-by-length t)
   :init (nucleo-completion-ensure-module))
 
-(use-package paren
-  :custom (show-paren-mode nil))
-
 (use-package paren-face
   :ensure t
-  :custom (paren-face-regexp "#?[](){}[]")
-  :hook (elpaca-after-init-hook . global-paren-face-mode))
+  :custom (paren-face-regexp "#?[][(){}]")
+  :hook (after-init-hook . global-paren-face-mode))
 
 (use-package project
   :config
@@ -375,9 +357,6 @@
 
 (use-package transient
   :custom (transient-mode-line-format nil))
-
-(use-package treesit
-  :custom (treesit-font-lock-level 2))
 
 (use-package tsx-ts-mode
   :mode "\\.tsx\\'"
