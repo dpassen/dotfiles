@@ -1,0 +1,4 @@
+inherits = 'modus_vivendi_tinted'
+
+'comment.block.documentation' = { fg = 'cyan-faint' }
+'comment.line.documentation' = { fg = 'cyan-faint' }

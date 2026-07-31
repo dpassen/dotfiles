@@ -1,0 +1,11 @@
+inherits = 'modus_vivendi'
+
+rainbow = [{ fg = 'fg-dim' }]
+'ui.help' = { bg = 'bg-main' }
+'ui.linenr.selected' = { modifiers = ['bold'] }
+'ui.menu' = { bg = 'bg-main' }
+'ui.popup' = { bg = 'bg-main' }
+'ui.popup.info' = { bg = 'bg-main' }
+'ui.statusline.insert' = { bg = 'green-warmer', fg = 'bg-main' }
+'ui.statusline.normal' = { bg = 'blue-warmer', fg = 'bg-main' }
+'ui.statusline.select' = { bg = 'magenta-warmer', fg = 'bg-main' }
