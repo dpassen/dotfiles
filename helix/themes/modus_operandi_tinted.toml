@@ -1,0 +1,4 @@
+inherits = 'modus_operandi_tinted'
+
+'comment.block.documentation' = { fg = 'green-faint' }
+'comment.line.documentation' = { fg = 'green-faint' }
