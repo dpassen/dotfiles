@@ -1,10 +1,9 @@
-theme = 'base16_minimal'
-
 [editor]
 auto-completion = false
 color-modes = true
 end-of-line-diagnostics = 'disable'
 popup-border = 'all'
+rainbow-brackets = true
 
 [editor.cursor-shape]
 insert = 'bar'
@@ -14,7 +13,7 @@ select = 'underline'
 hidden = false
 
 [editor.gutters]
-layout = ['line-numbers', 'spacer']
+layout = ['spacer', 'line-numbers', 'spacer']
 
 [editor.statusline]
 right = ['diagnostics', 'selections', 'file-type']
@@ -23,3 +22,7 @@ right = ['diagnostics', 'selections', 'file-type']
 insert = 'I'
 normal = 'N'
 select = 'S'
+
+[theme]
+dark = 'modus_vivendi_tinted'
+light = 'modus_operandi_tinted'
