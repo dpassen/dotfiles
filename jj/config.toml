@@ -13,6 +13,9 @@ merge-editor = 'ec'
 [merge-tools.ec]
 merge-args = ['$base', '$left', '$right', '$output']
 
+[aliases]
+autoresolve = ['resolve', '--tool', 'mergiraf']
+
 [revsets]
 bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
 
