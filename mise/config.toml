@@ -9,3 +9,4 @@ rust = { version = '1.97.1', components = 'clippy,rust-analyzer' }
 'cargo:git-credit-cli' = '0.1.1'
 'cargo:forgelink-cli' = '0.3.3'
 'github:MKindberg/ghostty-ls' = '0.1.0'
+'github:vimlinuz/mdwatch' = '0.2.6'
