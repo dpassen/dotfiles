@@ -24,9 +24,7 @@
   (use-short-answers t)
   :init
   (setq frame-title-format "%b\n"
-        kill-buffer-query-functions nil
-        load-prefer-newer t
-        message-truncate-lines t))
+        load-prefer-newer t))
 
 (use-package apheleia
   :ensure t
@@ -59,14 +57,13 @@
   :ensure t
   :custom
   (cider-connection-message-fn nil)
-  (cider-download-java-sources t)
   (cider-font-lock-dynamically nil)
+  (cider-fringe-indicators nil)
   (cider-ns-save-files-on-refresh t)
   (cider-repl-display-help-banner nil)
   (cider-repl-history-file 'per-project)
   (cider-repl-pop-to-buffer-on-connect nil)
-  (cider-save-file-on-load t)
-  (cider-use-fringe-indicators nil))
+  (cider-save-file-on-load t))
 
 (use-package clojure-ts-mode
   :ensure t
@@ -151,9 +148,7 @@
 
 (use-package dumb-jump
   :ensure t
-  :custom
-  (dumb-jump-prefer-searcher 'rg)
-  (dumb-jump-selector 'completing-read)
+  :custom (dumb-jump-prefer-searcher 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (use-package edit-indirect
@@ -191,7 +186,6 @@
 
 (use-package files
   :custom
-  (confirm-kill-processes nil)
   (major-mode-remap-alist
    '((c++-mode . c++-ts-mode)
      (c-mode . c-ts-mode)
@@ -324,7 +318,6 @@
 (use-package simple
   :custom
   (async-shell-command-buffer 'new-buffer)
-  (column-number-mode t)
   (kill-do-not-save-duplicates t)
   (read-extended-command-predicate 'command-completion-default-include-p)
   (read-quoted-char-radix 16)
