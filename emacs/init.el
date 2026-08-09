@@ -142,7 +142,7 @@
   :ensure t
   :custom
   (disproject-find-line-command #'consult-line-multi)
-  (disproject-shell-command #'terminal-here)
+  (disproject-shell-command #'ghostel)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
 
@@ -218,6 +218,12 @@
   :ensure t
   :demand t
   :after clojure-ts-mode)
+
+(use-package ghostel
+  :ensure t
+  :custom
+  (ghostel-environment '("PATH"))
+  (ghostel-module-auto-install 'download))
 
 (use-package git-link
   :ensure t
@@ -353,10 +359,6 @@
 
 (use-package subword
   :hook (after-init-hook . global-subword-mode))
-
-(use-package terminal-here
-  :vc (:url "https://github.com/dpassen/terminal-here")
-  :custom (terminal-here-terminal-command 'ghostty))
 
 (use-package toml-ts-mode
   :treesit)
