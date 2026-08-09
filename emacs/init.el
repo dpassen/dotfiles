@@ -94,8 +94,7 @@
 (use-package consult-flycheck
   :ensure t
   :after flycheck
-  :bind (:map goto-map
-              ("f" . consult-flycheck)))
+  :bind (:map goto-map ("f" . consult-flycheck)))
 
 (use-package corfu
   :ensure t
