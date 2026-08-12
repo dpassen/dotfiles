@@ -305,7 +305,8 @@
 
 (use-package project
   :config
-  (push '(major-mode . cider-repl-mode) project-kill-buffer-conditions))
+  (dolist (mode '(cider-repl-mode ghostel-mode))
+    (push `(major-mode . ,mode) project-kill-buffer-conditions)))
 
 (use-package pulse
   :custom (pulse-flag 'never))
