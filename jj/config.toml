@@ -15,6 +15,7 @@ merge-args = ['$base', '$left', '$right', '$output']
 
 [aliases]
 autoresolve = ['resolve', '--tool', 'mergiraf']
+pr = ['util', 'exec', '--', 'jj-gh', 'pr']
 
 [revsets]
 bookmark-advance-to = 'heads(::@ & mutable() & ~description(exact:"") & (~empty() | merges()))'
