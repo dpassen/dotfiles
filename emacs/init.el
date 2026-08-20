@@ -429,10 +429,4 @@
   :when (memq window-system '(mac ns x))
   :hook (after-init-hook . exec-path-from-shell-initialize))
 
-;; Local Variables:
-;; no-byte-compile: t
-;; no-native-compile: t
-;; no-update-autoloads: t
-;; End:
-
 ;;; init.el ends here
