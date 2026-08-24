@@ -11,7 +11,7 @@
 [fish.files]
 'fish/conf.d/brew.fish' = '~/.config/fish/conf.d/brew.fish'
 'fish/conf.d/editor.fish' = '~/.config/fish/conf.d/editor.fish'
-'fish/conf.d/postexec_echo.fish' = '~/.config/fish/conf.d/postexec_echo.fish'
+'fish/conf.d/transient.fish' = '~/.config/fish/conf.d/transient.fish'
 'fish/conf.d/xdg.fish' = '~/.config/fish/conf.d/xdg.fish'
 'fish/functions/edit.fish' = '~/.config/fish/functions/edit.fish'
 'fish/functions/emacs.fish' = '~/.config/fish/functions/emacs.fish'

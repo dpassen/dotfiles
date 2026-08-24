@@ -1,3 +1,6 @@
 function fish_prompt
-    echo -n (prompt_pwd) '❯ '
+    if not contains -- --final-rendering $argv
+        printf '%s ' (prompt_pwd)
+    end
+    echo -n '❯ '
 end
