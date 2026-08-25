@@ -9,10 +9,6 @@
         use-package-hook-name-suffix nil
         use-package-vc-prefer-newest t)
 
-(use-package use-package-treesit
-  :ensure t
-  :demand t)
-
 (use-package emacs
   :custom
   (cursor-type 'bar)
@@ -50,15 +46,6 @@
   (avy-lead-face-2 ((t (:inherit modus-themes-fg-yellow-cooler :weight bold :background unspecified))))
   :bind (:map goto-map ("e" . avy-goto-word-0)))
 
-(use-package bash-ts-mode
-  :treesit)
-
-(use-package c++-ts-mode
-  :treesit)
-
-(use-package c-ts-mode
-  :treesit)
-
 (use-package cape
   :ensure t
   :bind-keymap ("C-c p" . cape-prefix-map))
@@ -77,7 +64,7 @@
 
 (use-package clojure-ts-mode
   :ensure t
-  :treesit
+  :demand t
   :custom
   (clojure-ts-align-forms-automatically t)
   (clojure-ts-toplevel-inside-comment-form t))
@@ -110,9 +97,6 @@
   :ensure t
   :custom (corfu-cycle t)
   :hook (after-init-hook . global-corfu-mode))
-
-(use-package css-ts-mode
-  :treesit)
 
 (use-package custom
   :custom (custom-file (locate-user-emacs-file "custom.el"))
@@ -194,26 +178,7 @@
     (set-face-attribute face nil :font "Berkeley Mono Variable 12")))
 
 (use-package files
-  :custom
-  (major-mode-remap-alist
-   '((c++-mode . c++-ts-mode)
-     (c-mode . c-ts-mode)
-     (clojure-mode . clojure-ts-mode)
-     (clojurec-mode . clojure-ts-clojurec-mode)
-     (clojuredart-mode . clojure-ts-clojuredart-mode)
-     (clojurescript-mode . clojure-ts-clojurescript-mode)
-     (conf-toml-mode . toml-ts-mode)
-     (css-mode . css-ts-mode)
-     (jank-mode . clojure-ts-jank-mode)
-     (java-mode . java-ts-mode)
-     (javascript-mode . js-ts-mode)
-     (joker-mode . clojure-ts-joker-mode)
-     (js-json-mode . json-ts-mode)
-     (mhtml-mode . html-ts-mode)
-     (python-mode . python-ts-mode)
-     (ruby-mode . ruby-ts-mode)
-     (sh-mode . bash-ts-mode)))
-  (require-final-newline t))
+  :custom (require-final-newline t))
 
 (use-package flycheck
   :ensure t
@@ -254,25 +219,12 @@
   :ensure t
   :hook (after-init-hook . global-hl-todo-mode))
 
-(use-package html-ts-mode
-  :treesit)
-
-(use-package java-ts-mode
-  :treesit)
-
-(use-package js-ts-mode
-  :treesit)
-
-(use-package json-ts-mode
-  :treesit)
-
 (use-package just-mode
   :ensure t)
 
 (use-package kotlin-ts-mode
   :ensure t
-  :mode "\\.kts?\\'"
-  :treesit)
+  :mode "\\.kts?\\'")
 
 (use-package marginalia
   :ensure t
@@ -292,6 +244,8 @@
    '((bg-line-number-active unspecified)
      (bg-line-number-inactive unspecified)
      (bg-mode-line-active bg-alt)
+     (border-mode-line-active unspecified)
+     (border-mode-line-inactive unspecified)
      (fg-line-number-active fg-main)
      (fg-line-number-inactive "gray50")))
   (modus-themes-italic-constructs t))
@@ -320,16 +274,6 @@
 
 (use-package pulse
   :custom (pulse-flag 'never))
-
-(use-package python-ts-mode
-  :treesit)
-
-(use-package ruby-ts-mode
-  :treesit)
-
-(use-package rust-ts-mode
-  :mode "\\.rs\\'"
-  :treesit)
 
 (use-package simple
   :custom
@@ -370,25 +314,20 @@
 (use-package subword
   :hook (after-init-hook . global-subword-mode))
 
-(use-package toml-ts-mode
-  :treesit)
-
 (use-package transient
   :custom (transient-mode-line-format nil))
 
 (use-package treesit
-  :custom (treesit-font-lock-level 2))
-
-(use-package tsx-ts-mode
-  :mode "\\.tsx\\'"
-  :treesit)
-
-(use-package typescript-ts-mode
-  :mode "\\.ts\\'"
-  :treesit)
+  :custom
+  (treesit-auto-install-grammar 'always)
+  (treesit-enabled-modes t)
+  (treesit-font-lock-level 2))
 
 (use-package uniquify
   :custom (uniquify-buffer-name-style 'forward))
+
+(use-package vc
+  :custom (vc-dir-auto-hide-up-to-date 'revert))
 
 (use-package vc-jj
   :ensure t
@@ -408,17 +347,10 @@
   :config (vertico-multiform-mode 1)
   :hook after-init-hook)
 
-(use-package wgrep
-  :ensure t
-  :custom (wgrep-auto-save-buffer t))
-
 (use-package xref
   :custom
   (xref-history-storage 'xref-window-local-history)
   (xref-search-program 'ripgrep))
-
-(use-package yaml-mode
-  :ensure t)
 
 (use-package mise
   :ensure t
