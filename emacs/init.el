@@ -264,8 +264,8 @@
 
 (use-package paren-face
   :ensure t
-  :custom (paren-face-regexp "#?[](){}[]")
-  :hook (elpaca-after-init-hook . global-paren-face-mode))
+  :custom (paren-face-regexp "#?[][(){}]")
+  :hook (after-init-hook . global-paren-face-mode))
 
 (use-package project
   :config
