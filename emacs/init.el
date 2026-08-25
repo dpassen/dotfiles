@@ -18,6 +18,7 @@
   (initial-scratch-message ";;; -*- lexical-binding: t;-*-\n\n;; rebellious pro\n\n")
   (ring-bell-function 'ignore)
   (use-short-answers t)
+  (window-resize-pixelwise t)
   :init
   (setq frame-title-format "%b\n"
         load-prefer-newer t))
