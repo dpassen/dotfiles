@@ -37,16 +37,6 @@
   :custom (auto-revert-verbose nil)
   :hook (after-init-hook .  global-auto-revert-mode))
 
-(use-package avy
-  :ensure t
-  :custom (avy-keys (number-sequence ?a ?z))
-  :custom-face
-  (avy-lead-face ((t (:inherit modus-themes-fg-yellow-cooler :weight bold :background unspecified))))
-  (avy-lead-face-0 ((t (:inherit modus-themes-fg-yellow-cooler :weight bold :background unspecified))))
-  (avy-lead-face-1 ((t (:inherit modus-themes-fg-yellow-cooler :weight bold :background unspecified))))
-  (avy-lead-face-2 ((t (:inherit modus-themes-fg-yellow-cooler :weight bold :background unspecified))))
-  :bind (:map goto-map ("e" . avy-goto-word-0)))
-
 (use-package cape
   :ensure t
   :bind-keymap ("C-c p" . cape-prefix-map))
