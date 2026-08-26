@@ -1,4 +1,3 @@
 function emacs
-    command emacs $argv &
-    disown
+    open -na Emacs --args (path resolve -- $argv)
 end
