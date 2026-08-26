@@ -15,7 +15,7 @@
   (frame-resize-pixelwise t)
   (indent-tabs-mode nil)
   (inhibit-startup-screen t)
-  (initial-scratch-message ";;; -*- lexical-binding: t;-*-\n\n;; rebellious pro\n\n")
+  (initial-scratch-message ";; rebellious pro\n\n")
   (ring-bell-function 'ignore)
   (use-short-answers t)
   (window-resize-pixelwise t)
