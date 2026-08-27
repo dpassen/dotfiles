@@ -131,9 +131,6 @@
   :custom (dumb-jump-prefer-searcher 'rg)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
-(use-package edit-indirect
-  :ensure t)
-
 (use-package editorconfig
   :hook after-init-hook)
 
@@ -161,7 +158,7 @@
 (use-package faces
   :when (display-graphic-p)
   :config
-  (dolist (face '(default tooltip))
+  (dolist (face '(default fixed-pitch tooltip))
     (set-face-attribute face nil :font "Berkeley Mono Variable 12")))
 
 (use-package files
@@ -217,9 +214,8 @@
   :ensure t
   :hook after-init-hook)
 
-(use-package markdown-mode
-  :ensure t
-  :custom (markdown-fontify-code-blocks-natively t))
+(use-package markdown-ts-mode
+  :mode ("\\.md\\'"))
 
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
