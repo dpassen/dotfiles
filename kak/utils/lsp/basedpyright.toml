@@ -1,0 +1,11 @@
+[basedpyright]
+command = 'basedpyright-langserver'
+args = ['--stdio']
+root_globs = [
+  'pyproject.toml',
+  'setup.py',
+  'poetry.lock',
+  'pyrightconfig.json',
+  '.git',
+  '.hg',
+]

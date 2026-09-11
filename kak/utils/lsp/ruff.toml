@@ -1,0 +1,4 @@
+[ruff]
+command = 'ruff'
+args = ['server', '--quiet']
+root_globs = ['pyproject.toml', 'setup.py', 'poetry.lock', '.git', '.hg']
