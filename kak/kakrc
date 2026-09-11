@@ -1,0 +1,10 @@
+define-command load -params 2 %{
+  source "%val{config}/%arg{1}/%arg{2}.kak"
+}
+
+load utils lsp
+
+load config options
+
+load filetypes python
+load filetypes rust

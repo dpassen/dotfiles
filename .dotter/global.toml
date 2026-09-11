@@ -28,6 +28,16 @@
 [jj.files]
 'jj/config.toml' = '~/.config/jj/config.toml'
 
+[kak.files]
+'kak/colors/alabaster-dark.kak' = '~/.config/kak/colors/alabaster-dark.kak'
+'kak/config/options.kak' = '~/.config/kak/config/options.kak'
+'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
+'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
+'kak/kakrc' = '~/.config/kak/kakrc'
+'kak/utils/lsp.kak' = { target = '~/.config/kak/utils/lsp.kak', type = 'symbolic' }
+'kak/utils/lsp/basedpyright.toml' = '~/.config/kak/utils/lsp/basedpyright.toml'
+'kak/utils/lsp/ruff.toml' = '~/.config/kak/utils/lsp/ruff.toml'
+
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'
 

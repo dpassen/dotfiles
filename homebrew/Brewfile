@@ -9,6 +9,7 @@ brew 'cmake'
 brew 'difftastic'
 brew 'dotter'
 brew 'ec'
+brew 'editorconfig'
 brew 'editorconfig-checker'
 brew 'fd'
 brew 'fish'
@@ -25,6 +26,7 @@ brew 'jj'
 brew 'jq'
 brew 'just'
 brew 'just-lsp'
+brew 'kakoune'
 brew 'leiningen'
 brew 'maven'
 brew 'mergiraf'
@@ -56,6 +58,7 @@ brew 'borkdude/brew/clj-kondo', trusted: true
 brew 'borkdude/brew/jet', trusted: true
 brew 'clojure-lsp/brew/clojure-lsp-native', trusted: true
 brew 'clojure/tools/clojure', trusted: true
+brew 'kakoune-lsp/kakoune-lsp/kakoune-lsp', trusted: true
 brew 'neurosnap/tap/zmx', trusted: true
 
 cask 'appcleaner'
