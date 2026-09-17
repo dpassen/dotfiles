@@ -1,0 +1,35 @@
+# Alabaster Dark
+
+[colors]
+ansi = [
+  '#0e1415',
+  '#ff7171',
+  '#c3e88d',
+  '#ffb45e',
+  '#5f9dff',
+  '#c792ea',
+  '#89ddff',
+  '#e7e7e7',
+]
+brights = [
+  '#474747',
+  '#ff5370',
+  '#c3e88d',
+  '#ffcb6b',
+  '#82aaff',
+  '#c792ea',
+  '#89ddff',
+  '#ffffff',
+]
+background = '#0e1415'
+foreground = '#e7e7e7'
+cursor_bg = '#e7e7e7'
+cursor_border = '#e7e7e7'
+cursor_fg = '#0e1415'
+selection_bg = '#5f9dff'
+selection_fg = '#e7e7e7'
+
+[colors.indexed]
+
+[metadata]
+name = 'Alabaster-Dark'

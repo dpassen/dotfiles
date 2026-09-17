@@ -15,10 +15,6 @@
 'fish/functions/fish_greeting.fish' = '~/.config/fish/functions/fish_greeting.fish'
 'fish/functions/fish_prompt.fish' = '~/.config/fish/functions/fish_prompt.fish'
 
-[ghostty.files]
-'ghostty/config' = '~/.config/ghostty/config'
-'ghostty/themes/Alabaster Dark' = '~/.config/ghostty/themes/Alabaster Dark'
-
 [git.files]
 'git/ignore' = '~/.config/git/ignore'
 
@@ -37,3 +33,7 @@
 
 [pi.files]
 'pi/agent/settings.json' = '~/.pi/agent/settings.json'
+
+[wezterm.files]
+'wezterm/colors/Alabaster-Dark.toml' = '~/.config/wezterm/colors/Alabaster-Dark.toml'
+'wezterm/wezterm.lua' = '~/.config/wezterm/wezterm.lua'
