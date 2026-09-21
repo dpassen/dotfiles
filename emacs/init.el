@@ -27,12 +27,6 @@
   :ensure t
   :hook (after-init-hook . apheleia-global-mode))
 
-(use-package auto-dark
-  :ensure t
-  :when (display-graphic-p)
-  :custom (auto-dark-themes '((ef-dark) (ef-light)))
-  :hook after-init-hook)
-
 (use-package autorevert
   :custom (auto-revert-verbose nil)
   :hook (after-init-hook .  global-auto-revert-mode))
@@ -220,18 +214,13 @@
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
 
-(use-package modus-themes
+(use-package modus-alabaster
+  :vc (:url "https://github.com/dpassen/modus-alabaster")
   :custom
-  (modus-themes-bold-constructs t)
-  (modus-themes-common-palette-overrides
-   '((bg-line-number-active unspecified)
-     (bg-line-number-inactive unspecified)
-     (bg-mode-line-active bg-alt)
-     (border-mode-line-active unspecified)
-     (border-mode-line-inactive unspecified)
-     (fg-line-number-active fg-main)
-     (fg-line-number-inactive "gray50")))
-  (modus-themes-italic-constructs t))
+  (modus-alabaster-dark-palette-overrides
+   '((fg-line-number-active alabaster-active)
+     (bg-line-number-active unspecified)))
+  :init (load-theme 'modus-alabaster-dark t))
 
 (use-package nucleo-completion
   :ensure t
