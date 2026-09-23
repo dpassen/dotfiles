@@ -77,6 +77,6 @@ cask 'simple-comic'
 cask 'skim'
 cask 'soulseek'
 cask 'xld'
-cask 'wezterm'
+cask 'wezterm@nightly'
 
 cask 'jimeh/emacs-builds/emacs-app', trusted: true
