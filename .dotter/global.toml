@@ -29,7 +29,7 @@
 'jj/config.toml' = '~/.config/jj/config.toml'
 
 [kak.files]
-'kak/colors/alabaster-dark.kak' = '~/.config/kak/colors/alabaster-dark.kak'
+'kak/colors/catppuccin-mocha.kak' = '~/.config/kak/colors/catppuccin-mocha.kak'
 'kak/config/options.kak' = '~/.config/kak/config/options.kak'
 'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
@@ -45,5 +45,4 @@
 'pi/agent/settings.json' = '~/.pi/agent/settings.json'
 
 [wezterm.files]
-'wezterm/colors/Alabaster-Dark.toml' = '~/.config/wezterm/colors/Alabaster-Dark.toml'
 'wezterm/wezterm.lua' = '~/.config/wezterm/wezterm.lua'

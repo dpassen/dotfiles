@@ -31,6 +31,10 @@
   :custom (auto-revert-verbose nil)
   :hook (after-init-hook .  global-auto-revert-mode))
 
+(use-package batppuccin
+  :ensure t
+  :init (load-theme 'batppuccin-mocha t))
+
 (use-package cape
   :ensure t
   :bind-keymap ("C-c p" . cape-prefix-map))
@@ -93,9 +97,7 @@
 
 (use-package dimmer
   :ensure t
-  :custom
-  (dimmer-fraction 0.4)
-  (dimmer-watch-frame-focus-events nil)
+  :custom (dimmer-watch-frame-focus-events nil)
   :config (dimmer-configure-magit)
   :hook after-init-hook)
 
@@ -213,14 +215,6 @@
 
 (use-package misc
   :bind ("M-z" . zap-up-to-char))
-
-(use-package modus-alabaster
-  :vc (:url "https://github.com/dpassen/modus-alabaster")
-  :custom
-  (modus-alabaster-dark-palette-overrides
-   '((fg-line-number-active alabaster-active)
-     (bg-line-number-active unspecified)))
-  :init (load-theme 'modus-alabaster-dark t))
 
 (use-package nucleo-completion
   :ensure t

@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.color_scheme = "Alabaster-Dark"
+config.color_scheme = "Catppuccin Mocha"
 config.default_cursor_style = "BlinkingBar"
 config.font_size = 12
 config.freetype_load_flags = "NO_HINTING"

@@ -1,4 +1,4 @@
-colorscheme alabaster-dark
+colorscheme catppuccin-mocha
 
 set-option global autocomplete prompt
 set-option global autoreload true
