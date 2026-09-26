@@ -21,6 +21,7 @@
 [helix.files]
 'helix/config.toml' = '~/.config/helix/config.toml'
 'helix/languages.toml' = '~/.config/helix/languages.toml'
+'helix/themes/catppuccin_mocha.toml' = '~/.config/helix/themes/catppuccin_mocha.toml'
 
 [hushlogin.files]
 'hushlogin/hushlogin' = '~/.hushlogin'

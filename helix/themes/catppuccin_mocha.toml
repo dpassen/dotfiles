@@ -1,0 +1,9 @@
+inherits = 'catppuccin_mocha'
+
+'comment' = 'overlay2'
+'keyword.control.conditional' = 'mauve'
+'namespace' = 'yellow'
+'ui.statusline.insert' = { fg = 'green', modifiers = ['bold'] }
+'ui.statusline.normal' = { fg = 'blue', modifiers = ['bold'] }
+'ui.statusline.select' = { fg = 'mauve', modifiers = ['bold'] }
+'variable.parameter' = 'maroon'

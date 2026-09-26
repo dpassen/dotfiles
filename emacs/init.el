@@ -33,6 +33,7 @@
 
 (use-package batppuccin
   :ensure t
+  :custom (batppuccin-italic-comments nil)
   :init (load-theme 'batppuccin-mocha t))
 
 (use-package cape

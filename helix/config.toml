@@ -2,6 +2,7 @@ theme = 'catppuccin_mocha'
 
 [editor]
 auto-completion = false
+color-modes = true
 popup-border = 'all'
 
 [editor.cursor-shape]
@@ -19,3 +20,8 @@ cursor-line = 'warning'
 
 [editor.statusline]
 right = ['diagnostics', 'selections', 'file-type']
+
+[editor.statusline.mode]
+insert = 'I'
+normal = 'N'
+select = 'S'
