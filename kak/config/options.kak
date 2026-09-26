@@ -7,7 +7,7 @@ set-option global indentwidth 2
 set-option global startup_info_version 20260521
 set-option global tabstop 2
 set-option global ui_options terminal_assistant=none terminal_set_title=false terminal_synchronized=true
-set-option global windowing_placement vertical
+set-option global windowing_placement horizontal
 
 add-highlighter global/ number-lines -separator '  ' -min-digits 1 -hlcursor
 add-highlighter global/ show-matching
@@ -23,12 +23,12 @@ define-command find -docstring "find files" %{
 }
 
 define-command find-down -docstring "find file, opening result below the current pane" %{
-  set-option local windowing_placement vertical
+  set-option local windowing_placement horizontal
   new execute-keys :find<ret>
 }
 
 define-command find-right -docstring "find file, opening result to the right of the current pane" %{
-  set-option local windowing_placement horizontal
+  set-option local windowing_placement vertical
   new execute-keys :find<ret>
 }
 

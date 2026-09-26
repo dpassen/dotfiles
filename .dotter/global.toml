@@ -44,6 +44,3 @@
 
 [pi.files]
 'pi/agent/settings.json' = '~/.pi/agent/settings.json'
-
-[wezterm.files]
-'wezterm/wezterm.lua' = '~/.config/wezterm/wezterm.lua'
