@@ -33,9 +33,9 @@ define-command find-right -docstring "find file, opening result to the right of 
 }
 
 declare-user-mode find
-map global user f ': enter-user-mode find<ret>' -docstring "find"
+map global user f ':enter-user-mode find<ret>' -docstring "find"
 map global find f ':find<ret>' -docstring "find file"
-map global find s ': find-down<ret>' -docstring "find file (down)"
-map global find v ': find-right<ret>' -docstring "find file (right)"
+map global find s ':find-down<ret>' -docstring "find file (down)"
+map global find v ':find-right<ret>' -docstring "find file (right)"
 
-map global user / ":grep<space>" -docstring "grep project directory"
+map global user / ':grep<space>' -docstring "grep project directory"
