@@ -26,10 +26,10 @@ insert = 'I'
 normal = 'N'
 select = 'S'
 
-[keys.normal.space.l]
+[keys.normal.space.u]
 c = ':sh forgelink copy "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
 o = ':sh forgelink open "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
 
-[keys.select.space.l]
+[keys.select.space.u]
 c = ':sh forgelink copy "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'
 o = ':sh forgelink open "%{buffer_name}:%{selection_line_start}-%{selection_line_end}"'

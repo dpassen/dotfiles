@@ -1,5 +1,5 @@
 declare-user-mode forgelink
-map global user g ':enter-user-mode forgelink<ret>' -docstring "forgelink"
+map global user u ':enter-user-mode forgelink<ret>' -docstring "forgelink"
 map global forgelink c ':forgelink copy<ret>' -docstring "copy link"
 map global forgelink o ':forgelink open<ret>' -docstring "open link"
 
