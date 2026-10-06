@@ -39,6 +39,7 @@
 'kak/filetypes/markdown.kak' = '~/.config/kak/filetypes/markdown.kak'
 'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
+'kak/filetypes/toml.kak' = '~/.config/kak/filetypes/toml.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
 'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
 'kak/lsp/init.kak' = '~/.config/kak/lsp/init.kak'
