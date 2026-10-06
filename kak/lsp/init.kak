@@ -1,9 +1,7 @@
 eval %sh{kak-lsp --kakoune -s $kak_session}
 map global user l ':enter-user-mode lsp<ret>' -docstring "LSP mode"
 
-set-option global lsp_code_lens_sign ' '
-set-option global lsp_diagnostic_line_error_sign ' '
-set-option global lsp_diagnostic_line_warning_sign ' '
+set-option global lsp_code_lens_sign ''
 set-option global lsp_hover_anchor true
 set-option global lsp_snippet_support false
 
@@ -26,5 +24,8 @@ define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set bu
 
 define-command -params 1..2 lsp-filetype -docstring 'lsp-filetype <filetype-regex> [override]: enable LSP for matching filetypes' %{
   hook global BufSetOption "filetype=%arg{1}" "%arg{2}"
-  hook global WinSetOption "filetype=%arg{1}" lsp-enable-window
+  hook global WinSetOption "filetype=%arg{1}" %{
+    lsp-enable-window
+    lsp-diagnostic-lines-disable window
+  }
 }
