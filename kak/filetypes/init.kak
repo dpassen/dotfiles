@@ -1,5 +1,13 @@
-source "%val{config}/filetypes/markdown.kak"
-source "%val{config}/filetypes/python.kak"
-source "%val{config}/filetypes/rust.kak"
-source "%val{config}/filetypes/toml.kak"
-source "%val{config}/filetypes/typst.kak"
+lsp-filetype '(rust|toml|typst)' %{
+  hook buffer BufWritePre .* lsp-formatting-sync
+}
+
+lsp-filetype markdown %{
+  lsp-servers rumdl
+  hook buffer BufWritePre .* lsp-formatting-sync
+}
+
+lsp-filetype python %{
+  lsp-servers basedpyright ruff
+  hook buffer BufWritePre .* lsp-formatting-sync
+}
