@@ -131,9 +131,6 @@
 (use-package editorconfig
   :hook after-init-hook)
 
-(use-package ef-themes
-  :ensure t)
-
 (use-package embark
   :ensure t
   :bind ("C-." . embark-act)
