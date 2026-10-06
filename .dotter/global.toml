@@ -39,6 +39,7 @@
 'kak/kakrc' = '~/.config/kak/kakrc'
 'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
 'kak/lsp/init.kak' = '~/.config/kak/lsp/init.kak'
+'kak/lsp/just-lsp.toml' = '~/.config/kak/lsp/just-lsp.toml'
 'kak/lsp/rumdl.toml' = '~/.config/kak/lsp/rumdl.toml'
 'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
 

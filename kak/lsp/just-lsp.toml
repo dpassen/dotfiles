@@ -1,0 +1,3 @@
+[just-lsp]
+command = 'just-lsp'
+root_globs = ['justfile', 'Justfile', '.justfile', '.Justfile', '.git', '.hg']
