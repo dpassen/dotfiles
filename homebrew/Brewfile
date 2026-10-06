@@ -76,6 +76,7 @@ cask 'signal'
 cask 'simple-comic'
 cask 'skim'
 cask 'soulseek'
+cask 'vlc'
 cask 'xld'
 
 cask 'jimeh/emacs-builds/emacs-app', trusted: true
