@@ -40,7 +40,7 @@
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
 'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
-'kak/lsp/init.kak' = { target = '~/.config/kak/lsp/init.kak', type = 'symbolic' }
+'kak/lsp/init.kak' = '~/.config/kak/lsp/init.kak'
 'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
 
 [mise.files]

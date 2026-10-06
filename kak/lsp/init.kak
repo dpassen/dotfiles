@@ -10,7 +10,7 @@ set-option global lsp_snippet_support false
 set-option global modelinefmt %sh{
   printf '%s' '{DiagnosticErrorCount}%sh{[ "$kak_opt_lsp_diagnostic_error_count" -gt 0 ] && printf "●"}{StatusLine}%sh{[ "$kak_opt_lsp_diagnostic_error_count" -gt 0 ] && printf " %s " "$kak_opt_lsp_diagnostic_error_count"}'
   printf '%s' '{DiagnosticWarningCount}%sh{[ "$kak_opt_lsp_diagnostic_warning_count" -gt 0 ] && printf "●"}{StatusLine}%sh{[ "$kak_opt_lsp_diagnostic_warning_count" -gt 0 ] && printf " %s " "$kak_opt_lsp_diagnostic_warning_count"}'
-  printf '%s' '{StatusLine}%val{bufname} {{context_info}} {{mode_info}}'
+  printf '%s' '{StatusLine}%val{bufname} {' '{context_info}} {' '{mode_info}}'
 }
 
 define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set buffer lsp_servers by concatenating lsp/<name>.toml files' %{
