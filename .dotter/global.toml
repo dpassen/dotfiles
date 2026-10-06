@@ -36,11 +36,13 @@
 'kak/config/find.kak' = '~/.config/kak/config/find.kak'
 'kak/config/init.kak' = '~/.config/kak/config/init.kak'
 'kak/filetypes/init.kak' = '~/.config/kak/filetypes/init.kak'
+'kak/filetypes/markdown.kak' = '~/.config/kak/filetypes/markdown.kak'
 'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
 'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
 'kak/lsp/init.kak' = '~/.config/kak/lsp/init.kak'
+'kak/lsp/rumdl.toml' = '~/.config/kak/lsp/rumdl.toml'
 'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
 
 [mise.files]

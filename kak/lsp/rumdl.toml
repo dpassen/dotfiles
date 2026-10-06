@@ -1,0 +1,4 @@
+[rumdl]
+command = 'rumdl'
+args = ['server']
+root_globs = ['.rumdl.toml', 'rumdl.toml', '.git', '.hg']
