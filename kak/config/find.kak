@@ -14,10 +14,10 @@ define-command find -docstring "find files" %{
 
 define-command find-down -hidden %{
   set-option local windowing_placement horizontal
-  new execute-keys :find<ret>
+  new find
 }
 
 define-command find-right -hidden %{
   set-option local windowing_placement vertical
-  new execute-keys :find<ret>
+  new find
 }
