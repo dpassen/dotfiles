@@ -13,12 +13,12 @@ set-option global modelinefmt %sh{
   printf '%s' '{StatusLine}%val{bufname} {{context_info}} {{mode_info}}'
 }
 
-define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set buffer lsp_servers by concatenating utils/lsp/<name>.toml files' %{
+define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set buffer lsp_servers by concatenating lsp/<name>.toml files' %{
   set-option buffer lsp_servers %sh{
     names="$@"
     set --
     for name in $names; do
-      set -- "$@" "$kak_config/utils/lsp/$name.toml"
+      set -- "$@" "$kak_config/lsp/$name.toml"
     done
     cat "$@"
   }

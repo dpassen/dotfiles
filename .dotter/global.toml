@@ -31,13 +31,17 @@
 
 [kak.files]
 'kak/colors/catppuccin-mocha.kak' = '~/.config/kak/colors/catppuccin-mocha.kak'
-'kak/config/options.kak' = '~/.config/kak/config/options.kak'
+'kak/config/clipboard.kak' = '~/.config/kak/config/clipboard.kak'
+'kak/config/core.kak' = '~/.config/kak/config/core.kak'
+'kak/config/find.kak' = '~/.config/kak/config/find.kak'
+'kak/config/init.kak' = '~/.config/kak/config/init.kak'
+'kak/filetypes/init.kak' = '~/.config/kak/filetypes/init.kak'
 'kak/filetypes/python.kak' = '~/.config/kak/filetypes/python.kak'
 'kak/filetypes/rust.kak' = '~/.config/kak/filetypes/rust.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
-'kak/utils/lsp.kak' = { target = '~/.config/kak/utils/lsp.kak', type = 'symbolic' }
-'kak/utils/lsp/basedpyright.toml' = '~/.config/kak/utils/lsp/basedpyright.toml'
-'kak/utils/lsp/ruff.toml' = '~/.config/kak/utils/lsp/ruff.toml'
+'kak/lsp/basedpyright.toml' = '~/.config/kak/lsp/basedpyright.toml'
+'kak/lsp/init.kak' = { target = '~/.config/kak/lsp/init.kak', type = 'symbolic' }
+'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
 
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'
