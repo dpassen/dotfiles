@@ -15,3 +15,5 @@ lsp-filetype python %{
   lsp-servers basedpyright ruff
   hook buffer BufWritePre .* lsp-formatting-sync
 }
+
+lsp-filetype yaml
