@@ -90,11 +90,7 @@
 
 (use-package custom
   :custom (custom-file (locate-user-emacs-file "custom.el"))
-  :config
-  (load custom-file :no-error-if-file-is-missing)
-  (add-hook 'enable-theme-functions
-            (lambda (&rest _)
-              (set-face-attribute 'bold nil :weight 'semibold))))
+  :config (load custom-file :no-error-if-file-is-missing))
 
 (use-package dimmer
   :ensure t
