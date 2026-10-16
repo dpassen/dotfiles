@@ -7,7 +7,7 @@ map global find s ':find-down<ret>' -docstring "find file (down)"
 map global find v ':find-right<ret>' -docstring "find file (right)"
 
 define-command find -docstring "find files" %{
-  prompt 'find: ' -shell-script-candidates %{ fd -tf } -menu %{
+  prompt 'find: ' -shell-script-candidates %{ fd -tf -H } -menu %{
     edit -existing %val{text}
   }
 }
