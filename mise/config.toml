@@ -10,5 +10,5 @@ python = '3.15.1'
 rust = { version = '1.99.1', components = 'clippy,rust-analyzer' }
 'cargo:forgelink-cli' = '0.3.12'
 'cargo:git-credit-cli' = '0.2.1'
-'github:mrjones2014/jj-gh' = 'jj-gh-v0.3.3'
+'github:mrjones2014/jj-gh' = 'jj-gh-v0.3.4'
 'github:vimlinuz/mdwatch' = '0.2.9'
