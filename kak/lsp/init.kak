@@ -1,13 +1,14 @@
 eval %sh{kak-lsp}
 map global user l ':enter-user-mode lsp<ret>' -docstring "LSP mode"
 
+set-option global lsp_auto_show_code_actions false
 set-option global lsp_code_lens_sign ''
 set-option global lsp_hover_anchor true
 set-option global lsp_snippet_support false
 
 set-option global modelinefmt %sh{
-  printf '%s' '{DiagnosticErrorCount}%sh{[ "$kak_opt_lsp_diagnostic_error_count" -gt 0 ] && printf "●"}{StatusLine}%sh{[ "$kak_opt_lsp_diagnostic_error_count" -gt 0 ] && printf " %s " "$kak_opt_lsp_diagnostic_error_count"}'
-  printf '%s' '{DiagnosticWarningCount}%sh{[ "$kak_opt_lsp_diagnostic_warning_count" -gt 0 ] && printf "●"}{StatusLine}%sh{[ "$kak_opt_lsp_diagnostic_warning_count" -gt 0 ] && printf " %s " "$kak_opt_lsp_diagnostic_warning_count"}'
+  printf '%s' '{DiagnosticErrorCount}%sh{[ "$kak_opt_lsp_diagnostic_error_count" -gt 0 ] && printf "● %s " "$kak_opt_lsp_diagnostic_error_count"}'
+  printf '%s' '{DiagnosticWarningCount}%sh{[ "$kak_opt_lsp_diagnostic_warning_count" -gt 0 ] && printf "● %s " "$kak_opt_lsp_diagnostic_warning_count"}'
   printf '%s' '{StatusLine}%val{bufname} {' '{context_info}} {' '{mode_info}}'
 }
 
