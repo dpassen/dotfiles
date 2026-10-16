@@ -1,4 +1,4 @@
-eval %sh{kak-lsp --kakoune -s $kak_session}
+eval %sh{kak-lsp}
 map global user l ':enter-user-mode lsp<ret>' -docstring "LSP mode"
 
 set-option global lsp_code_lens_sign ''
