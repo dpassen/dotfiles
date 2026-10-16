@@ -1,4 +1,4 @@
-lsp-filetype '(rust|toml|typst)' %{
+lsp-filetype '(clojure|rust|toml|typst)' %{
   hook buffer BufWritePre .* lsp-formatting-sync
 }
 
@@ -16,4 +16,4 @@ lsp-filetype python %{
   hook buffer BufWritePre .* lsp-formatting-sync
 }
 
-lsp-filetype yaml
+lsp-filetype '(ruby|yaml)'
