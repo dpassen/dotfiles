@@ -31,6 +31,11 @@
   :custom (auto-revert-verbose nil)
   :hook (after-init-hook .  global-auto-revert-mode))
 
+(use-package avy
+  :ensure t
+  :custom (avy-keys (number-sequence ?a ?z))
+  :bind (:map goto-map ("e" . avy-goto-word-0)))
+
 (use-package batppuccin
   :ensure t
   :custom (batppuccin-italic-comments nil)
