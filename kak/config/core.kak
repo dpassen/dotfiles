@@ -1,5 +1,3 @@
-colorscheme catppuccin-mocha
-
 set-option global autocomplete prompt
 set-option global autoreload true
 set-option global grepcmd 'rg --smart-case --vimgrep --sort path'

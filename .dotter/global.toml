@@ -47,6 +47,7 @@
 'kak/lsp/just-lsp.toml' = '~/.config/kak/lsp/just-lsp.toml'
 'kak/lsp/rumdl.toml' = '~/.config/kak/lsp/rumdl.toml'
 'kak/lsp/ruff.toml' = '~/.config/kak/lsp/ruff.toml'
+'kak/theme/init.kak' = '~/.config/kak/theme/init.kak'
 
 [mise.files]
 'mise/config.toml' = '~/.config/mise/config.toml'

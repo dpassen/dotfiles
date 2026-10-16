@@ -1,3 +1,4 @@
 source "%val{config}/config/init.kak"
 source "%val{config}/lsp/init.kak"
 source "%val{config}/filetypes/init.kak"
+source "%val{config}/theme/init.kak"
