@@ -13,12 +13,9 @@ set-option global modelinefmt %sh{
 
 define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set buffer lsp_servers by concatenating lsp/<name>.toml files' %{
   set-option buffer lsp_servers %sh{
-    names="$@"
-    set --
-    for name in $names; do
-      set -- "$@" "$kak_config/lsp/$name.toml"
+    for name; do
+      cat "$kak_config/lsp/$name.toml" || exit 1
     done
-    cat "$@"
   }
 }
 
