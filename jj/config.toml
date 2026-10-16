@@ -15,6 +15,7 @@ merge-args = ['$base', '$left', '$right', '$output']
 
 [aliases]
 autoresolve = ['resolve', '--tool', 'mergiraf']
+credit = ['util', 'exec', '--', 'jj-credit']
 pr = ['util', 'exec', '--', 'jj-gh', 'pr']
 
 [revsets]
