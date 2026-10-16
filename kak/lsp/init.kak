@@ -22,7 +22,7 @@ define-command -params 1.. lsp-servers -docstring 'lsp-servers <name>...: set bu
   }
 }
 
-define-command -params 1..2 lsp-filetype -docstring 'lsp-filetype <filetype-regex> [override]: enable LSP for matching filetypes' %{
+define-command -params 1..2 lsp-filetype -docstring 'lsp-filetype <filetype-regex> [setup]: enable LSP and run setup commands for matching filetypes' %{
   hook global BufSetOption "filetype=%arg{1}" "%arg{2}"
   hook global WinSetOption "filetype=%arg{1}" %{
     lsp-enable-window
