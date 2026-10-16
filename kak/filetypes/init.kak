@@ -3,9 +3,9 @@ hook global BufSetOption filetype=(css|html|javascript|json|typescript) %{
   hook buffer BufWritePre .* format-buffer
 }
 
-lsp-filetype '(ruby|yaml)'
+lsp-filetype (ruby|yaml)
 
-lsp-filetype '(clojure|rust|toml|typst)' %{
+lsp-filetype (clojure|rust|toml|typst) %{
   hook buffer BufWritePre .* lsp-formatting-sync
 }
 
