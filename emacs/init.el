@@ -41,6 +41,9 @@
   :custom (batppuccin-italic-comments nil)
   :init (load-theme 'batppuccin-mocha t))
 
+(use-package bazel
+  :ensure t)
+
 (use-package cape
   :ensure t
   :bind-keymap ("C-c p" . cape-prefix-map))
@@ -93,6 +96,9 @@
   :custom (corfu-cycle t)
   :hook (after-init-hook . global-corfu-mode))
 
+(use-package csv-mode
+  :ensure t)
+
 (use-package custom
   :custom (custom-file (locate-user-emacs-file "custom.el"))
   :config (load custom-file :no-error-if-file-is-missing))
@@ -123,6 +129,9 @@
   (disproject-shell-command #'ghostel)
   (disproject-switch-to-buffer-command #'consult-project-buffer)
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
+
+(use-package docker
+  :ensure t)
 
 (use-package dumb-jump
   :ensure t
@@ -183,6 +192,9 @@
   :custom (git-link-use-commit t))
 
 (use-package git-modes
+  :ensure t)
+
+(use-package graphql-mode
   :ensure t)
 
 (use-package grep
@@ -272,12 +284,22 @@
     eval-expression-minibuffer-setup-hook
     lisp-data-mode-hook) . smartparens-strict-mode))
 
+(use-package splash
+  :vc (:url "git@github.com:SplashFinancial/stonehenge.git"
+            :lisp-dir "development/emacs")
+  :custom
+  (splash-stonehenge-dir (expand-file-name "~/Work/stonehenge"))
+  (splash-website-dir (expand-file-name "~/Work/Website")))
+
 (use-package stillness-mode
   :ensure t
   :hook after-init-hook)
 
 (use-package subword
   :hook (after-init-hook . global-subword-mode))
+
+(use-package terraform-mode
+  :ensure t)
 
 (use-package transient
   :custom (transient-mode-line-format nil))
@@ -322,7 +344,8 @@
   (xref-search-program 'ripgrep))
 
 (use-package mise
-  :ensure t
+  :vc (:url "https://github.com/dpassen/mise.el"
+            :branch "ignore-json-readtable-errors")
   :hook (after-init-hook . global-mise-mode))
 
 (use-package exec-path-from-shell
