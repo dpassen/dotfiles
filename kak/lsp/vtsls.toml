@@ -1,0 +1,20 @@
+[vtsls]
+command = 'vtsls'
+args = ['--stdio']
+root_globs = ['package.json', 'tsconfig.json', 'jsconfig.json', '.git', '.hg']
+
+[vtsls.settings.vtsls]
+autoUseWorkspaceTsdk = true
+
+[vtsls.settings.javascript.preferences]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+
+[vtsls.settings.typescript.preferences]
+importModuleSpecifier = 'non-relative'
+importModuleSpecifierEnding = 'minimal'
+autoImportFileExcludePatterns = [
+  'next/router.d.ts',
+  'next/dist/client/router.d.ts',
+  'lucide-react',
+]

@@ -1,6 +1,8 @@
 [dotfiles]
 '~/.config/bat/config' = 'bat/config'
 
+'~/.claude/settings.json' = 'claude/settings.json'
+
 '~/.config/emacs/early-init.el' = 'emacs/early-init.el'
 '~/.config/emacs/init.el' = 'emacs/init.el'
 
@@ -35,14 +37,16 @@
 '~/.config/kak/lsp/basedpyright.toml' = 'kak/lsp/basedpyright.toml'
 '~/.config/kak/lsp/init.kak' = 'kak/lsp/init.kak'
 '~/.config/kak/lsp/just-lsp.toml' = 'kak/lsp/just-lsp.toml'
+'~/.config/kak/lsp/oxlint-language-server.toml' = 'kak/lsp/oxlint-language-server.toml'
+'~/.config/kak/lsp/phpantom.toml' = 'kak/lsp/phpantom.toml'
 '~/.config/kak/lsp/ruff.toml' = 'kak/lsp/ruff.toml'
 '~/.config/kak/lsp/rumdl.toml' = 'kak/lsp/rumdl.toml'
+'~/.config/kak/lsp/tailwindcss-language-server.toml' = 'kak/lsp/tailwindcss-language-server.toml'
+'~/.config/kak/lsp/vtsls.toml' = 'kak/lsp/vtsls.toml'
 '~/.config/kak/theme/init.kak' = 'kak/theme/init.kak'
 
 '~/.config/mise/config.toml' = 'mise/config.toml'
 
 '~/.hushlogin' = 'hushlogin/hushlogin'
-
-'~/.pi/agent/settings.json' = 'pi/agent/settings.json'
 
 '~/.ugrep' = 'ugrep/.ugrep'
