@@ -38,6 +38,7 @@
 'kak/config/core.kak' = '~/.config/kak/config/core.kak'
 'kak/config/find.kak' = '~/.config/kak/config/find.kak'
 'kak/config/forgelink.kak' = '~/.config/kak/config/forgelink.kak'
+'kak/config/hop.kak' = '~/.config/kak/config/hop.kak'
 'kak/config/init.kak' = '~/.config/kak/config/init.kak'
 'kak/filetypes/init.kak' = '~/.config/kak/filetypes/init.kak'
 'kak/kakrc' = '~/.config/kak/kakrc'
