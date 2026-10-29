@@ -1,2 +1,2 @@
-set -q EDITOR; or set -gx EDITOR hx
-set -q VISUAL; or set -gx VISUAL hx
+set -q EDITOR; or set -gx EDITOR kak
+set -q VISUAL; or set -gx VISUAL kak
