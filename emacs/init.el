@@ -312,6 +312,10 @@
   :config (vertico-multiform-mode 1)
   :hook after-init-hook)
 
+(use-package with-editor
+  :ensure t
+  :hook (ghostel-pre-spawn-hook . with-editor-export-editor))
+
 (use-package xref
   :custom
   (xref-history-storage 'xref-window-local-history)
