@@ -1,3 +1,3 @@
 function emacs
-    open -na Emacs --args (path resolve -- $argv)
+    open -na Emacs $argv
 end
