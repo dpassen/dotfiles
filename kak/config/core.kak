@@ -9,6 +9,7 @@ set-option global windowing_placement horizontal
 
 add-highlighter global/ number-lines -separator ' ' -min-digits 1 -hlcursor
 add-highlighter global/ show-matching
+add-highlighter global/ wrap -word
 add-highlighter global/highlight-todos dynregex '\Q%opt{comment_line}\E[ \t]*\b(TODO|FIXME|MAYBE)\b:?' 1:default+b@comment
 
 hook global BufNewFile .* editorconfig-load
