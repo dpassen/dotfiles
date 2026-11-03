@@ -5,6 +5,7 @@ set-option global indentwidth 2
 set-option global startup_info_version 20260521
 set-option global tabstop 2
 set-option global ui_options terminal_assistant=none terminal_set_title=false terminal_synchronized=true
+set-option global windowing_modules iterm
 set-option global windowing_placement horizontal
 
 add-highlighter global/ number-lines -separator ' ' -min-digits 1 -hlcursor
