@@ -176,7 +176,8 @@
   :ensure t
   :custom
   (ghostel-environment '("PATH"))
-  (ghostel-module-auto-install 'download))
+  (ghostel-module-auto-install 'download)
+  (ghostel-ignore-cursor-change t))
 
 (use-package git-link
   :ensure t
