@@ -20,9 +20,9 @@ define-command find -docstring "find files" %{
 
 define-command find-sibling -docstring "find sibling files" %{
   prompt 'find: ' -shell-script-candidates %{
-    fd --type file --hidden --no-ignore --max-depth 1 --base-directory "${kak_buffile%/*}"
+    fd --type file --hidden --no-ignore --max-depth 1 --base-directory "$(dirname "$kak_buffile")"
   } -menu %{
-    edit -existing %sh{ printf '%s/%s\n' "${kak_buffile%/*}" "$kak_text" }
+    edit -existing %sh{ printf '%s/%s\n' "$(dirname "$kak_buffile")" "$kak_text" }
   }
 }
 
