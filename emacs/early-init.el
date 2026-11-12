@@ -3,6 +3,8 @@
 
 ;;; Code:
 
+(setenv "MACOSX_DEPLOYMENT_TARGET" "27.0")
+
 (setopt scroll-bar-mode nil)
 (setopt tool-bar-mode nil)
 

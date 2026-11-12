@@ -33,7 +33,7 @@
 'jj/config.toml' = '~/.config/jj/config.toml'
 
 [kak.files]
-'kak/colors/catppuccin-mocha.kak' = '~/.config/kak/colors/catppuccin-mocha.kak'
+'kak/colors/alabaster-mocha.kak' = '~/.config/kak/colors/alabaster-mocha.kak'
 'kak/config/clipboard.kak' = '~/.config/kak/config/clipboard.kak'
 'kak/config/core.kak' = '~/.config/kak/config/core.kak'
 'kak/config/find.kak' = '~/.config/kak/config/find.kak'

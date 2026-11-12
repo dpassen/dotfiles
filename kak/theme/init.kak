@@ -1,1 +1,1 @@
-colorscheme catppuccin-mocha
+colorscheme alabaster-mocha
