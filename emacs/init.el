@@ -216,17 +216,14 @@
 (use-package markdown-ts-mode
   :mode ("\\.md\\'"))
 
-(use-package misc
-  :bind ("M-z" . zap-up-to-char))
-
-(use-package nucleo-completion
-  :ensure t
+(use-package minibuffer
   :custom
   (completion-category-defaults nil)
-  (completion-styles '(nucleo basic))
-  (nucleo-completion-module-install-policy 'prompt)
-  (nucleo-completion-sort-ties-by-length t)
-  :init (nucleo-completion-ensure-module))
+  (completion-ignore-case t)
+  (completion-styles '(flex basic)))
+
+(use-package misc
+  :bind ("M-z" . zap-up-to-char))
 
 (use-package paren
   :custom (show-paren-mode nil))
@@ -312,7 +309,6 @@
    '((execute-extended-command reverse)
      (execute-extended-command-for-buffer reverse)))
   (vertico-resize nil)
-  (vertico-sort-function 'vertico-sort-length-alpha)
   :config (vertico-multiform-mode 1)
   :hook after-init-hook)
 
