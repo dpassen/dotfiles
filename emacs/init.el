@@ -128,7 +128,7 @@
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
 
 (use-package dumb-jump
-  :vc (:url "https://github.com/dpassen/dumb-jump")
+  :ensure t
   :custom (dumb-jump-prefer-searcher 'ug)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
