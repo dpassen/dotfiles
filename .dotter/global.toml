@@ -54,3 +54,6 @@
 
 [pi.files]
 'pi/agent/settings.json' = '~/.pi/agent/settings.json'
+
+[ugrep.files]
+'ugrep/.ugrep' = '~/.ugrep'
