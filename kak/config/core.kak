@@ -1,6 +1,6 @@
 set-option global autocomplete prompt
 set-option global autoreload true
-set-option global grepcmd 'rg --smart-case --vimgrep --sort path'
+set-option global grepcmd 'ug --recursive --format="%f:%n:%k:%O%~"'
 set-option global indentwidth 2
 set-option global startup_info_version 20260521
 set-option global tabstop 2

@@ -1,0 +1,5 @@
+exclude-dir=.git
+exclude-dir=.jj
+ignore-binary
+ignore-files
+smart-case
