@@ -7,7 +7,7 @@ experimental = true
 java = 'temurin-21.0.13+9.0.LTS'
 node = '26.13.0'
 python = '3.15.2'
-rust = { version = '1.99.1', components = 'clippy,rust-analyzer' }
+rust = { version = '1.100.0', components = 'clippy,rust-analyzer' }
 'cargo:forgelink-cli' = '0.3.13'
 'cargo:git-credit-cli' = '0.2.1'
 'cargo:hop-kak' = '0.2.0'
