@@ -80,13 +80,16 @@
          ("g" . consult-goto-line)
          ("i" . consult-imenu)
          :map search-map
-         ("l" . consult-line)
-         ("r" . consult-ripgrep)))
+         ("l" . consult-line)))
 
 (use-package consult-flycheck
   :ensure t
   :after flycheck
   :bind (:map goto-map ("f" . consult-flycheck)))
+
+(use-package consult-ugrep
+  :vc (:url "https://github.com/dpassen/consult-ugrep")
+  :bind (:map search-map ("u" . consult-ugrep)))
 
 (use-package corfu
   :ensure t
@@ -125,8 +128,8 @@
   :bind (:map ctl-x-map ("p" . disproject-dispatch)))
 
 (use-package dumb-jump
-  :ensure t
-  :custom (dumb-jump-prefer-searcher 'rg)
+  :vc (:url "https://github.com/dpassen/dumb-jump")
+  :custom (dumb-jump-prefer-searcher 'ug)
   :hook (xref-backend-functions . dumb-jump-xref-activate))
 
 (use-package editorconfig
@@ -320,7 +323,7 @@
 (use-package xref
   :custom
   (xref-history-storage 'xref-window-local-history)
-  (xref-search-program 'ripgrep))
+  (xref-search-program 'ugrep))
 
 (use-package mise
   :ensure t
