@@ -83,7 +83,7 @@ set-face global StatusLineValue "%opt{blue},%opt{mantle}"
 # Diagnostics
 # ----------------------------------------------------------------------
 
-set-face global DiagnosticError "%opt{text},%opt{base},%opt{red}+c"
+set-face global DiagnosticError "default,%opt{base},%opt{red}+c"
 set-face global DiagnosticErrorCount "%opt{red},%opt{mantle}"
-set-face global DiagnosticWarning "%opt{text},%opt{base},%opt{yellow}+c"
+set-face global DiagnosticWarning "default,%opt{base},%opt{yellow}+c"
 set-face global DiagnosticWarningCount "%opt{yellow},%opt{mantle}"
