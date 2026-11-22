@@ -6,14 +6,13 @@ Everyone else is doing it
 
 ```sh
 brew bundle --file ./homebrew/Brewfile install
-dotter init
-dotter deploy
-mise install
+mise trust
+mise bootstrap
 ```
 
 ## Uninstall
 
 ```sh
 mise uninstall --all
-dotter undeploy
+mise dot unapply
 ```

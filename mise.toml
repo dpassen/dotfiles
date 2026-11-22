@@ -1,0 +1,48 @@
+[dotfiles]
+'~/.config/bat/config' = 'bat/config'
+
+'~/.config/emacs/early-init.el' = 'emacs/early-init.el'
+'~/.config/emacs/init.el' = 'emacs/init.el'
+
+'~/.config/fd/ignore' = 'fd/ignore'
+
+'~/.config/fish/conf.d/brew.fish' = 'fish/conf.d/brew.fish'
+'~/.config/fish/conf.d/editor.fish' = 'fish/conf.d/editor.fish'
+'~/.config/fish/conf.d/postexec_echo.fish' = 'fish/conf.d/postexec_echo.fish'
+'~/.config/fish/conf.d/xdg.fish' = 'fish/conf.d/xdg.fish'
+'~/.config/fish/functions/edit.fish' = 'fish/functions/edit.fish'
+'~/.config/fish/functions/emacs.fish' = 'fish/functions/emacs.fish'
+'~/.config/fish/functions/fish_greeting.fish' = 'fish/functions/fish_greeting.fish'
+'~/.config/fish/functions/fish_prompt.fish' = 'fish/functions/fish_prompt.fish'
+
+'~/.config/git/ignore' = 'git/ignore'
+
+'~/.config/helix/config.toml' = 'helix/config.toml'
+'~/.config/helix/languages.toml' = 'helix/languages.toml'
+'~/.config/helix/themes/catppuccin_mocha.toml' = 'helix/themes/catppuccin_mocha.toml'
+
+'~/.config/jj/config.toml' = 'jj/config.toml'
+
+'~/.config/kak/colors/alabaster-mocha.kak' = 'kak/colors/alabaster-mocha.kak'
+'~/.config/kak/config/clipboard.kak' = 'kak/config/clipboard.kak'
+'~/.config/kak/config/core.kak' = 'kak/config/core.kak'
+'~/.config/kak/config/find.kak' = 'kak/config/find.kak'
+'~/.config/kak/config/forgelink.kak' = 'kak/config/forgelink.kak'
+'~/.config/kak/config/hop.kak' = 'kak/config/hop.kak'
+'~/.config/kak/config/init.kak' = 'kak/config/init.kak'
+'~/.config/kak/filetypes/init.kak' = 'kak/filetypes/init.kak'
+'~/.config/kak/kakrc' = 'kak/kakrc'
+'~/.config/kak/lsp/basedpyright.toml' = 'kak/lsp/basedpyright.toml'
+'~/.config/kak/lsp/init.kak' = 'kak/lsp/init.kak'
+'~/.config/kak/lsp/just-lsp.toml' = 'kak/lsp/just-lsp.toml'
+'~/.config/kak/lsp/ruff.toml' = 'kak/lsp/ruff.toml'
+'~/.config/kak/lsp/rumdl.toml' = 'kak/lsp/rumdl.toml'
+'~/.config/kak/theme/init.kak' = 'kak/theme/init.kak'
+
+'~/.config/mise/config.toml' = 'mise/config.toml'
+
+'~/.hushlogin' = 'hushlogin/hushlogin'
+
+'~/.pi/agent/settings.json' = 'pi/agent/settings.json'
+
+'~/.ugrep' = 'ugrep/.ugrep'
